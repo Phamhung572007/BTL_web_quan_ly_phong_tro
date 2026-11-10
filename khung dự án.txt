@@ -1,0 +1,73 @@
+QuanLyNhaTro/
+│
+├── frontend/                     # Mã nguồn phía giao diện người dùng (React.js)
+│   └── src/                      # Thư mục mã nguồn chính của Frontend
+│       ├── components/           # Các thành phần giao diện dùng chung (Header, Sidebar, Modal, Card, Button...)
+│       ├── pages/                # Các màn hình/trang giao diện chính theo từng chức năng nghiệp vụ
+│       │   ├── dang_nhap/        # Giao diện đăng nhập, đăng ký tài khoản cho Chủ trọ và Khách thuê
+│       │   ├── phong_tro/        # Quản lý danh sách phòng trọ, trạng thái phòng (đang trống / đã thuê / bảo trì)
+│       │   ├── hop_dong/         # Lập mới, xem chi tiết, gia hạn và thanh lý hợp đồng thuê nhà
+│       │   ├── dien_nuoc/        # Giao diện nhập chỉ số điện, nước định kỳ hàng tháng
+│       │   ├── hoa_don/          # Tạo, quản lý và theo dõi trạng thái thanh toán hóa đơn
+│       │   ├── thong_ke/         # Báo cáo biểu đồ doanh thu, công nợ, tỷ lệ lấp đầy phòng trọ
+│       │   ├── nguoi_thue/       # Quản lý danh sách khách thuê, thông tin cá nhân, CCCD và tạm trú
+│       │   ├── tim_phong/        # Màn hình cho phép người thuê tìm kiếm và xem chi tiết thông tin phòng
+│       │   └── sua_chua/         # Tiếp nhận, gửi và theo dõi tiến độ giải quyết sự cố/hỏng hóc
+│       │
+│       ├── services/             # Tập hợp các hàm gọi API (Axios/Fetch) để lấy hoặc gửi dữ liệu lên Backend
+│       ├── routes/               # Cấu hình định tuyến trang (React Router: phân quyền Private Route / Public Route)
+│       └── App.jsx               # Component gốc tích hợp router và render giao diện chính toàn dự án
+│
+├── backend/                      # Mã nguồn phía máy chủ xử lý dữ liệu (Node.js / Express.js)
+│   ├── config/                   # Cấu hình kết nối hệ thống
+│   │   └── ket_noi_database.js   # Khởi tạo kết nối tới cơ sở dữ liệu MongoDB bằng Mongoose
+│   │
+│   ├── models/                   # Định nghĩa cấu trúc dữ liệu (Schemas / Models) trong MongoDB
+│   │   ├── nguoi_dung.js         # Cấu trúc tài khoản (Chủ trọ / Khách thuê: email, mật khẩu băm, quyền role)
+│   │   ├── day_tro.js            # Cấu trúc dãy trọ / tòa nhà (tên dãy, địa chỉ, tổng số phòng)
+│   │   ├── phong_tro.js          # Cấu trúc phòng trọ (số phòng, giá thuê, diện tích, tiện nghi, trạng thái)
+│   │   ├── nguoi_thue.js         # Thông tin chi tiết khách thuê (Họ tên, SĐT, CCCD, quê quán, phòng đang ở)
+│   │   ├── hop_dong.js           # Thông tin hợp đồng (ngày bắt đầu/kết thúc, tiền cọc, điều khoản thuê)
+│   │   ├── chi_so_dien_nuoc.js   # Lưu chỉ số điện nước (chỉ số cũ, chỉ số mới, tháng/năm ghi)
+│   │   ├── hoa_don.js            # Cấu trúc hóa đơn (tiền phòng + điện + nước + dịch vụ, trạng thái đã/chưa thanh toán)
+│   │   └── yeu_cau_sua_chua.js   # Thông tin yêu cầu sửa chữa (mô tả sự cố, hình ảnh, mức độ ưu tiên, trạng thái)
+│   │
+│   ├── controllers/              # Tầng xử lý logic nghiệp vụ chính của ứng dụng
+│   │   ├── dang_nhap_controller.js # Xử lý đăng nhập, kiểm tra mật khẩu (bcryptjs) và trả về JWT Token
+│   │   ├── phong_tro_controller.js # Thực hiện CRUD (Thêm, xem, sửa, xóa) danh sách phòng trọ
+│   │   ├── hop_dong_controller.js  # Tính toán tiền cọc, lập hợp đồng mới, gia hạn hoặc chấm dứt hợp đồng
+│   │   ├── dien_nuoc_controller.js # Ghi chỉ số, tự động tính số kWh điện và m³ nước tiêu thụ trong tháng
+│   │   ├── hoa_don_controller.js   # Tự động cộng tổng tiền phòng + điện + nước + dịch vụ, xác nhận thanh toán
+│   │   ├── sua_chua_controller.js  # Tiếp nhận yêu cầu sửa chữa, cập nhật trạng thái xử lý và chi phí phát sinh
+│   │   ├── nguoi_thue_controller.js# Thêm khách thuê vào phòng, cập nhật hồ sơ, quản lý danh sách ở ghép
+│   │   └── thong_ke_controller.js  # Gom nhóm dữ liệu (MongoDB Aggregation) tính doanh thu, công nợ, số phòng trống
+│   │
+│   ├── routes/                   # Khai báo các đường dẫn API Endpoint tiếp nhận request từ Frontend
+│   │   ├── dang_nhap_routes.js    # Định nghĩa endpoint xác thực (ví dụ: POST /api/auth/login, POST /api/auth/register)
+│   │   ├── phong_tro_routes.js    # Định nghĩa endpoint phòng trọ (GET/POST/PUT/DELETE /api/phong-tro)
+│   │   ├── hop_dong_routes.js     # Định nghĩa endpoint hợp đồng (GET/POST/PUT /api/hop-dong)
+│   │   ├── dien_nuoc_routes.js    # Định nghĩa endpoint điện nước (GET/POST /api/dien-nuoc)
+│   │   ├── hoa_don_routes.js      # Định nghĩa endpoint hóa đơn (GET/POST/PUT /api/hoa-don)
+│   │   ├── sua_chua_routes.js     # Định nghĩa endpoint sửa chữa (GET/POST/PUT /api/sua-chua)
+│   │   ├── nguoi_thue_routes.js   # Định nghĩa endpoint người thuê (GET/POST/PUT/DELETE /api/nguoi-thue)
+│   │   └── thong_ke_routes.js     # Định nghĩa endpoint báo cáo thống kê (GET /api/thong-ke)
+│   │
+│   ├── middleware/               # Tầng lọc xử lý trung gian trước khi gửi request tới Controller
+│   │   ├── xu_ly_loi.js          # Tập trung bắt và trả về thông báo lỗi chuẩn định dạng JSON (Global Error Handler)
+│   │   ├── xac_thuc.js           # Kiểm tra chuỗi JWT Token gửi kèm trong Header để xác minh và phân quyền tài khoản
+│   │   ├── kiem_tra_du_lieu.js   # Validate dữ liệu đầu vào bằng express-validator (kiểm tra định dạng email, SĐT...)
+│   │   └── upload.js             # Cấu hình Multer xử lý tải tệp/hình ảnh (ảnh phòng trọ, ảnh CCCD, ảnh sự cố)
+│   │
+│   ├── utils/                    # Các hàm tiện ích dùng lại trong nhiều nơi ở Backend
+│   │   └── generateToken.js      # Hàm tạo và ký chuỗi mã hóa JWT Token từ thông tin User ID
+│   │
+│   ├── uploads/                  # Thư mục vật lý lưu trữ các tệp tin và ảnh được tải lên từ ứng dụng
+│   ├── services/                 # Chứa các dịch vụ độc lập phức tạp (gửi mail tự động, tính cước tự động...)
+│   ├── .env                      # Lưu các biến môi trường bí mật (PORT, MONGODB_URI, JWT_SECRET...)
+│   ├── server.js                 # File khởi chạy chính của Server, nạp các Middleware, Route và lắng nghe Cổng (Port)
+│   ├── package.json              # File cấu hình gốc của dự án Node.js (tên dự án, danh sách thư viện dependencies)
+│   └── package-lock.json         # File khóa chi tiết phiên bản của từng thư viện được cài đặt trong node_modules
+│
+├── TAI_LIEU_API.md               # Tài liệu chi tiết mô tả danh sách API, phương thức (GET/POST/PUT/DELETE), tham số và kết quả trả về
+├── .gitignore                    # Khai báo danh sách các file/thư mục không được đẩy lên Git (node_modules, .env, uploads)
+└── README.md                     # Tài liệu hướng dẫn cài đặt môi trường, cách chạy dự án và tổng quan về hệ thống
