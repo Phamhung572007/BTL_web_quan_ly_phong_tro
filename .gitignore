@@ -1,1 +1,2 @@
-.vscode/
+# Thư mục chứa thư viện phụ thuộc (rất nặng, không push lên GitHub)
+node_modules/
