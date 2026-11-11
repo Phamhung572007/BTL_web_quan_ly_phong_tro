@@ -8,10 +8,7 @@ function SuaChua() {
         <h1>Yêu cầu sửa chữa</h1>
         <p>Tiếp nhận sự cố và theo dõi tiến độ xử lý yêu cầu sửa chữa.</p>
       </header>
-
-      <section className="sua-chua-page__content" aria-label="Nội dung sửa chữa">
-        {/* TODO: Thêm danh sách yêu cầu, bộ lọc trạng thái và cập nhật tiến độ. */}
-      </section>
+      <section className="sua-chua-page__content" aria-label="Nội dung sửa chữa" />
     </main>
   )
 }

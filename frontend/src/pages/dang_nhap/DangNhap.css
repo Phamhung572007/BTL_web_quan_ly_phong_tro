@@ -1,0 +1,30 @@
+.dang-nhap-page {
+  width: min(100% - 32px, 960px);
+  margin: 0 auto;
+  padding: 40px 0;
+  color: #172033;
+}
+
+.dang-nhap-page__header {
+  margin-bottom: 28px;
+}
+
+.dang-nhap-page__eyebrow {
+  margin: 0 0 8px;
+  color: #52617a;
+  font-size: 0.875rem;
+}
+
+.dang-nhap-page__header h1 {
+  margin: 0;
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+}
+
+.dang-nhap-page__header > p:last-child {
+  margin: 10px 0 0;
+  color: #52617a;
+}
+
+.dang-nhap-page__content {
+  min-height: 240px;
+}
