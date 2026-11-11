@@ -1,0 +1,95 @@
+====================================================================
+           BẢNG PHÂN CHIA CÔNG VIỆC DỰ ÁN QUẢN LÝ NHÀ TRỌ
+====================================================================
+1. TỔNG QUAN PHÂN CÔNG
+--------------------------------------------------------------------
+
+Dự án được phân chia theo mô hình dọc theo tính năng (Feature-based). Mỗi thành viên chịu trách nhiệm từ thiết kế Backend API đến xây dựng Giao diện Frontend tương ứng, đảm bảo tính chủ động và hoàn chỉnh cho từng module. Chỉ clone khung dự án từ nhánh main, phần mỗi thành viên phụ trách sẽ push lên nhánh có tên của thành viên đó, sau khi test đầy đủ sẽ cho push lên nhánh chính(main) sau tránh code lỗi. Lưu ý: các thành viên dùng API theo quy ước ghi trong TAI_LIEU_API.md để đồng nhất.
+--------------------------------------------------------------------
+2. CHI TIẾT CÔNG VIỆC TỪNG THÀNH VIÊN
+--------------------------------------------------------------------
+
+[THÀNH VIÊN 1 (Hùng) - DATABASE, CORE BACKEND, HÓA ĐƠN & THỐNG KÊ ]
+
+* Database & Khung Backend chung:
+  - Thiết kế toàn bộ sơ đồ CSDL MongoDB và khởi tạo 9 Mongoose Schemas/Models: NguoiDung, DayTro, PhongTro, NguoiThue, HopDong, ChiSoDienNuoc, HoaDon, YeuCauSuaChua, DichVu.
+  - Khởi tạo file kết nối CSDL MongoDB (config/ket_noi_database.js).
+  - Viết Middleware xử lý lỗi tập trung (middleware/xu_ly_loi.js) và Middleware kiểm tra dữ liệu đầu vào (middleware/kiem_tra_du_lieu.js).
+  - Định nghĩa chuẩn cấu trúc dữ liệu JSON trả về cho toàn bộ API (success, message, data).
+
+* Lập trình Backend API:
+  - API Quản lý Dịch vụ & Đơn giá: GET, POST, PUT, DELETE /api/dich-vu (Thiết lập giá điện/kWh, nước/m3, wifi, rác).
+  - API Chỉ số Điện nước: GET, POST, PUT /api/chi-so-dien-nuoc (Ghi chỉ số lẻ, xem lịch sử, nhập chỉ số hàng loạt).
+  - API Hóa đơn: GET, POST, PATCH /api/hoa-don (Tạo hóa đơn lẻ, tự động tạo hóa đơn tháng hàng loạt, xác nhận thanh toán).
+  - API Thống kê Dashboard: GET /api/thong-ke/tong-quan, /doanh-thu, /phong-no-tien.
+
+* Lập trình Frontend (React):
+  - Trang cài đặt danh sách và đơn giá dịch vụ.
+  - Trang nhập chỉ số điện nước (hỗ trợ nhập theo từng phòng và nhập hàng loạt).
+  - Trang khởi tạo, phát hành và quản lý danh sách hóa đơn hàng tháng.
+  - Trang Dashboard Thống kê Chủ trọ: Biểu đồ doanh thu 12 tháng, thống kê tỷ lệ lấp đầy phòng, bảng theo dõi công nợ phòng trọ.
+
+* Nghiệp vụ kiểm soát:
+  - Kiểm tra bắt buộc chỉ số điện/nước mới lớn hơn hoặc bằng chỉ số cũ.
+  - Tự động tính toán tổng tiền (Phòng + Điện + Nước + Dịch vụ) hoàn toàn tại Server.
+  - Đảm bảo mỗi phòng chỉ tồn tại duy nhất 1 hóa đơn trong 1 kỳ thanh toán.
+
+
+[THÀNH VIÊN 2 - QUẢN LÝ CƠ SỞ VẬT CHẤT & HỢP ĐỒNG ]
+
+* Lập trình Backend API:
+  - API Dãy trọ: GET, POST, PUT, DELETE /api/day-tro.
+  - API Phòng trọ: GET, POST, PUT, DELETE /api/phong-tro.
+  - API Người thuê: GET, POST, PUT, DELETE /api/nguoi-thue.
+  - API Hợp đồng: GET, POST, PUT, PATCH /api/hop-dong (Lập hợp đồng, gia hạn, chấm dứt hợp đồng).
+
+* Lập trình Frontend (React):
+  - Trang quản lý danh sách dãy trọ và chi tiết dãy trọ.
+  - Trang quản lý sơ đồ và danh sách phòng trọ (Trạng thái: Trống, Đang ở, Bảo trì).
+  - Trang quản lý danh sách người thuê (lưu thông tin cá nhân, CCCD, tạm trú).
+  - Trang tạo hợp đồng mới, xem chi tiết và thao tác thanh lý/kết thúc hợp đồng.
+
+* Nghiệp vụ kiểm soát:
+  - Kiểm tra phòng đã có hợp đồng hiệu lực hay chưa trước khi tạo hợp đồng mới.
+  - Tự động cập nhật trạng thái phòng sang "Đang ở" khi có hợp đồng và chuyển về "Trống" khi thanh lý hợp đồng.
+  - Chặn thao tác xóa phòng/dãy trọ đang có người ở hoặc hợp đồng còn hiệu lực.
+
+
+[THÀNH VIÊN 3 - XÁC THỰC, UPLOAD, SỬA CHỮA & GIAO DIỆN KHÁCH]
+
+* Lập trình Backend API:
+  - API Tài khoản & Xác thực: POST /api/dang-ky, /api/dang-nhap, /api/dang-xuat, GET/PUT /api/tai-khoan, PUT /api/doi-mat-khau.
+  - Xây dựng Middleware xác thực JWT & Phân quyền (middleware/xac_thuc.js, utils/generateToken.js).
+  - API Upload Tệp tin: POST /api/upload/anh (Sử dụng Multer lưu trữ ảnh phòng, CCCD, ảnh báo hỏng).
+  - API Yêu cầu Sửa chữa: GET, POST, PATCH /api/yeu-cau-sua-chua.
+  - API Tìm phòng trống: GET /api/phong-tro-trong.
+
+* Lập trình Frontend (React):
+  - Giao diện Đăng nhập, Đăng ký, Đổi mật khẩu & Cập nhật hồ sơ cá nhân.
+  - Giao diện Khách vãng lai: Trang tìm kiếm phòng trống & thông tin liên hệ chủ trọ.
+  - Giao diện Khách thuê: Tra cứu thông tin phòng đang ở, xem lịch sử hóa đơn cá nhân, gửi yêu cầu báo hỏng/sửa chữa kèm hình ảnh.
+  - Giao diện Chủ trọ: Tiếp nhận và cập nhật tiến độ xử lý sự cố.
+
+--------------------------------------------------------------------
+3. TIẾN ĐỘ & QUY TRÌNH PHỐI HỢP NHÓM
+--------------------------------------------------------------------
+
+Giai đoạn 1: Khởi tạo Nền tảng (Ngày 1 - Ngày 2)
+1. Thành viên 1: Tạo khung Backend Express, kết nối MongoDB Atlas, xây dựng 9 Mongoose Schemas, viết các Middleware xử lý lỗi/kiểm tra dữ liệu và push code lên nhánh main.
+2. Thành viên 2 & 3: Clone repository từ GitHub, khởi tạo dự án React + Vite ở thư mục frontend/ và tạo sẵn cấu trúc thư mục giao diện.
+
+Giai đoạn 2: Phát triển API & Giao diện Module (Ngày 3 - Ngày 7)
+1. Thành viên 3: Hoàn thiện API Đăng nhập & tạo chuỗi JWT Token để Thành viên 1 và 2 tích hợp kiểm thử xác thực API.
+2. Thành viên 2: Phát triển toàn bộ API và UI cho các module Dãy trọ, Phòng trọ, Người thuê & Hợp đồng.
+3. Thành viên 1: Phát triển toàn bộ API và UI cho các module Dịch vụ, Chỉ số Điện nước, Hóa đơn & Dashboard Thống kê.
+
+Giai đoạn 3: Tích hợp, Kiểm thử & Hoàn thiện (Ngày 8 - Ngày 10)
+1. Kiểm thử liên thông toàn bộ luồng nghiệp vụ:
+   Tạo phòng (TV2) -> Lập hợp đồng (TV2) -> Nhập điện nước (TV1) -> Xuất hóa đơn (TV1) -> Cập nhật Dashboard (TV1)
+2. Kiểm thử phân quyền: Đảm bảo tài khoản Khách thuê không thể truy cập các API quản lý của Chủ trọ.
+3. Tối ưu & Đóng gói: Kiểm tra lỗi giao diện, tối ưu câu truy vấn MongoDB, xóa các file thừa và cập nhật tài liệu API lần cuối.
+
+Quy định làm việc với Git:
+- Không commit trực tiếp lên nhánh main.
+- Mỗi thành viên tạo nhánh riêng có tên của mình
+- Tạo Pull Request (PR) và kiểm thử thành công trước khi gộp code vào main.
