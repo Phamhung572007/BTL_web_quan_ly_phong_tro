@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="512" height="512">
+  <g fill="none" stroke="#FFFFFF" stroke-width="17" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Roof and chimney -->
+    <path d="M38 112 L128 34 L218 112"/>
+    <path d="M190 87 V58 H215 V108"/>
+    <!-- House outline, intentionally open at the lower center -->
+    <path d="M58 105 V190 Q58 211 79 211 H101"/>
+    <path d="M198 105 V190 Q198 211 177 211 H155"/>
+    <!-- Keyhole stem -->
+    <path d="M128 164 V211"/>
+  </g>
+  <!-- Keyhole head -->
+  <path d="M103 119
+           Q103 111 112 111
+           H144
+           Q153 111 153 120
+           V147
+           Q153 160 140 160
+           H116
+           Q103 160 103 147 Z"
+        fill="#FFFFFF"/>
+  <circle cx="128" cy="135" r="8.5" fill="#14276F"/>
+</svg>
