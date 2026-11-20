@@ -89,7 +89,7 @@
 
 ## 6. API QUẢN LÝ NGƯỜI THUÊ
 
-**Phụ trách: Thành viên 2**
+**Phụ trách: Thành viên 3**
 
 | Phương thức | Đường dẫn API | Chức năng |
 |---|---|---|
@@ -192,7 +192,7 @@
 
 ## 15. API TIN ĐĂNG PHÒNG
 
-**Phụ trách: Thành viên 1 (Hùng)**
+**Phụ trách: Thành viên 2**
 
 | Phương thức | Đường dẫn API | Chức năng |
 |---|---|---|
@@ -207,7 +207,7 @@ Landing page dùng danh sách tin nổi bật từ `GET /tin-dang` và nội dun
 
 ## 16. API TÌM NGƯỜI Ở GHÉP
 
-**Phụ trách: Thành viên 1 (Hùng)**
+**Phụ trách: Thành viên 3**
 
 | Phương thức | Đường dẫn API | Chức năng |
 |---|---|---|
@@ -284,27 +284,24 @@ Landing page dùng danh sách tin nổi bật từ `GET /tin-dang` và nội dun
 
 ### Thành viên 1
 
-- Thiết kế Database toàn dự án.
-- Thiết kế API toàn dự án.
+- Thiết lập kết nối CSDL, middleware và quy ước API/schema dùng chung.
+- Sở hữu Model/API thuộc phần dịch vụ, chỉ số điện nước, hóa đơn, thống kê, lịch xem, bảng tin, đánh giá và thông báo.
 - Lập trình API quản lý dịch vụ và đơn giá.
 - Lập trình API điện nước.
 - Lập trình API hóa đơn.
-- Lập trình API thống kê và các API bổ sung theo Figma ở mục 14–18.
+- Lập trình API thống kê.
+- Lập trình API lịch xem phòng, bảng tin, đánh giá và thông báo.
 - Kiểm thử và tích hợp Backend.
 
 ### Thành viên 2
 
-- Lập trình API quản lý dãy trọ.
-- Lập trình API quản lý phòng.
-- Lập trình API người thuê.
-- Lập trình API hợp đồng.
+- Tạo Model và lập trình API dãy trọ, phòng, hợp đồng và tin đăng phòng.
+- Sở hữu tìm kiếm tin công khai và dữ liệu phòng trống để giao diện khách sử dụng.
 - Xây dựng giao diện tương ứng.
 
 ### Thành viên 3
 
-- Lập trình API đăng nhập và phân quyền.
-- Lập trình API upload tệp tin.
-- Lập trình API yêu cầu sửa chữa.
+- Tạo Model và lập trình API tài khoản, xác thực, upload, người thuê, sửa chữa và hồ sơ ở ghép.
 - Xây dựng giao diện tương ứng.
 
 ### Quy định chung

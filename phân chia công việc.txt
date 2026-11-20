@@ -4,15 +4,14 @@
 1. TỔNG QUAN PHÂN CÔNG
 --------------------------------------------------------------------
 
-Dự án được phân chia theo mô hình dọc theo tính năng (Feature-based). Mỗi thành viên chịu trách nhiệm từ thiết kế Backend API đến xây dựng Giao diện Frontend tương ứng, đảm bảo tính chủ động và hoàn chỉnh cho từng module. Chỉ clone khung dự án từ nhánh main, phần mỗi thành viên phụ trách sẽ push lên nhánh có tên của thành viên đó, sau khi test đầy đủ sẽ cho push lên nhánh chính(main) sau tránh code lỗi. Lưu ý: các thành viên dùng API theo quy ước ghi trong TAI_LIEU_API.md để đồng nhất.
---------------------------------------------------------------------
 2. CHI TIẾT CÔNG VIỆC TỪNG THÀNH VIÊN
 --------------------------------------------------------------------
 
-[THÀNH VIÊN 1 (Hùng) - DATABASE, CORE BACKEND, HÓA ĐƠN, THỐNG KÊ & CÁC MÀN BỔ SUNG FIGMA]
+[THÀNH VIÊN 1 (Hùng) - BACKEND DÙNG CHUNG, TÀI CHÍNH, LỊCH XEM & CỘNG ĐỒNG]
 
 * Database & Khung Backend chung:
-  - Thiết kế sơ đồ CSDL và khởi tạo 9 Model lõi: NguoiDung, DayTro, PhongTro, NguoiThue, HopDong, ChiSoDienNuoc, HoaDon, YeuCauSuaChua, DichVu; các Model mới cho màn Figma được liệt kê riêng bên dưới.
+  - Thiết lập kết nối MongoDB, quy ước schema/response và middleware dùng chung.
+  - Tạo Model thuộc phần Hùng: ChiSoDienNuoc, HoaDon, DichVu, LichXem, BaiViet, DanhGiaPhong, ThongBao. Model dãy/phòng/hợp đồng/tin đăng do thành viên 2 tạo; Model tài khoản/người thuê/sửa chữa/ở ghép do thành viên 3 tạo.
   - Khởi tạo file kết nối CSDL MongoDB (config/ket_noi_database.js).
   - Viết Middleware xử lý lỗi tập trung (middleware/xu_ly_loi.js) và Middleware kiểm tra dữ liệu đầu vào (middleware/kiem_tra_du_lieu.js).
   - Định nghĩa chuẩn cấu trúc dữ liệu JSON trả về cho toàn bộ API (success, message, data).
@@ -22,60 +21,63 @@ Dự án được phân chia theo mô hình dọc theo tính năng (Feature-base
   - API Chỉ số Điện nước: GET, POST, PUT /api/chi-so-dien-nuoc (Ghi chỉ số lẻ, xem lịch sử, nhập chỉ số hàng loạt).
   - API Hóa đơn: GET, POST, PATCH /api/hoa-don (Tạo hóa đơn lẻ, tự động tạo hóa đơn tháng hàng loạt, xác nhận thanh toán).
   - API Thống kê Dashboard: GET /api/thong-ke/tong-quan, /doanh-thu, /phong-no-tien.
+  - API Lịch xem phòng: GET/POST /api/lich-xem; PATCH để duyệt, đổi lịch hoặc hủy lịch.
+  - API Bảng tin, đánh giá và thông báo: /api/bai-viet, /api/danh-gia-phong, /api/thong-bao.
 
 * Lập trình Frontend (React):
   - Trang cài đặt danh sách và đơn giá dịch vụ.
   - Trang nhập chỉ số điện nước (hỗ trợ nhập theo từng phòng và nhập hàng loạt).
   - Trang khởi tạo, phát hành và quản lý danh sách hóa đơn hàng tháng.
   - Trang Dashboard Thống kê Chủ trọ: Biểu đồ doanh thu 12 tháng, thống kê tỷ lệ lấp đầy phòng, bảng theo dõi công nợ phòng trọ.
+  - Trang lịch xem phòng, bảng tin/sự kiện, đánh giá phòng và hộp thư thông báo.
 
 * Nghiệp vụ kiểm soát:
   - Kiểm tra bắt buộc chỉ số điện/nước mới lớn hơn hoặc bằng chỉ số cũ.
   - Tự động tính toán tổng tiền (Phòng + Điện + Nước + Dịch vụ) hoàn toàn tại Server.
   - Đảm bảo mỗi phòng chỉ tồn tại duy nhất 1 hóa đơn trong 1 kỳ thanh toán.
 
-* Phần việc bổ sung theo các màn hình (Hùng phụ trách):
-  - Xây dựng landing page công khai: khu vực tìm kiếm, phòng nổi bật, tin tức/sự kiện và điều hướng.
-  - Hoàn thiện UI tìm phòng dạng danh sách/bản đồ, bộ lọc, trang chi tiết tin (ảnh, tiện nghi, vị trí) và luồng đăng tin cho chủ trọ.
-  - Xây dựng lịch hẹn xem phòng: gửi yêu cầu, chủ trọ duyệt/đổi lịch/hủy và hai bên theo dõi trạng thái.
-  - Bổ sung tìm người ở ghép bằng bản đồ/danh sách hồ sơ; xây dựng bảng tin, đánh giá phòng và trang thông báo theo tài khoản.
-  - Bổ sung Model/Controller/Route cần thiết cho tin đăng, lịch xem, hồ sơ ở ghép, bài viết, đánh giá và thông báo; tái sử dụng dữ liệu phòng, tài khoản và upload hiện có.
-  - Tích hợp các màn mới với API và phân quyền; thống nhất giao diện trên desktop/mobile. Member 2 tiếp tục sở hữu CRUD dãy/phòng/hợp đồng; Member 3 cung cấp xác thực, upload và API tìm phòng trống để Hùng tích hợp.
 
+[THÀNH VIÊN 2 - DÃY TRỌ, PHÒNG TRỌ, HỢP ĐỒNG & TIN ĐĂNG]
 
-[THÀNH VIÊN 2 - QUẢN LÝ CƠ SỞ VẬT CHẤT & HỢP ĐỒNG ]
-
-* Lập trình Backend API:
+* Model & Lập trình Backend API:
+  - Tạo và sở hữu các Model DayTro, PhongTro, HopDong, TinDangPhong.
   - API Dãy trọ: GET, POST, PUT, DELETE /api/day-tro.
   - API Phòng trọ: GET, POST, PUT, DELETE /api/phong-tro.
-  - API Người thuê: GET, POST, PUT, DELETE /api/nguoi-thue.
   - API Hợp đồng: GET, POST, PUT, PATCH /api/hop-dong (Lập hợp đồng, gia hạn, chấm dứt hợp đồng).
+  - API Tin đăng phòng: GET danh sách/tìm kiếm và chi tiết `/api/tin-dang`; POST, PUT, PATCH trạng thái đăng/ẩn và DELETE tin.
+  - API `/api/phong-tro-trong` cung cấp dữ liệu phòng còn trống; không tạo bộ lọc tìm kiếm công khai trùng với `/api/tin-dang`.
 
 * Lập trình Frontend (React):
   - Trang quản lý danh sách dãy trọ và chi tiết dãy trọ.
   - Trang quản lý sơ đồ và danh sách phòng trọ (Trạng thái: Trống, Đang ở, Bảo trì).
-  - Trang quản lý danh sách người thuê (lưu thông tin cá nhân, CCCD, tạm trú).
   - Trang tạo hợp đồng mới, xem chi tiết và thao tác thanh lý/kết thúc hợp đồng.
+  - Trang chủ trọ tạo, cập nhật, đăng/ẩn tin cho thuê gắn với phòng do mình quản lý.
 
 * Nghiệp vụ kiểm soát:
   - Kiểm tra phòng đã có hợp đồng hiệu lực hay chưa trước khi tạo hợp đồng mới.
   - Tự động cập nhật trạng thái phòng sang "Đang ở" khi có hợp đồng và chuyển về "Trống" khi thanh lý hợp đồng.
   - Chặn thao tác xóa phòng/dãy trọ đang có người ở hoặc hợp đồng còn hiệu lực.
+  - Tin đăng phải tham chiếu phòng có thật; chỉ tin đang đăng và phòng còn cho thuê mới xuất hiện trong tìm kiếm công khai.
+  - Hợp đồng lưu mã người thuê do thành viên 3 quản lý; không tạo hoặc sửa Model/API hồ sơ người thuê.
 
 
-[THÀNH VIÊN 3 - XÁC THỰC, UPLOAD, SỬA CHỮA & GIAO DIỆN KHÁCH]
+[THÀNH VIÊN 3 - TÀI KHOẢN, KHÁCH THUÊ, TÌM PHÒNG & CỘNG ĐỒNG]
 
-* Lập trình Backend API:
+* Model & Lập trình Backend API:
+  - Tạo và sở hữu các Model NguoiDung, NguoiThue, YeuCauSuaChua, HoSoOGhep.
   - API Tài khoản & Xác thực: POST /api/dang-ky, /api/dang-nhap, /api/dang-xuat, GET/PUT /api/tai-khoan, PUT /api/doi-mat-khau.
   - Xây dựng Middleware xác thực JWT & Phân quyền (middleware/xac_thuc.js, utils/generateToken.js).
   - API Upload Tệp tin: POST /api/upload/anh (Sử dụng Multer lưu trữ ảnh phòng, CCCD, ảnh báo hỏng).
+  - API Người thuê: GET, POST, PUT, DELETE /api/nguoi-thue và quản lý hồ sơ/tạm trú.
   - API Yêu cầu Sửa chữa: GET, POST, PATCH /api/yeu-cau-sua-chua.
-  - API Tìm phòng trống: GET /api/phong-tro-trong; thống nhất bộ lọc/dữ liệu trả về với Hùng để giao diện public không tạo API trùng lặp.
+  - API Hồ sơ ở ghép: tạo, cập nhật, tìm kiếm và gỡ hồ sơ của tài khoản.
 
 * Lập trình Frontend (React):
   - Giao diện Đăng nhập, Đăng ký, Đổi mật khẩu & Cập nhật hồ sơ cá nhân.
-  - Phối hợp với Hùng về xác thực, upload và API tìm phòng trống; Hùng phụ trách các màn public theo Figma (landing, tìm phòng, chi tiết tin, đăng tin và lịch xem).
-  - Giao diện Khách thuê: Tra cứu thông tin phòng đang ở, xem lịch sử hóa đơn cá nhân, gửi yêu cầu báo hỏng/sửa chữa kèm hình ảnh.
+  - Các màn công khai: landing page, tìm phòng dạng bản đồ/danh sách, bộ lọc và chi tiết tin; dùng API `/tin-dang` do thành viên 2 cung cấp.
+  - Giao diện quản lý người thuê/tạm trú và cổng người thuê (xem phòng, hóa đơn cá nhân, gửi yêu cầu sửa chữa).
+  - Giao diện tìm người ở ghép bằng bản đồ/danh sách hồ sơ.
+  - Tích hợp các nút xem lịch, bài viết, đánh giá và thông báo với module/API do Hùng sở hữu; không tự tạo bản API hoặc trang module trùng.
   - Giao diện Chủ trọ: Tiếp nhận và cập nhật tiến độ xử lý sự cố.
 
 --------------------------------------------------------------------
@@ -83,17 +85,19 @@ Dự án được phân chia theo mô hình dọc theo tính năng (Feature-base
 --------------------------------------------------------------------
 
 Giai đoạn 1: Khởi tạo Nền tảng (Ngày 1 - Ngày 2)
-1. Thành viên 1: Tạo khung Backend Express, kết nối MongoDB Atlas, xây dựng 9 Mongoose Schemas, viết các Middleware xử lý lỗi/kiểm tra dữ liệu và push code lên nhánh main.
-2. Thành viên 2 & 3: Clone repository từ GitHub, khởi tạo dự án React + Vite ở thư mục frontend/ và tạo sẵn cấu trúc thư mục giao diện.
+1. Thành viên 1 (Hùng): Tạo khung Backend Express, kết nối MongoDB Atlas, middleware dùng chung và các Model tài chính, lịch xem, bảng tin, đánh giá, thông báo.
+2. Thành viên 2: Tạo Model dãy trọ, phòng, hợp đồng và tin đăng; hoàn thiện cấu trúc API cho các module này.
+3. Thành viên 3: Tạo Model tài khoản, người thuê, sửa chữa và hồ sơ ở ghép; khởi tạo React + Vite cùng thành viên 2.
 
 Giai đoạn 2: Phát triển API & Giao diện Module (Ngày 3 - Ngày 7)
-1. Thành viên 3: Hoàn thiện API Đăng nhập & tạo chuỗi JWT Token để Thành viên 1 và 2 tích hợp kiểm thử xác thực API.
-2. Thành viên 2: Phát triển toàn bộ API và UI cho các module Dãy trọ, Phòng trọ, Người thuê & Hợp đồng.
-3. Thành viên 1: Phát triển toàn bộ API và UI cho các module Dịch vụ, Chỉ số Điện nước, Hóa đơn & Dashboard Thống kê.
+1. Thành viên 3: Hoàn thiện API tài khoản, xác thực, người thuê, sửa chữa và hồ sơ ở ghép.
+2. Thành viên 2: Phát triển API và UI cho Dãy trọ, Phòng trọ, Hợp đồng và Tin đăng.
+3. Thành viên 1 (Hùng): Phát triển API và UI cho Dịch vụ, Điện nước, Hóa đơn, Thống kê, Lịch xem, Bảng tin, Đánh giá và Thông báo.
+4. Thành viên 3: Phát triển UI tài khoản/người thuê, landing, tìm phòng, chi tiết tin, sửa chữa và ở ghép; dùng API tin đăng của thành viên 2, tích hợp lịch/bảng tin/đánh giá/thông báo của Hùng.
 
 Giai đoạn 3: Tích hợp, Kiểm thử & Hoàn thiện (Ngày 8 - Ngày 10)
 1. Kiểm thử liên thông toàn bộ luồng nghiệp vụ:
-   Tạo phòng (TV2) -> Lập hợp đồng (TV2) -> Nhập điện nước (TV1) -> Xuất hóa đơn (TV1) -> Cập nhật Dashboard (TV1)
+   Tạo phòng và tin đăng (TV2) -> Tìm phòng (TV3) -> Đặt lịch xem (TV1) -> Lập hợp đồng (TV2) -> Quản lý người thuê (TV3) -> Nhập điện nước/hóa đơn/dashboard (TV1)
 2. Kiểm thử phân quyền: Đảm bảo tài khoản Khách thuê không thể truy cập các API quản lý của Chủ trọ.
 3. Tối ưu & Đóng gói: Kiểm tra lỗi giao diện, tối ưu câu truy vấn MongoDB, xóa các file thừa và cập nhật tài liệu API lần cuối.
 
