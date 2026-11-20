@@ -9,10 +9,10 @@ Dự án được phân chia theo mô hình dọc theo tính năng (Feature-base
 2. CHI TIẾT CÔNG VIỆC TỪNG THÀNH VIÊN
 --------------------------------------------------------------------
 
-[THÀNH VIÊN 1 (Hùng) - DATABASE, CORE BACKEND, HÓA ĐƠN & THỐNG KÊ ]
+[THÀNH VIÊN 1 (Hùng) - DATABASE, CORE BACKEND, HÓA ĐƠN, THỐNG KÊ & CÁC MÀN BỔ SUNG FIGMA]
 
 * Database & Khung Backend chung:
-  - Thiết kế toàn bộ sơ đồ CSDL MongoDB và khởi tạo 9 Mongoose Schemas/Models: NguoiDung, DayTro, PhongTro, NguoiThue, HopDong, ChiSoDienNuoc, HoaDon, YeuCauSuaChua, DichVu.
+  - Thiết kế sơ đồ CSDL và khởi tạo 9 Model lõi: NguoiDung, DayTro, PhongTro, NguoiThue, HopDong, ChiSoDienNuoc, HoaDon, YeuCauSuaChua, DichVu; các Model mới cho màn Figma được liệt kê riêng bên dưới.
   - Khởi tạo file kết nối CSDL MongoDB (config/ket_noi_database.js).
   - Viết Middleware xử lý lỗi tập trung (middleware/xu_ly_loi.js) và Middleware kiểm tra dữ liệu đầu vào (middleware/kiem_tra_du_lieu.js).
   - Định nghĩa chuẩn cấu trúc dữ liệu JSON trả về cho toàn bộ API (success, message, data).
@@ -33,6 +33,14 @@ Dự án được phân chia theo mô hình dọc theo tính năng (Feature-base
   - Kiểm tra bắt buộc chỉ số điện/nước mới lớn hơn hoặc bằng chỉ số cũ.
   - Tự động tính toán tổng tiền (Phòng + Điện + Nước + Dịch vụ) hoàn toàn tại Server.
   - Đảm bảo mỗi phòng chỉ tồn tại duy nhất 1 hóa đơn trong 1 kỳ thanh toán.
+
+* Phần việc bổ sung theo các màn hình (Hùng phụ trách):
+  - Xây dựng landing page công khai: khu vực tìm kiếm, phòng nổi bật, tin tức/sự kiện và điều hướng.
+  - Hoàn thiện UI tìm phòng dạng danh sách/bản đồ, bộ lọc, trang chi tiết tin (ảnh, tiện nghi, vị trí) và luồng đăng tin cho chủ trọ.
+  - Xây dựng lịch hẹn xem phòng: gửi yêu cầu, chủ trọ duyệt/đổi lịch/hủy và hai bên theo dõi trạng thái.
+  - Bổ sung tìm người ở ghép bằng bản đồ/danh sách hồ sơ; xây dựng bảng tin, đánh giá phòng và trang thông báo theo tài khoản.
+  - Bổ sung Model/Controller/Route cần thiết cho tin đăng, lịch xem, hồ sơ ở ghép, bài viết, đánh giá và thông báo; tái sử dụng dữ liệu phòng, tài khoản và upload hiện có.
+  - Tích hợp các màn mới với API và phân quyền; thống nhất giao diện trên desktop/mobile. Member 2 tiếp tục sở hữu CRUD dãy/phòng/hợp đồng; Member 3 cung cấp xác thực, upload và API tìm phòng trống để Hùng tích hợp.
 
 
 [THÀNH VIÊN 2 - QUẢN LÝ CƠ SỞ VẬT CHẤT & HỢP ĐỒNG ]
@@ -62,11 +70,11 @@ Dự án được phân chia theo mô hình dọc theo tính năng (Feature-base
   - Xây dựng Middleware xác thực JWT & Phân quyền (middleware/xac_thuc.js, utils/generateToken.js).
   - API Upload Tệp tin: POST /api/upload/anh (Sử dụng Multer lưu trữ ảnh phòng, CCCD, ảnh báo hỏng).
   - API Yêu cầu Sửa chữa: GET, POST, PATCH /api/yeu-cau-sua-chua.
-  - API Tìm phòng trống: GET /api/phong-tro-trong.
+  - API Tìm phòng trống: GET /api/phong-tro-trong; thống nhất bộ lọc/dữ liệu trả về với Hùng để giao diện public không tạo API trùng lặp.
 
 * Lập trình Frontend (React):
   - Giao diện Đăng nhập, Đăng ký, Đổi mật khẩu & Cập nhật hồ sơ cá nhân.
-  - Giao diện Khách vãng lai: Trang tìm kiếm phòng trống & thông tin liên hệ chủ trọ.
+  - Phối hợp với Hùng về xác thực, upload và API tìm phòng trống; Hùng phụ trách các màn public theo Figma (landing, tìm phòng, chi tiết tin, đăng tin và lịch xem).
   - Giao diện Khách thuê: Tra cứu thông tin phòng đang ở, xem lịch sử hóa đơn cá nhân, gửi yêu cầu báo hỏng/sửa chữa kèm hình ảnh.
   - Giao diện Chủ trọ: Tiếp nhận và cập nhật tiến độ xử lý sự cố.
 
