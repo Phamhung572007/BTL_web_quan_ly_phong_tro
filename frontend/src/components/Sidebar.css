@@ -14,24 +14,24 @@
 .sidebar-brand {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 8px;
   padding: 0 8px;
   margin-bottom: 28px;
 }
 
 .sidebar-logo-img {
-  width: 48px;
-  height: 48px;
-  padding: 8px;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.08);
+  width: 56px;
+  height: 56px;
+  padding: 0;
+  background: none;
+  border-radius: 0;
   object-fit: contain;
   flex-shrink: 0;
 }
 
 .sidebar-brand strong {
   display: block;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 700;
   letter-spacing: 0.5px;
 }

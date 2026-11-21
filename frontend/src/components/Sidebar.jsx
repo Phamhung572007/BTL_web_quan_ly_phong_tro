@@ -25,11 +25,8 @@ export default function Sidebar() {
   return (
     <aside className="sidebar">
       <div className="sidebar-brand">
-        <img src={logo} alt="PTIT" className="sidebar-logo-img" />
-        <div>
-          <strong>PTIT</strong>
-          <span>SmartRent System</span>
-        </div>
+        <img src={logo} alt="SmartRent" className="sidebar-logo-img" />
+        <strong>SmartRent</strong>
       </div>
 
       <div className="sidebar-profile">
