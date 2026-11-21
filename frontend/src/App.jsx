@@ -1,13 +1,13 @@
 import { BrowserRouter } from "react-router-dom";
-import Sidebar from "./components/Sidebar";
+import MainLayout from "./components/MainLayout";
+import AppRoutes from "./routes/AppRoutes";
 
 export default function App() {
   return (
     <BrowserRouter>
-      <div style={{ display: "flex", minHeight: "100vh" }}>
-        <Sidebar />
-        <main style={{ flex: 1, padding: 32 }}>Nội dung trang</main>
-      </div>
+      <MainLayout>
+        <AppRoutes />
+      </MainLayout>
     </BrowserRouter>
   );
 }
