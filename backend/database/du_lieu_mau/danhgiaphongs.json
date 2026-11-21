@@ -1,0 +1,2062 @@
+[
+  {
+    "_id": {
+      "$oid": "740000000000000000000001"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000002"
+    },
+    "tinDangId": null,
+    "hopDongId": {
+      "$oid": "6b0000000000000000000001"
+    },
+    "nguoiDanhGiaId": {
+      "$oid": "670000000000000000000003"
+    },
+    "nguoiThueId": {
+      "$oid": "6a0000000000000000000001"
+    },
+    "diem": {
+      "$numberInt": "5"
+    },
+    "tieuDe": "Phong sach va chu nha ho tro nhanh",
+    "noiDung": "Danh gia demo: phong dung mo ta va cac yeu cau sua chua duoc tiep nhan som.",
+    "hinhAnh": [],
+    "trangThai": "DA_DUYET",
+    "phanHoiChuTro": {
+      "noiDung": "Cam on ban da gui danh gia demo.",
+      "nguoiPhanHoiId": {
+        "$oid": "670000000000000000000001"
+      },
+      "phanHoiLuc": {
+        "$date": {
+          "$numberLong": "1795064400000"
+        }
+      }
+    },
+    "lyDoAn": "",
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1794974400000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795064400000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "740000000000000000000002"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000005"
+    },
+    "tinDangId": null,
+    "hopDongId": {
+      "$oid": "6b0000000000000000000003"
+    },
+    "nguoiDanhGiaId": {
+      "$oid": "670000000000000000000005"
+    },
+    "nguoiThueId": {
+      "$oid": "6a0000000000000000000003"
+    },
+    "diem": {
+      "$numberInt": "4"
+    },
+    "tieuDe": "Khu vuc thuan tien",
+    "noiDung": "Danh gia demo: du lieu mau cho danh sach va tinh diem trung binh cua phong.",
+    "hinhAnh": [],
+    "trangThai": "DA_DUYET",
+    "phanHoiChuTro": {
+      "noiDung": "Cam on danh gia cua ban.",
+      "nguoiPhanHoiId": {
+        "$oid": "670000000000000000000002"
+      },
+      "phanHoiLuc": {
+        "$date": {
+          "$numberLong": "1794985200000"
+        }
+      }
+    },
+    "lyDoAn": "",
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1794888000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1794985200000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "740000000000000000000003"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000008"
+    },
+    "tinDangId": null,
+    "hopDongId": {
+      "$oid": "6b0000000000000000000004"
+    },
+    "nguoiDanhGiaId": {
+      "$oid": "670000000000000000000008"
+    },
+    "nguoiThueId": {
+      "$oid": "6a0000000000000000000005"
+    },
+    "diem": {
+      "$numberInt": "3"
+    },
+    "tieuDe": "[DEMO] Danh gia phong 3",
+    "noiDung": "[DEMO] Danh gia gia lap, dung thu hien thi va phan trang.",
+    "hinhAnh": [],
+    "trangThai": "CHO_DUYET",
+    "phanHoiChuTro": {
+      "noiDung": "",
+      "nguoiPhanHoiId": null,
+      "phanHoiLuc": null
+    },
+    "lyDoAn": "",
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1790812800000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "740000000000000000000004"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000009"
+    },
+    "tinDangId": null,
+    "hopDongId": {
+      "$oid": "6b0000000000000000000005"
+    },
+    "nguoiDanhGiaId": {
+      "$oid": "670000000000000000000009"
+    },
+    "nguoiThueId": {
+      "$oid": "6a0000000000000000000006"
+    },
+    "diem": {
+      "$numberInt": "4"
+    },
+    "tieuDe": "[DEMO] Danh gia phong 4",
+    "noiDung": "[DEMO] Danh gia gia lap, dung thu hien thi va phan trang.",
+    "hinhAnh": [],
+    "trangThai": "DA_DUYET",
+    "phanHoiChuTro": {
+      "noiDung": "",
+      "nguoiPhanHoiId": null,
+      "phanHoiLuc": null
+    },
+    "lyDoAn": "",
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1793577600000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "740000000000000000000005"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000010"
+    },
+    "tinDangId": null,
+    "hopDongId": {
+      "$oid": "6b0000000000000000000006"
+    },
+    "nguoiDanhGiaId": {
+      "$oid": "670000000000000000000010"
+    },
+    "nguoiThueId": {
+      "$oid": "6a0000000000000000000007"
+    },
+    "diem": {
+      "$numberInt": "5"
+    },
+    "tieuDe": "[DEMO] Danh gia phong 5",
+    "noiDung": "[DEMO] Danh gia gia lap, dung thu hien thi va phan trang.",
+    "hinhAnh": [],
+    "trangThai": "DA_DUYET",
+    "phanHoiChuTro": {
+      "noiDung": "",
+      "nguoiPhanHoiId": null,
+      "phanHoiLuc": null
+    },
+    "lyDoAn": "",
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1790985600000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "740000000000000000000006"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000011"
+    },
+    "tinDangId": null,
+    "hopDongId": {
+      "$oid": "6b0000000000000000000007"
+    },
+    "nguoiDanhGiaId": {
+      "$oid": "670000000000000000000011"
+    },
+    "nguoiThueId": {
+      "$oid": "6a0000000000000000000008"
+    },
+    "diem": {
+      "$numberInt": "3"
+    },
+    "tieuDe": "[DEMO] Danh gia phong 6",
+    "noiDung": "[DEMO] Danh gia gia lap, dung thu hien thi va phan trang.",
+    "hinhAnh": [],
+    "trangThai": "DA_DUYET",
+    "phanHoiChuTro": {
+      "noiDung": "",
+      "nguoiPhanHoiId": null,
+      "phanHoiLuc": null
+    },
+    "lyDoAn": "",
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1793750400000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "740000000000000000000007"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000012"
+    },
+    "tinDangId": null,
+    "hopDongId": {
+      "$oid": "6b0000000000000000000008"
+    },
+    "nguoiDanhGiaId": {
+      "$oid": "670000000000000000000012"
+    },
+    "nguoiThueId": {
+      "$oid": "6a0000000000000000000009"
+    },
+    "diem": {
+      "$numberInt": "4"
+    },
+    "tieuDe": "[DEMO] Danh gia phong 7",
+    "noiDung": "[DEMO] Danh gia gia lap, dung thu hien thi va phan trang.",
+    "hinhAnh": [],
+    "trangThai": "DA_DUYET",
+    "phanHoiChuTro": {
+      "noiDung": "",
+      "nguoiPhanHoiId": null,
+      "phanHoiLuc": null
+    },
+    "lyDoAn": "",
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1791158400000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "740000000000000000000008"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000013"
+    },
+    "tinDangId": null,
+    "hopDongId": {
+      "$oid": "6b0000000000000000000009"
+    },
+    "nguoiDanhGiaId": {
+      "$oid": "670000000000000000000013"
+    },
+    "nguoiThueId": {
+      "$oid": "6a0000000000000000000010"
+    },
+    "diem": {
+      "$numberInt": "5"
+    },
+    "tieuDe": "[DEMO] Danh gia phong 8",
+    "noiDung": "[DEMO] Danh gia gia lap, dung thu hien thi va phan trang.",
+    "hinhAnh": [],
+    "trangThai": "CHO_DUYET",
+    "phanHoiChuTro": {
+      "noiDung": "",
+      "nguoiPhanHoiId": null,
+      "phanHoiLuc": null
+    },
+    "lyDoAn": "",
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1793923200000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "740000000000000000000009"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000014"
+    },
+    "tinDangId": null,
+    "hopDongId": {
+      "$oid": "6b0000000000000000000010"
+    },
+    "nguoiDanhGiaId": {
+      "$oid": "670000000000000000000014"
+    },
+    "nguoiThueId": {
+      "$oid": "6a0000000000000000000011"
+    },
+    "diem": {
+      "$numberInt": "3"
+    },
+    "tieuDe": "[DEMO] Danh gia phong 9",
+    "noiDung": "[DEMO] Danh gia gia lap, dung thu hien thi va phan trang.",
+    "hinhAnh": [],
+    "trangThai": "DA_DUYET",
+    "phanHoiChuTro": {
+      "noiDung": "",
+      "nguoiPhanHoiId": null,
+      "phanHoiLuc": null
+    },
+    "lyDoAn": "",
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1791331200000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "740000000000000000000010"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000015"
+    },
+    "tinDangId": null,
+    "hopDongId": {
+      "$oid": "6b0000000000000000000011"
+    },
+    "nguoiDanhGiaId": {
+      "$oid": "670000000000000000000015"
+    },
+    "nguoiThueId": {
+      "$oid": "6a0000000000000000000012"
+    },
+    "diem": {
+      "$numberInt": "4"
+    },
+    "tieuDe": "[DEMO] Danh gia phong 10",
+    "noiDung": "[DEMO] Danh gia gia lap, dung thu hien thi va phan trang.",
+    "hinhAnh": [],
+    "trangThai": "DA_DUYET",
+    "phanHoiChuTro": {
+      "noiDung": "",
+      "nguoiPhanHoiId": null,
+      "phanHoiLuc": null
+    },
+    "lyDoAn": "",
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1794096000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "740000000000000000000011"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000016"
+    },
+    "tinDangId": null,
+    "hopDongId": {
+      "$oid": "6b0000000000000000000012"
+    },
+    "nguoiDanhGiaId": {
+      "$oid": "670000000000000000000016"
+    },
+    "nguoiThueId": {
+      "$oid": "6a0000000000000000000013"
+    },
+    "diem": {
+      "$numberInt": "5"
+    },
+    "tieuDe": "[DEMO] Danh gia phong 11",
+    "noiDung": "[DEMO] Danh gia gia lap, dung thu hien thi va phan trang.",
+    "hinhAnh": [],
+    "trangThai": "DA_DUYET",
+    "phanHoiChuTro": {
+      "noiDung": "",
+      "nguoiPhanHoiId": null,
+      "phanHoiLuc": null
+    },
+    "lyDoAn": "",
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1791504000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "740000000000000000000012"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000017"
+    },
+    "tinDangId": null,
+    "hopDongId": {
+      "$oid": "6b0000000000000000000013"
+    },
+    "nguoiDanhGiaId": {
+      "$oid": "670000000000000000000017"
+    },
+    "nguoiThueId": {
+      "$oid": "6a0000000000000000000014"
+    },
+    "diem": {
+      "$numberInt": "3"
+    },
+    "tieuDe": "[DEMO] Danh gia phong 12",
+    "noiDung": "[DEMO] Danh gia gia lap, dung thu hien thi va phan trang.",
+    "hinhAnh": [],
+    "trangThai": "DA_DUYET",
+    "phanHoiChuTro": {
+      "noiDung": "",
+      "nguoiPhanHoiId": null,
+      "phanHoiLuc": null
+    },
+    "lyDoAn": "",
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1794268800000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "740000000000000000000013"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000018"
+    },
+    "tinDangId": null,
+    "hopDongId": {
+      "$oid": "6b0000000000000000000014"
+    },
+    "nguoiDanhGiaId": {
+      "$oid": "670000000000000000000018"
+    },
+    "nguoiThueId": {
+      "$oid": "6a0000000000000000000015"
+    },
+    "diem": {
+      "$numberInt": "4"
+    },
+    "tieuDe": "[DEMO] Danh gia phong 13",
+    "noiDung": "[DEMO] Danh gia gia lap, dung thu hien thi va phan trang.",
+    "hinhAnh": [],
+    "trangThai": "CHO_DUYET",
+    "phanHoiChuTro": {
+      "noiDung": "",
+      "nguoiPhanHoiId": null,
+      "phanHoiLuc": null
+    },
+    "lyDoAn": "",
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1791676800000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "740000000000000000000014"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000019"
+    },
+    "tinDangId": null,
+    "hopDongId": {
+      "$oid": "6b0000000000000000000015"
+    },
+    "nguoiDanhGiaId": {
+      "$oid": "670000000000000000000019"
+    },
+    "nguoiThueId": {
+      "$oid": "6a0000000000000000000016"
+    },
+    "diem": {
+      "$numberInt": "5"
+    },
+    "tieuDe": "[DEMO] Danh gia phong 14",
+    "noiDung": "[DEMO] Danh gia gia lap, dung thu hien thi va phan trang.",
+    "hinhAnh": [],
+    "trangThai": "DA_DUYET",
+    "phanHoiChuTro": {
+      "noiDung": "",
+      "nguoiPhanHoiId": null,
+      "phanHoiLuc": null
+    },
+    "lyDoAn": "",
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1794441600000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "740000000000000000000015"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000020"
+    },
+    "tinDangId": null,
+    "hopDongId": {
+      "$oid": "6b0000000000000000000016"
+    },
+    "nguoiDanhGiaId": {
+      "$oid": "670000000000000000000020"
+    },
+    "nguoiThueId": {
+      "$oid": "6a0000000000000000000017"
+    },
+    "diem": {
+      "$numberInt": "3"
+    },
+    "tieuDe": "[DEMO] Danh gia phong 15",
+    "noiDung": "[DEMO] Danh gia gia lap, dung thu hien thi va phan trang.",
+    "hinhAnh": [],
+    "trangThai": "DA_DUYET",
+    "phanHoiChuTro": {
+      "noiDung": "",
+      "nguoiPhanHoiId": null,
+      "phanHoiLuc": null
+    },
+    "lyDoAn": "",
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1791849600000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "740000000000000000000016"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000021"
+    },
+    "tinDangId": null,
+    "hopDongId": {
+      "$oid": "6b0000000000000000000017"
+    },
+    "nguoiDanhGiaId": {
+      "$oid": "670000000000000000000021"
+    },
+    "nguoiThueId": {
+      "$oid": "6a0000000000000000000018"
+    },
+    "diem": {
+      "$numberInt": "4"
+    },
+    "tieuDe": "[DEMO] Danh gia phong 16",
+    "noiDung": "[DEMO] Danh gia gia lap, dung thu hien thi va phan trang.",
+    "hinhAnh": [],
+    "trangThai": "DA_DUYET",
+    "phanHoiChuTro": {
+      "noiDung": "",
+      "nguoiPhanHoiId": null,
+      "phanHoiLuc": null
+    },
+    "lyDoAn": "",
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1794614400000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "740000000000000000000017"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000022"
+    },
+    "tinDangId": null,
+    "hopDongId": {
+      "$oid": "6b0000000000000000000018"
+    },
+    "nguoiDanhGiaId": {
+      "$oid": "670000000000000000000022"
+    },
+    "nguoiThueId": {
+      "$oid": "6a0000000000000000000019"
+    },
+    "diem": {
+      "$numberInt": "5"
+    },
+    "tieuDe": "[DEMO] Danh gia phong 17",
+    "noiDung": "[DEMO] Danh gia gia lap, dung thu hien thi va phan trang.",
+    "hinhAnh": [],
+    "trangThai": "DA_DUYET",
+    "phanHoiChuTro": {
+      "noiDung": "",
+      "nguoiPhanHoiId": null,
+      "phanHoiLuc": null
+    },
+    "lyDoAn": "",
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1792022400000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "740000000000000000000018"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000023"
+    },
+    "tinDangId": null,
+    "hopDongId": {
+      "$oid": "6b0000000000000000000019"
+    },
+    "nguoiDanhGiaId": {
+      "$oid": "670000000000000000000023"
+    },
+    "nguoiThueId": {
+      "$oid": "6a0000000000000000000020"
+    },
+    "diem": {
+      "$numberInt": "3"
+    },
+    "tieuDe": "[DEMO] Danh gia phong 18",
+    "noiDung": "[DEMO] Danh gia gia lap, dung thu hien thi va phan trang.",
+    "hinhAnh": [],
+    "trangThai": "CHO_DUYET",
+    "phanHoiChuTro": {
+      "noiDung": "",
+      "nguoiPhanHoiId": null,
+      "phanHoiLuc": null
+    },
+    "lyDoAn": "",
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1794787200000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "740000000000000000000019"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000024"
+    },
+    "tinDangId": null,
+    "hopDongId": {
+      "$oid": "6b0000000000000000000020"
+    },
+    "nguoiDanhGiaId": {
+      "$oid": "670000000000000000000024"
+    },
+    "nguoiThueId": {
+      "$oid": "6a0000000000000000000021"
+    },
+    "diem": {
+      "$numberInt": "4"
+    },
+    "tieuDe": "[DEMO] Danh gia phong 19",
+    "noiDung": "[DEMO] Danh gia gia lap, dung thu hien thi va phan trang.",
+    "hinhAnh": [],
+    "trangThai": "DA_DUYET",
+    "phanHoiChuTro": {
+      "noiDung": "",
+      "nguoiPhanHoiId": null,
+      "phanHoiLuc": null
+    },
+    "lyDoAn": "",
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1792195200000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "740000000000000000000020"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000025"
+    },
+    "tinDangId": null,
+    "hopDongId": {
+      "$oid": "6b0000000000000000000021"
+    },
+    "nguoiDanhGiaId": {
+      "$oid": "670000000000000000000025"
+    },
+    "nguoiThueId": {
+      "$oid": "6a0000000000000000000022"
+    },
+    "diem": {
+      "$numberInt": "5"
+    },
+    "tieuDe": "[DEMO] Danh gia phong 20",
+    "noiDung": "[DEMO] Danh gia gia lap, dung thu hien thi va phan trang.",
+    "hinhAnh": [],
+    "trangThai": "DA_DUYET",
+    "phanHoiChuTro": {
+      "noiDung": "",
+      "nguoiPhanHoiId": null,
+      "phanHoiLuc": null
+    },
+    "lyDoAn": "",
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1794960000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "740000000000000000000021"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000026"
+    },
+    "tinDangId": null,
+    "hopDongId": {
+      "$oid": "6b0000000000000000000022"
+    },
+    "nguoiDanhGiaId": {
+      "$oid": "670000000000000000000026"
+    },
+    "nguoiThueId": {
+      "$oid": "6a0000000000000000000023"
+    },
+    "diem": {
+      "$numberInt": "3"
+    },
+    "tieuDe": "[DEMO] Danh gia phong 21",
+    "noiDung": "[DEMO] Danh gia gia lap, dung thu hien thi va phan trang.",
+    "hinhAnh": [],
+    "trangThai": "DA_DUYET",
+    "phanHoiChuTro": {
+      "noiDung": "",
+      "nguoiPhanHoiId": null,
+      "phanHoiLuc": null
+    },
+    "lyDoAn": "",
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1792368000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "740000000000000000000022"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000027"
+    },
+    "tinDangId": null,
+    "hopDongId": {
+      "$oid": "6b0000000000000000000023"
+    },
+    "nguoiDanhGiaId": {
+      "$oid": "670000000000000000000027"
+    },
+    "nguoiThueId": {
+      "$oid": "6a0000000000000000000024"
+    },
+    "diem": {
+      "$numberInt": "4"
+    },
+    "tieuDe": "[DEMO] Danh gia phong 22",
+    "noiDung": "[DEMO] Danh gia gia lap, dung thu hien thi va phan trang.",
+    "hinhAnh": [],
+    "trangThai": "DA_DUYET",
+    "phanHoiChuTro": {
+      "noiDung": "",
+      "nguoiPhanHoiId": null,
+      "phanHoiLuc": null
+    },
+    "lyDoAn": "",
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1795132800000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "740000000000000000000023"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000028"
+    },
+    "tinDangId": null,
+    "hopDongId": {
+      "$oid": "6b0000000000000000000024"
+    },
+    "nguoiDanhGiaId": {
+      "$oid": "670000000000000000000028"
+    },
+    "nguoiThueId": {
+      "$oid": "6a0000000000000000000025"
+    },
+    "diem": {
+      "$numberInt": "5"
+    },
+    "tieuDe": "[DEMO] Danh gia phong 23",
+    "noiDung": "[DEMO] Danh gia gia lap, dung thu hien thi va phan trang.",
+    "hinhAnh": [],
+    "trangThai": "CHO_DUYET",
+    "phanHoiChuTro": {
+      "noiDung": "",
+      "nguoiPhanHoiId": null,
+      "phanHoiLuc": null
+    },
+    "lyDoAn": "",
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1792540800000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "740000000000000000000024"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000029"
+    },
+    "tinDangId": null,
+    "hopDongId": {
+      "$oid": "6b0000000000000000000025"
+    },
+    "nguoiDanhGiaId": {
+      "$oid": "670000000000000000000029"
+    },
+    "nguoiThueId": {
+      "$oid": "6a0000000000000000000026"
+    },
+    "diem": {
+      "$numberInt": "3"
+    },
+    "tieuDe": "[DEMO] Danh gia phong 24",
+    "noiDung": "[DEMO] Danh gia gia lap, dung thu hien thi va phan trang.",
+    "hinhAnh": [],
+    "trangThai": "DA_DUYET",
+    "phanHoiChuTro": {
+      "noiDung": "",
+      "nguoiPhanHoiId": null,
+      "phanHoiLuc": null
+    },
+    "lyDoAn": "",
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1795305600000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "740000000000000000000025"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000030"
+    },
+    "tinDangId": null,
+    "hopDongId": {
+      "$oid": "6b0000000000000000000026"
+    },
+    "nguoiDanhGiaId": {
+      "$oid": "670000000000000000000030"
+    },
+    "nguoiThueId": {
+      "$oid": "6a0000000000000000000027"
+    },
+    "diem": {
+      "$numberInt": "4"
+    },
+    "tieuDe": "[DEMO] Danh gia phong 25",
+    "noiDung": "[DEMO] Danh gia gia lap, dung thu hien thi va phan trang.",
+    "hinhAnh": [],
+    "trangThai": "DA_DUYET",
+    "phanHoiChuTro": {
+      "noiDung": "",
+      "nguoiPhanHoiId": null,
+      "phanHoiLuc": null
+    },
+    "lyDoAn": "",
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1792713600000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "740000000000000000000026"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000031"
+    },
+    "tinDangId": null,
+    "hopDongId": {
+      "$oid": "6b0000000000000000000027"
+    },
+    "nguoiDanhGiaId": {
+      "$oid": "670000000000000000000031"
+    },
+    "nguoiThueId": {
+      "$oid": "6a0000000000000000000028"
+    },
+    "diem": {
+      "$numberInt": "5"
+    },
+    "tieuDe": "[DEMO] Danh gia phong 26",
+    "noiDung": "[DEMO] Danh gia gia lap, dung thu hien thi va phan trang.",
+    "hinhAnh": [],
+    "trangThai": "DA_DUYET",
+    "phanHoiChuTro": {
+      "noiDung": "",
+      "nguoiPhanHoiId": null,
+      "phanHoiLuc": null
+    },
+    "lyDoAn": "",
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1795478400000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "740000000000000000000027"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000032"
+    },
+    "tinDangId": null,
+    "hopDongId": {
+      "$oid": "6b0000000000000000000028"
+    },
+    "nguoiDanhGiaId": {
+      "$oid": "670000000000000000000032"
+    },
+    "nguoiThueId": {
+      "$oid": "6a0000000000000000000029"
+    },
+    "diem": {
+      "$numberInt": "3"
+    },
+    "tieuDe": "[DEMO] Danh gia phong 27",
+    "noiDung": "[DEMO] Danh gia gia lap, dung thu hien thi va phan trang.",
+    "hinhAnh": [],
+    "trangThai": "DA_DUYET",
+    "phanHoiChuTro": {
+      "noiDung": "",
+      "nguoiPhanHoiId": null,
+      "phanHoiLuc": null
+    },
+    "lyDoAn": "",
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1792886400000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "740000000000000000000028"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000033"
+    },
+    "tinDangId": null,
+    "hopDongId": {
+      "$oid": "6b0000000000000000000029"
+    },
+    "nguoiDanhGiaId": {
+      "$oid": "670000000000000000000033"
+    },
+    "nguoiThueId": {
+      "$oid": "6a0000000000000000000030"
+    },
+    "diem": {
+      "$numberInt": "4"
+    },
+    "tieuDe": "[DEMO] Danh gia phong 28",
+    "noiDung": "[DEMO] Danh gia gia lap, dung thu hien thi va phan trang.",
+    "hinhAnh": [],
+    "trangThai": "CHO_DUYET",
+    "phanHoiChuTro": {
+      "noiDung": "",
+      "nguoiPhanHoiId": null,
+      "phanHoiLuc": null
+    },
+    "lyDoAn": "",
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1795651200000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "740000000000000000000029"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000034"
+    },
+    "tinDangId": null,
+    "hopDongId": {
+      "$oid": "6b0000000000000000000030"
+    },
+    "nguoiDanhGiaId": {
+      "$oid": "670000000000000000000034"
+    },
+    "nguoiThueId": {
+      "$oid": "6a0000000000000000000031"
+    },
+    "diem": {
+      "$numberInt": "5"
+    },
+    "tieuDe": "[DEMO] Danh gia phong 29",
+    "noiDung": "[DEMO] Danh gia gia lap, dung thu hien thi va phan trang.",
+    "hinhAnh": [],
+    "trangThai": "DA_DUYET",
+    "phanHoiChuTro": {
+      "noiDung": "",
+      "nguoiPhanHoiId": null,
+      "phanHoiLuc": null
+    },
+    "lyDoAn": "",
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1793059200000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "740000000000000000000030"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000035"
+    },
+    "tinDangId": null,
+    "hopDongId": {
+      "$oid": "6b0000000000000000000031"
+    },
+    "nguoiDanhGiaId": {
+      "$oid": "670000000000000000000035"
+    },
+    "nguoiThueId": {
+      "$oid": "6a0000000000000000000032"
+    },
+    "diem": {
+      "$numberInt": "3"
+    },
+    "tieuDe": "[DEMO] Danh gia phong 30",
+    "noiDung": "[DEMO] Danh gia gia lap, dung thu hien thi va phan trang.",
+    "hinhAnh": [],
+    "trangThai": "DA_DUYET",
+    "phanHoiChuTro": {
+      "noiDung": "",
+      "nguoiPhanHoiId": null,
+      "phanHoiLuc": null
+    },
+    "lyDoAn": "",
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1793491200000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "740000000000000000000031"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000036"
+    },
+    "tinDangId": null,
+    "hopDongId": {
+      "$oid": "6b0000000000000000000032"
+    },
+    "nguoiDanhGiaId": {
+      "$oid": "670000000000000000000036"
+    },
+    "nguoiThueId": {
+      "$oid": "6a0000000000000000000033"
+    },
+    "diem": {
+      "$numberInt": "4"
+    },
+    "tieuDe": "[DEMO] Danh gia phong 31",
+    "noiDung": "[DEMO] Danh gia gia lap, dung thu hien thi va phan trang.",
+    "hinhAnh": [],
+    "trangThai": "DA_DUYET",
+    "phanHoiChuTro": {
+      "noiDung": "",
+      "nguoiPhanHoiId": null,
+      "phanHoiLuc": null
+    },
+    "lyDoAn": "",
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1790899200000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "740000000000000000000032"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000037"
+    },
+    "tinDangId": null,
+    "hopDongId": {
+      "$oid": "6b0000000000000000000033"
+    },
+    "nguoiDanhGiaId": {
+      "$oid": "670000000000000000000037"
+    },
+    "nguoiThueId": {
+      "$oid": "6a0000000000000000000034"
+    },
+    "diem": {
+      "$numberInt": "5"
+    },
+    "tieuDe": "[DEMO] Danh gia phong 32",
+    "noiDung": "[DEMO] Danh gia gia lap, dung thu hien thi va phan trang.",
+    "hinhAnh": [],
+    "trangThai": "DA_DUYET",
+    "phanHoiChuTro": {
+      "noiDung": "",
+      "nguoiPhanHoiId": null,
+      "phanHoiLuc": null
+    },
+    "lyDoAn": "",
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1793664000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "740000000000000000000033"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000038"
+    },
+    "tinDangId": null,
+    "hopDongId": {
+      "$oid": "6b0000000000000000000034"
+    },
+    "nguoiDanhGiaId": {
+      "$oid": "670000000000000000000038"
+    },
+    "nguoiThueId": {
+      "$oid": "6a0000000000000000000035"
+    },
+    "diem": {
+      "$numberInt": "3"
+    },
+    "tieuDe": "[DEMO] Danh gia phong 33",
+    "noiDung": "[DEMO] Danh gia gia lap, dung thu hien thi va phan trang.",
+    "hinhAnh": [],
+    "trangThai": "CHO_DUYET",
+    "phanHoiChuTro": {
+      "noiDung": "",
+      "nguoiPhanHoiId": null,
+      "phanHoiLuc": null
+    },
+    "lyDoAn": "",
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1791072000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "740000000000000000000034"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000039"
+    },
+    "tinDangId": null,
+    "hopDongId": {
+      "$oid": "6b0000000000000000000035"
+    },
+    "nguoiDanhGiaId": {
+      "$oid": "670000000000000000000039"
+    },
+    "nguoiThueId": {
+      "$oid": "6a0000000000000000000036"
+    },
+    "diem": {
+      "$numberInt": "4"
+    },
+    "tieuDe": "[DEMO] Danh gia phong 34",
+    "noiDung": "[DEMO] Danh gia gia lap, dung thu hien thi va phan trang.",
+    "hinhAnh": [],
+    "trangThai": "DA_DUYET",
+    "phanHoiChuTro": {
+      "noiDung": "",
+      "nguoiPhanHoiId": null,
+      "phanHoiLuc": null
+    },
+    "lyDoAn": "",
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1793836800000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "740000000000000000000035"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000040"
+    },
+    "tinDangId": null,
+    "hopDongId": {
+      "$oid": "6b0000000000000000000036"
+    },
+    "nguoiDanhGiaId": {
+      "$oid": "670000000000000000000040"
+    },
+    "nguoiThueId": {
+      "$oid": "6a0000000000000000000037"
+    },
+    "diem": {
+      "$numberInt": "5"
+    },
+    "tieuDe": "[DEMO] Danh gia phong 35",
+    "noiDung": "[DEMO] Danh gia gia lap, dung thu hien thi va phan trang.",
+    "hinhAnh": [],
+    "trangThai": "DA_DUYET",
+    "phanHoiChuTro": {
+      "noiDung": "",
+      "nguoiPhanHoiId": null,
+      "phanHoiLuc": null
+    },
+    "lyDoAn": "",
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1791244800000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "740000000000000000000036"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000041"
+    },
+    "tinDangId": null,
+    "hopDongId": {
+      "$oid": "6b0000000000000000000037"
+    },
+    "nguoiDanhGiaId": {
+      "$oid": "670000000000000000000041"
+    },
+    "nguoiThueId": {
+      "$oid": "6a0000000000000000000038"
+    },
+    "diem": {
+      "$numberInt": "3"
+    },
+    "tieuDe": "[DEMO] Danh gia phong 36",
+    "noiDung": "[DEMO] Danh gia gia lap, dung thu hien thi va phan trang.",
+    "hinhAnh": [],
+    "trangThai": "DA_DUYET",
+    "phanHoiChuTro": {
+      "noiDung": "",
+      "nguoiPhanHoiId": null,
+      "phanHoiLuc": null
+    },
+    "lyDoAn": "",
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1794009600000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "740000000000000000000037"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000042"
+    },
+    "tinDangId": null,
+    "hopDongId": {
+      "$oid": "6b0000000000000000000038"
+    },
+    "nguoiDanhGiaId": {
+      "$oid": "670000000000000000000042"
+    },
+    "nguoiThueId": {
+      "$oid": "6a0000000000000000000039"
+    },
+    "diem": {
+      "$numberInt": "4"
+    },
+    "tieuDe": "[DEMO] Danh gia phong 37",
+    "noiDung": "[DEMO] Danh gia gia lap, dung thu hien thi va phan trang.",
+    "hinhAnh": [],
+    "trangThai": "DA_DUYET",
+    "phanHoiChuTro": {
+      "noiDung": "",
+      "nguoiPhanHoiId": null,
+      "phanHoiLuc": null
+    },
+    "lyDoAn": "",
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1791417600000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "740000000000000000000038"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000043"
+    },
+    "tinDangId": null,
+    "hopDongId": {
+      "$oid": "6b0000000000000000000039"
+    },
+    "nguoiDanhGiaId": {
+      "$oid": "670000000000000000000043"
+    },
+    "nguoiThueId": {
+      "$oid": "6a0000000000000000000040"
+    },
+    "diem": {
+      "$numberInt": "5"
+    },
+    "tieuDe": "[DEMO] Danh gia phong 38",
+    "noiDung": "[DEMO] Danh gia gia lap, dung thu hien thi va phan trang.",
+    "hinhAnh": [],
+    "trangThai": "CHO_DUYET",
+    "phanHoiChuTro": {
+      "noiDung": "",
+      "nguoiPhanHoiId": null,
+      "phanHoiLuc": null
+    },
+    "lyDoAn": "",
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1794182400000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "740000000000000000000039"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000044"
+    },
+    "tinDangId": null,
+    "hopDongId": {
+      "$oid": "6b0000000000000000000040"
+    },
+    "nguoiDanhGiaId": {
+      "$oid": "670000000000000000000044"
+    },
+    "nguoiThueId": {
+      "$oid": "6a0000000000000000000041"
+    },
+    "diem": {
+      "$numberInt": "3"
+    },
+    "tieuDe": "[DEMO] Danh gia phong 39",
+    "noiDung": "[DEMO] Danh gia gia lap, dung thu hien thi va phan trang.",
+    "hinhAnh": [],
+    "trangThai": "DA_DUYET",
+    "phanHoiChuTro": {
+      "noiDung": "",
+      "nguoiPhanHoiId": null,
+      "phanHoiLuc": null
+    },
+    "lyDoAn": "",
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1791590400000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "740000000000000000000040"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000045"
+    },
+    "tinDangId": null,
+    "hopDongId": {
+      "$oid": "6b0000000000000000000041"
+    },
+    "nguoiDanhGiaId": {
+      "$oid": "670000000000000000000045"
+    },
+    "nguoiThueId": {
+      "$oid": "6a0000000000000000000042"
+    },
+    "diem": {
+      "$numberInt": "4"
+    },
+    "tieuDe": "[DEMO] Danh gia phong 40",
+    "noiDung": "[DEMO] Danh gia gia lap, dung thu hien thi va phan trang.",
+    "hinhAnh": [],
+    "trangThai": "DA_DUYET",
+    "phanHoiChuTro": {
+      "noiDung": "",
+      "nguoiPhanHoiId": null,
+      "phanHoiLuc": null
+    },
+    "lyDoAn": "",
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1794355200000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "740000000000000000000041"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000046"
+    },
+    "tinDangId": null,
+    "hopDongId": {
+      "$oid": "6b0000000000000000000042"
+    },
+    "nguoiDanhGiaId": {
+      "$oid": "670000000000000000000046"
+    },
+    "nguoiThueId": {
+      "$oid": "6a0000000000000000000043"
+    },
+    "diem": {
+      "$numberInt": "5"
+    },
+    "tieuDe": "[DEMO] Danh gia phong 41",
+    "noiDung": "[DEMO] Danh gia gia lap, dung thu hien thi va phan trang.",
+    "hinhAnh": [],
+    "trangThai": "DA_DUYET",
+    "phanHoiChuTro": {
+      "noiDung": "",
+      "nguoiPhanHoiId": null,
+      "phanHoiLuc": null
+    },
+    "lyDoAn": "",
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1791763200000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "740000000000000000000042"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000047"
+    },
+    "tinDangId": null,
+    "hopDongId": {
+      "$oid": "6b0000000000000000000043"
+    },
+    "nguoiDanhGiaId": {
+      "$oid": "670000000000000000000047"
+    },
+    "nguoiThueId": {
+      "$oid": "6a0000000000000000000044"
+    },
+    "diem": {
+      "$numberInt": "3"
+    },
+    "tieuDe": "[DEMO] Danh gia phong 42",
+    "noiDung": "[DEMO] Danh gia gia lap, dung thu hien thi va phan trang.",
+    "hinhAnh": [],
+    "trangThai": "DA_DUYET",
+    "phanHoiChuTro": {
+      "noiDung": "",
+      "nguoiPhanHoiId": null,
+      "phanHoiLuc": null
+    },
+    "lyDoAn": "",
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1794528000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "740000000000000000000043"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000048"
+    },
+    "tinDangId": null,
+    "hopDongId": {
+      "$oid": "6b0000000000000000000044"
+    },
+    "nguoiDanhGiaId": {
+      "$oid": "670000000000000000000048"
+    },
+    "nguoiThueId": {
+      "$oid": "6a0000000000000000000045"
+    },
+    "diem": {
+      "$numberInt": "4"
+    },
+    "tieuDe": "[DEMO] Danh gia phong 43",
+    "noiDung": "[DEMO] Danh gia gia lap, dung thu hien thi va phan trang.",
+    "hinhAnh": [],
+    "trangThai": "CHO_DUYET",
+    "phanHoiChuTro": {
+      "noiDung": "",
+      "nguoiPhanHoiId": null,
+      "phanHoiLuc": null
+    },
+    "lyDoAn": "",
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1791936000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "740000000000000000000044"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000049"
+    },
+    "tinDangId": null,
+    "hopDongId": {
+      "$oid": "6b0000000000000000000045"
+    },
+    "nguoiDanhGiaId": {
+      "$oid": "670000000000000000000049"
+    },
+    "nguoiThueId": {
+      "$oid": "6a0000000000000000000046"
+    },
+    "diem": {
+      "$numberInt": "5"
+    },
+    "tieuDe": "[DEMO] Danh gia phong 44",
+    "noiDung": "[DEMO] Danh gia gia lap, dung thu hien thi va phan trang.",
+    "hinhAnh": [],
+    "trangThai": "DA_DUYET",
+    "phanHoiChuTro": {
+      "noiDung": "",
+      "nguoiPhanHoiId": null,
+      "phanHoiLuc": null
+    },
+    "lyDoAn": "",
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1794700800000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "740000000000000000000045"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000050"
+    },
+    "tinDangId": null,
+    "hopDongId": {
+      "$oid": "6b0000000000000000000046"
+    },
+    "nguoiDanhGiaId": {
+      "$oid": "670000000000000000000050"
+    },
+    "nguoiThueId": {
+      "$oid": "6a0000000000000000000047"
+    },
+    "diem": {
+      "$numberInt": "3"
+    },
+    "tieuDe": "[DEMO] Danh gia phong 45",
+    "noiDung": "[DEMO] Danh gia gia lap, dung thu hien thi va phan trang.",
+    "hinhAnh": [],
+    "trangThai": "DA_DUYET",
+    "phanHoiChuTro": {
+      "noiDung": "",
+      "nguoiPhanHoiId": null,
+      "phanHoiLuc": null
+    },
+    "lyDoAn": "",
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1792108800000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "740000000000000000000046"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000008"
+    },
+    "tinDangId": null,
+    "hopDongId": {
+      "$oid": "6b0000000000000000000047"
+    },
+    "nguoiDanhGiaId": {
+      "$oid": "670000000000000000000008"
+    },
+    "nguoiThueId": {
+      "$oid": "6a0000000000000000000048"
+    },
+    "diem": {
+      "$numberInt": "4"
+    },
+    "tieuDe": "[DEMO] Danh gia phong 46",
+    "noiDung": "[DEMO] Danh gia gia lap, dung thu hien thi va phan trang.",
+    "hinhAnh": [],
+    "trangThai": "DA_DUYET",
+    "phanHoiChuTro": {
+      "noiDung": "",
+      "nguoiPhanHoiId": null,
+      "phanHoiLuc": null
+    },
+    "lyDoAn": "",
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1794873600000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "740000000000000000000047"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000009"
+    },
+    "tinDangId": null,
+    "hopDongId": {
+      "$oid": "6b0000000000000000000048"
+    },
+    "nguoiDanhGiaId": {
+      "$oid": "670000000000000000000009"
+    },
+    "nguoiThueId": {
+      "$oid": "6a0000000000000000000049"
+    },
+    "diem": {
+      "$numberInt": "5"
+    },
+    "tieuDe": "[DEMO] Danh gia phong 47",
+    "noiDung": "[DEMO] Danh gia gia lap, dung thu hien thi va phan trang.",
+    "hinhAnh": [],
+    "trangThai": "DA_DUYET",
+    "phanHoiChuTro": {
+      "noiDung": "",
+      "nguoiPhanHoiId": null,
+      "phanHoiLuc": null
+    },
+    "lyDoAn": "",
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1792281600000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "740000000000000000000048"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000010"
+    },
+    "tinDangId": null,
+    "hopDongId": {
+      "$oid": "6b0000000000000000000049"
+    },
+    "nguoiDanhGiaId": {
+      "$oid": "670000000000000000000010"
+    },
+    "nguoiThueId": {
+      "$oid": "6a0000000000000000000050"
+    },
+    "diem": {
+      "$numberInt": "3"
+    },
+    "tieuDe": "[DEMO] Danh gia phong 48",
+    "noiDung": "[DEMO] Danh gia gia lap, dung thu hien thi va phan trang.",
+    "hinhAnh": [],
+    "trangThai": "CHO_DUYET",
+    "phanHoiChuTro": {
+      "noiDung": "",
+      "nguoiPhanHoiId": null,
+      "phanHoiLuc": null
+    },
+    "lyDoAn": "",
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1795046400000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "740000000000000000000049"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000011"
+    },
+    "tinDangId": null,
+    "hopDongId": {
+      "$oid": "6b0000000000000000000050"
+    },
+    "nguoiDanhGiaId": {
+      "$oid": "670000000000000000000008"
+    },
+    "nguoiThueId": {
+      "$oid": "6a0000000000000000000005"
+    },
+    "diem": {
+      "$numberInt": "4"
+    },
+    "tieuDe": "[DEMO] Danh gia phong 49",
+    "noiDung": "[DEMO] Danh gia gia lap, dung thu hien thi va phan trang.",
+    "hinhAnh": [],
+    "trangThai": "DA_DUYET",
+    "phanHoiChuTro": {
+      "noiDung": "",
+      "nguoiPhanHoiId": null,
+      "phanHoiLuc": null
+    },
+    "lyDoAn": "",
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1792454400000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "740000000000000000000050"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000012"
+    },
+    "tinDangId": null,
+    "hopDongId": null,
+    "nguoiDanhGiaId": {
+      "$oid": "670000000000000000000009"
+    },
+    "nguoiThueId": {
+      "$oid": "6a0000000000000000000006"
+    },
+    "diem": {
+      "$numberInt": "5"
+    },
+    "tieuDe": "[DEMO] Danh gia phong 50",
+    "noiDung": "[DEMO] Danh gia gia lap, dung thu hien thi va phan trang.",
+    "hinhAnh": [],
+    "trangThai": "DA_DUYET",
+    "phanHoiChuTro": {
+      "noiDung": "",
+      "nguoiPhanHoiId": null,
+      "phanHoiLuc": null
+    },
+    "lyDoAn": "",
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1795219200000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  }
+]

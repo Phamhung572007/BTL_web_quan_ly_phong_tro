@@ -1,0 +1,2970 @@
+[
+  {
+    "_id": {
+      "$oid": "6b0000000000000000000001"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000001"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000001"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000002"
+    },
+    "nguoiThueIds": [
+      {
+        "$oid": "6a0000000000000000000001"
+      }
+    ],
+    "ngayKy": {
+      "$date": {
+        "$numberLong": "1785196800000"
+      }
+    },
+    "ngayBatDau": {
+      "$date": {
+        "$numberLong": "1785542400000"
+      }
+    },
+    "ngayKetThuc": {
+      "$date": {
+        "$numberLong": "1817078399000"
+      }
+    },
+    "ngayKetThucThucTe": null,
+    "giaThueThang": {
+      "$numberInt": "4200000"
+    },
+    "tienCoc": {
+      "$numberInt": "4200000"
+    },
+    "dieuKhoan": "Hop dong demo; khong phai hop dong that.",
+    "taiLieuUrl": "",
+    "trangThai": "DANG_HIEU_LUC",
+    "lyDoKetThuc": "",
+    "nguoiTaoId": {
+      "$oid": "670000000000000000000001"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1785207600000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1785553200000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6b0000000000000000000002"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000001"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000001"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000003"
+    },
+    "nguoiThueIds": [
+      {
+        "$oid": "6a0000000000000000000002"
+      }
+    ],
+    "ngayKy": {
+      "$date": {
+        "$numberLong": "1788998400000"
+      }
+    },
+    "ngayBatDau": {
+      "$date": {
+        "$numberLong": "1789430400000"
+      }
+    },
+    "ngayKetThuc": {
+      "$date": {
+        "$numberLong": "1820966399000"
+      }
+    },
+    "ngayKetThucThucTe": null,
+    "giaThueThang": {
+      "$numberInt": "3800000"
+    },
+    "tienCoc": {
+      "$numberInt": "3800000"
+    },
+    "dieuKhoan": "Hop dong demo; khong phai hop dong that.",
+    "taiLieuUrl": "",
+    "trangThai": "DANG_HIEU_LUC",
+    "lyDoKetThuc": "",
+    "nguoiTaoId": {
+      "$oid": "670000000000000000000001"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1789009200000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1789441200000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6b0000000000000000000003"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000002"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000002"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000005"
+    },
+    "nguoiThueIds": [
+      {
+        "$oid": "6a0000000000000000000003"
+      }
+    ],
+    "ngayKy": {
+      "$date": {
+        "$numberLong": "1782518400000"
+      }
+    },
+    "ngayBatDau": {
+      "$date": {
+        "$numberLong": "1782864000000"
+      }
+    },
+    "ngayKetThuc": {
+      "$date": {
+        "$numberLong": "1814399999000"
+      }
+    },
+    "ngayKetThucThucTe": null,
+    "giaThueThang": {
+      "$numberInt": "4500000"
+    },
+    "tienCoc": {
+      "$numberInt": "4500000"
+    },
+    "dieuKhoan": "Hop dong demo; khong phai hop dong that.",
+    "taiLieuUrl": "",
+    "trangThai": "DANG_HIEU_LUC",
+    "lyDoKetThuc": "",
+    "nguoiTaoId": {
+      "$oid": "670000000000000000000002"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1782529200000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1782874800000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6b0000000000000000000004"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000001"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000003"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000008"
+    },
+    "nguoiThueIds": [
+      {
+        "$oid": "6a0000000000000000000005"
+      }
+    ],
+    "ngayKy": {
+      "$date": {
+        "$numberLong": "1780272000000"
+      }
+    },
+    "ngayBatDau": {
+      "$date": {
+        "$numberLong": "1782864000000"
+      }
+    },
+    "ngayKetThuc": {
+      "$date": {
+        "$numberLong": "1814140800000"
+      }
+    },
+    "ngayKetThucThucTe": null,
+    "giaThueThang": {
+      "$numberInt": "3100000"
+    },
+    "tienCoc": {
+      "$numberInt": "3100000"
+    },
+    "dieuKhoan": "[DEMO] Hop dong mau, khong co gia tri giao ket.",
+    "taiLieuUrl": "",
+    "trangThai": "DANG_HIEU_LUC",
+    "lyDoKetThuc": "",
+    "nguoiTaoId": {
+      "$oid": "670000000000000000000001"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1780272000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6b0000000000000000000005"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000002"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000004"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000009"
+    },
+    "nguoiThueIds": [
+      {
+        "$oid": "6a0000000000000000000006"
+      }
+    ],
+    "ngayKy": {
+      "$date": {
+        "$numberLong": "1782950400000"
+      }
+    },
+    "ngayBatDau": {
+      "$date": {
+        "$numberLong": "1785628800000"
+      }
+    },
+    "ngayKetThuc": {
+      "$date": {
+        "$numberLong": "1816732800000"
+      }
+    },
+    "ngayKetThucThucTe": null,
+    "giaThueThang": {
+      "$numberInt": "4373000"
+    },
+    "tienCoc": {
+      "$numberInt": "4373000"
+    },
+    "dieuKhoan": "[DEMO] Hop dong mau, khong co gia tri giao ket.",
+    "taiLieuUrl": "",
+    "trangThai": "DANG_HIEU_LUC",
+    "lyDoKetThuc": "",
+    "nguoiTaoId": {
+      "$oid": "670000000000000000000002"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1780272000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6b0000000000000000000006"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000001"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000005"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000010"
+    },
+    "nguoiThueIds": [
+      {
+        "$oid": "6a0000000000000000000007"
+      }
+    ],
+    "ngayKy": {
+      "$date": {
+        "$numberLong": "1785715200000"
+      }
+    },
+    "ngayBatDau": {
+      "$date": {
+        "$numberLong": "1788393600000"
+      }
+    },
+    "ngayKetThuc": {
+      "$date": {
+        "$numberLong": "1819411200000"
+      }
+    },
+    "ngayKetThucThucTe": null,
+    "giaThueThang": {
+      "$numberInt": "3446000"
+    },
+    "tienCoc": {
+      "$numberInt": "3446000"
+    },
+    "dieuKhoan": "[DEMO] Hop dong mau, khong co gia tri giao ket.",
+    "taiLieuUrl": "",
+    "trangThai": "DANG_HIEU_LUC",
+    "lyDoKetThuc": "",
+    "nguoiTaoId": {
+      "$oid": "670000000000000000000001"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1780272000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6b0000000000000000000007"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000002"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000006"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000011"
+    },
+    "nguoiThueIds": [
+      {
+        "$oid": "6a0000000000000000000008"
+      }
+    ],
+    "ngayKy": {
+      "$date": {
+        "$numberLong": "1788480000000"
+      }
+    },
+    "ngayBatDau": {
+      "$date": {
+        "$numberLong": "1783123200000"
+      }
+    },
+    "ngayKetThuc": {
+      "$date": {
+        "$numberLong": "1814140800000"
+      }
+    },
+    "ngayKetThucThucTe": null,
+    "giaThueThang": {
+      "$numberInt": "4719000"
+    },
+    "tienCoc": {
+      "$numberInt": "4719000"
+    },
+    "dieuKhoan": "[DEMO] Hop dong mau, khong co gia tri giao ket.",
+    "taiLieuUrl": "",
+    "trangThai": "DANG_HIEU_LUC",
+    "lyDoKetThuc": "",
+    "nguoiTaoId": {
+      "$oid": "670000000000000000000002"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1780272000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6b0000000000000000000008"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000001"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000007"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000012"
+    },
+    "nguoiThueIds": [
+      {
+        "$oid": "6a0000000000000000000009"
+      }
+    ],
+    "ngayKy": {
+      "$date": {
+        "$numberLong": "1780617600000"
+      }
+    },
+    "ngayBatDau": {
+      "$date": {
+        "$numberLong": "1785888000000"
+      }
+    },
+    "ngayKetThuc": {
+      "$date": {
+        "$numberLong": "1816732800000"
+      }
+    },
+    "ngayKetThucThucTe": null,
+    "giaThueThang": {
+      "$numberInt": "3792000"
+    },
+    "tienCoc": {
+      "$numberInt": "3792000"
+    },
+    "dieuKhoan": "[DEMO] Hop dong mau, khong co gia tri giao ket.",
+    "taiLieuUrl": "",
+    "trangThai": "DANG_HIEU_LUC",
+    "lyDoKetThuc": "",
+    "nguoiTaoId": {
+      "$oid": "670000000000000000000001"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1780272000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6b0000000000000000000009"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000002"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000008"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000013"
+    },
+    "nguoiThueIds": [
+      {
+        "$oid": "6a0000000000000000000010"
+      }
+    ],
+    "ngayKy": {
+      "$date": {
+        "$numberLong": "1783296000000"
+      }
+    },
+    "ngayBatDau": {
+      "$date": {
+        "$numberLong": "1788652800000"
+      }
+    },
+    "ngayKetThuc": {
+      "$date": {
+        "$numberLong": "1819411200000"
+      }
+    },
+    "ngayKetThucThucTe": null,
+    "giaThueThang": {
+      "$numberInt": "5065000"
+    },
+    "tienCoc": {
+      "$numberInt": "5065000"
+    },
+    "dieuKhoan": "[DEMO] Hop dong mau, khong co gia tri giao ket.",
+    "taiLieuUrl": "",
+    "trangThai": "DANG_HIEU_LUC",
+    "lyDoKetThuc": "",
+    "nguoiTaoId": {
+      "$oid": "670000000000000000000002"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1780272000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6b0000000000000000000010"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000001"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000009"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000014"
+    },
+    "nguoiThueIds": [
+      {
+        "$oid": "6a0000000000000000000011"
+      }
+    ],
+    "ngayKy": {
+      "$date": {
+        "$numberLong": "1786060800000"
+      }
+    },
+    "ngayBatDau": {
+      "$date": {
+        "$numberLong": "1783382400000"
+      }
+    },
+    "ngayKetThuc": {
+      "$date": {
+        "$numberLong": "1814140800000"
+      }
+    },
+    "ngayKetThucThucTe": null,
+    "giaThueThang": {
+      "$numberInt": "4138000"
+    },
+    "tienCoc": {
+      "$numberInt": "4138000"
+    },
+    "dieuKhoan": "[DEMO] Hop dong mau, khong co gia tri giao ket.",
+    "taiLieuUrl": "",
+    "trangThai": "DANG_HIEU_LUC",
+    "lyDoKetThuc": "",
+    "nguoiTaoId": {
+      "$oid": "670000000000000000000001"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1780272000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6b0000000000000000000011"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000002"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000010"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000015"
+    },
+    "nguoiThueIds": [
+      {
+        "$oid": "6a0000000000000000000012"
+      }
+    ],
+    "ngayKy": {
+      "$date": {
+        "$numberLong": "1788825600000"
+      }
+    },
+    "ngayBatDau": {
+      "$date": {
+        "$numberLong": "1786147200000"
+      }
+    },
+    "ngayKetThuc": {
+      "$date": {
+        "$numberLong": "1816732800000"
+      }
+    },
+    "ngayKetThucThucTe": null,
+    "giaThueThang": {
+      "$numberInt": "5411000"
+    },
+    "tienCoc": {
+      "$numberInt": "5411000"
+    },
+    "dieuKhoan": "[DEMO] Hop dong mau, khong co gia tri giao ket.",
+    "taiLieuUrl": "",
+    "trangThai": "DANG_HIEU_LUC",
+    "lyDoKetThuc": "",
+    "nguoiTaoId": {
+      "$oid": "670000000000000000000002"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1780272000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6b0000000000000000000012"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000001"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000011"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000016"
+    },
+    "nguoiThueIds": [
+      {
+        "$oid": "6a0000000000000000000013"
+      }
+    ],
+    "ngayKy": {
+      "$date": {
+        "$numberLong": "1780963200000"
+      }
+    },
+    "ngayBatDau": {
+      "$date": {
+        "$numberLong": "1788912000000"
+      }
+    },
+    "ngayKetThuc": {
+      "$date": {
+        "$numberLong": "1819411200000"
+      }
+    },
+    "ngayKetThucThucTe": null,
+    "giaThueThang": {
+      "$numberInt": "4484000"
+    },
+    "tienCoc": {
+      "$numberInt": "4484000"
+    },
+    "dieuKhoan": "[DEMO] Hop dong mau, khong co gia tri giao ket.",
+    "taiLieuUrl": "",
+    "trangThai": "DANG_HIEU_LUC",
+    "lyDoKetThuc": "",
+    "nguoiTaoId": {
+      "$oid": "670000000000000000000001"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1780272000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6b0000000000000000000013"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000002"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000012"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000017"
+    },
+    "nguoiThueIds": [
+      {
+        "$oid": "6a0000000000000000000014"
+      }
+    ],
+    "ngayKy": {
+      "$date": {
+        "$numberLong": "1783641600000"
+      }
+    },
+    "ngayBatDau": {
+      "$date": {
+        "$numberLong": "1783641600000"
+      }
+    },
+    "ngayKetThuc": {
+      "$date": {
+        "$numberLong": "1814140800000"
+      }
+    },
+    "ngayKetThucThucTe": null,
+    "giaThueThang": {
+      "$numberInt": "5757000"
+    },
+    "tienCoc": {
+      "$numberInt": "5757000"
+    },
+    "dieuKhoan": "[DEMO] Hop dong mau, khong co gia tri giao ket.",
+    "taiLieuUrl": "",
+    "trangThai": "DANG_HIEU_LUC",
+    "lyDoKetThuc": "",
+    "nguoiTaoId": {
+      "$oid": "670000000000000000000002"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1780272000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6b0000000000000000000014"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000001"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000013"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000018"
+    },
+    "nguoiThueIds": [
+      {
+        "$oid": "6a0000000000000000000015"
+      }
+    ],
+    "ngayKy": {
+      "$date": {
+        "$numberLong": "1786406400000"
+      }
+    },
+    "ngayBatDau": {
+      "$date": {
+        "$numberLong": "1786406400000"
+      }
+    },
+    "ngayKetThuc": {
+      "$date": {
+        "$numberLong": "1816732800000"
+      }
+    },
+    "ngayKetThucThucTe": null,
+    "giaThueThang": {
+      "$numberInt": "4830000"
+    },
+    "tienCoc": {
+      "$numberInt": "4830000"
+    },
+    "dieuKhoan": "[DEMO] Hop dong mau, khong co gia tri giao ket.",
+    "taiLieuUrl": "",
+    "trangThai": "DANG_HIEU_LUC",
+    "lyDoKetThuc": "",
+    "nguoiTaoId": {
+      "$oid": "670000000000000000000001"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1780272000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6b0000000000000000000015"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000002"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000014"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000019"
+    },
+    "nguoiThueIds": [
+      {
+        "$oid": "6a0000000000000000000016"
+      }
+    ],
+    "ngayKy": {
+      "$date": {
+        "$numberLong": "1789171200000"
+      }
+    },
+    "ngayBatDau": {
+      "$date": {
+        "$numberLong": "1789171200000"
+      }
+    },
+    "ngayKetThuc": {
+      "$date": {
+        "$numberLong": "1819411200000"
+      }
+    },
+    "ngayKetThucThucTe": null,
+    "giaThueThang": {
+      "$numberInt": "6103000"
+    },
+    "tienCoc": {
+      "$numberInt": "6103000"
+    },
+    "dieuKhoan": "[DEMO] Hop dong mau, khong co gia tri giao ket.",
+    "taiLieuUrl": "",
+    "trangThai": "DANG_HIEU_LUC",
+    "lyDoKetThuc": "",
+    "nguoiTaoId": {
+      "$oid": "670000000000000000000002"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1780272000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6b0000000000000000000016"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000001"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000015"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000020"
+    },
+    "nguoiThueIds": [
+      {
+        "$oid": "6a0000000000000000000017"
+      }
+    ],
+    "ngayKy": {
+      "$date": {
+        "$numberLong": "1781308800000"
+      }
+    },
+    "ngayBatDau": {
+      "$date": {
+        "$numberLong": "1783900800000"
+      }
+    },
+    "ngayKetThuc": {
+      "$date": {
+        "$numberLong": "1814140800000"
+      }
+    },
+    "ngayKetThucThucTe": null,
+    "giaThueThang": {
+      "$numberInt": "5176000"
+    },
+    "tienCoc": {
+      "$numberInt": "5176000"
+    },
+    "dieuKhoan": "[DEMO] Hop dong mau, khong co gia tri giao ket.",
+    "taiLieuUrl": "",
+    "trangThai": "DANG_HIEU_LUC",
+    "lyDoKetThuc": "",
+    "nguoiTaoId": {
+      "$oid": "670000000000000000000001"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1780272000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6b0000000000000000000017"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000002"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000016"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000021"
+    },
+    "nguoiThueIds": [
+      {
+        "$oid": "6a0000000000000000000018"
+      }
+    ],
+    "ngayKy": {
+      "$date": {
+        "$numberLong": "1783987200000"
+      }
+    },
+    "ngayBatDau": {
+      "$date": {
+        "$numberLong": "1786665600000"
+      }
+    },
+    "ngayKetThuc": {
+      "$date": {
+        "$numberLong": "1816732800000"
+      }
+    },
+    "ngayKetThucThucTe": null,
+    "giaThueThang": {
+      "$numberInt": "6449000"
+    },
+    "tienCoc": {
+      "$numberInt": "6449000"
+    },
+    "dieuKhoan": "[DEMO] Hop dong mau, khong co gia tri giao ket.",
+    "taiLieuUrl": "",
+    "trangThai": "DANG_HIEU_LUC",
+    "lyDoKetThuc": "",
+    "nguoiTaoId": {
+      "$oid": "670000000000000000000002"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1780272000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6b0000000000000000000018"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000001"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000017"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000022"
+    },
+    "nguoiThueIds": [
+      {
+        "$oid": "6a0000000000000000000019"
+      }
+    ],
+    "ngayKy": {
+      "$date": {
+        "$numberLong": "1786752000000"
+      }
+    },
+    "ngayBatDau": {
+      "$date": {
+        "$numberLong": "1789430400000"
+      }
+    },
+    "ngayKetThuc": {
+      "$date": {
+        "$numberLong": "1819411200000"
+      }
+    },
+    "ngayKetThucThucTe": null,
+    "giaThueThang": {
+      "$numberInt": "5522000"
+    },
+    "tienCoc": {
+      "$numberInt": "5522000"
+    },
+    "dieuKhoan": "[DEMO] Hop dong mau, khong co gia tri giao ket.",
+    "taiLieuUrl": "",
+    "trangThai": "DANG_HIEU_LUC",
+    "lyDoKetThuc": "",
+    "nguoiTaoId": {
+      "$oid": "670000000000000000000001"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1780272000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6b0000000000000000000019"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000002"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000018"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000023"
+    },
+    "nguoiThueIds": [
+      {
+        "$oid": "6a0000000000000000000020"
+      }
+    ],
+    "ngayKy": {
+      "$date": {
+        "$numberLong": "1789516800000"
+      }
+    },
+    "ngayBatDau": {
+      "$date": {
+        "$numberLong": "1784160000000"
+      }
+    },
+    "ngayKetThuc": {
+      "$date": {
+        "$numberLong": "1814140800000"
+      }
+    },
+    "ngayKetThucThucTe": null,
+    "giaThueThang": {
+      "$numberInt": "6795000"
+    },
+    "tienCoc": {
+      "$numberInt": "6795000"
+    },
+    "dieuKhoan": "[DEMO] Hop dong mau, khong co gia tri giao ket.",
+    "taiLieuUrl": "",
+    "trangThai": "DANG_HIEU_LUC",
+    "lyDoKetThuc": "",
+    "nguoiTaoId": {
+      "$oid": "670000000000000000000002"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1780272000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6b0000000000000000000020"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000001"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000019"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000024"
+    },
+    "nguoiThueIds": [
+      {
+        "$oid": "6a0000000000000000000021"
+      }
+    ],
+    "ngayKy": {
+      "$date": {
+        "$numberLong": "1781654400000"
+      }
+    },
+    "ngayBatDau": {
+      "$date": {
+        "$numberLong": "1786924800000"
+      }
+    },
+    "ngayKetThuc": {
+      "$date": {
+        "$numberLong": "1816732800000"
+      }
+    },
+    "ngayKetThucThucTe": null,
+    "giaThueThang": {
+      "$numberInt": "3268000"
+    },
+    "tienCoc": {
+      "$numberInt": "3268000"
+    },
+    "dieuKhoan": "[DEMO] Hop dong mau, khong co gia tri giao ket.",
+    "taiLieuUrl": "",
+    "trangThai": "DANG_HIEU_LUC",
+    "lyDoKetThuc": "",
+    "nguoiTaoId": {
+      "$oid": "670000000000000000000001"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1780272000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6b0000000000000000000021"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000002"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000020"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000025"
+    },
+    "nguoiThueIds": [
+      {
+        "$oid": "6a0000000000000000000022"
+      }
+    ],
+    "ngayKy": {
+      "$date": {
+        "$numberLong": "1784332800000"
+      }
+    },
+    "ngayBatDau": {
+      "$date": {
+        "$numberLong": "1789689600000"
+      }
+    },
+    "ngayKetThuc": {
+      "$date": {
+        "$numberLong": "1819411200000"
+      }
+    },
+    "ngayKetThucThucTe": null,
+    "giaThueThang": {
+      "$numberInt": "4541000"
+    },
+    "tienCoc": {
+      "$numberInt": "4541000"
+    },
+    "dieuKhoan": "[DEMO] Hop dong mau, khong co gia tri giao ket.",
+    "taiLieuUrl": "",
+    "trangThai": "DANG_HIEU_LUC",
+    "lyDoKetThuc": "",
+    "nguoiTaoId": {
+      "$oid": "670000000000000000000002"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1780272000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6b0000000000000000000022"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000001"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000021"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000026"
+    },
+    "nguoiThueIds": [
+      {
+        "$oid": "6a0000000000000000000023"
+      }
+    ],
+    "ngayKy": {
+      "$date": {
+        "$numberLong": "1787097600000"
+      }
+    },
+    "ngayBatDau": {
+      "$date": {
+        "$numberLong": "1784419200000"
+      }
+    },
+    "ngayKetThuc": {
+      "$date": {
+        "$numberLong": "1814140800000"
+      }
+    },
+    "ngayKetThucThucTe": null,
+    "giaThueThang": {
+      "$numberInt": "3614000"
+    },
+    "tienCoc": {
+      "$numberInt": "3614000"
+    },
+    "dieuKhoan": "[DEMO] Hop dong mau, khong co gia tri giao ket.",
+    "taiLieuUrl": "",
+    "trangThai": "DANG_HIEU_LUC",
+    "lyDoKetThuc": "",
+    "nguoiTaoId": {
+      "$oid": "670000000000000000000001"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1780272000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6b0000000000000000000023"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000002"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000022"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000027"
+    },
+    "nguoiThueIds": [
+      {
+        "$oid": "6a0000000000000000000024"
+      }
+    ],
+    "ngayKy": {
+      "$date": {
+        "$numberLong": "1789862400000"
+      }
+    },
+    "ngayBatDau": {
+      "$date": {
+        "$numberLong": "1787184000000"
+      }
+    },
+    "ngayKetThuc": {
+      "$date": {
+        "$numberLong": "1816732800000"
+      }
+    },
+    "ngayKetThucThucTe": null,
+    "giaThueThang": {
+      "$numberInt": "4887000"
+    },
+    "tienCoc": {
+      "$numberInt": "4887000"
+    },
+    "dieuKhoan": "[DEMO] Hop dong mau, khong co gia tri giao ket.",
+    "taiLieuUrl": "",
+    "trangThai": "DANG_HIEU_LUC",
+    "lyDoKetThuc": "",
+    "nguoiTaoId": {
+      "$oid": "670000000000000000000002"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1780272000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6b0000000000000000000024"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000001"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000023"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000028"
+    },
+    "nguoiThueIds": [
+      {
+        "$oid": "6a0000000000000000000025"
+      }
+    ],
+    "ngayKy": {
+      "$date": {
+        "$numberLong": "1782000000000"
+      }
+    },
+    "ngayBatDau": {
+      "$date": {
+        "$numberLong": "1789948800000"
+      }
+    },
+    "ngayKetThuc": {
+      "$date": {
+        "$numberLong": "1819411200000"
+      }
+    },
+    "ngayKetThucThucTe": null,
+    "giaThueThang": {
+      "$numberInt": "3960000"
+    },
+    "tienCoc": {
+      "$numberInt": "3960000"
+    },
+    "dieuKhoan": "[DEMO] Hop dong mau, khong co gia tri giao ket.",
+    "taiLieuUrl": "",
+    "trangThai": "DANG_HIEU_LUC",
+    "lyDoKetThuc": "",
+    "nguoiTaoId": {
+      "$oid": "670000000000000000000001"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1780272000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6b0000000000000000000025"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000002"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000024"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000029"
+    },
+    "nguoiThueIds": [
+      {
+        "$oid": "6a0000000000000000000026"
+      }
+    ],
+    "ngayKy": {
+      "$date": {
+        "$numberLong": "1784678400000"
+      }
+    },
+    "ngayBatDau": {
+      "$date": {
+        "$numberLong": "1784678400000"
+      }
+    },
+    "ngayKetThuc": {
+      "$date": {
+        "$numberLong": "1814140800000"
+      }
+    },
+    "ngayKetThucThucTe": null,
+    "giaThueThang": {
+      "$numberInt": "5233000"
+    },
+    "tienCoc": {
+      "$numberInt": "5233000"
+    },
+    "dieuKhoan": "[DEMO] Hop dong mau, khong co gia tri giao ket.",
+    "taiLieuUrl": "",
+    "trangThai": "DANG_HIEU_LUC",
+    "lyDoKetThuc": "",
+    "nguoiTaoId": {
+      "$oid": "670000000000000000000002"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1780272000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6b0000000000000000000026"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000001"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000025"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000030"
+    },
+    "nguoiThueIds": [
+      {
+        "$oid": "6a0000000000000000000027"
+      }
+    ],
+    "ngayKy": {
+      "$date": {
+        "$numberLong": "1787443200000"
+      }
+    },
+    "ngayBatDau": {
+      "$date": {
+        "$numberLong": "1787443200000"
+      }
+    },
+    "ngayKetThuc": {
+      "$date": {
+        "$numberLong": "1816732800000"
+      }
+    },
+    "ngayKetThucThucTe": null,
+    "giaThueThang": {
+      "$numberInt": "4306000"
+    },
+    "tienCoc": {
+      "$numberInt": "4306000"
+    },
+    "dieuKhoan": "[DEMO] Hop dong mau, khong co gia tri giao ket.",
+    "taiLieuUrl": "",
+    "trangThai": "DANG_HIEU_LUC",
+    "lyDoKetThuc": "",
+    "nguoiTaoId": {
+      "$oid": "670000000000000000000001"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1780272000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6b0000000000000000000027"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000002"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000026"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000031"
+    },
+    "nguoiThueIds": [
+      {
+        "$oid": "6a0000000000000000000028"
+      }
+    ],
+    "ngayKy": {
+      "$date": {
+        "$numberLong": "1790208000000"
+      }
+    },
+    "ngayBatDau": {
+      "$date": {
+        "$numberLong": "1790208000000"
+      }
+    },
+    "ngayKetThuc": {
+      "$date": {
+        "$numberLong": "1819411200000"
+      }
+    },
+    "ngayKetThucThucTe": null,
+    "giaThueThang": {
+      "$numberInt": "5579000"
+    },
+    "tienCoc": {
+      "$numberInt": "5579000"
+    },
+    "dieuKhoan": "[DEMO] Hop dong mau, khong co gia tri giao ket.",
+    "taiLieuUrl": "",
+    "trangThai": "DANG_HIEU_LUC",
+    "lyDoKetThuc": "",
+    "nguoiTaoId": {
+      "$oid": "670000000000000000000002"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1780272000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6b0000000000000000000028"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000001"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000027"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000032"
+    },
+    "nguoiThueIds": [
+      {
+        "$oid": "6a0000000000000000000029"
+      }
+    ],
+    "ngayKy": {
+      "$date": {
+        "$numberLong": "1782345600000"
+      }
+    },
+    "ngayBatDau": {
+      "$date": {
+        "$numberLong": "1784937600000"
+      }
+    },
+    "ngayKetThuc": {
+      "$date": {
+        "$numberLong": "1814140800000"
+      }
+    },
+    "ngayKetThucThucTe": null,
+    "giaThueThang": {
+      "$numberInt": "4652000"
+    },
+    "tienCoc": {
+      "$numberInt": "4652000"
+    },
+    "dieuKhoan": "[DEMO] Hop dong mau, khong co gia tri giao ket.",
+    "taiLieuUrl": "",
+    "trangThai": "DANG_HIEU_LUC",
+    "lyDoKetThuc": "",
+    "nguoiTaoId": {
+      "$oid": "670000000000000000000001"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1780272000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6b0000000000000000000029"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000002"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000028"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000033"
+    },
+    "nguoiThueIds": [
+      {
+        "$oid": "6a0000000000000000000030"
+      }
+    ],
+    "ngayKy": {
+      "$date": {
+        "$numberLong": "1785024000000"
+      }
+    },
+    "ngayBatDau": {
+      "$date": {
+        "$numberLong": "1785542400000"
+      }
+    },
+    "ngayKetThuc": {
+      "$date": {
+        "$numberLong": "1816732800000"
+      }
+    },
+    "ngayKetThucThucTe": null,
+    "giaThueThang": {
+      "$numberInt": "5925000"
+    },
+    "tienCoc": {
+      "$numberInt": "5925000"
+    },
+    "dieuKhoan": "[DEMO] Hop dong mau, khong co gia tri giao ket.",
+    "taiLieuUrl": "",
+    "trangThai": "DANG_HIEU_LUC",
+    "lyDoKetThuc": "",
+    "nguoiTaoId": {
+      "$oid": "670000000000000000000002"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1780272000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6b0000000000000000000030"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000001"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000029"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000034"
+    },
+    "nguoiThueIds": [
+      {
+        "$oid": "6a0000000000000000000031"
+      }
+    ],
+    "ngayKy": {
+      "$date": {
+        "$numberLong": "1785542400000"
+      }
+    },
+    "ngayBatDau": {
+      "$date": {
+        "$numberLong": "1788307200000"
+      }
+    },
+    "ngayKetThuc": {
+      "$date": {
+        "$numberLong": "1819411200000"
+      }
+    },
+    "ngayKetThucThucTe": null,
+    "giaThueThang": {
+      "$numberInt": "4998000"
+    },
+    "tienCoc": {
+      "$numberInt": "4998000"
+    },
+    "dieuKhoan": "[DEMO] Hop dong mau, khong co gia tri giao ket.",
+    "taiLieuUrl": "",
+    "trangThai": "DANG_HIEU_LUC",
+    "lyDoKetThuc": "",
+    "nguoiTaoId": {
+      "$oid": "670000000000000000000001"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1780272000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6b0000000000000000000031"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000002"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000030"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000035"
+    },
+    "nguoiThueIds": [
+      {
+        "$oid": "6a0000000000000000000032"
+      }
+    ],
+    "ngayKy": {
+      "$date": {
+        "$numberLong": "1788307200000"
+      }
+    },
+    "ngayBatDau": {
+      "$date": {
+        "$numberLong": "1783036800000"
+      }
+    },
+    "ngayKetThuc": {
+      "$date": {
+        "$numberLong": "1814140800000"
+      }
+    },
+    "ngayKetThucThucTe": null,
+    "giaThueThang": {
+      "$numberInt": "6271000"
+    },
+    "tienCoc": {
+      "$numberInt": "6271000"
+    },
+    "dieuKhoan": "[DEMO] Hop dong mau, khong co gia tri giao ket.",
+    "taiLieuUrl": "",
+    "trangThai": "DANG_HIEU_LUC",
+    "lyDoKetThuc": "",
+    "nguoiTaoId": {
+      "$oid": "670000000000000000000002"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1780272000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6b0000000000000000000032"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000001"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000031"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000036"
+    },
+    "nguoiThueIds": [
+      {
+        "$oid": "6a0000000000000000000033"
+      }
+    ],
+    "ngayKy": {
+      "$date": {
+        "$numberLong": "1780444800000"
+      }
+    },
+    "ngayBatDau": {
+      "$date": {
+        "$numberLong": "1785801600000"
+      }
+    },
+    "ngayKetThuc": {
+      "$date": {
+        "$numberLong": "1816732800000"
+      }
+    },
+    "ngayKetThucThucTe": null,
+    "giaThueThang": {
+      "$numberInt": "5344000"
+    },
+    "tienCoc": {
+      "$numberInt": "5344000"
+    },
+    "dieuKhoan": "[DEMO] Hop dong mau, khong co gia tri giao ket.",
+    "taiLieuUrl": "",
+    "trangThai": "DANG_HIEU_LUC",
+    "lyDoKetThuc": "",
+    "nguoiTaoId": {
+      "$oid": "670000000000000000000001"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1780272000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6b0000000000000000000033"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000002"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000032"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000037"
+    },
+    "nguoiThueIds": [
+      {
+        "$oid": "6a0000000000000000000034"
+      }
+    ],
+    "ngayKy": {
+      "$date": {
+        "$numberLong": "1783123200000"
+      }
+    },
+    "ngayBatDau": {
+      "$date": {
+        "$numberLong": "1788566400000"
+      }
+    },
+    "ngayKetThuc": {
+      "$date": {
+        "$numberLong": "1819411200000"
+      }
+    },
+    "ngayKetThucThucTe": null,
+    "giaThueThang": {
+      "$numberInt": "6617000"
+    },
+    "tienCoc": {
+      "$numberInt": "6617000"
+    },
+    "dieuKhoan": "[DEMO] Hop dong mau, khong co gia tri giao ket.",
+    "taiLieuUrl": "",
+    "trangThai": "DANG_HIEU_LUC",
+    "lyDoKetThuc": "",
+    "nguoiTaoId": {
+      "$oid": "670000000000000000000002"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1780272000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6b0000000000000000000034"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000001"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000003"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000008"
+    },
+    "nguoiThueIds": [
+      {
+        "$oid": "6a0000000000000000000035"
+      }
+    ],
+    "ngayKy": {
+      "$date": {
+        "$numberLong": "1767657600000"
+      }
+    },
+    "ngayBatDau": {
+      "$date": {
+        "$numberLong": "1770422400000"
+      }
+    },
+    "ngayKetThuc": {
+      "$date": {
+        "$numberLong": "1785196800000"
+      }
+    },
+    "ngayKetThucThucTe": {
+      "$date": {
+        "$numberLong": "1785196800000"
+      }
+    },
+    "giaThueThang": {
+      "$numberInt": "3100000"
+    },
+    "tienCoc": {
+      "$numberInt": "3100000"
+    },
+    "dieuKhoan": "[DEMO] Hop dong mau, khong co gia tri giao ket.",
+    "taiLieuUrl": "",
+    "trangThai": "DA_THANH_LY",
+    "lyDoKetThuc": "Ket thuc hop dong demo.",
+    "nguoiTaoId": {
+      "$oid": "670000000000000000000001"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1780272000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6b0000000000000000000035"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000002"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000004"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000009"
+    },
+    "nguoiThueIds": [
+      {
+        "$oid": "6a0000000000000000000036"
+      }
+    ],
+    "ngayKy": {
+      "$date": {
+        "$numberLong": "1770422400000"
+      }
+    },
+    "ngayBatDau": {
+      "$date": {
+        "$numberLong": "1772928000000"
+      }
+    },
+    "ngayKetThuc": {
+      "$date": {
+        "$numberLong": "1787875200000"
+      }
+    },
+    "ngayKetThucThucTe": {
+      "$date": {
+        "$numberLong": "1787875200000"
+      }
+    },
+    "giaThueThang": {
+      "$numberInt": "4373000"
+    },
+    "tienCoc": {
+      "$numberInt": "4373000"
+    },
+    "dieuKhoan": "[DEMO] Hop dong mau, khong co gia tri giao ket.",
+    "taiLieuUrl": "",
+    "trangThai": "DA_THANH_LY",
+    "lyDoKetThuc": "Ket thuc hop dong demo.",
+    "nguoiTaoId": {
+      "$oid": "670000000000000000000002"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1780272000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6b0000000000000000000036"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000001"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000005"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000010"
+    },
+    "nguoiThueIds": [
+      {
+        "$oid": "6a0000000000000000000037"
+      }
+    ],
+    "ngayKy": {
+      "$date": {
+        "$numberLong": "1772928000000"
+      }
+    },
+    "ngayBatDau": {
+      "$date": {
+        "$numberLong": "1775692800000"
+      }
+    },
+    "ngayKetThuc": {
+      "$date": {
+        "$numberLong": "1790553600000"
+      }
+    },
+    "ngayKetThucThucTe": {
+      "$date": {
+        "$numberLong": "1790553600000"
+      }
+    },
+    "giaThueThang": {
+      "$numberInt": "3446000"
+    },
+    "tienCoc": {
+      "$numberInt": "3446000"
+    },
+    "dieuKhoan": "[DEMO] Hop dong mau, khong co gia tri giao ket.",
+    "taiLieuUrl": "",
+    "trangThai": "DA_THANH_LY",
+    "lyDoKetThuc": "Ket thuc hop dong demo.",
+    "nguoiTaoId": {
+      "$oid": "670000000000000000000001"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1780272000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6b0000000000000000000037"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000002"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000006"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000011"
+    },
+    "nguoiThueIds": [
+      {
+        "$oid": "6a0000000000000000000038"
+      }
+    ],
+    "ngayKy": {
+      "$date": {
+        "$numberLong": "1775692800000"
+      }
+    },
+    "ngayBatDau": {
+      "$date": {
+        "$numberLong": "1778371200000"
+      }
+    },
+    "ngayKetThuc": {
+      "$date": {
+        "$numberLong": "1785196800000"
+      }
+    },
+    "ngayKetThucThucTe": {
+      "$date": {
+        "$numberLong": "1785196800000"
+      }
+    },
+    "giaThueThang": {
+      "$numberInt": "4719000"
+    },
+    "tienCoc": {
+      "$numberInt": "4719000"
+    },
+    "dieuKhoan": "[DEMO] Hop dong mau, khong co gia tri giao ket.",
+    "taiLieuUrl": "",
+    "trangThai": "DA_THANH_LY",
+    "lyDoKetThuc": "Ket thuc hop dong demo.",
+    "nguoiTaoId": {
+      "$oid": "670000000000000000000002"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1780272000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6b0000000000000000000038"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000001"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000007"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000012"
+    },
+    "nguoiThueIds": [
+      {
+        "$oid": "6a0000000000000000000039"
+      }
+    ],
+    "ngayKy": {
+      "$date": {
+        "$numberLong": "1778371200000"
+      }
+    },
+    "ngayBatDau": {
+      "$date": {
+        "$numberLong": "1781136000000"
+      }
+    },
+    "ngayKetThuc": {
+      "$date": {
+        "$numberLong": "1787875200000"
+      }
+    },
+    "ngayKetThucThucTe": {
+      "$date": {
+        "$numberLong": "1787875200000"
+      }
+    },
+    "giaThueThang": {
+      "$numberInt": "3792000"
+    },
+    "tienCoc": {
+      "$numberInt": "3792000"
+    },
+    "dieuKhoan": "[DEMO] Hop dong mau, khong co gia tri giao ket.",
+    "taiLieuUrl": "",
+    "trangThai": "DA_THANH_LY",
+    "lyDoKetThuc": "Ket thuc hop dong demo.",
+    "nguoiTaoId": {
+      "$oid": "670000000000000000000001"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1780272000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6b0000000000000000000039"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000002"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000008"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000013"
+    },
+    "nguoiThueIds": [
+      {
+        "$oid": "6a0000000000000000000040"
+      }
+    ],
+    "ngayKy": {
+      "$date": {
+        "$numberLong": "1781136000000"
+      }
+    },
+    "ngayBatDau": {
+      "$date": {
+        "$numberLong": "1770854400000"
+      }
+    },
+    "ngayKetThuc": {
+      "$date": {
+        "$numberLong": "1790553600000"
+      }
+    },
+    "ngayKetThucThucTe": {
+      "$date": {
+        "$numberLong": "1790553600000"
+      }
+    },
+    "giaThueThang": {
+      "$numberInt": "5065000"
+    },
+    "tienCoc": {
+      "$numberInt": "5065000"
+    },
+    "dieuKhoan": "[DEMO] Hop dong mau, khong co gia tri giao ket.",
+    "taiLieuUrl": "",
+    "trangThai": "DA_THANH_LY",
+    "lyDoKetThuc": "Ket thuc hop dong demo.",
+    "nguoiTaoId": {
+      "$oid": "670000000000000000000002"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1780272000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6b0000000000000000000040"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000001"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000009"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000014"
+    },
+    "nguoiThueIds": [
+      {
+        "$oid": "6a0000000000000000000041"
+      }
+    ],
+    "ngayKy": {
+      "$date": {
+        "$numberLong": "1768176000000"
+      }
+    },
+    "ngayBatDau": {
+      "$date": {
+        "$numberLong": "1773360000000"
+      }
+    },
+    "ngayKetThuc": {
+      "$date": {
+        "$numberLong": "1785196800000"
+      }
+    },
+    "ngayKetThucThucTe": {
+      "$date": {
+        "$numberLong": "1785196800000"
+      }
+    },
+    "giaThueThang": {
+      "$numberInt": "4138000"
+    },
+    "tienCoc": {
+      "$numberInt": "4138000"
+    },
+    "dieuKhoan": "[DEMO] Hop dong mau, khong co gia tri giao ket.",
+    "taiLieuUrl": "",
+    "trangThai": "DA_THANH_LY",
+    "lyDoKetThuc": "Ket thuc hop dong demo.",
+    "nguoiTaoId": {
+      "$oid": "670000000000000000000001"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1780272000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6b0000000000000000000041"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000002"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000010"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000015"
+    },
+    "nguoiThueIds": [
+      {
+        "$oid": "6a0000000000000000000042"
+      }
+    ],
+    "ngayKy": {
+      "$date": {
+        "$numberLong": "1770940800000"
+      }
+    },
+    "ngayBatDau": {
+      "$date": {
+        "$numberLong": "1776124800000"
+      }
+    },
+    "ngayKetThuc": {
+      "$date": {
+        "$numberLong": "1787875200000"
+      }
+    },
+    "ngayKetThucThucTe": {
+      "$date": {
+        "$numberLong": "1787875200000"
+      }
+    },
+    "giaThueThang": {
+      "$numberInt": "5411000"
+    },
+    "tienCoc": {
+      "$numberInt": "5411000"
+    },
+    "dieuKhoan": "[DEMO] Hop dong mau, khong co gia tri giao ket.",
+    "taiLieuUrl": "",
+    "trangThai": "DA_THANH_LY",
+    "lyDoKetThuc": "Ket thuc hop dong demo.",
+    "nguoiTaoId": {
+      "$oid": "670000000000000000000002"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1780272000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6b0000000000000000000042"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000001"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000011"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000016"
+    },
+    "nguoiThueIds": [
+      {
+        "$oid": "6a0000000000000000000043"
+      }
+    ],
+    "ngayKy": {
+      "$date": {
+        "$numberLong": "1773446400000"
+      }
+    },
+    "ngayBatDau": {
+      "$date": {
+        "$numberLong": "1778803200000"
+      }
+    },
+    "ngayKetThuc": {
+      "$date": {
+        "$numberLong": "1790553600000"
+      }
+    },
+    "ngayKetThucThucTe": {
+      "$date": {
+        "$numberLong": "1790553600000"
+      }
+    },
+    "giaThueThang": {
+      "$numberInt": "4484000"
+    },
+    "tienCoc": {
+      "$numberInt": "4484000"
+    },
+    "dieuKhoan": "[DEMO] Hop dong mau, khong co gia tri giao ket.",
+    "taiLieuUrl": "",
+    "trangThai": "DA_THANH_LY",
+    "lyDoKetThuc": "Ket thuc hop dong demo.",
+    "nguoiTaoId": {
+      "$oid": "670000000000000000000001"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1780272000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6b0000000000000000000043"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000002"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000012"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000017"
+    },
+    "nguoiThueIds": [
+      {
+        "$oid": "6a0000000000000000000044"
+      }
+    ],
+    "ngayKy": {
+      "$date": {
+        "$numberLong": "1776211200000"
+      }
+    },
+    "ngayBatDau": {
+      "$date": {
+        "$numberLong": "1781568000000"
+      }
+    },
+    "ngayKetThuc": {
+      "$date": {
+        "$numberLong": "1785196800000"
+      }
+    },
+    "ngayKetThucThucTe": {
+      "$date": {
+        "$numberLong": "1785196800000"
+      }
+    },
+    "giaThueThang": {
+      "$numberInt": "5757000"
+    },
+    "tienCoc": {
+      "$numberInt": "5757000"
+    },
+    "dieuKhoan": "[DEMO] Hop dong mau, khong co gia tri giao ket.",
+    "taiLieuUrl": "",
+    "trangThai": "DA_THANH_LY",
+    "lyDoKetThuc": "Ket thuc hop dong demo.",
+    "nguoiTaoId": {
+      "$oid": "670000000000000000000002"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1780272000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6b0000000000000000000044"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000001"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000013"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000018"
+    },
+    "nguoiThueIds": [
+      {
+        "$oid": "6a0000000000000000000045"
+      }
+    ],
+    "ngayKy": {
+      "$date": {
+        "$numberLong": "1778889600000"
+      }
+    },
+    "ngayBatDau": {
+      "$date": {
+        "$numberLong": "1771286400000"
+      }
+    },
+    "ngayKetThuc": {
+      "$date": {
+        "$numberLong": "1787875200000"
+      }
+    },
+    "ngayKetThucThucTe": {
+      "$date": {
+        "$numberLong": "1787875200000"
+      }
+    },
+    "giaThueThang": {
+      "$numberInt": "4830000"
+    },
+    "tienCoc": {
+      "$numberInt": "4830000"
+    },
+    "dieuKhoan": "[DEMO] Hop dong mau, khong co gia tri giao ket.",
+    "taiLieuUrl": "",
+    "trangThai": "DA_THANH_LY",
+    "lyDoKetThuc": "Ket thuc hop dong demo.",
+    "nguoiTaoId": {
+      "$oid": "670000000000000000000001"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1780272000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6b0000000000000000000045"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000002"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000014"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000019"
+    },
+    "nguoiThueIds": [
+      {
+        "$oid": "6a0000000000000000000046"
+      }
+    ],
+    "ngayKy": {
+      "$date": {
+        "$numberLong": "1781654400000"
+      }
+    },
+    "ngayBatDau": {
+      "$date": {
+        "$numberLong": "1773792000000"
+      }
+    },
+    "ngayKetThuc": {
+      "$date": {
+        "$numberLong": "1790553600000"
+      }
+    },
+    "ngayKetThucThucTe": {
+      "$date": {
+        "$numberLong": "1790553600000"
+      }
+    },
+    "giaThueThang": {
+      "$numberInt": "6103000"
+    },
+    "tienCoc": {
+      "$numberInt": "6103000"
+    },
+    "dieuKhoan": "[DEMO] Hop dong mau, khong co gia tri giao ket.",
+    "taiLieuUrl": "",
+    "trangThai": "DA_THANH_LY",
+    "lyDoKetThuc": "Ket thuc hop dong demo.",
+    "nguoiTaoId": {
+      "$oid": "670000000000000000000002"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1780272000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6b0000000000000000000046"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000001"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000015"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000020"
+    },
+    "nguoiThueIds": [
+      {
+        "$oid": "6a0000000000000000000047"
+      }
+    ],
+    "ngayKy": {
+      "$date": {
+        "$numberLong": "1768694400000"
+      }
+    },
+    "ngayBatDau": {
+      "$date": {
+        "$numberLong": "1776556800000"
+      }
+    },
+    "ngayKetThuc": {
+      "$date": {
+        "$numberLong": "1785196800000"
+      }
+    },
+    "ngayKetThucThucTe": {
+      "$date": {
+        "$numberLong": "1785196800000"
+      }
+    },
+    "giaThueThang": {
+      "$numberInt": "5176000"
+    },
+    "tienCoc": {
+      "$numberInt": "5176000"
+    },
+    "dieuKhoan": "[DEMO] Hop dong mau, khong co gia tri giao ket.",
+    "taiLieuUrl": "",
+    "trangThai": "DA_THANH_LY",
+    "lyDoKetThuc": "Ket thuc hop dong demo.",
+    "nguoiTaoId": {
+      "$oid": "670000000000000000000001"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1780272000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6b0000000000000000000047"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000001"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000003"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000008"
+    },
+    "nguoiThueIds": [
+      {
+        "$oid": "6a0000000000000000000048"
+      }
+    ],
+    "ngayKy": {
+      "$date": {
+        "$numberLong": "1771459200000"
+      }
+    },
+    "ngayBatDau": {
+      "$date": {
+        "$numberLong": "1779235200000"
+      }
+    },
+    "ngayKetThuc": {
+      "$date": {
+        "$numberLong": "1787875200000"
+      }
+    },
+    "ngayKetThucThucTe": {
+      "$date": {
+        "$numberLong": "1787875200000"
+      }
+    },
+    "giaThueThang": {
+      "$numberInt": "3100000"
+    },
+    "tienCoc": {
+      "$numberInt": "3100000"
+    },
+    "dieuKhoan": "[DEMO] Hop dong mau, khong co gia tri giao ket.",
+    "taiLieuUrl": "",
+    "trangThai": "DA_THANH_LY",
+    "lyDoKetThuc": "Ket thuc hop dong demo.",
+    "nguoiTaoId": {
+      "$oid": "670000000000000000000001"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1780272000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6b0000000000000000000048"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000002"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000004"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000009"
+    },
+    "nguoiThueIds": [
+      {
+        "$oid": "6a0000000000000000000049"
+      }
+    ],
+    "ngayKy": {
+      "$date": {
+        "$numberLong": "1773964800000"
+      }
+    },
+    "ngayBatDau": {
+      "$date": {
+        "$numberLong": "1782000000000"
+      }
+    },
+    "ngayKetThuc": {
+      "$date": {
+        "$numberLong": "1790553600000"
+      }
+    },
+    "ngayKetThucThucTe": {
+      "$date": {
+        "$numberLong": "1790553600000"
+      }
+    },
+    "giaThueThang": {
+      "$numberInt": "4373000"
+    },
+    "tienCoc": {
+      "$numberInt": "4373000"
+    },
+    "dieuKhoan": "[DEMO] Hop dong mau, khong co gia tri giao ket.",
+    "taiLieuUrl": "",
+    "trangThai": "DA_THANH_LY",
+    "lyDoKetThuc": "Ket thuc hop dong demo.",
+    "nguoiTaoId": {
+      "$oid": "670000000000000000000002"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1780272000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6b0000000000000000000049"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000001"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000005"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000010"
+    },
+    "nguoiThueIds": [
+      {
+        "$oid": "6a0000000000000000000050"
+      }
+    ],
+    "ngayKy": {
+      "$date": {
+        "$numberLong": "1776729600000"
+      }
+    },
+    "ngayBatDau": {
+      "$date": {
+        "$numberLong": "1771718400000"
+      }
+    },
+    "ngayKetThuc": {
+      "$date": {
+        "$numberLong": "1785196800000"
+      }
+    },
+    "ngayKetThucThucTe": {
+      "$date": {
+        "$numberLong": "1785196800000"
+      }
+    },
+    "giaThueThang": {
+      "$numberInt": "3446000"
+    },
+    "tienCoc": {
+      "$numberInt": "3446000"
+    },
+    "dieuKhoan": "[DEMO] Hop dong mau, khong co gia tri giao ket.",
+    "taiLieuUrl": "",
+    "trangThai": "DA_THANH_LY",
+    "lyDoKetThuc": "Ket thuc hop dong demo.",
+    "nguoiTaoId": {
+      "$oid": "670000000000000000000001"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1780272000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6b0000000000000000000050"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000002"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000006"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000011"
+    },
+    "nguoiThueIds": [
+      {
+        "$oid": "6a0000000000000000000004"
+      }
+    ],
+    "ngayKy": {
+      "$date": {
+        "$numberLong": "1779408000000"
+      }
+    },
+    "ngayBatDau": {
+      "$date": {
+        "$numberLong": "1774224000000"
+      }
+    },
+    "ngayKetThuc": {
+      "$date": {
+        "$numberLong": "1787875200000"
+      }
+    },
+    "ngayKetThucThucTe": {
+      "$date": {
+        "$numberLong": "1787875200000"
+      }
+    },
+    "giaThueThang": {
+      "$numberInt": "4719000"
+    },
+    "tienCoc": {
+      "$numberInt": "4719000"
+    },
+    "dieuKhoan": "[DEMO] Hop dong mau, khong co gia tri giao ket.",
+    "taiLieuUrl": "",
+    "trangThai": "DA_THANH_LY",
+    "lyDoKetThuc": "Ket thuc hop dong demo.",
+    "nguoiTaoId": {
+      "$oid": "670000000000000000000002"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1780272000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  }
+]

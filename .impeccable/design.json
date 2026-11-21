@@ -1,0 +1,462 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-21T12:45:46Z",
+  "title": "Design System: StaySync",
+  "extensions": {
+    "colorMeta": {
+      "blue": {
+        "role": "primary",
+        "displayName": "Clear Work Blue",
+        "canonical": "#2563d9",
+        "tonalRamp": [
+          "oklch(15% 0.067 262)",
+          "oklch(25% 0.113 262)",
+          "oklch(35% 0.158 262)",
+          "oklch(45% 0.192 262)",
+          "oklch(55% 0.192 262)",
+          "oklch(65% 0.187 262)",
+          "oklch(80% 0.101 262)",
+          "oklch(95% 0.024 262)"
+        ]
+      },
+      "deep-blue": {
+        "role": "primary",
+        "displayName": "Deep Navigation Blue",
+        "canonical": "#174ea6",
+        "tonalRamp": [
+          "oklch(15% 0.054 260)",
+          "oklch(25% 0.101 260)",
+          "oklch(35% 0.142 260)",
+          "oklch(45% 0.153 260)",
+          "oklch(55% 0.153 260)",
+          "oklch(65% 0.153 260)",
+          "oklch(80% 0.101 260)",
+          "oklch(95% 0.024 260)"
+        ]
+      },
+      "pale-blue": {
+        "role": "primary",
+        "displayName": "Pale Selection Blue",
+        "canonical": "#edf3ff",
+        "tonalRamp": [
+          "oklch(15% 0.006 264)",
+          "oklch(25% 0.015 264)",
+          "oklch(35% 0.017 264)",
+          "oklch(45% 0.017 264)",
+          "oklch(55% 0.017 264)",
+          "oklch(65% 0.017 264)",
+          "oklch(80% 0.017 264)",
+          "oklch(95% 0.003 264)"
+        ]
+      },
+      "orange": {
+        "role": "secondary",
+        "displayName": "Quiet Priority Orange",
+        "canonical": "#ed7622",
+        "tonalRamp": [
+          "oklch(15% 0.040 50)",
+          "oklch(25% 0.066 50)",
+          "oklch(35% 0.093 50)",
+          "oklch(45% 0.119 50)",
+          "oklch(55% 0.146 50)",
+          "oklch(65% 0.171 50)",
+          "oklch(80% 0.127 50)",
+          "oklch(95% 0.028 50)"
+        ]
+      },
+      "orange-pale": {
+        "role": "secondary",
+        "displayName": "Soft Priority Tint",
+        "canonical": "#fff2e7",
+        "tonalRamp": [
+          "oklch(15% 0.007 63)",
+          "oklch(25% 0.017 63)",
+          "oklch(35% 0.020 63)",
+          "oklch(45% 0.020 63)",
+          "oklch(55% 0.020 63)",
+          "oklch(65% 0.020 63)",
+          "oklch(80% 0.020 63)",
+          "oklch(95% 0.003 63)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Room Ink",
+        "canonical": "#1c2b43",
+        "tonalRamp": [
+          "oklch(15% 0.017 259)",
+          "oklch(25% 0.041 259)",
+          "oklch(35% 0.049 259)",
+          "oklch(45% 0.049 259)",
+          "oklch(55% 0.049 259)",
+          "oklch(65% 0.049 259)",
+          "oklch(80% 0.049 259)",
+          "oklch(95% 0.008 259)"
+        ]
+      },
+      "muted-text": {
+        "role": "neutral",
+        "displayName": "Muted Slate",
+        "canonical": "#64758d",
+        "tonalRamp": [
+          "oklch(15% 0.015 257)",
+          "oklch(25% 0.036 257)",
+          "oklch(35% 0.043 257)",
+          "oklch(45% 0.043 257)",
+          "oklch(55% 0.043 257)",
+          "oklch(65% 0.043 257)",
+          "oklch(80% 0.043 257)",
+          "oklch(95% 0.007 257)"
+        ]
+      },
+      "faint-text": {
+        "role": "neutral",
+        "displayName": "Faint Slate",
+        "canonical": "#8b98aa",
+        "tonalRamp": [
+          "oklch(15% 0.011 257)",
+          "oklch(25% 0.026 257)",
+          "oklch(35% 0.031 257)",
+          "oklch(45% 0.031 257)",
+          "oklch(55% 0.031 257)",
+          "oklch(65% 0.031 257)",
+          "oklch(80% 0.031 257)",
+          "oklch(95% 0.005 257)"
+        ]
+      },
+      "ground": {
+        "role": "neutral",
+        "displayName": "Cool Workspace Ground",
+        "canonical": "#f5f8fc",
+        "tonalRamp": [
+          "oklch(15% 0.002 255)",
+          "oklch(25% 0.005 255)",
+          "oklch(35% 0.006 255)",
+          "oklch(45% 0.006 255)",
+          "oklch(55% 0.006 255)",
+          "oklch(65% 0.006 255)",
+          "oklch(80% 0.006 255)",
+          "oklch(95% 0.001 255)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "White Surface",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "oklch(15% 0.000 90)",
+          "oklch(25% 0.000 90)",
+          "oklch(35% 0.000 90)",
+          "oklch(45% 0.000 90)",
+          "oklch(55% 0.000 90)",
+          "oklch(65% 0.000 90)",
+          "oklch(80% 0.000 90)",
+          "oklch(95% 0.000 90)"
+        ]
+      },
+      "divider": {
+        "role": "neutral",
+        "displayName": "Fine Divider",
+        "canonical": "#e3eaf3",
+        "tonalRamp": [
+          "oklch(15% 0.005 255)",
+          "oklch(25% 0.012 255)",
+          "oklch(35% 0.014 255)",
+          "oklch(45% 0.014 255)",
+          "oklch(55% 0.014 255)",
+          "oklch(65% 0.014 255)",
+          "oklch(80% 0.014 255)",
+          "oklch(95% 0.002 255)"
+        ]
+      },
+      "strong-divider": {
+        "role": "neutral",
+        "displayName": "Strong Divider",
+        "canonical": "#d5dfeb",
+        "tonalRamp": [
+          "oklch(15% 0.007 253)",
+          "oklch(25% 0.017 253)",
+          "oklch(35% 0.020 253)",
+          "oklch(45% 0.020 253)",
+          "oklch(55% 0.020 253)",
+          "oklch(65% 0.020 253)",
+          "oklch(80% 0.020 253)",
+          "oklch(95% 0.003 253)"
+        ]
+      },
+      "table-header": {
+        "role": "neutral",
+        "displayName": "Quiet Table Header",
+        "canonical": "#f4f7fb",
+        "tonalRamp": [
+          "oklch(15% 0.002 255)",
+          "oklch(25% 0.005 255)",
+          "oklch(35% 0.006 255)",
+          "oklch(45% 0.006 255)",
+          "oklch(55% 0.006 255)",
+          "oklch(65% 0.006 255)",
+          "oklch(80% 0.006 255)",
+          "oklch(95% 0.001 255)"
+        ]
+      },
+      "green": {
+        "role": "tertiary",
+        "displayName": "Confirm Green",
+        "canonical": "#16835c",
+        "tonalRamp": [
+          "oklch(15% 0.033 163)",
+          "oklch(25% 0.054 163)",
+          "oklch(35% 0.076 163)",
+          "oklch(45% 0.098 163)",
+          "oklch(55% 0.111 163)",
+          "oklch(65% 0.111 163)",
+          "oklch(80% 0.111 163)",
+          "oklch(95% 0.019 163)"
+        ]
+      },
+      "green-pale": {
+        "role": "tertiary",
+        "displayName": "Soft Confirm",
+        "canonical": "#e8f6ef",
+        "tonalRamp": [
+          "oklch(15% 0.006 165)",
+          "oklch(25% 0.015 165)",
+          "oklch(35% 0.017 165)",
+          "oklch(45% 0.017 165)",
+          "oklch(55% 0.017 165)",
+          "oklch(65% 0.017 165)",
+          "oklch(80% 0.017 165)",
+          "oklch(95% 0.003 165)"
+        ]
+      },
+      "red": {
+        "role": "tertiary",
+        "displayName": "Error Red",
+        "canonical": "#bf4545",
+        "tonalRamp": [
+          "oklch(15% 0.055 24)",
+          "oklch(25% 0.101 24)",
+          "oklch(35% 0.141 24)",
+          "oklch(45% 0.157 24)",
+          "oklch(55% 0.157 24)",
+          "oklch(65% 0.157 24)",
+          "oklch(80% 0.114 24)",
+          "oklch(95% 0.025 24)"
+        ]
+      },
+      "red-pale": {
+        "role": "tertiary",
+        "displayName": "Soft Error",
+        "canonical": "#fff0ef",
+        "tonalRamp": [
+          "oklch(15% 0.006 22)",
+          "oklch(25% 0.014 22)",
+          "oklch(35% 0.016 22)",
+          "oklch(45% 0.016 22)",
+          "oklch(55% 0.016 22)",
+          "oklch(65% 0.016 22)",
+          "oklch(80% 0.016 22)",
+          "oklch(95% 0.003 22)"
+        ]
+      },
+      "amber": {
+        "role": "tertiary",
+        "displayName": "Caution Amber",
+        "canonical": "#a96710",
+        "tonalRamp": [
+          "oklch(15% 0.034 65)",
+          "oklch(25% 0.056 65)",
+          "oklch(35% 0.078 65)",
+          "oklch(45% 0.101 65)",
+          "oklch(55% 0.123 65)",
+          "oklch(65% 0.123 65)",
+          "oklch(80% 0.123 65)",
+          "oklch(95% 0.021 65)"
+        ]
+      },
+      "amber-pale": {
+        "role": "tertiary",
+        "displayName": "Soft Caution",
+        "canonical": "#fff5dc",
+        "tonalRamp": [
+          "oklch(15% 0.012 89)",
+          "oklch(25% 0.029 89)",
+          "oklch(35% 0.034 89)",
+          "oklch(45% 0.034 89)",
+          "oklch(55% 0.034 89)",
+          "oklch(65% 0.034 89)",
+          "oklch(80% 0.034 89)",
+          "oklch(95% 0.006 89)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Page titles and primary task headings."
+      },
+      "title": {
+        "displayName": "Panel Title",
+        "purpose": "Panel headings and selected room names."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Default interface copy and longer explanations."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Filters, table headers, and compact metadata."
+      }
+    },
+    "shadows": [
+      {
+        "name": "mobile-navigation",
+        "value": "12px 0 28px rgb(22 42 73 / 9%)",
+        "purpose": "Separates the slide-in mobile navigation from the page."
+      },
+      {
+        "name": "room-detail-sheet",
+        "value": "0 -12px 32px rgb(22 42 73 / 14%)",
+        "purpose": "Lifts the mobile room detail sheet over its scrim."
+      }
+    ],
+    "motion": [
+      {
+        "name": "control-state",
+        "value": "160ms ease",
+        "purpose": "Short hover and pressed state transitions."
+      },
+      {
+        "name": "navigation-drawer",
+        "value": "200ms ease-out",
+        "purpose": "Slide-in motion for the mobile sidebar."
+      },
+      {
+        "name": "chart-update",
+        "value": "220ms ease-out",
+        "purpose": "Bar height changes when revenue updates."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "0.01ms",
+        "purpose": "Near-instant animation and transitions when reduced motion is requested."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact-desktop",
+        "value": "1050px"
+      },
+      {
+        "name": "mobile",
+        "value": "760px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Everyday save, view, and continue actions.",
+      "html": "<button class=\"ds-btn-primary\" type=\"button\">Mở hóa đơn</button>",
+      "css": ".ds-btn-primary { min-height: 36px; padding: 0 12px; border: 1px solid var(--blue); border-radius: 6px; background: var(--blue); color: #fff; font: 650 12px/1 ui-sans-serif, system-ui, sans-serif; transition: background-color .16s ease, border-color .16s ease, transform .16s ease; } .ds-btn-primary:hover { border-color: #1d52b7; background: #1d52b7; } .ds-btn-primary:focus-visible { outline: 3px solid #8ab5ff; outline-offset: 2px; } .ds-btn-primary:active { transform: translateY(1px); } .ds-btn-primary:disabled { opacity: .55; }"
+    },
+    {
+      "name": "Priority Button",
+      "kind": "button",
+      "refersTo": "button-priority",
+      "description": "One high-priority operation, such as recording meter readings.",
+      "html": "<button class=\"ds-btn-priority\" type=\"button\">Ghi chỉ số điện nước</button>",
+      "css": ".ds-btn-priority { min-height: 36px; padding: 0 12px; border: 1px solid var(--orange); border-radius: 6px; background: var(--orange); color: #fff; font: 650 12px/1 ui-sans-serif, system-ui, sans-serif; transition: background-color .16s ease, border-color .16s ease; } .ds-btn-priority:hover { border-color: #d66517; background: #d66517; } .ds-btn-priority:focus-visible { outline: 3px solid #8ab5ff; outline-offset: 2px; } .ds-btn-priority:active { transform: translateY(1px); }"
+    },
+    {
+      "name": "Input Field",
+      "kind": "input",
+      "refersTo": "input-field",
+      "description": "Search and form values with a visible focus treatment.",
+      "html": "<label class=\"ds-field-label\">Tìm phòng<input class=\"ds-field\" type=\"search\" placeholder=\"Số phòng hoặc mã phòng\"></label>",
+      "css": ".ds-field-label { display: grid; gap: 5px; color: #566a84; font: 650 11px/1.35 ui-sans-serif, system-ui, sans-serif; } .ds-field { width: 100%; min-height: 36px; padding: 0 10px; border: 1px solid #d4deeb; border-radius: 6px; background: #fff; color: var(--ink); font: 400 12px/1.4 ui-sans-serif, system-ui, sans-serif; transition: border-color .16s ease, outline-color .16s ease; } .ds-field::placeholder { color: #697991; opacity: 1; } .ds-field:hover { border-color: #aebfd5; } .ds-field:focus-visible { border-color: #7da4e9; outline: 2px solid #dce8fb; outline-offset: 0; }"
+    },
+    {
+      "name": "Selected Navigation Link",
+      "kind": "nav",
+      "refersTo": "navigation-active",
+      "description": "Keeps the active landlord section easy to find.",
+      "html": "<a class=\"ds-nav-link ds-nav-link-active\" href=\"#\">Tổng quan</a>",
+      "css": ".ds-nav-link { min-height: 37px; display: flex; align-items: center; padding: 0 10px; border-radius: 6px; color: #52647d; font: 400 12px/1.3 ui-sans-serif, system-ui, sans-serif; text-decoration: none; transition: color .16s ease, background-color .16s ease; } .ds-nav-link:hover { background: #f4f7fb; color: var(--deep-blue); } .ds-nav-link-active { background: #eaf1ff; color: var(--deep-blue); font-weight: 650; } .ds-nav-link:focus-visible { outline: 3px solid #8ab5ff; outline-offset: 2px; }"
+    },
+    {
+      "name": "Workspace Panel",
+      "kind": "card",
+      "refersTo": "panel",
+      "description": "Groups one related table, summary, or task area.",
+      "html": "<section class=\"ds-panel\"><header class=\"ds-panel-heading\"><h2>Theo dõi theo phòng</h2><p>Trạng thái và bước tiếp theo</p></header><div class=\"ds-panel-body\">Nội dung</div></section>",
+      "css": ".ds-panel { min-width: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 8px; background: #fff; color: var(--ink); } .ds-panel-heading { min-height: 51px; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 11px 15px; border-bottom: 1px solid #e9eef5; } .ds-panel-heading h2 { margin: 0; color: #293b55; font: 680 13px/1.3 ui-sans-serif, system-ui, sans-serif; } .ds-panel-heading p { margin: 3px 0 0; color: #687991; font: 400 10px/1.4 ui-sans-serif, system-ui, sans-serif; } .ds-panel-body { padding: 15px; }"
+    },
+    {
+      "name": "Status Chip",
+      "kind": "chip",
+      "refersTo": "status-badge",
+      "description": "Pairs a short state label with a restrained semantic tint.",
+      "html": "<span class=\"ds-status ds-status--green\">Đã thanh toán</span>",
+      "css": ".ds-status { display: inline-flex; align-items: center; padding: 4px 8px; border: 1px solid transparent; border-radius: 12px; font: 700 9px/1.2 ui-sans-serif, system-ui, sans-serif; white-space: nowrap; } .ds-status--blue { border-color: #dce7fb; background: #edf3ff; color: #2459b2; } .ds-status--green { border-color: #d8efe3; background: var(--green-pale); color: var(--green); } .ds-status--amber { border-color: #f4e5bb; background: var(--amber-pale); color: var(--amber); } .ds-status--red { border-color: #f3d7d4; background: var(--red-pale); color: var(--red); } .ds-status--gray { border-color: #e0e6ed; background: #f4f6f8; color: #52647d; }"
+    },
+    {
+      "name": "Mobile Room Summary",
+      "kind": "custom",
+      "refersTo": "room-control-row",
+      "description": "Summarizes the room, tenant, latest reading, unpaid invoices, and balance in one tap target.",
+      "html": "<button class=\"ds-room\" type=\"button\"><span class=\"ds-room-main\"><b>Phòng A01</b><small>Nguyễn An · Đ 42 kWh · N 3 m³</small></span><span class=\"ds-room-debt\"><small>1 hóa đơn nợ</small><b>1.250.000 ₫</b></span></button>",
+      "css": ".ds-room { width: 100%; display: grid; grid-template-columns: minmax(0, 1fr) auto 15px; align-items: center; gap: 10px; padding: 11px 10px; border: 1px solid var(--line); border-radius: 8px; background: #fff; color: #425772; text-align: left; transition: border-color .16s ease, background-color .16s ease; } .ds-room:hover, .ds-room:active { border-color: #cbdcf6; background: #f7faff; } .ds-room:focus-visible { outline: 3px solid #8ab5ff; outline-offset: 2px; } .ds-room-main, .ds-room-debt { display: grid; gap: 4px; } .ds-room-main b { color: #263950; font: 650 12px/1.3 ui-sans-serif, system-ui, sans-serif; } .ds-room-main small, .ds-room-debt small { color: #61748e; font: 400 10px/1.35 ui-sans-serif, system-ui, sans-serif; } .ds-room-debt { justify-items: end; } .ds-room-debt b { color: #ad581d; font: 750 11px/1.3 ui-sans-serif, system-ui, sans-serif; }"
+    },
+    {
+      "name": "Room Detail Sheet",
+      "kind": "custom",
+      "refersTo": "room-detail-sheet",
+      "description": "Shows invoice detail and room actions in an accessible mobile sheet.",
+      "html": "<aside class=\"ds-room-sheet\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ds-room-sheet-title\"><h2 id=\"ds-room-sheet-title\">Phòng A01</h2><p>Chỉ số, hóa đơn và người thuê</p><button type=\"button\">Đóng</button></aside>",
+      "css": ".ds-room-sheet { position: fixed; z-index: 50; inset: auto 0 0; max-height: 80dvh; overflow: auto; padding: 15px 15px calc(15px + env(safe-area-inset-bottom)); border: 1px solid #dce5f0; border-radius: 16px 16px 0 0; background: #fff; color: var(--ink); box-shadow: 0 -12px 32px rgb(22 42 73 / 14%); font-family: ui-sans-serif, system-ui, sans-serif; } .ds-room-sheet h2 { margin: 0; color: #293e5a; font-size: 16px; } .ds-room-sheet p { color: #667990; font-size: 11px; line-height: 1.5; } .ds-room-sheet button { min-height: 36px; padding: 0 12px; border: 1px solid var(--line); border-radius: 6px; background: #fff; color: #365170; } .ds-room-sheet button:hover { background: #f8fafd; } .ds-room-sheet button:focus-visible { outline: 3px solid #8ab5ff; outline-offset: 2px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "StaySync",
+    "overview": "StaySync's landlord workspace should feel friendly, light, and modern while giving daily work a calm, predictable rhythm. The same neutral system sans stack serves every screen; clear labels, compact rows, and repeatable table alignment carry the hierarchy instead of decorative display lettering.\n\nBlue identifies navigation and ordinary primary actions, pale blue holds selected or contextual data, and orange marks a high-priority next step. White surfaces over a cool light ground keep long data views easy to scan. Green, amber, and red stay tied to operational status. Borders and tonal shifts separate most surfaces; a soft shadow appears only on layers that move above the page, such as mobile navigation and the room detail sheet.",
+    "keyCharacteristics": [
+      "Calm blue-and-white surfaces for information-dense work.",
+      "Room, tenant, latest reading, invoice balance, and next action stay connected.",
+      "Compact labels and aligned rows make repeated tasks easy to scan.",
+      "Orange is reserved for a small number of priority actions."
+    ],
+    "rules": [
+      {
+        "name": "The Quiet Priority Rule",
+        "body": "Keep orange for the next action that deserves attention; blue remains the everyday navigation and action color.",
+        "section": "colors"
+      },
+      {
+        "name": "The Scan Hierarchy Rule",
+        "body": "Use size and weight to distinguish the task, panel, and supporting label; do not add a decorative display face.",
+        "section": "typography"
+      },
+      {
+        "name": "The Room-First Rule",
+        "body": "Keep the room identity and the details needed for its next action together; make mobile cards summarize the same operational facts as the desktop row.",
+        "section": "layout"
+      }
+    ],
+    "dos": [
+      "Do keep room, tenant, meter reading, invoice balance, and next action connected in the control desk.",
+      "Do reserve orange for a clearly prioritized action and use blue for everyday navigation and primary controls.",
+      "Do label each semantic status in text as well as color.",
+      "Do keep the mobile room summary readable without horizontal scrolling.",
+      "Do preserve visible keyboard focus and reduced-motion behavior."
+    ],
+    "donts": [
+      "Don't present invented occupancy, payment, or debt figures as live data.",
+      "Don't add permanent shadows to flat panels; reserve elevation for floating layers.",
+      "Don't rely on color alone to explain an invoice or room state.",
+      "Don't make mobile users pan through a wide dashboard table to identify the next task."
+    ]
+  }
+}

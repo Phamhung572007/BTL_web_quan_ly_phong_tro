@@ -34,7 +34,35 @@
 - Chỉ thêm hậu tố hành động cho chuyển trạng thái nghiệp vụ rõ ràng, như `/thanh-toan`, `/duyet`, `/huy`; không dùng động từ làm tên tài nguyên gốc.
 - `/phong-tro-trong` trả về phòng còn trống; `/tin-dang` trả về tin công khai đã đăng. Dùng đúng một endpoint cho mỗi mục đích, không tạo route tìm kiếm trùng lặp.
 - Mặc định endpoint quản trị cần đăng nhập và kiểm tra vai trò. Endpoint công khai chỉ trả dữ liệu tin đã đăng; dữ liệu riêng tư chỉ trả cho chủ thể hoặc người có quyền.
+- Frontend gửi JWT trong header `Authorization: Bearer <token>`. Middleware xác thực do Thành viên 3 sở hữu phải gắn tài khoản đã xác thực vào `req.user` (có `_id` và `vaiTro`) trước khi gọi API cần đăng nhập. Guard của Hùng kiểm tra vai trò `CHU_TRO` cho các API quản trị; không truyền `chuTroId` từ client để xác định quyền sở hữu.
+- Nếu bổ sung middleware xác thực, export middleware tên `xacThuc` từ `backend/middleware/xac_thuc.js` để các route Hùng sử dụng. Middleware/quyền API không được thay cho bước kiểm tra sở hữu tài nguyên trong controller.
 - Request và response dùng JSON, trừ upload ảnh dùng `multipart/form-data`. Response thống nhất các trường `success`, `message`, `data`; danh sách có thể thêm `meta` cho phân trang.
+
+Ví dụ response thành công:
+
+```json
+{
+  "success": true,
+  "message": "Lấy dữ liệu thành công.",
+  "data": {}
+}
+```
+
+Ví dụ response lỗi đầu vào:
+
+```json
+{
+  "success": false,
+  "message": "Dữ liệu gửi lên không hợp lệ.",
+  "data": {
+    "errors": [
+      { "field": "email", "message": "Email không hợp lệ." }
+    ]
+  }
+}
+```
+
+Response danh sách giữ `data` là mảng và thêm `meta` gồm `page`, `limit`, `total`, `totalPages`, `hasNextPage`, `hasPreviousPage`.
 
 ### Mã trạng thái HTTP
 
@@ -61,6 +89,31 @@
 | PUT | `/tai-khoan` | Cập nhật thông tin cá nhân |
 | PUT | `/doi-mat-khau` | Đổi mật khẩu |
 | POST | `/dang-xuat` | Đăng xuất |
+
+### Hợp đồng đăng nhập và tài khoản hiện tại cho Frontend
+
+Khi đăng nhập thành công, `data` phải có JWT và hồ sơ người dùng. Frontend gọi `setSession(response)` trong `frontend/src/contexts/AuthContext.jsx`; token được lưu dưới khóa `accessToken` và gửi ở header `Authorization: Bearer <token>`.
+
+Ví dụ response `POST /dang-nhap`:
+
+```json
+{
+  "success": true,
+  "message": "Đăng nhập thành công.",
+  "data": {
+    "token": "<jwt>",
+    "nguoiDung": {
+      "_id": "<maNguoiDung>",
+      "hoTen": "Nguyễn Văn A",
+      "email": "chutro@example.com",
+      "vaiTro": "CHU_TRO",
+      "trangThai": "HOAT_DONG"
+    }
+  }
+}
+```
+
+`GET /tai-khoan` trả cùng hồ sơ người dùng trong `data` (không trả mật khẩu). Khi tải lại trang, AuthContext dùng endpoint này để đồng bộ tên, vai trò, trạng thái và chữ avatar. Thành viên 3 sở hữu việc triển khai endpoint và bảo đảm phản hồi theo hợp đồng trên.
 
 ## 4. API QUẢN LÝ DÃY TRỌ
 
@@ -156,6 +209,7 @@
 |---|---|---|
 | GET | `/thong-ke/tong-quan` | Thống kê tổng quan nhà trọ |
 | GET | `/thong-ke/doanh-thu` | Thống kê doanh thu theo tháng |
+| GET | `/thong-ke/dieu-phoi-phong` | Bàn điều phối phòng: người thuê, chỉ số gần nhất, hóa đơn và công nợ (`dayTroId`, `tuKhoa`, `page`, `limit` tùy chọn) |
 | GET | `/thong-ke/phong-no-tien` | Danh sách phòng còn nợ tiền |
 
 ## 12. API QUẢN LÝ YÊU CẦU SỬA CHỮA
