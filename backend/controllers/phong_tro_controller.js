@@ -3,7 +3,7 @@ const DayTro = require('../models/day_tro');
 const HopDong = require('../models/hop_dong');
 const TinDangPhong = require('../models/tin_dang_phong');
 
-// [GET] /api/phong-tro - Lấy danh sách phòng của chủ trọ (hỗ trợ lọc dayTroId, trangThai, tu-khoa)
+
 const layDanhSachPhongTro = async (req, res, next) => {
   try {
     const page = Math.max(parseInt(req.query.page, 10) || 1, 1);
@@ -45,7 +45,7 @@ const layDanhSachPhongTro = async (req, res, next) => {
   }
 };
 
-// [GET] /api/phong-tro/:maPhong - Xem chi tiết phòng trọ
+
 const layChiTietPhongTro = async (req, res, next) => {
   try {
     const phong = await PhongTro.findById(req.params.maPhong)
@@ -73,7 +73,7 @@ const layChiTietPhongTro = async (req, res, next) => {
   }
 };
 
-// [POST] /api/phong-tro - Thêm phòng mới vào dãy trọ
+
 const taoPhongTro = async (req, res, next) => {
   try {
     const {
@@ -140,7 +140,7 @@ const taoPhongTro = async (req, res, next) => {
   }
 };
 
-// [PUT] /api/phong-tro/:maPhong - Cập nhật thông tin phòng
+
 const capNhatPhongTro = async (req, res, next) => {
   try {
     const phong = await PhongTro.findById(req.params.maPhong);
@@ -164,7 +164,6 @@ const capNhatPhongTro = async (req, res, next) => {
       trangThai,
     } = req.body;
 
-    // Nếu đổi số phòng thì kiểm tra trùng trong cùng dãy
     if (soPhong !== undefined && soPhong.trim() !== phong.soPhong) {
       const trungSoPhong = await PhongTro.findOne({
         dayTroId: phong.dayTroId,
@@ -181,7 +180,7 @@ const capNhatPhongTro = async (req, res, next) => {
       phong.soPhong = soPhong.trim();
     }
 
-    // Nếu chuyển trạng thái sang TRONG hoặc BAO_TRI, kiểm tra xem phòng có đang vướng hợp đồng hiệu lực không
+    
     if (trangThai !== undefined && trangThai !== phong.trangThai) {
       if (trangThai !== 'DANG_O') {
         const coHopDong = await HopDong.exists({ phongTroId: phong._id, trangThai: 'HIEU_LUC' });
@@ -207,7 +206,7 @@ const capNhatPhongTro = async (req, res, next) => {
 
     await phong.save();
 
-    // Nếu phòng không còn TRONG thì tự động ẩn tin đăng công khai tương ứng
+    
     if (phong.trangThai !== 'TRONG') {
       await TinDangPhong.updateMany({ phongTroId: phong._id }, { $set: { trangThai: 'DA_AN' } });
     }
@@ -222,7 +221,7 @@ const capNhatPhongTro = async (req, res, next) => {
   }
 };
 
-// [DELETE] /api/phong-tro/:maPhong - Xóa phòng trọ
+
 const xoaPhongTro = async (req, res, next) => {
   try {
     const phong = await PhongTro.findById(req.params.maPhong);
@@ -255,7 +254,7 @@ const xoaPhongTro = async (req, res, next) => {
   }
 };
 
-// [GET] /api/phong-tro-trong - Endpoint công khai trả về danh sách phòng còn trống
+
 const layDanhSachPhongTrong = async (req, res, next) => {
   try {
     const page = Math.max(parseInt(req.query.page, 10) || 1, 1);
