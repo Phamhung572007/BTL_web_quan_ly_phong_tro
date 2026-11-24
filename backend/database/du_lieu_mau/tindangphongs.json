@@ -1,0 +1,4251 @@
+[
+  {
+    "_id": {
+      "$oid": "700000000000000000000001"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000001"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000001"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000001"
+    },
+    "tieuDe": "[DEMO] Phong 25m2 gan Xuan Thuy",
+    "slug": "demo-phong-25m2-xuan-thuy-700001",
+    "moTa": "Tin dang mau de thu giao dien. Gia va dien tich tham khao phan khuc phong tro Cau Giay; day khong phai phong dang giao dich that.",
+    "giaThue": {
+      "$numberInt": "3100000"
+    },
+    "tienCoc": {
+      "$numberInt": "3100000"
+    },
+    "dienTichM2": {
+      "$numberInt": "25"
+    },
+    "soNguoiToiDa": {
+      "$numberInt": "2"
+    },
+    "tienIch": [
+      "May lanh",
+      "Gac lung",
+      "Wifi"
+    ],
+    "diaChi": {
+      "soNhaDuong": "Khu vuc duong Xuan Thuy (du lieu mau)",
+      "phuongXa": "Phuong Cau Giay",
+      "quanHuyen": "Cau Giay",
+      "tinhThanh": "Ha Noi"
+    },
+    "viTri": {
+      "type": "Point",
+      "coordinates": [
+        {
+          "$numberDouble": "105.7906"
+        },
+        {
+          "$numberDouble": "21.0365"
+        }
+      ]
+    },
+    "hinhAnh": [
+      {
+        "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80",
+        "moTa": "Anh tham khao",
+        "thuTu": {
+          "$numberInt": "0"
+        }
+      }
+    ],
+    "trangThai": "DA_DANG",
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "124"
+    },
+    "noiBat": true,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    },
+    "ngayHetHan": {
+      "$date": {
+        "$numberLong": "1797753600000"
+      }
+    },
+    "ngayAn": null,
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "700000000000000000000002"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000001"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000001"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000004"
+    },
+    "tieuDe": "[DEMO] Studio 33m2 khu Trung Kinh",
+    "slug": "demo-studio-33m2-trung-kinh-700002",
+    "moTa": "Tin dang mau studio 33m2, muc gia nam trong phan khuc phong dich vu duoc cong khai tai Cau Giay. Thong tin chu nha la gia lap.",
+    "giaThue": {
+      "$numberInt": "5600000"
+    },
+    "tienCoc": {
+      "$numberInt": "5600000"
+    },
+    "dienTichM2": {
+      "$numberInt": "33"
+    },
+    "soNguoiToiDa": {
+      "$numberInt": "2"
+    },
+    "tienIch": [
+      "Full noi that",
+      "Ban cong",
+      "Thang may"
+    ],
+    "diaChi": {
+      "soNhaDuong": "Khu vuc duong Trung Kinh (du lieu mau)",
+      "phuongXa": "Phuong Yen Hoa",
+      "quanHuyen": "Cau Giay",
+      "tinhThanh": "Ha Noi"
+    },
+    "viTri": {
+      "type": "Point",
+      "coordinates": [
+        {
+          "$numberDouble": "105.799"
+        },
+        {
+          "$numberDouble": "21.019"
+        }
+      ]
+    },
+    "hinhAnh": [
+      {
+        "url": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+        "moTa": "Anh tham khao",
+        "thuTu": {
+          "$numberInt": "0"
+        }
+      }
+    ],
+    "trangThai": "DA_DANG",
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "88"
+    },
+    "noiBat": false,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1795078800000"
+      }
+    },
+    "ngayHetHan": {
+      "$date": {
+        "$numberLong": "1797670800000"
+      }
+    },
+    "ngayAn": null,
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1795078800000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795078800000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "700000000000000000000003"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000002"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000002"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000006"
+    },
+    "tieuDe": "[DEMO] Phong 25m2 co ban cong Binh Thanh",
+    "slug": "demo-phong-25m2-ban-cong-binh-thanh-700003",
+    "moTa": "Tin dang mau khu vuc Binh Thanh. Muc gia minh hoa theo khoang gia cong khai; dia chi va chu tro khong phai tin giao dich that.",
+    "giaThue": {
+      "$numberInt": "5000000"
+    },
+    "tienCoc": {
+      "$numberInt": "5000000"
+    },
+    "dienTichM2": {
+      "$numberInt": "25"
+    },
+    "soNguoiToiDa": {
+      "$numberInt": "2"
+    },
+    "tienIch": [
+      "Ban cong",
+      "May lanh",
+      "Tu lanh"
+    ],
+    "diaChi": {
+      "soNhaDuong": "Khu vuc duong Dien Bien Phu (du lieu mau)",
+      "phuongXa": "Phuong 25",
+      "quanHuyen": "Binh Thanh",
+      "tinhThanh": "Ho Chi Minh"
+    },
+    "viTri": {
+      "type": "Point",
+      "coordinates": [
+        {
+          "$numberDouble": "106.7103"
+        },
+        {
+          "$numberDouble": "10.8016"
+        }
+      ]
+    },
+    "hinhAnh": [
+      {
+        "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80",
+        "moTa": "Anh tham khao",
+        "thuTu": {
+          "$numberInt": "0"
+        }
+      }
+    ],
+    "trangThai": "DA_DANG",
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "63"
+    },
+    "noiBat": false,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1795082400000"
+      }
+    },
+    "ngayHetHan": {
+      "$date": {
+        "$numberLong": "1797674400000"
+      }
+    },
+    "ngayAn": null,
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1795082400000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795082400000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "700000000000000000000004"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000002"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000002"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000007"
+    },
+    "tieuDe": "[DEMO] Studio 30m2 Binh Thanh",
+    "slug": "demo-studio-30m2-binh-thanh-700004",
+    "moTa": "Tin mau phong dich vu 30m2, dung de kiem thu loc gia va dien tich.",
+    "giaThue": {
+      "$numberInt": "7000000"
+    },
+    "tienCoc": {
+      "$numberInt": "7000000"
+    },
+    "dienTichM2": {
+      "$numberInt": "30"
+    },
+    "soNguoiToiDa": {
+      "$numberInt": "2"
+    },
+    "tienIch": [
+      "Full noi that",
+      "Thang may",
+      "Bao ve"
+    ],
+    "diaChi": {
+      "soNhaDuong": "Khu vuc duong Pham Viet Chanh (du lieu mau)",
+      "phuongXa": "Phuong 19",
+      "quanHuyen": "Binh Thanh",
+      "tinhThanh": "Ho Chi Minh"
+    },
+    "viTri": {
+      "type": "Point",
+      "coordinates": [
+        {
+          "$numberDouble": "106.7105"
+        },
+        {
+          "$numberDouble": "10.8018"
+        }
+      ]
+    },
+    "hinhAnh": [
+      {
+        "url": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+        "moTa": "Anh tham khao",
+        "thuTu": {
+          "$numberInt": "0"
+        }
+      }
+    ],
+    "trangThai": "DA_DANG",
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "41"
+    },
+    "noiBat": true,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1794996000000"
+      }
+    },
+    "ngayHetHan": {
+      "$date": {
+        "$numberLong": "1797588000000"
+      }
+    },
+    "ngayAn": null,
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1794996000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1794996000000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "700000000000000000000005"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000001"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000003"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000008"
+    },
+    "tieuDe": "[DEMO] D001 - phong Cau Giay",
+    "slug": "demo-d001-stay-005",
+    "moTa": "[DEMO] Tin gia lap de thu trang tim phong.",
+    "giaThue": {
+      "$numberInt": "3100000"
+    },
+    "tienCoc": {
+      "$numberInt": "3100000"
+    },
+    "dienTichM2": {
+      "$numberInt": "18"
+    },
+    "soNguoiToiDa": {
+      "$numberInt": "2"
+    },
+    "tienIch": [
+      "May lanh",
+      "Gac lung",
+      "Wifi"
+    ],
+    "diaChi": {
+      "soNhaDuong": "Khu vuc demo 3",
+      "phuongXa": "Phuong Dich Vong",
+      "quanHuyen": "Cau Giay",
+      "tinhThanh": "Ha Noi",
+      "maBuuChinh": "100000"
+    },
+    "viTri": {
+      "type": "Point",
+      "coordinates": [
+        {
+          "$numberDouble": "105.7916"
+        },
+        {
+          "$numberDouble": "21.0365"
+        }
+      ]
+    },
+    "hinhAnh": [
+      {
+        "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80",
+        "moTa": "Anh phong mau",
+        "thuTu": {
+          "$numberInt": "0"
+        }
+      }
+    ],
+    "trangThai": "DA_AN",
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "10"
+    },
+    "noiBat": true,
+    "ngayDang": null,
+    "ngayHetHan": null,
+    "ngayAn": {
+      "$date": {
+        "$numberLong": "1795046400000"
+      }
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1793491200000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "700000000000000000000006"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000002"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000004"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000009"
+    },
+    "tieuDe": "[DEMO] D002 - phong Binh Thanh",
+    "slug": "demo-d002-stay-006",
+    "moTa": "[DEMO] Tin gia lap de thu trang tim phong.",
+    "giaThue": {
+      "$numberInt": "4373000"
+    },
+    "tienCoc": {
+      "$numberInt": "4373000"
+    },
+    "dienTichM2": {
+      "$numberInt": "25"
+    },
+    "soNguoiToiDa": {
+      "$numberInt": "3"
+    },
+    "tienIch": [
+      "May lanh",
+      "Gac lung",
+      "Wifi"
+    ],
+    "diaChi": {
+      "soNhaDuong": "Khu vuc demo 4",
+      "phuongXa": "Phuong 25",
+      "quanHuyen": "Binh Thanh",
+      "tinhThanh": "Ho Chi Minh",
+      "maBuuChinh": "700000"
+    },
+    "viTri": {
+      "type": "Point",
+      "coordinates": [
+        {
+          "$numberDouble": "106.7053"
+        },
+        {
+          "$numberDouble": "10.8022"
+        }
+      ]
+    },
+    "hinhAnh": [
+      {
+        "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80",
+        "moTa": "Anh phong mau",
+        "thuTu": {
+          "$numberInt": "0"
+        }
+      }
+    ],
+    "trangThai": "DA_AN",
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "51"
+    },
+    "noiBat": false,
+    "ngayDang": null,
+    "ngayHetHan": null,
+    "ngayAn": {
+      "$date": {
+        "$numberLong": "1795046400000"
+      }
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1793577600000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "700000000000000000000007"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000001"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000005"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000010"
+    },
+    "tieuDe": "[DEMO] D003 - phong Cau Giay",
+    "slug": "demo-d003-stay-007",
+    "moTa": "[DEMO] Tin gia lap de thu trang tim phong.",
+    "giaThue": {
+      "$numberInt": "3446000"
+    },
+    "tienCoc": {
+      "$numberInt": "3446000"
+    },
+    "dienTichM2": {
+      "$numberInt": "32"
+    },
+    "soNguoiToiDa": {
+      "$numberInt": "4"
+    },
+    "tienIch": [
+      "May lanh",
+      "Gac lung",
+      "Wifi"
+    ],
+    "diaChi": {
+      "soNhaDuong": "Khu vuc demo 5",
+      "phuongXa": "Phuong Dich Vong",
+      "quanHuyen": "Cau Giay",
+      "tinhThanh": "Ha Noi",
+      "maBuuChinh": "100000"
+    },
+    "viTri": {
+      "type": "Point",
+      "coordinates": [
+        {
+          "$numberDouble": "105.7886"
+        },
+        {
+          "$numberDouble": "21.0385"
+        }
+      ]
+    },
+    "hinhAnh": [
+      {
+        "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80",
+        "moTa": "Anh phong mau",
+        "thuTu": {
+          "$numberInt": "0"
+        }
+      }
+    ],
+    "trangThai": "DA_AN",
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "92"
+    },
+    "noiBat": false,
+    "ngayDang": null,
+    "ngayHetHan": null,
+    "ngayAn": {
+      "$date": {
+        "$numberLong": "1795046400000"
+      }
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1793664000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "700000000000000000000008"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000002"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000006"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000011"
+    },
+    "tieuDe": "[DEMO] D004 - phong Binh Thanh",
+    "slug": "demo-d004-stay-008",
+    "moTa": "[DEMO] Tin gia lap de thu trang tim phong.",
+    "giaThue": {
+      "$numberInt": "4719000"
+    },
+    "tienCoc": {
+      "$numberInt": "4719000"
+    },
+    "dienTichM2": {
+      "$numberInt": "39"
+    },
+    "soNguoiToiDa": {
+      "$numberInt": "2"
+    },
+    "tienIch": [
+      "May lanh",
+      "Gac lung",
+      "Wifi"
+    ],
+    "diaChi": {
+      "soNhaDuong": "Khu vuc demo 6",
+      "phuongXa": "Phuong 25",
+      "quanHuyen": "Binh Thanh",
+      "tinhThanh": "Ho Chi Minh",
+      "maBuuChinh": "700000"
+    },
+    "viTri": {
+      "type": "Point",
+      "coordinates": [
+        {
+          "$numberDouble": "106.7023"
+        },
+        {
+          "$numberDouble": "10.8042"
+        }
+      ]
+    },
+    "hinhAnh": [
+      {
+        "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80",
+        "moTa": "Anh phong mau",
+        "thuTu": {
+          "$numberInt": "0"
+        }
+      }
+    ],
+    "trangThai": "DA_AN",
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "133"
+    },
+    "noiBat": false,
+    "ngayDang": null,
+    "ngayHetHan": null,
+    "ngayAn": {
+      "$date": {
+        "$numberLong": "1795046400000"
+      }
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1793750400000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "700000000000000000000009"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000001"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000007"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000012"
+    },
+    "tieuDe": "[DEMO] D005 - phong Cau Giay",
+    "slug": "demo-d005-stay-009",
+    "moTa": "[DEMO] Tin gia lap de thu trang tim phong.",
+    "giaThue": {
+      "$numberInt": "3792000"
+    },
+    "tienCoc": {
+      "$numberInt": "3792000"
+    },
+    "dienTichM2": {
+      "$numberInt": "22"
+    },
+    "soNguoiToiDa": {
+      "$numberInt": "3"
+    },
+    "tienIch": [
+      "May lanh",
+      "Gac lung",
+      "Wifi"
+    ],
+    "diaChi": {
+      "soNhaDuong": "Khu vuc demo 7",
+      "phuongXa": "Phuong Dich Vong",
+      "quanHuyen": "Cau Giay",
+      "tinhThanh": "Ha Noi",
+      "maBuuChinh": "100000"
+    },
+    "viTri": {
+      "type": "Point",
+      "coordinates": [
+        {
+          "$numberDouble": "105.7906"
+        },
+        {
+          "$numberDouble": "21.0335"
+        }
+      ]
+    },
+    "hinhAnh": [
+      {
+        "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80",
+        "moTa": "Anh phong mau",
+        "thuTu": {
+          "$numberInt": "0"
+        }
+      }
+    ],
+    "trangThai": "DA_AN",
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "174"
+    },
+    "noiBat": false,
+    "ngayDang": null,
+    "ngayHetHan": null,
+    "ngayAn": {
+      "$date": {
+        "$numberLong": "1795046400000"
+      }
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1793836800000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "700000000000000000000010"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000002"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000008"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000013"
+    },
+    "tieuDe": "[DEMO] D006 - phong Binh Thanh",
+    "slug": "demo-d006-stay-010",
+    "moTa": "[DEMO] Tin gia lap de thu trang tim phong.",
+    "giaThue": {
+      "$numberInt": "5065000"
+    },
+    "tienCoc": {
+      "$numberInt": "5065000"
+    },
+    "dienTichM2": {
+      "$numberInt": "29"
+    },
+    "soNguoiToiDa": {
+      "$numberInt": "4"
+    },
+    "tienIch": [
+      "May lanh",
+      "Gac lung",
+      "Wifi"
+    ],
+    "diaChi": {
+      "soNhaDuong": "Khu vuc demo 8",
+      "phuongXa": "Phuong 25",
+      "quanHuyen": "Binh Thanh",
+      "tinhThanh": "Ho Chi Minh",
+      "maBuuChinh": "700000"
+    },
+    "viTri": {
+      "type": "Point",
+      "coordinates": [
+        {
+          "$numberDouble": "106.7043"
+        },
+        {
+          "$numberDouble": "10.799199999999999"
+        }
+      ]
+    },
+    "hinhAnh": [
+      {
+        "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80",
+        "moTa": "Anh phong mau",
+        "thuTu": {
+          "$numberInt": "0"
+        }
+      }
+    ],
+    "trangThai": "DA_AN",
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "215"
+    },
+    "noiBat": false,
+    "ngayDang": null,
+    "ngayHetHan": null,
+    "ngayAn": {
+      "$date": {
+        "$numberLong": "1795046400000"
+      }
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1793923200000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "700000000000000000000011"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000001"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000009"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000014"
+    },
+    "tieuDe": "[DEMO] D007 - phong Cau Giay",
+    "slug": "demo-d007-stay-011",
+    "moTa": "[DEMO] Tin gia lap de thu trang tim phong.",
+    "giaThue": {
+      "$numberInt": "4138000"
+    },
+    "tienCoc": {
+      "$numberInt": "4138000"
+    },
+    "dienTichM2": {
+      "$numberInt": "36"
+    },
+    "soNguoiToiDa": {
+      "$numberInt": "2"
+    },
+    "tienIch": [
+      "May lanh",
+      "Gac lung",
+      "Wifi"
+    ],
+    "diaChi": {
+      "soNhaDuong": "Khu vuc demo 9",
+      "phuongXa": "Phuong Dich Vong",
+      "quanHuyen": "Cau Giay",
+      "tinhThanh": "Ha Noi",
+      "maBuuChinh": "100000"
+    },
+    "viTri": {
+      "type": "Point",
+      "coordinates": [
+        {
+          "$numberDouble": "105.7926"
+        },
+        {
+          "$numberDouble": "21.0355"
+        }
+      ]
+    },
+    "hinhAnh": [
+      {
+        "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80",
+        "moTa": "Anh phong mau",
+        "thuTu": {
+          "$numberInt": "0"
+        }
+      }
+    ],
+    "trangThai": "DA_AN",
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "256"
+    },
+    "noiBat": false,
+    "ngayDang": null,
+    "ngayHetHan": null,
+    "ngayAn": {
+      "$date": {
+        "$numberLong": "1795046400000"
+      }
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1794009600000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "700000000000000000000012"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000002"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000010"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000015"
+    },
+    "tieuDe": "[DEMO] D008 - phong Binh Thanh",
+    "slug": "demo-d008-stay-012",
+    "moTa": "[DEMO] Tin gia lap de thu trang tim phong.",
+    "giaThue": {
+      "$numberInt": "5411000"
+    },
+    "tienCoc": {
+      "$numberInt": "5411000"
+    },
+    "dienTichM2": {
+      "$numberInt": "19"
+    },
+    "soNguoiToiDa": {
+      "$numberInt": "3"
+    },
+    "tienIch": [
+      "May lanh",
+      "Gac lung",
+      "Wifi"
+    ],
+    "diaChi": {
+      "soNhaDuong": "Khu vuc demo 10",
+      "phuongXa": "Phuong 25",
+      "quanHuyen": "Binh Thanh",
+      "tinhThanh": "Ho Chi Minh",
+      "maBuuChinh": "700000"
+    },
+    "viTri": {
+      "type": "Point",
+      "coordinates": [
+        {
+          "$numberDouble": "106.7013"
+        },
+        {
+          "$numberDouble": "10.8012"
+        }
+      ]
+    },
+    "hinhAnh": [
+      {
+        "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80",
+        "moTa": "Anh phong mau",
+        "thuTu": {
+          "$numberInt": "0"
+        }
+      }
+    ],
+    "trangThai": "DA_AN",
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "297"
+    },
+    "noiBat": false,
+    "ngayDang": null,
+    "ngayHetHan": null,
+    "ngayAn": {
+      "$date": {
+        "$numberLong": "1795046400000"
+      }
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1794096000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "700000000000000000000013"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000001"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000011"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000016"
+    },
+    "tieuDe": "[DEMO] D009 - phong Cau Giay",
+    "slug": "demo-d009-stay-013",
+    "moTa": "[DEMO] Tin gia lap de thu trang tim phong.",
+    "giaThue": {
+      "$numberInt": "4484000"
+    },
+    "tienCoc": {
+      "$numberInt": "4484000"
+    },
+    "dienTichM2": {
+      "$numberInt": "26"
+    },
+    "soNguoiToiDa": {
+      "$numberInt": "4"
+    },
+    "tienIch": [
+      "May lanh",
+      "Gac lung",
+      "Wifi"
+    ],
+    "diaChi": {
+      "soNhaDuong": "Khu vuc demo 11",
+      "phuongXa": "Phuong Dich Vong",
+      "quanHuyen": "Cau Giay",
+      "tinhThanh": "Ha Noi",
+      "maBuuChinh": "100000"
+    },
+    "viTri": {
+      "type": "Point",
+      "coordinates": [
+        {
+          "$numberDouble": "105.7896"
+        },
+        {
+          "$numberDouble": "21.0375"
+        }
+      ]
+    },
+    "hinhAnh": [
+      {
+        "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80",
+        "moTa": "Anh phong mau",
+        "thuTu": {
+          "$numberInt": "0"
+        }
+      }
+    ],
+    "trangThai": "DA_AN",
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "338"
+    },
+    "noiBat": true,
+    "ngayDang": null,
+    "ngayHetHan": null,
+    "ngayAn": {
+      "$date": {
+        "$numberLong": "1795046400000"
+      }
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1794182400000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "700000000000000000000014"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000002"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000012"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000017"
+    },
+    "tieuDe": "[DEMO] D010 - phong Binh Thanh",
+    "slug": "demo-d010-stay-014",
+    "moTa": "[DEMO] Tin gia lap de thu trang tim phong.",
+    "giaThue": {
+      "$numberInt": "5757000"
+    },
+    "tienCoc": {
+      "$numberInt": "5757000"
+    },
+    "dienTichM2": {
+      "$numberInt": "33"
+    },
+    "soNguoiToiDa": {
+      "$numberInt": "2"
+    },
+    "tienIch": [
+      "May lanh",
+      "Gac lung",
+      "Wifi"
+    ],
+    "diaChi": {
+      "soNhaDuong": "Khu vuc demo 12",
+      "phuongXa": "Phuong 25",
+      "quanHuyen": "Binh Thanh",
+      "tinhThanh": "Ho Chi Minh",
+      "maBuuChinh": "700000"
+    },
+    "viTri": {
+      "type": "Point",
+      "coordinates": [
+        {
+          "$numberDouble": "106.7033"
+        },
+        {
+          "$numberDouble": "10.8032"
+        }
+      ]
+    },
+    "hinhAnh": [
+      {
+        "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80",
+        "moTa": "Anh phong mau",
+        "thuTu": {
+          "$numberInt": "0"
+        }
+      }
+    ],
+    "trangThai": "DA_AN",
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "379"
+    },
+    "noiBat": false,
+    "ngayDang": null,
+    "ngayHetHan": null,
+    "ngayAn": {
+      "$date": {
+        "$numberLong": "1795046400000"
+      }
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1794268800000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "700000000000000000000015"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000001"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000013"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000018"
+    },
+    "tieuDe": "[DEMO] D011 - phong Cau Giay",
+    "slug": "demo-d011-stay-015",
+    "moTa": "[DEMO] Tin gia lap de thu trang tim phong.",
+    "giaThue": {
+      "$numberInt": "4830000"
+    },
+    "tienCoc": {
+      "$numberInt": "4830000"
+    },
+    "dienTichM2": {
+      "$numberInt": "40"
+    },
+    "soNguoiToiDa": {
+      "$numberInt": "3"
+    },
+    "tienIch": [
+      "May lanh",
+      "Gac lung",
+      "Wifi"
+    ],
+    "diaChi": {
+      "soNhaDuong": "Khu vuc demo 13",
+      "phuongXa": "Phuong Dich Vong",
+      "quanHuyen": "Cau Giay",
+      "tinhThanh": "Ha Noi",
+      "maBuuChinh": "100000"
+    },
+    "viTri": {
+      "type": "Point",
+      "coordinates": [
+        {
+          "$numberDouble": "105.7916"
+        },
+        {
+          "$numberDouble": "21.0395"
+        }
+      ]
+    },
+    "hinhAnh": [
+      {
+        "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80",
+        "moTa": "Anh phong mau",
+        "thuTu": {
+          "$numberInt": "0"
+        }
+      }
+    ],
+    "trangThai": "DA_AN",
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "420"
+    },
+    "noiBat": false,
+    "ngayDang": null,
+    "ngayHetHan": null,
+    "ngayAn": {
+      "$date": {
+        "$numberLong": "1795046400000"
+      }
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1794355200000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "700000000000000000000016"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000002"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000014"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000019"
+    },
+    "tieuDe": "[DEMO] D012 - phong Binh Thanh",
+    "slug": "demo-d012-stay-016",
+    "moTa": "[DEMO] Tin gia lap de thu trang tim phong.",
+    "giaThue": {
+      "$numberInt": "6103000"
+    },
+    "tienCoc": {
+      "$numberInt": "6103000"
+    },
+    "dienTichM2": {
+      "$numberInt": "23"
+    },
+    "soNguoiToiDa": {
+      "$numberInt": "4"
+    },
+    "tienIch": [
+      "May lanh",
+      "Gac lung",
+      "Wifi"
+    ],
+    "diaChi": {
+      "soNhaDuong": "Khu vuc demo 14",
+      "phuongXa": "Phuong 25",
+      "quanHuyen": "Binh Thanh",
+      "tinhThanh": "Ho Chi Minh",
+      "maBuuChinh": "700000"
+    },
+    "viTri": {
+      "type": "Point",
+      "coordinates": [
+        {
+          "$numberDouble": "106.7053"
+        },
+        {
+          "$numberDouble": "10.7982"
+        }
+      ]
+    },
+    "hinhAnh": [
+      {
+        "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80",
+        "moTa": "Anh phong mau",
+        "thuTu": {
+          "$numberInt": "0"
+        }
+      }
+    ],
+    "trangThai": "DA_AN",
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "461"
+    },
+    "noiBat": false,
+    "ngayDang": null,
+    "ngayHetHan": null,
+    "ngayAn": {
+      "$date": {
+        "$numberLong": "1795046400000"
+      }
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1794441600000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "700000000000000000000017"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000001"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000015"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000020"
+    },
+    "tieuDe": "[DEMO] D013 - phong Cau Giay",
+    "slug": "demo-d013-stay-017",
+    "moTa": "[DEMO] Tin gia lap de thu trang tim phong.",
+    "giaThue": {
+      "$numberInt": "5176000"
+    },
+    "tienCoc": {
+      "$numberInt": "5176000"
+    },
+    "dienTichM2": {
+      "$numberInt": "30"
+    },
+    "soNguoiToiDa": {
+      "$numberInt": "2"
+    },
+    "tienIch": [
+      "May lanh",
+      "Gac lung",
+      "Wifi"
+    ],
+    "diaChi": {
+      "soNhaDuong": "Khu vuc demo 15",
+      "phuongXa": "Phuong Dich Vong",
+      "quanHuyen": "Cau Giay",
+      "tinhThanh": "Ha Noi",
+      "maBuuChinh": "100000"
+    },
+    "viTri": {
+      "type": "Point",
+      "coordinates": [
+        {
+          "$numberDouble": "105.7886"
+        },
+        {
+          "$numberDouble": "21.0345"
+        }
+      ]
+    },
+    "hinhAnh": [
+      {
+        "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80",
+        "moTa": "Anh phong mau",
+        "thuTu": {
+          "$numberInt": "0"
+        }
+      }
+    ],
+    "trangThai": "DA_AN",
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "502"
+    },
+    "noiBat": false,
+    "ngayDang": null,
+    "ngayHetHan": null,
+    "ngayAn": {
+      "$date": {
+        "$numberLong": "1795046400000"
+      }
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1794528000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "700000000000000000000018"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000002"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000016"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000021"
+    },
+    "tieuDe": "[DEMO] D014 - phong Binh Thanh",
+    "slug": "demo-d014-stay-018",
+    "moTa": "[DEMO] Tin gia lap de thu trang tim phong.",
+    "giaThue": {
+      "$numberInt": "6449000"
+    },
+    "tienCoc": {
+      "$numberInt": "6449000"
+    },
+    "dienTichM2": {
+      "$numberInt": "37"
+    },
+    "soNguoiToiDa": {
+      "$numberInt": "3"
+    },
+    "tienIch": [
+      "May lanh",
+      "Gac lung",
+      "Wifi"
+    ],
+    "diaChi": {
+      "soNhaDuong": "Khu vuc demo 16",
+      "phuongXa": "Phuong 25",
+      "quanHuyen": "Binh Thanh",
+      "tinhThanh": "Ho Chi Minh",
+      "maBuuChinh": "700000"
+    },
+    "viTri": {
+      "type": "Point",
+      "coordinates": [
+        {
+          "$numberDouble": "106.7023"
+        },
+        {
+          "$numberDouble": "10.8002"
+        }
+      ]
+    },
+    "hinhAnh": [
+      {
+        "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80",
+        "moTa": "Anh phong mau",
+        "thuTu": {
+          "$numberInt": "0"
+        }
+      }
+    ],
+    "trangThai": "DA_AN",
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "543"
+    },
+    "noiBat": false,
+    "ngayDang": null,
+    "ngayHetHan": null,
+    "ngayAn": {
+      "$date": {
+        "$numberLong": "1795046400000"
+      }
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1794614400000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "700000000000000000000019"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000001"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000017"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000022"
+    },
+    "tieuDe": "[DEMO] D015 - phong Cau Giay",
+    "slug": "demo-d015-stay-019",
+    "moTa": "[DEMO] Tin gia lap de thu trang tim phong.",
+    "giaThue": {
+      "$numberInt": "5522000"
+    },
+    "tienCoc": {
+      "$numberInt": "5522000"
+    },
+    "dienTichM2": {
+      "$numberInt": "20"
+    },
+    "soNguoiToiDa": {
+      "$numberInt": "4"
+    },
+    "tienIch": [
+      "May lanh",
+      "Gac lung",
+      "Wifi"
+    ],
+    "diaChi": {
+      "soNhaDuong": "Khu vuc demo 17",
+      "phuongXa": "Phuong Dich Vong",
+      "quanHuyen": "Cau Giay",
+      "tinhThanh": "Ha Noi",
+      "maBuuChinh": "100000"
+    },
+    "viTri": {
+      "type": "Point",
+      "coordinates": [
+        {
+          "$numberDouble": "105.7906"
+        },
+        {
+          "$numberDouble": "21.0365"
+        }
+      ]
+    },
+    "hinhAnh": [
+      {
+        "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80",
+        "moTa": "Anh phong mau",
+        "thuTu": {
+          "$numberInt": "0"
+        }
+      }
+    ],
+    "trangThai": "DA_AN",
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "584"
+    },
+    "noiBat": false,
+    "ngayDang": null,
+    "ngayHetHan": null,
+    "ngayAn": {
+      "$date": {
+        "$numberLong": "1795046400000"
+      }
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1794700800000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "700000000000000000000020"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000002"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000018"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000023"
+    },
+    "tieuDe": "[DEMO] D016 - phong Binh Thanh",
+    "slug": "demo-d016-stay-020",
+    "moTa": "[DEMO] Tin gia lap de thu trang tim phong.",
+    "giaThue": {
+      "$numberInt": "6795000"
+    },
+    "tienCoc": {
+      "$numberInt": "6795000"
+    },
+    "dienTichM2": {
+      "$numberInt": "27"
+    },
+    "soNguoiToiDa": {
+      "$numberInt": "2"
+    },
+    "tienIch": [
+      "May lanh",
+      "Gac lung",
+      "Wifi"
+    ],
+    "diaChi": {
+      "soNhaDuong": "Khu vuc demo 18",
+      "phuongXa": "Phuong 25",
+      "quanHuyen": "Binh Thanh",
+      "tinhThanh": "Ho Chi Minh",
+      "maBuuChinh": "700000"
+    },
+    "viTri": {
+      "type": "Point",
+      "coordinates": [
+        {
+          "$numberDouble": "106.7043"
+        },
+        {
+          "$numberDouble": "10.8022"
+        }
+      ]
+    },
+    "hinhAnh": [
+      {
+        "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80",
+        "moTa": "Anh phong mau",
+        "thuTu": {
+          "$numberInt": "0"
+        }
+      }
+    ],
+    "trangThai": "DA_AN",
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "625"
+    },
+    "noiBat": false,
+    "ngayDang": null,
+    "ngayHetHan": null,
+    "ngayAn": {
+      "$date": {
+        "$numberLong": "1795046400000"
+      }
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1794787200000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "700000000000000000000021"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000001"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000019"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000024"
+    },
+    "tieuDe": "[DEMO] D017 - phong Cau Giay",
+    "slug": "demo-d017-stay-021",
+    "moTa": "[DEMO] Tin gia lap de thu trang tim phong.",
+    "giaThue": {
+      "$numberInt": "3268000"
+    },
+    "tienCoc": {
+      "$numberInt": "3268000"
+    },
+    "dienTichM2": {
+      "$numberInt": "34"
+    },
+    "soNguoiToiDa": {
+      "$numberInt": "3"
+    },
+    "tienIch": [
+      "May lanh",
+      "Gac lung",
+      "Wifi"
+    ],
+    "diaChi": {
+      "soNhaDuong": "Khu vuc demo 19",
+      "phuongXa": "Phuong Dich Vong",
+      "quanHuyen": "Cau Giay",
+      "tinhThanh": "Ha Noi",
+      "maBuuChinh": "100000"
+    },
+    "viTri": {
+      "type": "Point",
+      "coordinates": [
+        {
+          "$numberDouble": "105.7926"
+        },
+        {
+          "$numberDouble": "21.0385"
+        }
+      ]
+    },
+    "hinhAnh": [
+      {
+        "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80",
+        "moTa": "Anh phong mau",
+        "thuTu": {
+          "$numberInt": "0"
+        }
+      }
+    ],
+    "trangThai": "DA_AN",
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "666"
+    },
+    "noiBat": true,
+    "ngayDang": null,
+    "ngayHetHan": null,
+    "ngayAn": {
+      "$date": {
+        "$numberLong": "1795046400000"
+      }
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1794873600000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "700000000000000000000022"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000002"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000020"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000025"
+    },
+    "tieuDe": "[DEMO] D018 - phong Binh Thanh",
+    "slug": "demo-d018-stay-022",
+    "moTa": "[DEMO] Tin gia lap de thu trang tim phong.",
+    "giaThue": {
+      "$numberInt": "4541000"
+    },
+    "tienCoc": {
+      "$numberInt": "4541000"
+    },
+    "dienTichM2": {
+      "$numberInt": "41"
+    },
+    "soNguoiToiDa": {
+      "$numberInt": "4"
+    },
+    "tienIch": [
+      "May lanh",
+      "Gac lung",
+      "Wifi"
+    ],
+    "diaChi": {
+      "soNhaDuong": "Khu vuc demo 20",
+      "phuongXa": "Phuong 25",
+      "quanHuyen": "Binh Thanh",
+      "tinhThanh": "Ho Chi Minh",
+      "maBuuChinh": "700000"
+    },
+    "viTri": {
+      "type": "Point",
+      "coordinates": [
+        {
+          "$numberDouble": "106.7013"
+        },
+        {
+          "$numberDouble": "10.8042"
+        }
+      ]
+    },
+    "hinhAnh": [
+      {
+        "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80",
+        "moTa": "Anh phong mau",
+        "thuTu": {
+          "$numberInt": "0"
+        }
+      }
+    ],
+    "trangThai": "DA_AN",
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "707"
+    },
+    "noiBat": false,
+    "ngayDang": null,
+    "ngayHetHan": null,
+    "ngayAn": {
+      "$date": {
+        "$numberLong": "1795046400000"
+      }
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1794960000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "700000000000000000000023"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000001"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000021"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000026"
+    },
+    "tieuDe": "[DEMO] D019 - phong Cau Giay",
+    "slug": "demo-d019-stay-023",
+    "moTa": "[DEMO] Tin gia lap de thu trang tim phong.",
+    "giaThue": {
+      "$numberInt": "3614000"
+    },
+    "tienCoc": {
+      "$numberInt": "3614000"
+    },
+    "dienTichM2": {
+      "$numberInt": "24"
+    },
+    "soNguoiToiDa": {
+      "$numberInt": "2"
+    },
+    "tienIch": [
+      "May lanh",
+      "Gac lung",
+      "Wifi"
+    ],
+    "diaChi": {
+      "soNhaDuong": "Khu vuc demo 21",
+      "phuongXa": "Phuong Dich Vong",
+      "quanHuyen": "Cau Giay",
+      "tinhThanh": "Ha Noi",
+      "maBuuChinh": "100000"
+    },
+    "viTri": {
+      "type": "Point",
+      "coordinates": [
+        {
+          "$numberDouble": "105.7896"
+        },
+        {
+          "$numberDouble": "21.0335"
+        }
+      ]
+    },
+    "hinhAnh": [
+      {
+        "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80",
+        "moTa": "Anh phong mau",
+        "thuTu": {
+          "$numberInt": "0"
+        }
+      }
+    ],
+    "trangThai": "DA_AN",
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "748"
+    },
+    "noiBat": false,
+    "ngayDang": null,
+    "ngayHetHan": null,
+    "ngayAn": {
+      "$date": {
+        "$numberLong": "1795046400000"
+      }
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1795046400000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "700000000000000000000024"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000002"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000022"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000027"
+    },
+    "tieuDe": "[DEMO] D020 - phong Binh Thanh",
+    "slug": "demo-d020-stay-024",
+    "moTa": "[DEMO] Tin gia lap de thu trang tim phong.",
+    "giaThue": {
+      "$numberInt": "4887000"
+    },
+    "tienCoc": {
+      "$numberInt": "4887000"
+    },
+    "dienTichM2": {
+      "$numberInt": "31"
+    },
+    "soNguoiToiDa": {
+      "$numberInt": "3"
+    },
+    "tienIch": [
+      "May lanh",
+      "Gac lung",
+      "Wifi"
+    ],
+    "diaChi": {
+      "soNhaDuong": "Khu vuc demo 22",
+      "phuongXa": "Phuong 25",
+      "quanHuyen": "Binh Thanh",
+      "tinhThanh": "Ho Chi Minh",
+      "maBuuChinh": "700000"
+    },
+    "viTri": {
+      "type": "Point",
+      "coordinates": [
+        {
+          "$numberDouble": "106.7033"
+        },
+        {
+          "$numberDouble": "10.799199999999999"
+        }
+      ]
+    },
+    "hinhAnh": [
+      {
+        "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80",
+        "moTa": "Anh phong mau",
+        "thuTu": {
+          "$numberInt": "0"
+        }
+      }
+    ],
+    "trangThai": "DA_AN",
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "789"
+    },
+    "noiBat": false,
+    "ngayDang": null,
+    "ngayHetHan": null,
+    "ngayAn": {
+      "$date": {
+        "$numberLong": "1795046400000"
+      }
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1795132800000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "700000000000000000000025"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000001"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000023"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000028"
+    },
+    "tieuDe": "[DEMO] D021 - phong Cau Giay",
+    "slug": "demo-d021-stay-025",
+    "moTa": "[DEMO] Tin gia lap de thu trang tim phong.",
+    "giaThue": {
+      "$numberInt": "3960000"
+    },
+    "tienCoc": {
+      "$numberInt": "3960000"
+    },
+    "dienTichM2": {
+      "$numberInt": "38"
+    },
+    "soNguoiToiDa": {
+      "$numberInt": "4"
+    },
+    "tienIch": [
+      "May lanh",
+      "Gac lung",
+      "Wifi"
+    ],
+    "diaChi": {
+      "soNhaDuong": "Khu vuc demo 23",
+      "phuongXa": "Phuong Dich Vong",
+      "quanHuyen": "Cau Giay",
+      "tinhThanh": "Ha Noi",
+      "maBuuChinh": "100000"
+    },
+    "viTri": {
+      "type": "Point",
+      "coordinates": [
+        {
+          "$numberDouble": "105.7916"
+        },
+        {
+          "$numberDouble": "21.0355"
+        }
+      ]
+    },
+    "hinhAnh": [
+      {
+        "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80",
+        "moTa": "Anh phong mau",
+        "thuTu": {
+          "$numberInt": "0"
+        }
+      }
+    ],
+    "trangThai": "DA_AN",
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "830"
+    },
+    "noiBat": false,
+    "ngayDang": null,
+    "ngayHetHan": null,
+    "ngayAn": {
+      "$date": {
+        "$numberLong": "1795046400000"
+      }
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1793491200000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "700000000000000000000026"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000002"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000024"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000029"
+    },
+    "tieuDe": "[DEMO] D022 - phong Binh Thanh",
+    "slug": "demo-d022-stay-026",
+    "moTa": "[DEMO] Tin gia lap de thu trang tim phong.",
+    "giaThue": {
+      "$numberInt": "5233000"
+    },
+    "tienCoc": {
+      "$numberInt": "5233000"
+    },
+    "dienTichM2": {
+      "$numberInt": "21"
+    },
+    "soNguoiToiDa": {
+      "$numberInt": "2"
+    },
+    "tienIch": [
+      "May lanh",
+      "Gac lung",
+      "Wifi"
+    ],
+    "diaChi": {
+      "soNhaDuong": "Khu vuc demo 24",
+      "phuongXa": "Phuong 25",
+      "quanHuyen": "Binh Thanh",
+      "tinhThanh": "Ho Chi Minh",
+      "maBuuChinh": "700000"
+    },
+    "viTri": {
+      "type": "Point",
+      "coordinates": [
+        {
+          "$numberDouble": "106.7053"
+        },
+        {
+          "$numberDouble": "10.8012"
+        }
+      ]
+    },
+    "hinhAnh": [
+      {
+        "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80",
+        "moTa": "Anh phong mau",
+        "thuTu": {
+          "$numberInt": "0"
+        }
+      }
+    ],
+    "trangThai": "DA_AN",
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "871"
+    },
+    "noiBat": false,
+    "ngayDang": null,
+    "ngayHetHan": null,
+    "ngayAn": {
+      "$date": {
+        "$numberLong": "1795046400000"
+      }
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1793577600000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "700000000000000000000027"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000001"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000025"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000030"
+    },
+    "tieuDe": "[DEMO] D023 - phong Cau Giay",
+    "slug": "demo-d023-stay-027",
+    "moTa": "[DEMO] Tin gia lap de thu trang tim phong.",
+    "giaThue": {
+      "$numberInt": "4306000"
+    },
+    "tienCoc": {
+      "$numberInt": "4306000"
+    },
+    "dienTichM2": {
+      "$numberInt": "28"
+    },
+    "soNguoiToiDa": {
+      "$numberInt": "3"
+    },
+    "tienIch": [
+      "May lanh",
+      "Gac lung",
+      "Wifi"
+    ],
+    "diaChi": {
+      "soNhaDuong": "Khu vuc demo 25",
+      "phuongXa": "Phuong Dich Vong",
+      "quanHuyen": "Cau Giay",
+      "tinhThanh": "Ha Noi",
+      "maBuuChinh": "100000"
+    },
+    "viTri": {
+      "type": "Point",
+      "coordinates": [
+        {
+          "$numberDouble": "105.7886"
+        },
+        {
+          "$numberDouble": "21.0375"
+        }
+      ]
+    },
+    "hinhAnh": [
+      {
+        "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80",
+        "moTa": "Anh phong mau",
+        "thuTu": {
+          "$numberInt": "0"
+        }
+      }
+    ],
+    "trangThai": "DA_AN",
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "12"
+    },
+    "noiBat": false,
+    "ngayDang": null,
+    "ngayHetHan": null,
+    "ngayAn": {
+      "$date": {
+        "$numberLong": "1795046400000"
+      }
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1793664000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "700000000000000000000028"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000002"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000026"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000031"
+    },
+    "tieuDe": "[DEMO] D024 - phong Binh Thanh",
+    "slug": "demo-d024-stay-028",
+    "moTa": "[DEMO] Tin gia lap de thu trang tim phong.",
+    "giaThue": {
+      "$numberInt": "5579000"
+    },
+    "tienCoc": {
+      "$numberInt": "5579000"
+    },
+    "dienTichM2": {
+      "$numberInt": "35"
+    },
+    "soNguoiToiDa": {
+      "$numberInt": "4"
+    },
+    "tienIch": [
+      "May lanh",
+      "Gac lung",
+      "Wifi"
+    ],
+    "diaChi": {
+      "soNhaDuong": "Khu vuc demo 26",
+      "phuongXa": "Phuong 25",
+      "quanHuyen": "Binh Thanh",
+      "tinhThanh": "Ho Chi Minh",
+      "maBuuChinh": "700000"
+    },
+    "viTri": {
+      "type": "Point",
+      "coordinates": [
+        {
+          "$numberDouble": "106.7023"
+        },
+        {
+          "$numberDouble": "10.8032"
+        }
+      ]
+    },
+    "hinhAnh": [
+      {
+        "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80",
+        "moTa": "Anh phong mau",
+        "thuTu": {
+          "$numberInt": "0"
+        }
+      }
+    ],
+    "trangThai": "DA_AN",
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "53"
+    },
+    "noiBat": false,
+    "ngayDang": null,
+    "ngayHetHan": null,
+    "ngayAn": {
+      "$date": {
+        "$numberLong": "1795046400000"
+      }
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1793750400000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "700000000000000000000029"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000001"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000027"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000032"
+    },
+    "tieuDe": "[DEMO] D025 - phong Cau Giay",
+    "slug": "demo-d025-stay-029",
+    "moTa": "[DEMO] Tin gia lap de thu trang tim phong.",
+    "giaThue": {
+      "$numberInt": "4652000"
+    },
+    "tienCoc": {
+      "$numberInt": "4652000"
+    },
+    "dienTichM2": {
+      "$numberInt": "18"
+    },
+    "soNguoiToiDa": {
+      "$numberInt": "2"
+    },
+    "tienIch": [
+      "May lanh",
+      "Gac lung",
+      "Wifi"
+    ],
+    "diaChi": {
+      "soNhaDuong": "Khu vuc demo 27",
+      "phuongXa": "Phuong Dich Vong",
+      "quanHuyen": "Cau Giay",
+      "tinhThanh": "Ha Noi",
+      "maBuuChinh": "100000"
+    },
+    "viTri": {
+      "type": "Point",
+      "coordinates": [
+        {
+          "$numberDouble": "105.7906"
+        },
+        {
+          "$numberDouble": "21.0395"
+        }
+      ]
+    },
+    "hinhAnh": [
+      {
+        "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80",
+        "moTa": "Anh phong mau",
+        "thuTu": {
+          "$numberInt": "0"
+        }
+      }
+    ],
+    "trangThai": "DA_AN",
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "94"
+    },
+    "noiBat": true,
+    "ngayDang": null,
+    "ngayHetHan": null,
+    "ngayAn": {
+      "$date": {
+        "$numberLong": "1795046400000"
+      }
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1793836800000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "700000000000000000000030"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000002"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000028"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000033"
+    },
+    "tieuDe": "[DEMO] D026 - phong Binh Thanh",
+    "slug": "demo-d026-stay-030",
+    "moTa": "[DEMO] Tin gia lap de thu trang tim phong.",
+    "giaThue": {
+      "$numberInt": "5925000"
+    },
+    "tienCoc": {
+      "$numberInt": "5925000"
+    },
+    "dienTichM2": {
+      "$numberInt": "25"
+    },
+    "soNguoiToiDa": {
+      "$numberInt": "3"
+    },
+    "tienIch": [
+      "May lanh",
+      "Gac lung",
+      "Wifi"
+    ],
+    "diaChi": {
+      "soNhaDuong": "Khu vuc demo 28",
+      "phuongXa": "Phuong 25",
+      "quanHuyen": "Binh Thanh",
+      "tinhThanh": "Ho Chi Minh",
+      "maBuuChinh": "700000"
+    },
+    "viTri": {
+      "type": "Point",
+      "coordinates": [
+        {
+          "$numberDouble": "106.7043"
+        },
+        {
+          "$numberDouble": "10.7982"
+        }
+      ]
+    },
+    "hinhAnh": [
+      {
+        "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80",
+        "moTa": "Anh phong mau",
+        "thuTu": {
+          "$numberInt": "0"
+        }
+      }
+    ],
+    "trangThai": "DA_AN",
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "135"
+    },
+    "noiBat": false,
+    "ngayDang": null,
+    "ngayHetHan": null,
+    "ngayAn": {
+      "$date": {
+        "$numberLong": "1795046400000"
+      }
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1793923200000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "700000000000000000000031"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000001"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000029"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000034"
+    },
+    "tieuDe": "[DEMO] D027 - phong Cau Giay",
+    "slug": "demo-d027-stay-031",
+    "moTa": "[DEMO] Tin gia lap de thu trang tim phong.",
+    "giaThue": {
+      "$numberInt": "4998000"
+    },
+    "tienCoc": {
+      "$numberInt": "4998000"
+    },
+    "dienTichM2": {
+      "$numberInt": "32"
+    },
+    "soNguoiToiDa": {
+      "$numberInt": "4"
+    },
+    "tienIch": [
+      "May lanh",
+      "Gac lung",
+      "Wifi"
+    ],
+    "diaChi": {
+      "soNhaDuong": "Khu vuc demo 29",
+      "phuongXa": "Phuong Dich Vong",
+      "quanHuyen": "Cau Giay",
+      "tinhThanh": "Ha Noi",
+      "maBuuChinh": "100000"
+    },
+    "viTri": {
+      "type": "Point",
+      "coordinates": [
+        {
+          "$numberDouble": "105.7926"
+        },
+        {
+          "$numberDouble": "21.0345"
+        }
+      ]
+    },
+    "hinhAnh": [
+      {
+        "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80",
+        "moTa": "Anh phong mau",
+        "thuTu": {
+          "$numberInt": "0"
+        }
+      }
+    ],
+    "trangThai": "DA_AN",
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "176"
+    },
+    "noiBat": false,
+    "ngayDang": null,
+    "ngayHetHan": null,
+    "ngayAn": {
+      "$date": {
+        "$numberLong": "1795046400000"
+      }
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1794009600000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "700000000000000000000032"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000002"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000030"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000035"
+    },
+    "tieuDe": "[DEMO] D028 - phong Binh Thanh",
+    "slug": "demo-d028-stay-032",
+    "moTa": "[DEMO] Tin gia lap de thu trang tim phong.",
+    "giaThue": {
+      "$numberInt": "6271000"
+    },
+    "tienCoc": {
+      "$numberInt": "6271000"
+    },
+    "dienTichM2": {
+      "$numberInt": "39"
+    },
+    "soNguoiToiDa": {
+      "$numberInt": "2"
+    },
+    "tienIch": [
+      "May lanh",
+      "Gac lung",
+      "Wifi"
+    ],
+    "diaChi": {
+      "soNhaDuong": "Khu vuc demo 30",
+      "phuongXa": "Phuong 25",
+      "quanHuyen": "Binh Thanh",
+      "tinhThanh": "Ho Chi Minh",
+      "maBuuChinh": "700000"
+    },
+    "viTri": {
+      "type": "Point",
+      "coordinates": [
+        {
+          "$numberDouble": "106.7013"
+        },
+        {
+          "$numberDouble": "10.8002"
+        }
+      ]
+    },
+    "hinhAnh": [
+      {
+        "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80",
+        "moTa": "Anh phong mau",
+        "thuTu": {
+          "$numberInt": "0"
+        }
+      }
+    ],
+    "trangThai": "DA_AN",
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "217"
+    },
+    "noiBat": false,
+    "ngayDang": null,
+    "ngayHetHan": null,
+    "ngayAn": {
+      "$date": {
+        "$numberLong": "1795046400000"
+      }
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1794096000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "700000000000000000000033"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000001"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000031"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000036"
+    },
+    "tieuDe": "[DEMO] D029 - phong Cau Giay",
+    "slug": "demo-d029-stay-033",
+    "moTa": "[DEMO] Tin gia lap de thu trang tim phong.",
+    "giaThue": {
+      "$numberInt": "5344000"
+    },
+    "tienCoc": {
+      "$numberInt": "5344000"
+    },
+    "dienTichM2": {
+      "$numberInt": "22"
+    },
+    "soNguoiToiDa": {
+      "$numberInt": "3"
+    },
+    "tienIch": [
+      "May lanh",
+      "Gac lung",
+      "Wifi"
+    ],
+    "diaChi": {
+      "soNhaDuong": "Khu vuc demo 31",
+      "phuongXa": "Phuong Dich Vong",
+      "quanHuyen": "Cau Giay",
+      "tinhThanh": "Ha Noi",
+      "maBuuChinh": "100000"
+    },
+    "viTri": {
+      "type": "Point",
+      "coordinates": [
+        {
+          "$numberDouble": "105.7896"
+        },
+        {
+          "$numberDouble": "21.0365"
+        }
+      ]
+    },
+    "hinhAnh": [
+      {
+        "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80",
+        "moTa": "Anh phong mau",
+        "thuTu": {
+          "$numberInt": "0"
+        }
+      }
+    ],
+    "trangThai": "DA_AN",
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "258"
+    },
+    "noiBat": false,
+    "ngayDang": null,
+    "ngayHetHan": null,
+    "ngayAn": {
+      "$date": {
+        "$numberLong": "1795046400000"
+      }
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1794182400000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "700000000000000000000034"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000002"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000032"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000037"
+    },
+    "tieuDe": "[DEMO] D030 - phong Binh Thanh",
+    "slug": "demo-d030-stay-034",
+    "moTa": "[DEMO] Tin gia lap de thu trang tim phong.",
+    "giaThue": {
+      "$numberInt": "6617000"
+    },
+    "tienCoc": {
+      "$numberInt": "6617000"
+    },
+    "dienTichM2": {
+      "$numberInt": "29"
+    },
+    "soNguoiToiDa": {
+      "$numberInt": "4"
+    },
+    "tienIch": [
+      "May lanh",
+      "Gac lung",
+      "Wifi"
+    ],
+    "diaChi": {
+      "soNhaDuong": "Khu vuc demo 32",
+      "phuongXa": "Phuong 25",
+      "quanHuyen": "Binh Thanh",
+      "tinhThanh": "Ho Chi Minh",
+      "maBuuChinh": "700000"
+    },
+    "viTri": {
+      "type": "Point",
+      "coordinates": [
+        {
+          "$numberDouble": "106.7033"
+        },
+        {
+          "$numberDouble": "10.8022"
+        }
+      ]
+    },
+    "hinhAnh": [
+      {
+        "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80",
+        "moTa": "Anh phong mau",
+        "thuTu": {
+          "$numberInt": "0"
+        }
+      }
+    ],
+    "trangThai": "DA_AN",
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "299"
+    },
+    "noiBat": false,
+    "ngayDang": null,
+    "ngayHetHan": null,
+    "ngayAn": {
+      "$date": {
+        "$numberLong": "1795046400000"
+      }
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1794268800000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "700000000000000000000035"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000001"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000033"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000038"
+    },
+    "tieuDe": "[DEMO] D031 - phong Cau Giay",
+    "slug": "demo-d031-stay-035",
+    "moTa": "[DEMO] Tin gia lap de thu trang tim phong.",
+    "giaThue": {
+      "$numberInt": "5690000"
+    },
+    "tienCoc": {
+      "$numberInt": "5690000"
+    },
+    "dienTichM2": {
+      "$numberInt": "36"
+    },
+    "soNguoiToiDa": {
+      "$numberInt": "2"
+    },
+    "tienIch": [
+      "May lanh",
+      "Gac lung",
+      "Wifi"
+    ],
+    "diaChi": {
+      "soNhaDuong": "Khu vuc demo 33",
+      "phuongXa": "Phuong Dich Vong",
+      "quanHuyen": "Cau Giay",
+      "tinhThanh": "Ha Noi",
+      "maBuuChinh": "100000"
+    },
+    "viTri": {
+      "type": "Point",
+      "coordinates": [
+        {
+          "$numberDouble": "105.7916"
+        },
+        {
+          "$numberDouble": "21.0385"
+        }
+      ]
+    },
+    "hinhAnh": [
+      {
+        "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80",
+        "moTa": "Anh phong mau",
+        "thuTu": {
+          "$numberInt": "0"
+        }
+      }
+    ],
+    "trangThai": "DA_DANG",
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "340"
+    },
+    "noiBat": false,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1794700800000"
+      }
+    },
+    "ngayHetHan": {
+      "$date": {
+        "$numberLong": "1797724800000"
+      }
+    },
+    "ngayAn": null,
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1794355200000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "700000000000000000000036"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000002"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000034"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000039"
+    },
+    "tieuDe": "[DEMO] D032 - phong Binh Thanh",
+    "slug": "demo-d032-stay-036",
+    "moTa": "[DEMO] Tin gia lap de thu trang tim phong.",
+    "giaThue": {
+      "$numberInt": "4363000"
+    },
+    "tienCoc": {
+      "$numberInt": "4363000"
+    },
+    "dienTichM2": {
+      "$numberInt": "19"
+    },
+    "soNguoiToiDa": {
+      "$numberInt": "3"
+    },
+    "tienIch": [
+      "May lanh",
+      "Gac lung",
+      "Wifi"
+    ],
+    "diaChi": {
+      "soNhaDuong": "Khu vuc demo 34",
+      "phuongXa": "Phuong 25",
+      "quanHuyen": "Binh Thanh",
+      "tinhThanh": "Ho Chi Minh",
+      "maBuuChinh": "700000"
+    },
+    "viTri": {
+      "type": "Point",
+      "coordinates": [
+        {
+          "$numberDouble": "106.7053"
+        },
+        {
+          "$numberDouble": "10.8042"
+        }
+      ]
+    },
+    "hinhAnh": [
+      {
+        "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80",
+        "moTa": "Anh phong mau",
+        "thuTu": {
+          "$numberInt": "0"
+        }
+      }
+    ],
+    "trangThai": "DA_DANG",
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "381"
+    },
+    "noiBat": false,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1794787200000"
+      }
+    },
+    "ngayHetHan": {
+      "$date": {
+        "$numberLong": "1797724800000"
+      }
+    },
+    "ngayAn": null,
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1794441600000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "700000000000000000000037"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000001"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000035"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000040"
+    },
+    "tieuDe": "[DEMO] D033 - phong Cau Giay",
+    "slug": "demo-d033-stay-037",
+    "moTa": "[DEMO] Tin gia lap de thu trang tim phong.",
+    "giaThue": {
+      "$numberInt": "3436000"
+    },
+    "tienCoc": {
+      "$numberInt": "3436000"
+    },
+    "dienTichM2": {
+      "$numberInt": "26"
+    },
+    "soNguoiToiDa": {
+      "$numberInt": "4"
+    },
+    "tienIch": [
+      "May lanh",
+      "Gac lung",
+      "Wifi"
+    ],
+    "diaChi": {
+      "soNhaDuong": "Khu vuc demo 35",
+      "phuongXa": "Phuong Dich Vong",
+      "quanHuyen": "Cau Giay",
+      "tinhThanh": "Ha Noi",
+      "maBuuChinh": "100000"
+    },
+    "viTri": {
+      "type": "Point",
+      "coordinates": [
+        {
+          "$numberDouble": "105.7886"
+        },
+        {
+          "$numberDouble": "21.0335"
+        }
+      ]
+    },
+    "hinhAnh": [
+      {
+        "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80",
+        "moTa": "Anh phong mau",
+        "thuTu": {
+          "$numberInt": "0"
+        }
+      }
+    ],
+    "trangThai": "DA_DANG",
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "422"
+    },
+    "noiBat": true,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1794873600000"
+      }
+    },
+    "ngayHetHan": {
+      "$date": {
+        "$numberLong": "1797724800000"
+      }
+    },
+    "ngayAn": null,
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1794528000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "700000000000000000000038"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000002"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000036"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000041"
+    },
+    "tieuDe": "[DEMO] D034 - phong Binh Thanh",
+    "slug": "demo-d034-stay-038",
+    "moTa": "[DEMO] Tin gia lap de thu trang tim phong.",
+    "giaThue": {
+      "$numberInt": "4709000"
+    },
+    "tienCoc": {
+      "$numberInt": "4709000"
+    },
+    "dienTichM2": {
+      "$numberInt": "33"
+    },
+    "soNguoiToiDa": {
+      "$numberInt": "2"
+    },
+    "tienIch": [
+      "May lanh",
+      "Gac lung",
+      "Wifi"
+    ],
+    "diaChi": {
+      "soNhaDuong": "Khu vuc demo 36",
+      "phuongXa": "Phuong 25",
+      "quanHuyen": "Binh Thanh",
+      "tinhThanh": "Ho Chi Minh",
+      "maBuuChinh": "700000"
+    },
+    "viTri": {
+      "type": "Point",
+      "coordinates": [
+        {
+          "$numberDouble": "106.7023"
+        },
+        {
+          "$numberDouble": "10.799199999999999"
+        }
+      ]
+    },
+    "hinhAnh": [
+      {
+        "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80",
+        "moTa": "Anh phong mau",
+        "thuTu": {
+          "$numberInt": "0"
+        }
+      }
+    ],
+    "trangThai": "DA_DANG",
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "463"
+    },
+    "noiBat": false,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1794960000000"
+      }
+    },
+    "ngayHetHan": {
+      "$date": {
+        "$numberLong": "1797724800000"
+      }
+    },
+    "ngayAn": null,
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1794614400000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "700000000000000000000039"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000001"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000037"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000042"
+    },
+    "tieuDe": "[DEMO] D035 - phong Cau Giay",
+    "slug": "demo-d035-stay-039",
+    "moTa": "[DEMO] Tin gia lap de thu trang tim phong.",
+    "giaThue": {
+      "$numberInt": "3782000"
+    },
+    "tienCoc": {
+      "$numberInt": "3782000"
+    },
+    "dienTichM2": {
+      "$numberInt": "40"
+    },
+    "soNguoiToiDa": {
+      "$numberInt": "3"
+    },
+    "tienIch": [
+      "May lanh",
+      "Gac lung",
+      "Wifi"
+    ],
+    "diaChi": {
+      "soNhaDuong": "Khu vuc demo 37",
+      "phuongXa": "Phuong Dich Vong",
+      "quanHuyen": "Cau Giay",
+      "tinhThanh": "Ha Noi",
+      "maBuuChinh": "100000"
+    },
+    "viTri": {
+      "type": "Point",
+      "coordinates": [
+        {
+          "$numberDouble": "105.7906"
+        },
+        {
+          "$numberDouble": "21.0355"
+        }
+      ]
+    },
+    "hinhAnh": [
+      {
+        "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80",
+        "moTa": "Anh phong mau",
+        "thuTu": {
+          "$numberInt": "0"
+        }
+      }
+    ],
+    "trangThai": "DA_DANG",
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "504"
+    },
+    "noiBat": false,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1795046400000"
+      }
+    },
+    "ngayHetHan": {
+      "$date": {
+        "$numberLong": "1797724800000"
+      }
+    },
+    "ngayAn": null,
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1794700800000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "700000000000000000000040"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000002"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000038"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000043"
+    },
+    "tieuDe": "[DEMO] D036 - phong Binh Thanh",
+    "slug": "demo-d036-stay-040",
+    "moTa": "[DEMO] Tin gia lap de thu trang tim phong.",
+    "giaThue": {
+      "$numberInt": "5055000"
+    },
+    "tienCoc": {
+      "$numberInt": "5055000"
+    },
+    "dienTichM2": {
+      "$numberInt": "23"
+    },
+    "soNguoiToiDa": {
+      "$numberInt": "4"
+    },
+    "tienIch": [
+      "May lanh",
+      "Gac lung",
+      "Wifi"
+    ],
+    "diaChi": {
+      "soNhaDuong": "Khu vuc demo 38",
+      "phuongXa": "Phuong 25",
+      "quanHuyen": "Binh Thanh",
+      "tinhThanh": "Ho Chi Minh",
+      "maBuuChinh": "700000"
+    },
+    "viTri": {
+      "type": "Point",
+      "coordinates": [
+        {
+          "$numberDouble": "106.7043"
+        },
+        {
+          "$numberDouble": "10.8012"
+        }
+      ]
+    },
+    "hinhAnh": [
+      {
+        "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80",
+        "moTa": "Anh phong mau",
+        "thuTu": {
+          "$numberInt": "0"
+        }
+      }
+    ],
+    "trangThai": "DA_DANG",
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "545"
+    },
+    "noiBat": false,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1795132800000"
+      }
+    },
+    "ngayHetHan": {
+      "$date": {
+        "$numberLong": "1797724800000"
+      }
+    },
+    "ngayAn": null,
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1794787200000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "700000000000000000000041"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000001"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000039"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000044"
+    },
+    "tieuDe": "[DEMO] D037 - phong Cau Giay",
+    "slug": "demo-d037-stay-041",
+    "moTa": "[DEMO] Tin gia lap de thu trang tim phong.",
+    "giaThue": {
+      "$numberInt": "4128000"
+    },
+    "tienCoc": {
+      "$numberInt": "4128000"
+    },
+    "dienTichM2": {
+      "$numberInt": "30"
+    },
+    "soNguoiToiDa": {
+      "$numberInt": "2"
+    },
+    "tienIch": [
+      "May lanh",
+      "Gac lung",
+      "Wifi"
+    ],
+    "diaChi": {
+      "soNhaDuong": "Khu vuc demo 39",
+      "phuongXa": "Phuong Dich Vong",
+      "quanHuyen": "Cau Giay",
+      "tinhThanh": "Ha Noi",
+      "maBuuChinh": "100000"
+    },
+    "viTri": {
+      "type": "Point",
+      "coordinates": [
+        {
+          "$numberDouble": "105.7926"
+        },
+        {
+          "$numberDouble": "21.0375"
+        }
+      ]
+    },
+    "hinhAnh": [
+      {
+        "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80",
+        "moTa": "Anh phong mau",
+        "thuTu": {
+          "$numberInt": "0"
+        }
+      }
+    ],
+    "trangThai": "DA_DANG",
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "586"
+    },
+    "noiBat": false,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1794700800000"
+      }
+    },
+    "ngayHetHan": {
+      "$date": {
+        "$numberLong": "1797724800000"
+      }
+    },
+    "ngayAn": null,
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1794873600000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "700000000000000000000042"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000002"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000040"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000045"
+    },
+    "tieuDe": "[DEMO] D038 - phong Binh Thanh",
+    "slug": "demo-d038-stay-042",
+    "moTa": "[DEMO] Tin gia lap de thu trang tim phong.",
+    "giaThue": {
+      "$numberInt": "5401000"
+    },
+    "tienCoc": {
+      "$numberInt": "5401000"
+    },
+    "dienTichM2": {
+      "$numberInt": "37"
+    },
+    "soNguoiToiDa": {
+      "$numberInt": "3"
+    },
+    "tienIch": [
+      "May lanh",
+      "Gac lung",
+      "Wifi"
+    ],
+    "diaChi": {
+      "soNhaDuong": "Khu vuc demo 40",
+      "phuongXa": "Phuong 25",
+      "quanHuyen": "Binh Thanh",
+      "tinhThanh": "Ho Chi Minh",
+      "maBuuChinh": "700000"
+    },
+    "viTri": {
+      "type": "Point",
+      "coordinates": [
+        {
+          "$numberDouble": "106.7013"
+        },
+        {
+          "$numberDouble": "10.8032"
+        }
+      ]
+    },
+    "hinhAnh": [
+      {
+        "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80",
+        "moTa": "Anh phong mau",
+        "thuTu": {
+          "$numberInt": "0"
+        }
+      }
+    ],
+    "trangThai": "DA_DANG",
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "627"
+    },
+    "noiBat": false,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1794787200000"
+      }
+    },
+    "ngayHetHan": {
+      "$date": {
+        "$numberLong": "1797724800000"
+      }
+    },
+    "ngayAn": null,
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1794960000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "700000000000000000000043"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000001"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000041"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000046"
+    },
+    "tieuDe": "[DEMO] D039 - phong Cau Giay",
+    "slug": "demo-d039-stay-043",
+    "moTa": "[DEMO] Tin gia lap de thu trang tim phong.",
+    "giaThue": {
+      "$numberInt": "4474000"
+    },
+    "tienCoc": {
+      "$numberInt": "4474000"
+    },
+    "dienTichM2": {
+      "$numberInt": "20"
+    },
+    "soNguoiToiDa": {
+      "$numberInt": "4"
+    },
+    "tienIch": [
+      "May lanh",
+      "Gac lung",
+      "Wifi"
+    ],
+    "diaChi": {
+      "soNhaDuong": "Khu vuc demo 41",
+      "phuongXa": "Phuong Dich Vong",
+      "quanHuyen": "Cau Giay",
+      "tinhThanh": "Ha Noi",
+      "maBuuChinh": "100000"
+    },
+    "viTri": {
+      "type": "Point",
+      "coordinates": [
+        {
+          "$numberDouble": "105.7896"
+        },
+        {
+          "$numberDouble": "21.0395"
+        }
+      ]
+    },
+    "hinhAnh": [
+      {
+        "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80",
+        "moTa": "Anh phong mau",
+        "thuTu": {
+          "$numberInt": "0"
+        }
+      }
+    ],
+    "trangThai": "DA_DANG",
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "668"
+    },
+    "noiBat": false,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1794873600000"
+      }
+    },
+    "ngayHetHan": {
+      "$date": {
+        "$numberLong": "1797724800000"
+      }
+    },
+    "ngayAn": null,
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1795046400000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "700000000000000000000044"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000002"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000042"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000047"
+    },
+    "tieuDe": "[DEMO] D040 - phong Binh Thanh",
+    "slug": "demo-d040-stay-044",
+    "moTa": "[DEMO] Tin gia lap de thu trang tim phong.",
+    "giaThue": {
+      "$numberInt": "5747000"
+    },
+    "tienCoc": {
+      "$numberInt": "5747000"
+    },
+    "dienTichM2": {
+      "$numberInt": "27"
+    },
+    "soNguoiToiDa": {
+      "$numberInt": "2"
+    },
+    "tienIch": [
+      "May lanh",
+      "Gac lung",
+      "Wifi"
+    ],
+    "diaChi": {
+      "soNhaDuong": "Khu vuc demo 42",
+      "phuongXa": "Phuong 25",
+      "quanHuyen": "Binh Thanh",
+      "tinhThanh": "Ho Chi Minh",
+      "maBuuChinh": "700000"
+    },
+    "viTri": {
+      "type": "Point",
+      "coordinates": [
+        {
+          "$numberDouble": "106.7033"
+        },
+        {
+          "$numberDouble": "10.7982"
+        }
+      ]
+    },
+    "hinhAnh": [
+      {
+        "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80",
+        "moTa": "Anh phong mau",
+        "thuTu": {
+          "$numberInt": "0"
+        }
+      }
+    ],
+    "trangThai": "DA_DANG",
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "709"
+    },
+    "noiBat": false,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1794960000000"
+      }
+    },
+    "ngayHetHan": {
+      "$date": {
+        "$numberLong": "1797724800000"
+      }
+    },
+    "ngayAn": null,
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1795132800000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "700000000000000000000045"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000001"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000043"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000048"
+    },
+    "tieuDe": "[DEMO] D041 - phong Cau Giay",
+    "slug": "demo-d041-stay-045",
+    "moTa": "[DEMO] Tin gia lap de thu trang tim phong.",
+    "giaThue": {
+      "$numberInt": "4820000"
+    },
+    "tienCoc": {
+      "$numberInt": "4820000"
+    },
+    "dienTichM2": {
+      "$numberInt": "34"
+    },
+    "soNguoiToiDa": {
+      "$numberInt": "3"
+    },
+    "tienIch": [
+      "May lanh",
+      "Gac lung",
+      "Wifi"
+    ],
+    "diaChi": {
+      "soNhaDuong": "Khu vuc demo 43",
+      "phuongXa": "Phuong Dich Vong",
+      "quanHuyen": "Cau Giay",
+      "tinhThanh": "Ha Noi",
+      "maBuuChinh": "100000"
+    },
+    "viTri": {
+      "type": "Point",
+      "coordinates": [
+        {
+          "$numberDouble": "105.7916"
+        },
+        {
+          "$numberDouble": "21.0345"
+        }
+      ]
+    },
+    "hinhAnh": [
+      {
+        "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80",
+        "moTa": "Anh phong mau",
+        "thuTu": {
+          "$numberInt": "0"
+        }
+      }
+    ],
+    "trangThai": "DA_AN",
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "750"
+    },
+    "noiBat": true,
+    "ngayDang": null,
+    "ngayHetHan": null,
+    "ngayAn": {
+      "$date": {
+        "$numberLong": "1795046400000"
+      }
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1793491200000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "700000000000000000000046"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000002"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000044"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000049"
+    },
+    "tieuDe": "[DEMO] D042 - phong Binh Thanh",
+    "slug": "demo-d042-stay-046",
+    "moTa": "[DEMO] Tin gia lap de thu trang tim phong.",
+    "giaThue": {
+      "$numberInt": "6093000"
+    },
+    "tienCoc": {
+      "$numberInt": "6093000"
+    },
+    "dienTichM2": {
+      "$numberInt": "41"
+    },
+    "soNguoiToiDa": {
+      "$numberInt": "4"
+    },
+    "tienIch": [
+      "May lanh",
+      "Gac lung",
+      "Wifi"
+    ],
+    "diaChi": {
+      "soNhaDuong": "Khu vuc demo 44",
+      "phuongXa": "Phuong 25",
+      "quanHuyen": "Binh Thanh",
+      "tinhThanh": "Ho Chi Minh",
+      "maBuuChinh": "700000"
+    },
+    "viTri": {
+      "type": "Point",
+      "coordinates": [
+        {
+          "$numberDouble": "106.7053"
+        },
+        {
+          "$numberDouble": "10.8002"
+        }
+      ]
+    },
+    "hinhAnh": [
+      {
+        "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80",
+        "moTa": "Anh phong mau",
+        "thuTu": {
+          "$numberInt": "0"
+        }
+      }
+    ],
+    "trangThai": "DA_AN",
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "791"
+    },
+    "noiBat": false,
+    "ngayDang": null,
+    "ngayHetHan": null,
+    "ngayAn": {
+      "$date": {
+        "$numberLong": "1795046400000"
+      }
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1793577600000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "700000000000000000000047"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000001"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000045"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000050"
+    },
+    "tieuDe": "[DEMO] D043 - phong Cau Giay",
+    "slug": "demo-d043-stay-047",
+    "moTa": "[DEMO] Tin gia lap de thu trang tim phong.",
+    "giaThue": {
+      "$numberInt": "5166000"
+    },
+    "tienCoc": {
+      "$numberInt": "5166000"
+    },
+    "dienTichM2": {
+      "$numberInt": "24"
+    },
+    "soNguoiToiDa": {
+      "$numberInt": "2"
+    },
+    "tienIch": [
+      "May lanh",
+      "Gac lung",
+      "Wifi"
+    ],
+    "diaChi": {
+      "soNhaDuong": "Khu vuc demo 45",
+      "phuongXa": "Phuong Dich Vong",
+      "quanHuyen": "Cau Giay",
+      "tinhThanh": "Ha Noi",
+      "maBuuChinh": "100000"
+    },
+    "viTri": {
+      "type": "Point",
+      "coordinates": [
+        {
+          "$numberDouble": "105.7886"
+        },
+        {
+          "$numberDouble": "21.0365"
+        }
+      ]
+    },
+    "hinhAnh": [
+      {
+        "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80",
+        "moTa": "Anh phong mau",
+        "thuTu": {
+          "$numberInt": "0"
+        }
+      }
+    ],
+    "trangThai": "DA_AN",
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "832"
+    },
+    "noiBat": false,
+    "ngayDang": null,
+    "ngayHetHan": null,
+    "ngayAn": {
+      "$date": {
+        "$numberLong": "1795046400000"
+      }
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1793664000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "700000000000000000000048"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000001"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000001"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000001"
+    },
+    "tieuDe": "[DEMO] Tin lich su 48",
+    "slug": "demo-lich-su-tin-48",
+    "moTa": "Tin dang mau de thu giao dien. Gia va dien tich tham khao phan khuc phong tro Cau Giay; day khong phai phong dang giao dich that.",
+    "giaThue": {
+      "$numberInt": "3100000"
+    },
+    "tienCoc": {
+      "$numberInt": "3100000"
+    },
+    "dienTichM2": {
+      "$numberInt": "25"
+    },
+    "soNguoiToiDa": {
+      "$numberInt": "2"
+    },
+    "tienIch": [
+      "May lanh",
+      "Gac lung",
+      "Wifi"
+    ],
+    "diaChi": {
+      "soNhaDuong": "Khu vuc duong Xuan Thuy (du lieu mau)",
+      "phuongXa": "Phuong Cau Giay",
+      "quanHuyen": "Cau Giay",
+      "tinhThanh": "Ha Noi"
+    },
+    "viTri": {
+      "type": "Point",
+      "coordinates": [
+        {
+          "$numberDouble": "105.7906"
+        },
+        {
+          "$numberDouble": "21.0365"
+        }
+      ]
+    },
+    "hinhAnh": [
+      {
+        "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80",
+        "moTa": "Anh tham khao",
+        "thuTu": {
+          "$numberInt": "0"
+        }
+      }
+    ],
+    "trangThai": "DA_AN",
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "124"
+    },
+    "noiBat": true,
+    "ngayDang": null,
+    "ngayHetHan": null,
+    "ngayAn": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1791417600000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "700000000000000000000049"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000001"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000001"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000002"
+    },
+    "tieuDe": "[DEMO] Tin lich su 49",
+    "slug": "demo-lich-su-tin-49",
+    "moTa": "Tin dang mau de thu giao dien. Gia va dien tich tham khao phan khuc phong tro Cau Giay; day khong phai phong dang giao dich that.",
+    "giaThue": {
+      "$numberInt": "3100000"
+    },
+    "tienCoc": {
+      "$numberInt": "3100000"
+    },
+    "dienTichM2": {
+      "$numberInt": "25"
+    },
+    "soNguoiToiDa": {
+      "$numberInt": "2"
+    },
+    "tienIch": [
+      "May lanh",
+      "Gac lung",
+      "Wifi"
+    ],
+    "diaChi": {
+      "soNhaDuong": "Khu vuc duong Xuan Thuy (du lieu mau)",
+      "phuongXa": "Phuong Cau Giay",
+      "quanHuyen": "Cau Giay",
+      "tinhThanh": "Ha Noi"
+    },
+    "viTri": {
+      "type": "Point",
+      "coordinates": [
+        {
+          "$numberDouble": "105.7906"
+        },
+        {
+          "$numberDouble": "21.0365"
+        }
+      ]
+    },
+    "hinhAnh": [
+      {
+        "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80",
+        "moTa": "Anh tham khao",
+        "thuTu": {
+          "$numberInt": "0"
+        }
+      }
+    ],
+    "trangThai": "DA_AN",
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "124"
+    },
+    "noiBat": true,
+    "ngayDang": null,
+    "ngayHetHan": null,
+    "ngayAn": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1791504000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "700000000000000000000050"
+    },
+    "chuTroId": {
+      "$oid": "670000000000000000000001"
+    },
+    "dayTroId": {
+      "$oid": "680000000000000000000001"
+    },
+    "phongTroId": {
+      "$oid": "690000000000000000000003"
+    },
+    "tieuDe": "[DEMO] Tin lich su 50",
+    "slug": "demo-lich-su-tin-50",
+    "moTa": "Tin dang mau de thu giao dien. Gia va dien tich tham khao phan khuc phong tro Cau Giay; day khong phai phong dang giao dich that.",
+    "giaThue": {
+      "$numberInt": "3100000"
+    },
+    "tienCoc": {
+      "$numberInt": "3100000"
+    },
+    "dienTichM2": {
+      "$numberInt": "25"
+    },
+    "soNguoiToiDa": {
+      "$numberInt": "2"
+    },
+    "tienIch": [
+      "May lanh",
+      "Gac lung",
+      "Wifi"
+    ],
+    "diaChi": {
+      "soNhaDuong": "Khu vuc duong Xuan Thuy (du lieu mau)",
+      "phuongXa": "Phuong Cau Giay",
+      "quanHuyen": "Cau Giay",
+      "tinhThanh": "Ha Noi"
+    },
+    "viTri": {
+      "type": "Point",
+      "coordinates": [
+        {
+          "$numberDouble": "105.7906"
+        },
+        {
+          "$numberDouble": "21.0365"
+        }
+      ]
+    },
+    "hinhAnh": [
+      {
+        "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80",
+        "moTa": "Anh tham khao",
+        "thuTu": {
+          "$numberInt": "0"
+        }
+      }
+    ],
+    "trangThai": "DA_AN",
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "124"
+    },
+    "noiBat": true,
+    "ngayDang": null,
+    "ngayHetHan": null,
+    "ngayAn": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1791590400000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  }
+]

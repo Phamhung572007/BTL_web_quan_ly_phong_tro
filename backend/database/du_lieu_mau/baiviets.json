@@ -1,0 +1,2358 @@
+[
+  {
+    "_id": {
+      "$oid": "730000000000000000000001"
+    },
+    "tacGiaId": {
+      "$oid": "670000000000000000000007"
+    },
+    "loaiBaiViet": "TIN_TUC",
+    "tieuDe": "Checklist xem phong tro truoc khi ky hop dong",
+    "slug": "checklist-xem-phong-demo-730001",
+    "tomTat": "Danh sach cac muc can kiem tra khi xem phong va doc hop dong.",
+    "noiDung": "Bai viet demo: kiem tra dien nuoc, khoa cua, thong gio, loi thoat hiem, chi phi dich vu va dieu khoan dat coc. Noi dung chi phuc vu kiem thu giao dien.",
+    "anhDaiDien": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    "hinhAnh": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80"
+    ],
+    "tags": [
+      "kinh-nghiem",
+      "thue-phong"
+    ],
+    "trangThai": "DA_DANG",
+    "ghimLenDau": true,
+    "ngayBatDauSuKien": null,
+    "ngayKetThucSuKien": null,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1794974400000"
+      }
+    },
+    "nguoiDuyetId": {
+      "$oid": "670000000000000000000007"
+    },
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "235"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1794888000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1794974400000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "730000000000000000000002"
+    },
+    "tacGiaId": {
+      "$oid": "670000000000000000000001"
+    },
+    "loaiBaiViet": "SU_KIEN",
+    "tieuDe": "Ngay hoi ket noi nguoi thue demo",
+    "slug": "ngay-hoi-ket-noi-demo-730002",
+    "tomTat": "Thong tin su kien mau tren bang tin.",
+    "noiDung": "Bai viet va su kien demo de kiem tra phan trang, loc theo loai bai viet va trang thai dang.",
+    "anhDaiDien": "",
+    "hinhAnh": [],
+    "tags": [
+      "su-kien",
+      "cong-dong"
+    ],
+    "trangThai": "DA_DANG",
+    "ghimLenDau": false,
+    "ngayBatDauSuKien": {
+      "$date": {
+        "$numberLong": "1796868000000"
+      }
+    },
+    "ngayKetThucSuKien": {
+      "$date": {
+        "$numberLong": "1796878800000"
+      }
+    },
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1795060800000"
+      }
+    },
+    "nguoiDuyetId": {
+      "$oid": "670000000000000000000007"
+    },
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "52"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1795057200000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795060800000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "730000000000000000000003"
+    },
+    "tacGiaId": {
+      "$oid": "670000000000000000000001"
+    },
+    "loaiBaiViet": "TIN_TUC",
+    "tieuDe": "[DEMO] Kinh nghiem nha tro 03",
+    "slug": "demo-kinh-nghiem-nha-tro-003",
+    "tomTat": "Noi dung minh hoa cho bang tin cong dong StaySync.",
+    "noiDung": "[DEMO] Bai viet gia lap de thu giao dien danh sach va chi tiet. Thay bang noi dung da duoc nhom duyet truoc khi dung that.",
+    "anhDaiDien": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    "hinhAnh": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80"
+    ],
+    "tags": [
+      "demo",
+      "nha-tro"
+    ],
+    "trangThai": "DA_DANG",
+    "ghimLenDau": false,
+    "ngayBatDauSuKien": null,
+    "ngayKetThucSuKien": null,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1790812800000"
+      }
+    },
+    "nguoiDuyetId": {
+      "$oid": "670000000000000000000007"
+    },
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "0"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1790812800000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "730000000000000000000004"
+    },
+    "tacGiaId": {
+      "$oid": "670000000000000000000002"
+    },
+    "loaiBaiViet": "SU_KIEN",
+    "tieuDe": "[DEMO] Kinh nghiem nha tro 04",
+    "slug": "demo-kinh-nghiem-nha-tro-004",
+    "tomTat": "Noi dung minh hoa cho bang tin cong dong StaySync.",
+    "noiDung": "[DEMO] Bai viet gia lap de thu giao dien danh sach va chi tiet. Thay bang noi dung da duoc nhom duyet truoc khi dung that.",
+    "anhDaiDien": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    "hinhAnh": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80"
+    ],
+    "tags": [
+      "demo",
+      "nha-tro"
+    ],
+    "trangThai": "DA_DANG",
+    "ghimLenDau": false,
+    "ngayBatDauSuKien": null,
+    "ngayKetThucSuKien": null,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1793577600000"
+      }
+    },
+    "nguoiDuyetId": {
+      "$oid": "670000000000000000000007"
+    },
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "23"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1793577600000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "730000000000000000000005"
+    },
+    "tacGiaId": {
+      "$oid": "670000000000000000000001"
+    },
+    "loaiBaiViet": "CONG_DONG",
+    "tieuDe": "[DEMO] Kinh nghiem nha tro 05",
+    "slug": "demo-kinh-nghiem-nha-tro-005",
+    "tomTat": "Noi dung minh hoa cho bang tin cong dong StaySync.",
+    "noiDung": "[DEMO] Bai viet gia lap de thu giao dien danh sach va chi tiet. Thay bang noi dung da duoc nhom duyet truoc khi dung that.",
+    "anhDaiDien": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    "hinhAnh": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80"
+    ],
+    "tags": [
+      "demo",
+      "nha-tro"
+    ],
+    "trangThai": "DA_DANG",
+    "ghimLenDau": false,
+    "ngayBatDauSuKien": null,
+    "ngayKetThucSuKien": null,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1790985600000"
+      }
+    },
+    "nguoiDuyetId": {
+      "$oid": "670000000000000000000007"
+    },
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "46"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1790985600000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "730000000000000000000006"
+    },
+    "tacGiaId": {
+      "$oid": "670000000000000000000002"
+    },
+    "loaiBaiViet": "TIN_TUC",
+    "tieuDe": "[DEMO] Kinh nghiem nha tro 06",
+    "slug": "demo-kinh-nghiem-nha-tro-006",
+    "tomTat": "Noi dung minh hoa cho bang tin cong dong StaySync.",
+    "noiDung": "[DEMO] Bai viet gia lap de thu giao dien danh sach va chi tiet. Thay bang noi dung da duoc nhom duyet truoc khi dung that.",
+    "anhDaiDien": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    "hinhAnh": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80"
+    ],
+    "tags": [
+      "demo",
+      "nha-tro"
+    ],
+    "trangThai": "DA_DANG",
+    "ghimLenDau": false,
+    "ngayBatDauSuKien": null,
+    "ngayKetThucSuKien": null,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1793750400000"
+      }
+    },
+    "nguoiDuyetId": {
+      "$oid": "670000000000000000000007"
+    },
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "69"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1793750400000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "730000000000000000000007"
+    },
+    "tacGiaId": {
+      "$oid": "670000000000000000000001"
+    },
+    "loaiBaiViet": "SU_KIEN",
+    "tieuDe": "[DEMO] Kinh nghiem nha tro 07",
+    "slug": "demo-kinh-nghiem-nha-tro-007",
+    "tomTat": "Noi dung minh hoa cho bang tin cong dong StaySync.",
+    "noiDung": "[DEMO] Bai viet gia lap de thu giao dien danh sach va chi tiet. Thay bang noi dung da duoc nhom duyet truoc khi dung that.",
+    "anhDaiDien": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    "hinhAnh": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80"
+    ],
+    "tags": [
+      "demo",
+      "nha-tro"
+    ],
+    "trangThai": "DA_DANG",
+    "ghimLenDau": false,
+    "ngayBatDauSuKien": null,
+    "ngayKetThucSuKien": null,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1791158400000"
+      }
+    },
+    "nguoiDuyetId": {
+      "$oid": "670000000000000000000007"
+    },
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "92"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1791158400000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "730000000000000000000008"
+    },
+    "tacGiaId": {
+      "$oid": "670000000000000000000002"
+    },
+    "loaiBaiViet": "CONG_DONG",
+    "tieuDe": "[DEMO] Kinh nghiem nha tro 08",
+    "slug": "demo-kinh-nghiem-nha-tro-008",
+    "tomTat": "Noi dung minh hoa cho bang tin cong dong StaySync.",
+    "noiDung": "[DEMO] Bai viet gia lap de thu giao dien danh sach va chi tiet. Thay bang noi dung da duoc nhom duyet truoc khi dung that.",
+    "anhDaiDien": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    "hinhAnh": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80"
+    ],
+    "tags": [
+      "demo",
+      "nha-tro"
+    ],
+    "trangThai": "DA_DANG",
+    "ghimLenDau": false,
+    "ngayBatDauSuKien": null,
+    "ngayKetThucSuKien": null,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1793923200000"
+      }
+    },
+    "nguoiDuyetId": {
+      "$oid": "670000000000000000000007"
+    },
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "115"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1793923200000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "730000000000000000000009"
+    },
+    "tacGiaId": {
+      "$oid": "670000000000000000000001"
+    },
+    "loaiBaiViet": "TIN_TUC",
+    "tieuDe": "[DEMO] Kinh nghiem nha tro 09",
+    "slug": "demo-kinh-nghiem-nha-tro-009",
+    "tomTat": "Noi dung minh hoa cho bang tin cong dong StaySync.",
+    "noiDung": "[DEMO] Bai viet gia lap de thu giao dien danh sach va chi tiet. Thay bang noi dung da duoc nhom duyet truoc khi dung that.",
+    "anhDaiDien": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    "hinhAnh": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80"
+    ],
+    "tags": [
+      "demo",
+      "nha-tro"
+    ],
+    "trangThai": "DA_DANG",
+    "ghimLenDau": false,
+    "ngayBatDauSuKien": null,
+    "ngayKetThucSuKien": null,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1791331200000"
+      }
+    },
+    "nguoiDuyetId": {
+      "$oid": "670000000000000000000007"
+    },
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "138"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1791331200000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "730000000000000000000010"
+    },
+    "tacGiaId": {
+      "$oid": "670000000000000000000002"
+    },
+    "loaiBaiViet": "SU_KIEN",
+    "tieuDe": "[DEMO] Kinh nghiem nha tro 10",
+    "slug": "demo-kinh-nghiem-nha-tro-010",
+    "tomTat": "Noi dung minh hoa cho bang tin cong dong StaySync.",
+    "noiDung": "[DEMO] Bai viet gia lap de thu giao dien danh sach va chi tiet. Thay bang noi dung da duoc nhom duyet truoc khi dung that.",
+    "anhDaiDien": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    "hinhAnh": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80"
+    ],
+    "tags": [
+      "demo",
+      "nha-tro"
+    ],
+    "trangThai": "DA_DANG",
+    "ghimLenDau": false,
+    "ngayBatDauSuKien": null,
+    "ngayKetThucSuKien": null,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1794096000000"
+      }
+    },
+    "nguoiDuyetId": {
+      "$oid": "670000000000000000000007"
+    },
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "161"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1794096000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "730000000000000000000011"
+    },
+    "tacGiaId": {
+      "$oid": "670000000000000000000001"
+    },
+    "loaiBaiViet": "CONG_DONG",
+    "tieuDe": "[DEMO] Kinh nghiem nha tro 11",
+    "slug": "demo-kinh-nghiem-nha-tro-011",
+    "tomTat": "Noi dung minh hoa cho bang tin cong dong StaySync.",
+    "noiDung": "[DEMO] Bai viet gia lap de thu giao dien danh sach va chi tiet. Thay bang noi dung da duoc nhom duyet truoc khi dung that.",
+    "anhDaiDien": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    "hinhAnh": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80"
+    ],
+    "tags": [
+      "demo",
+      "nha-tro"
+    ],
+    "trangThai": "DA_DANG",
+    "ghimLenDau": false,
+    "ngayBatDauSuKien": null,
+    "ngayKetThucSuKien": null,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1791504000000"
+      }
+    },
+    "nguoiDuyetId": {
+      "$oid": "670000000000000000000007"
+    },
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "184"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1791504000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "730000000000000000000012"
+    },
+    "tacGiaId": {
+      "$oid": "670000000000000000000002"
+    },
+    "loaiBaiViet": "TIN_TUC",
+    "tieuDe": "[DEMO] Kinh nghiem nha tro 12",
+    "slug": "demo-kinh-nghiem-nha-tro-012",
+    "tomTat": "Noi dung minh hoa cho bang tin cong dong StaySync.",
+    "noiDung": "[DEMO] Bai viet gia lap de thu giao dien danh sach va chi tiet. Thay bang noi dung da duoc nhom duyet truoc khi dung that.",
+    "anhDaiDien": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    "hinhAnh": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80"
+    ],
+    "tags": [
+      "demo",
+      "nha-tro"
+    ],
+    "trangThai": "DA_DANG",
+    "ghimLenDau": false,
+    "ngayBatDauSuKien": null,
+    "ngayKetThucSuKien": null,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1794268800000"
+      }
+    },
+    "nguoiDuyetId": {
+      "$oid": "670000000000000000000007"
+    },
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "207"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1794268800000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "730000000000000000000013"
+    },
+    "tacGiaId": {
+      "$oid": "670000000000000000000001"
+    },
+    "loaiBaiViet": "SU_KIEN",
+    "tieuDe": "[DEMO] Kinh nghiem nha tro 13",
+    "slug": "demo-kinh-nghiem-nha-tro-013",
+    "tomTat": "Noi dung minh hoa cho bang tin cong dong StaySync.",
+    "noiDung": "[DEMO] Bai viet gia lap de thu giao dien danh sach va chi tiet. Thay bang noi dung da duoc nhom duyet truoc khi dung that.",
+    "anhDaiDien": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    "hinhAnh": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80"
+    ],
+    "tags": [
+      "demo",
+      "nha-tro"
+    ],
+    "trangThai": "DA_DANG",
+    "ghimLenDau": false,
+    "ngayBatDauSuKien": null,
+    "ngayKetThucSuKien": null,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1791676800000"
+      }
+    },
+    "nguoiDuyetId": {
+      "$oid": "670000000000000000000007"
+    },
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "230"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1791676800000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "730000000000000000000014"
+    },
+    "tacGiaId": {
+      "$oid": "670000000000000000000002"
+    },
+    "loaiBaiViet": "CONG_DONG",
+    "tieuDe": "[DEMO] Kinh nghiem nha tro 14",
+    "slug": "demo-kinh-nghiem-nha-tro-014",
+    "tomTat": "Noi dung minh hoa cho bang tin cong dong StaySync.",
+    "noiDung": "[DEMO] Bai viet gia lap de thu giao dien danh sach va chi tiet. Thay bang noi dung da duoc nhom duyet truoc khi dung that.",
+    "anhDaiDien": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    "hinhAnh": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80"
+    ],
+    "tags": [
+      "demo",
+      "nha-tro"
+    ],
+    "trangThai": "DA_DANG",
+    "ghimLenDau": false,
+    "ngayBatDauSuKien": null,
+    "ngayKetThucSuKien": null,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1794441600000"
+      }
+    },
+    "nguoiDuyetId": {
+      "$oid": "670000000000000000000007"
+    },
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "253"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1794441600000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "730000000000000000000015"
+    },
+    "tacGiaId": {
+      "$oid": "670000000000000000000001"
+    },
+    "loaiBaiViet": "TIN_TUC",
+    "tieuDe": "[DEMO] Kinh nghiem nha tro 15",
+    "slug": "demo-kinh-nghiem-nha-tro-015",
+    "tomTat": "Noi dung minh hoa cho bang tin cong dong StaySync.",
+    "noiDung": "[DEMO] Bai viet gia lap de thu giao dien danh sach va chi tiet. Thay bang noi dung da duoc nhom duyet truoc khi dung that.",
+    "anhDaiDien": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    "hinhAnh": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80"
+    ],
+    "tags": [
+      "demo",
+      "nha-tro"
+    ],
+    "trangThai": "DA_DANG",
+    "ghimLenDau": false,
+    "ngayBatDauSuKien": null,
+    "ngayKetThucSuKien": null,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1791849600000"
+      }
+    },
+    "nguoiDuyetId": {
+      "$oid": "670000000000000000000007"
+    },
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "276"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1791849600000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "730000000000000000000016"
+    },
+    "tacGiaId": {
+      "$oid": "670000000000000000000002"
+    },
+    "loaiBaiViet": "SU_KIEN",
+    "tieuDe": "[DEMO] Kinh nghiem nha tro 16",
+    "slug": "demo-kinh-nghiem-nha-tro-016",
+    "tomTat": "Noi dung minh hoa cho bang tin cong dong StaySync.",
+    "noiDung": "[DEMO] Bai viet gia lap de thu giao dien danh sach va chi tiet. Thay bang noi dung da duoc nhom duyet truoc khi dung that.",
+    "anhDaiDien": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    "hinhAnh": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80"
+    ],
+    "tags": [
+      "demo",
+      "nha-tro"
+    ],
+    "trangThai": "DA_DANG",
+    "ghimLenDau": false,
+    "ngayBatDauSuKien": null,
+    "ngayKetThucSuKien": null,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1794614400000"
+      }
+    },
+    "nguoiDuyetId": {
+      "$oid": "670000000000000000000007"
+    },
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "299"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1794614400000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "730000000000000000000017"
+    },
+    "tacGiaId": {
+      "$oid": "670000000000000000000001"
+    },
+    "loaiBaiViet": "CONG_DONG",
+    "tieuDe": "[DEMO] Kinh nghiem nha tro 17",
+    "slug": "demo-kinh-nghiem-nha-tro-017",
+    "tomTat": "Noi dung minh hoa cho bang tin cong dong StaySync.",
+    "noiDung": "[DEMO] Bai viet gia lap de thu giao dien danh sach va chi tiet. Thay bang noi dung da duoc nhom duyet truoc khi dung that.",
+    "anhDaiDien": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    "hinhAnh": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80"
+    ],
+    "tags": [
+      "demo",
+      "nha-tro"
+    ],
+    "trangThai": "DA_DANG",
+    "ghimLenDau": false,
+    "ngayBatDauSuKien": null,
+    "ngayKetThucSuKien": null,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1792022400000"
+      }
+    },
+    "nguoiDuyetId": {
+      "$oid": "670000000000000000000007"
+    },
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "322"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1792022400000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "730000000000000000000018"
+    },
+    "tacGiaId": {
+      "$oid": "670000000000000000000002"
+    },
+    "loaiBaiViet": "TIN_TUC",
+    "tieuDe": "[DEMO] Kinh nghiem nha tro 18",
+    "slug": "demo-kinh-nghiem-nha-tro-018",
+    "tomTat": "Noi dung minh hoa cho bang tin cong dong StaySync.",
+    "noiDung": "[DEMO] Bai viet gia lap de thu giao dien danh sach va chi tiet. Thay bang noi dung da duoc nhom duyet truoc khi dung that.",
+    "anhDaiDien": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    "hinhAnh": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80"
+    ],
+    "tags": [
+      "demo",
+      "nha-tro"
+    ],
+    "trangThai": "DA_DANG",
+    "ghimLenDau": false,
+    "ngayBatDauSuKien": null,
+    "ngayKetThucSuKien": null,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1794787200000"
+      }
+    },
+    "nguoiDuyetId": {
+      "$oid": "670000000000000000000007"
+    },
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "345"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1794787200000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "730000000000000000000019"
+    },
+    "tacGiaId": {
+      "$oid": "670000000000000000000001"
+    },
+    "loaiBaiViet": "SU_KIEN",
+    "tieuDe": "[DEMO] Kinh nghiem nha tro 19",
+    "slug": "demo-kinh-nghiem-nha-tro-019",
+    "tomTat": "Noi dung minh hoa cho bang tin cong dong StaySync.",
+    "noiDung": "[DEMO] Bai viet gia lap de thu giao dien danh sach va chi tiet. Thay bang noi dung da duoc nhom duyet truoc khi dung that.",
+    "anhDaiDien": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    "hinhAnh": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80"
+    ],
+    "tags": [
+      "demo",
+      "nha-tro"
+    ],
+    "trangThai": "DA_DANG",
+    "ghimLenDau": false,
+    "ngayBatDauSuKien": null,
+    "ngayKetThucSuKien": null,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1792195200000"
+      }
+    },
+    "nguoiDuyetId": {
+      "$oid": "670000000000000000000007"
+    },
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "368"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1792195200000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "730000000000000000000020"
+    },
+    "tacGiaId": {
+      "$oid": "670000000000000000000002"
+    },
+    "loaiBaiViet": "CONG_DONG",
+    "tieuDe": "[DEMO] Kinh nghiem nha tro 20",
+    "slug": "demo-kinh-nghiem-nha-tro-020",
+    "tomTat": "Noi dung minh hoa cho bang tin cong dong StaySync.",
+    "noiDung": "[DEMO] Bai viet gia lap de thu giao dien danh sach va chi tiet. Thay bang noi dung da duoc nhom duyet truoc khi dung that.",
+    "anhDaiDien": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    "hinhAnh": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80"
+    ],
+    "tags": [
+      "demo",
+      "nha-tro"
+    ],
+    "trangThai": "DA_DANG",
+    "ghimLenDau": false,
+    "ngayBatDauSuKien": null,
+    "ngayKetThucSuKien": null,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1794960000000"
+      }
+    },
+    "nguoiDuyetId": {
+      "$oid": "670000000000000000000007"
+    },
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "391"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1794960000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "730000000000000000000021"
+    },
+    "tacGiaId": {
+      "$oid": "670000000000000000000001"
+    },
+    "loaiBaiViet": "TIN_TUC",
+    "tieuDe": "[DEMO] Kinh nghiem nha tro 21",
+    "slug": "demo-kinh-nghiem-nha-tro-021",
+    "tomTat": "Noi dung minh hoa cho bang tin cong dong StaySync.",
+    "noiDung": "[DEMO] Bai viet gia lap de thu giao dien danh sach va chi tiet. Thay bang noi dung da duoc nhom duyet truoc khi dung that.",
+    "anhDaiDien": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    "hinhAnh": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80"
+    ],
+    "tags": [
+      "demo",
+      "nha-tro"
+    ],
+    "trangThai": "DA_DANG",
+    "ghimLenDau": false,
+    "ngayBatDauSuKien": null,
+    "ngayKetThucSuKien": null,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1792368000000"
+      }
+    },
+    "nguoiDuyetId": {
+      "$oid": "670000000000000000000007"
+    },
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "414"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1792368000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "730000000000000000000022"
+    },
+    "tacGiaId": {
+      "$oid": "670000000000000000000002"
+    },
+    "loaiBaiViet": "SU_KIEN",
+    "tieuDe": "[DEMO] Kinh nghiem nha tro 22",
+    "slug": "demo-kinh-nghiem-nha-tro-022",
+    "tomTat": "Noi dung minh hoa cho bang tin cong dong StaySync.",
+    "noiDung": "[DEMO] Bai viet gia lap de thu giao dien danh sach va chi tiet. Thay bang noi dung da duoc nhom duyet truoc khi dung that.",
+    "anhDaiDien": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    "hinhAnh": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80"
+    ],
+    "tags": [
+      "demo",
+      "nha-tro"
+    ],
+    "trangThai": "DA_DANG",
+    "ghimLenDau": false,
+    "ngayBatDauSuKien": null,
+    "ngayKetThucSuKien": null,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1795132800000"
+      }
+    },
+    "nguoiDuyetId": {
+      "$oid": "670000000000000000000007"
+    },
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "437"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1795132800000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "730000000000000000000023"
+    },
+    "tacGiaId": {
+      "$oid": "670000000000000000000001"
+    },
+    "loaiBaiViet": "CONG_DONG",
+    "tieuDe": "[DEMO] Kinh nghiem nha tro 23",
+    "slug": "demo-kinh-nghiem-nha-tro-023",
+    "tomTat": "Noi dung minh hoa cho bang tin cong dong StaySync.",
+    "noiDung": "[DEMO] Bai viet gia lap de thu giao dien danh sach va chi tiet. Thay bang noi dung da duoc nhom duyet truoc khi dung that.",
+    "anhDaiDien": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    "hinhAnh": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80"
+    ],
+    "tags": [
+      "demo",
+      "nha-tro"
+    ],
+    "trangThai": "DA_DANG",
+    "ghimLenDau": false,
+    "ngayBatDauSuKien": null,
+    "ngayKetThucSuKien": null,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1792540800000"
+      }
+    },
+    "nguoiDuyetId": {
+      "$oid": "670000000000000000000007"
+    },
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "460"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1792540800000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "730000000000000000000024"
+    },
+    "tacGiaId": {
+      "$oid": "670000000000000000000002"
+    },
+    "loaiBaiViet": "TIN_TUC",
+    "tieuDe": "[DEMO] Kinh nghiem nha tro 24",
+    "slug": "demo-kinh-nghiem-nha-tro-024",
+    "tomTat": "Noi dung minh hoa cho bang tin cong dong StaySync.",
+    "noiDung": "[DEMO] Bai viet gia lap de thu giao dien danh sach va chi tiet. Thay bang noi dung da duoc nhom duyet truoc khi dung that.",
+    "anhDaiDien": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    "hinhAnh": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80"
+    ],
+    "tags": [
+      "demo",
+      "nha-tro"
+    ],
+    "trangThai": "DA_DANG",
+    "ghimLenDau": false,
+    "ngayBatDauSuKien": null,
+    "ngayKetThucSuKien": null,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1795305600000"
+      }
+    },
+    "nguoiDuyetId": {
+      "$oid": "670000000000000000000007"
+    },
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "483"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1795305600000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "730000000000000000000025"
+    },
+    "tacGiaId": {
+      "$oid": "670000000000000000000001"
+    },
+    "loaiBaiViet": "SU_KIEN",
+    "tieuDe": "[DEMO] Kinh nghiem nha tro 25",
+    "slug": "demo-kinh-nghiem-nha-tro-025",
+    "tomTat": "Noi dung minh hoa cho bang tin cong dong StaySync.",
+    "noiDung": "[DEMO] Bai viet gia lap de thu giao dien danh sach va chi tiet. Thay bang noi dung da duoc nhom duyet truoc khi dung that.",
+    "anhDaiDien": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    "hinhAnh": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80"
+    ],
+    "tags": [
+      "demo",
+      "nha-tro"
+    ],
+    "trangThai": "DA_DANG",
+    "ghimLenDau": false,
+    "ngayBatDauSuKien": null,
+    "ngayKetThucSuKien": null,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1792713600000"
+      }
+    },
+    "nguoiDuyetId": {
+      "$oid": "670000000000000000000007"
+    },
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "506"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1792713600000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "730000000000000000000026"
+    },
+    "tacGiaId": {
+      "$oid": "670000000000000000000002"
+    },
+    "loaiBaiViet": "CONG_DONG",
+    "tieuDe": "[DEMO] Kinh nghiem nha tro 26",
+    "slug": "demo-kinh-nghiem-nha-tro-026",
+    "tomTat": "Noi dung minh hoa cho bang tin cong dong StaySync.",
+    "noiDung": "[DEMO] Bai viet gia lap de thu giao dien danh sach va chi tiet. Thay bang noi dung da duoc nhom duyet truoc khi dung that.",
+    "anhDaiDien": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    "hinhAnh": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80"
+    ],
+    "tags": [
+      "demo",
+      "nha-tro"
+    ],
+    "trangThai": "DA_DANG",
+    "ghimLenDau": false,
+    "ngayBatDauSuKien": null,
+    "ngayKetThucSuKien": null,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1795478400000"
+      }
+    },
+    "nguoiDuyetId": {
+      "$oid": "670000000000000000000007"
+    },
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "529"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1795478400000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "730000000000000000000027"
+    },
+    "tacGiaId": {
+      "$oid": "670000000000000000000001"
+    },
+    "loaiBaiViet": "TIN_TUC",
+    "tieuDe": "[DEMO] Kinh nghiem nha tro 27",
+    "slug": "demo-kinh-nghiem-nha-tro-027",
+    "tomTat": "Noi dung minh hoa cho bang tin cong dong StaySync.",
+    "noiDung": "[DEMO] Bai viet gia lap de thu giao dien danh sach va chi tiet. Thay bang noi dung da duoc nhom duyet truoc khi dung that.",
+    "anhDaiDien": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    "hinhAnh": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80"
+    ],
+    "tags": [
+      "demo",
+      "nha-tro"
+    ],
+    "trangThai": "DA_DANG",
+    "ghimLenDau": false,
+    "ngayBatDauSuKien": null,
+    "ngayKetThucSuKien": null,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1792886400000"
+      }
+    },
+    "nguoiDuyetId": {
+      "$oid": "670000000000000000000007"
+    },
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "552"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1792886400000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "730000000000000000000028"
+    },
+    "tacGiaId": {
+      "$oid": "670000000000000000000002"
+    },
+    "loaiBaiViet": "SU_KIEN",
+    "tieuDe": "[DEMO] Kinh nghiem nha tro 28",
+    "slug": "demo-kinh-nghiem-nha-tro-028",
+    "tomTat": "Noi dung minh hoa cho bang tin cong dong StaySync.",
+    "noiDung": "[DEMO] Bai viet gia lap de thu giao dien danh sach va chi tiet. Thay bang noi dung da duoc nhom duyet truoc khi dung that.",
+    "anhDaiDien": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    "hinhAnh": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80"
+    ],
+    "tags": [
+      "demo",
+      "nha-tro"
+    ],
+    "trangThai": "DA_DANG",
+    "ghimLenDau": false,
+    "ngayBatDauSuKien": null,
+    "ngayKetThucSuKien": null,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1795651200000"
+      }
+    },
+    "nguoiDuyetId": {
+      "$oid": "670000000000000000000007"
+    },
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "575"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1795651200000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "730000000000000000000029"
+    },
+    "tacGiaId": {
+      "$oid": "670000000000000000000001"
+    },
+    "loaiBaiViet": "CONG_DONG",
+    "tieuDe": "[DEMO] Kinh nghiem nha tro 29",
+    "slug": "demo-kinh-nghiem-nha-tro-029",
+    "tomTat": "Noi dung minh hoa cho bang tin cong dong StaySync.",
+    "noiDung": "[DEMO] Bai viet gia lap de thu giao dien danh sach va chi tiet. Thay bang noi dung da duoc nhom duyet truoc khi dung that.",
+    "anhDaiDien": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    "hinhAnh": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80"
+    ],
+    "tags": [
+      "demo",
+      "nha-tro"
+    ],
+    "trangThai": "DA_DANG",
+    "ghimLenDau": false,
+    "ngayBatDauSuKien": null,
+    "ngayKetThucSuKien": null,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1793059200000"
+      }
+    },
+    "nguoiDuyetId": {
+      "$oid": "670000000000000000000007"
+    },
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "598"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1793059200000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "730000000000000000000030"
+    },
+    "tacGiaId": {
+      "$oid": "670000000000000000000002"
+    },
+    "loaiBaiViet": "TIN_TUC",
+    "tieuDe": "[DEMO] Kinh nghiem nha tro 30",
+    "slug": "demo-kinh-nghiem-nha-tro-030",
+    "tomTat": "Noi dung minh hoa cho bang tin cong dong StaySync.",
+    "noiDung": "[DEMO] Bai viet gia lap de thu giao dien danh sach va chi tiet. Thay bang noi dung da duoc nhom duyet truoc khi dung that.",
+    "anhDaiDien": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    "hinhAnh": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80"
+    ],
+    "tags": [
+      "demo",
+      "nha-tro"
+    ],
+    "trangThai": "DA_DANG",
+    "ghimLenDau": false,
+    "ngayBatDauSuKien": null,
+    "ngayKetThucSuKien": null,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1793491200000"
+      }
+    },
+    "nguoiDuyetId": {
+      "$oid": "670000000000000000000007"
+    },
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "621"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1793491200000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "730000000000000000000031"
+    },
+    "tacGiaId": {
+      "$oid": "670000000000000000000001"
+    },
+    "loaiBaiViet": "SU_KIEN",
+    "tieuDe": "[DEMO] Kinh nghiem nha tro 31",
+    "slug": "demo-kinh-nghiem-nha-tro-031",
+    "tomTat": "Noi dung minh hoa cho bang tin cong dong StaySync.",
+    "noiDung": "[DEMO] Bai viet gia lap de thu giao dien danh sach va chi tiet. Thay bang noi dung da duoc nhom duyet truoc khi dung that.",
+    "anhDaiDien": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    "hinhAnh": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80"
+    ],
+    "tags": [
+      "demo",
+      "nha-tro"
+    ],
+    "trangThai": "DA_DANG",
+    "ghimLenDau": false,
+    "ngayBatDauSuKien": null,
+    "ngayKetThucSuKien": null,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1790899200000"
+      }
+    },
+    "nguoiDuyetId": {
+      "$oid": "670000000000000000000007"
+    },
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "644"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1790899200000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "730000000000000000000032"
+    },
+    "tacGiaId": {
+      "$oid": "670000000000000000000002"
+    },
+    "loaiBaiViet": "CONG_DONG",
+    "tieuDe": "[DEMO] Kinh nghiem nha tro 32",
+    "slug": "demo-kinh-nghiem-nha-tro-032",
+    "tomTat": "Noi dung minh hoa cho bang tin cong dong StaySync.",
+    "noiDung": "[DEMO] Bai viet gia lap de thu giao dien danh sach va chi tiet. Thay bang noi dung da duoc nhom duyet truoc khi dung that.",
+    "anhDaiDien": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    "hinhAnh": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80"
+    ],
+    "tags": [
+      "demo",
+      "nha-tro"
+    ],
+    "trangThai": "DA_DANG",
+    "ghimLenDau": false,
+    "ngayBatDauSuKien": null,
+    "ngayKetThucSuKien": null,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1793664000000"
+      }
+    },
+    "nguoiDuyetId": {
+      "$oid": "670000000000000000000007"
+    },
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "667"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1793664000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "730000000000000000000033"
+    },
+    "tacGiaId": {
+      "$oid": "670000000000000000000001"
+    },
+    "loaiBaiViet": "TIN_TUC",
+    "tieuDe": "[DEMO] Kinh nghiem nha tro 33",
+    "slug": "demo-kinh-nghiem-nha-tro-033",
+    "tomTat": "Noi dung minh hoa cho bang tin cong dong StaySync.",
+    "noiDung": "[DEMO] Bai viet gia lap de thu giao dien danh sach va chi tiet. Thay bang noi dung da duoc nhom duyet truoc khi dung that.",
+    "anhDaiDien": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    "hinhAnh": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80"
+    ],
+    "tags": [
+      "demo",
+      "nha-tro"
+    ],
+    "trangThai": "DA_DANG",
+    "ghimLenDau": false,
+    "ngayBatDauSuKien": null,
+    "ngayKetThucSuKien": null,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1791072000000"
+      }
+    },
+    "nguoiDuyetId": {
+      "$oid": "670000000000000000000007"
+    },
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "690"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1791072000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "730000000000000000000034"
+    },
+    "tacGiaId": {
+      "$oid": "670000000000000000000002"
+    },
+    "loaiBaiViet": "SU_KIEN",
+    "tieuDe": "[DEMO] Kinh nghiem nha tro 34",
+    "slug": "demo-kinh-nghiem-nha-tro-034",
+    "tomTat": "Noi dung minh hoa cho bang tin cong dong StaySync.",
+    "noiDung": "[DEMO] Bai viet gia lap de thu giao dien danh sach va chi tiet. Thay bang noi dung da duoc nhom duyet truoc khi dung that.",
+    "anhDaiDien": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    "hinhAnh": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80"
+    ],
+    "tags": [
+      "demo",
+      "nha-tro"
+    ],
+    "trangThai": "DA_DANG",
+    "ghimLenDau": false,
+    "ngayBatDauSuKien": null,
+    "ngayKetThucSuKien": null,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1793836800000"
+      }
+    },
+    "nguoiDuyetId": {
+      "$oid": "670000000000000000000007"
+    },
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "713"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1793836800000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "730000000000000000000035"
+    },
+    "tacGiaId": {
+      "$oid": "670000000000000000000001"
+    },
+    "loaiBaiViet": "CONG_DONG",
+    "tieuDe": "[DEMO] Kinh nghiem nha tro 35",
+    "slug": "demo-kinh-nghiem-nha-tro-035",
+    "tomTat": "Noi dung minh hoa cho bang tin cong dong StaySync.",
+    "noiDung": "[DEMO] Bai viet gia lap de thu giao dien danh sach va chi tiet. Thay bang noi dung da duoc nhom duyet truoc khi dung that.",
+    "anhDaiDien": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    "hinhAnh": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80"
+    ],
+    "tags": [
+      "demo",
+      "nha-tro"
+    ],
+    "trangThai": "DA_DANG",
+    "ghimLenDau": false,
+    "ngayBatDauSuKien": null,
+    "ngayKetThucSuKien": null,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1791244800000"
+      }
+    },
+    "nguoiDuyetId": {
+      "$oid": "670000000000000000000007"
+    },
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "736"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1791244800000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "730000000000000000000036"
+    },
+    "tacGiaId": {
+      "$oid": "670000000000000000000002"
+    },
+    "loaiBaiViet": "TIN_TUC",
+    "tieuDe": "[DEMO] Kinh nghiem nha tro 36",
+    "slug": "demo-kinh-nghiem-nha-tro-036",
+    "tomTat": "Noi dung minh hoa cho bang tin cong dong StaySync.",
+    "noiDung": "[DEMO] Bai viet gia lap de thu giao dien danh sach va chi tiet. Thay bang noi dung da duoc nhom duyet truoc khi dung that.",
+    "anhDaiDien": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    "hinhAnh": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80"
+    ],
+    "tags": [
+      "demo",
+      "nha-tro"
+    ],
+    "trangThai": "DA_DANG",
+    "ghimLenDau": false,
+    "ngayBatDauSuKien": null,
+    "ngayKetThucSuKien": null,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1794009600000"
+      }
+    },
+    "nguoiDuyetId": {
+      "$oid": "670000000000000000000007"
+    },
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "759"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1794009600000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "730000000000000000000037"
+    },
+    "tacGiaId": {
+      "$oid": "670000000000000000000001"
+    },
+    "loaiBaiViet": "SU_KIEN",
+    "tieuDe": "[DEMO] Kinh nghiem nha tro 37",
+    "slug": "demo-kinh-nghiem-nha-tro-037",
+    "tomTat": "Noi dung minh hoa cho bang tin cong dong StaySync.",
+    "noiDung": "[DEMO] Bai viet gia lap de thu giao dien danh sach va chi tiet. Thay bang noi dung da duoc nhom duyet truoc khi dung that.",
+    "anhDaiDien": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    "hinhAnh": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80"
+    ],
+    "tags": [
+      "demo",
+      "nha-tro"
+    ],
+    "trangThai": "DA_DANG",
+    "ghimLenDau": false,
+    "ngayBatDauSuKien": null,
+    "ngayKetThucSuKien": null,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1791417600000"
+      }
+    },
+    "nguoiDuyetId": {
+      "$oid": "670000000000000000000007"
+    },
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "782"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1791417600000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "730000000000000000000038"
+    },
+    "tacGiaId": {
+      "$oid": "670000000000000000000002"
+    },
+    "loaiBaiViet": "CONG_DONG",
+    "tieuDe": "[DEMO] Kinh nghiem nha tro 38",
+    "slug": "demo-kinh-nghiem-nha-tro-038",
+    "tomTat": "Noi dung minh hoa cho bang tin cong dong StaySync.",
+    "noiDung": "[DEMO] Bai viet gia lap de thu giao dien danh sach va chi tiet. Thay bang noi dung da duoc nhom duyet truoc khi dung that.",
+    "anhDaiDien": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    "hinhAnh": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80"
+    ],
+    "tags": [
+      "demo",
+      "nha-tro"
+    ],
+    "trangThai": "DA_DANG",
+    "ghimLenDau": false,
+    "ngayBatDauSuKien": null,
+    "ngayKetThucSuKien": null,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1794182400000"
+      }
+    },
+    "nguoiDuyetId": {
+      "$oid": "670000000000000000000007"
+    },
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "805"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1794182400000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "730000000000000000000039"
+    },
+    "tacGiaId": {
+      "$oid": "670000000000000000000001"
+    },
+    "loaiBaiViet": "TIN_TUC",
+    "tieuDe": "[DEMO] Kinh nghiem nha tro 39",
+    "slug": "demo-kinh-nghiem-nha-tro-039",
+    "tomTat": "Noi dung minh hoa cho bang tin cong dong StaySync.",
+    "noiDung": "[DEMO] Bai viet gia lap de thu giao dien danh sach va chi tiet. Thay bang noi dung da duoc nhom duyet truoc khi dung that.",
+    "anhDaiDien": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    "hinhAnh": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80"
+    ],
+    "tags": [
+      "demo",
+      "nha-tro"
+    ],
+    "trangThai": "DA_DANG",
+    "ghimLenDau": false,
+    "ngayBatDauSuKien": null,
+    "ngayKetThucSuKien": null,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1791590400000"
+      }
+    },
+    "nguoiDuyetId": {
+      "$oid": "670000000000000000000007"
+    },
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "828"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1791590400000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "730000000000000000000040"
+    },
+    "tacGiaId": {
+      "$oid": "670000000000000000000002"
+    },
+    "loaiBaiViet": "SU_KIEN",
+    "tieuDe": "[DEMO] Kinh nghiem nha tro 40",
+    "slug": "demo-kinh-nghiem-nha-tro-040",
+    "tomTat": "Noi dung minh hoa cho bang tin cong dong StaySync.",
+    "noiDung": "[DEMO] Bai viet gia lap de thu giao dien danh sach va chi tiet. Thay bang noi dung da duoc nhom duyet truoc khi dung that.",
+    "anhDaiDien": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    "hinhAnh": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80"
+    ],
+    "tags": [
+      "demo",
+      "nha-tro"
+    ],
+    "trangThai": "DA_DANG",
+    "ghimLenDau": false,
+    "ngayBatDauSuKien": null,
+    "ngayKetThucSuKien": null,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1794355200000"
+      }
+    },
+    "nguoiDuyetId": {
+      "$oid": "670000000000000000000007"
+    },
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "851"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1794355200000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "730000000000000000000041"
+    },
+    "tacGiaId": {
+      "$oid": "670000000000000000000001"
+    },
+    "loaiBaiViet": "CONG_DONG",
+    "tieuDe": "[DEMO] Kinh nghiem nha tro 41",
+    "slug": "demo-kinh-nghiem-nha-tro-041",
+    "tomTat": "Noi dung minh hoa cho bang tin cong dong StaySync.",
+    "noiDung": "[DEMO] Bai viet gia lap de thu giao dien danh sach va chi tiet. Thay bang noi dung da duoc nhom duyet truoc khi dung that.",
+    "anhDaiDien": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    "hinhAnh": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80"
+    ],
+    "tags": [
+      "demo",
+      "nha-tro"
+    ],
+    "trangThai": "DA_DANG",
+    "ghimLenDau": false,
+    "ngayBatDauSuKien": null,
+    "ngayKetThucSuKien": null,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1791763200000"
+      }
+    },
+    "nguoiDuyetId": {
+      "$oid": "670000000000000000000007"
+    },
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "874"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1791763200000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "730000000000000000000042"
+    },
+    "tacGiaId": {
+      "$oid": "670000000000000000000002"
+    },
+    "loaiBaiViet": "TIN_TUC",
+    "tieuDe": "[DEMO] Kinh nghiem nha tro 42",
+    "slug": "demo-kinh-nghiem-nha-tro-042",
+    "tomTat": "Noi dung minh hoa cho bang tin cong dong StaySync.",
+    "noiDung": "[DEMO] Bai viet gia lap de thu giao dien danh sach va chi tiet. Thay bang noi dung da duoc nhom duyet truoc khi dung that.",
+    "anhDaiDien": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    "hinhAnh": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80"
+    ],
+    "tags": [
+      "demo",
+      "nha-tro"
+    ],
+    "trangThai": "DA_DANG",
+    "ghimLenDau": false,
+    "ngayBatDauSuKien": null,
+    "ngayKetThucSuKien": null,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1794528000000"
+      }
+    },
+    "nguoiDuyetId": {
+      "$oid": "670000000000000000000007"
+    },
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "897"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1794528000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "730000000000000000000043"
+    },
+    "tacGiaId": {
+      "$oid": "670000000000000000000001"
+    },
+    "loaiBaiViet": "SU_KIEN",
+    "tieuDe": "[DEMO] Kinh nghiem nha tro 43",
+    "slug": "demo-kinh-nghiem-nha-tro-043",
+    "tomTat": "Noi dung minh hoa cho bang tin cong dong StaySync.",
+    "noiDung": "[DEMO] Bai viet gia lap de thu giao dien danh sach va chi tiet. Thay bang noi dung da duoc nhom duyet truoc khi dung that.",
+    "anhDaiDien": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    "hinhAnh": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80"
+    ],
+    "tags": [
+      "demo",
+      "nha-tro"
+    ],
+    "trangThai": "DA_DANG",
+    "ghimLenDau": false,
+    "ngayBatDauSuKien": null,
+    "ngayKetThucSuKien": null,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1791936000000"
+      }
+    },
+    "nguoiDuyetId": {
+      "$oid": "670000000000000000000007"
+    },
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "920"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1791936000000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "730000000000000000000044"
+    },
+    "tacGiaId": {
+      "$oid": "670000000000000000000002"
+    },
+    "loaiBaiViet": "CONG_DONG",
+    "tieuDe": "[DEMO] Kinh nghiem nha tro 44",
+    "slug": "demo-kinh-nghiem-nha-tro-044",
+    "tomTat": "Noi dung minh hoa cho bang tin cong dong StaySync.",
+    "noiDung": "[DEMO] Bai viet gia lap de thu giao dien danh sach va chi tiet. Thay bang noi dung da duoc nhom duyet truoc khi dung that.",
+    "anhDaiDien": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    "hinhAnh": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80"
+    ],
+    "tags": [
+      "demo",
+      "nha-tro"
+    ],
+    "trangThai": "DA_DANG",
+    "ghimLenDau": false,
+    "ngayBatDauSuKien": null,
+    "ngayKetThucSuKien": null,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1794700800000"
+      }
+    },
+    "nguoiDuyetId": {
+      "$oid": "670000000000000000000007"
+    },
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "943"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1794700800000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "730000000000000000000045"
+    },
+    "tacGiaId": {
+      "$oid": "670000000000000000000001"
+    },
+    "loaiBaiViet": "TIN_TUC",
+    "tieuDe": "[DEMO] Kinh nghiem nha tro 45",
+    "slug": "demo-kinh-nghiem-nha-tro-045",
+    "tomTat": "Noi dung minh hoa cho bang tin cong dong StaySync.",
+    "noiDung": "[DEMO] Bai viet gia lap de thu giao dien danh sach va chi tiet. Thay bang noi dung da duoc nhom duyet truoc khi dung that.",
+    "anhDaiDien": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    "hinhAnh": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80"
+    ],
+    "tags": [
+      "demo",
+      "nha-tro"
+    ],
+    "trangThai": "DA_DANG",
+    "ghimLenDau": false,
+    "ngayBatDauSuKien": null,
+    "ngayKetThucSuKien": null,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1792108800000"
+      }
+    },
+    "nguoiDuyetId": {
+      "$oid": "670000000000000000000007"
+    },
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "966"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1792108800000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "730000000000000000000046"
+    },
+    "tacGiaId": {
+      "$oid": "670000000000000000000001"
+    },
+    "loaiBaiViet": "SU_KIEN",
+    "tieuDe": "[DEMO] Kinh nghiem nha tro 46",
+    "slug": "demo-kinh-nghiem-nha-tro-046",
+    "tomTat": "Noi dung minh hoa cho bang tin cong dong StaySync.",
+    "noiDung": "[DEMO] Bai viet gia lap de thu giao dien danh sach va chi tiet. Thay bang noi dung da duoc nhom duyet truoc khi dung that.",
+    "anhDaiDien": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    "hinhAnh": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80"
+    ],
+    "tags": [
+      "demo",
+      "nha-tro"
+    ],
+    "trangThai": "DA_DANG",
+    "ghimLenDau": false,
+    "ngayBatDauSuKien": null,
+    "ngayKetThucSuKien": null,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1794873600000"
+      }
+    },
+    "nguoiDuyetId": {
+      "$oid": "670000000000000000000007"
+    },
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "989"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1794873600000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "730000000000000000000047"
+    },
+    "tacGiaId": {
+      "$oid": "670000000000000000000002"
+    },
+    "loaiBaiViet": "CONG_DONG",
+    "tieuDe": "[DEMO] Kinh nghiem nha tro 47",
+    "slug": "demo-kinh-nghiem-nha-tro-047",
+    "tomTat": "Noi dung minh hoa cho bang tin cong dong StaySync.",
+    "noiDung": "[DEMO] Bai viet gia lap de thu giao dien danh sach va chi tiet. Thay bang noi dung da duoc nhom duyet truoc khi dung that.",
+    "anhDaiDien": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    "hinhAnh": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80"
+    ],
+    "tags": [
+      "demo",
+      "nha-tro"
+    ],
+    "trangThai": "DA_DANG",
+    "ghimLenDau": false,
+    "ngayBatDauSuKien": null,
+    "ngayKetThucSuKien": null,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1792281600000"
+      }
+    },
+    "nguoiDuyetId": {
+      "$oid": "670000000000000000000007"
+    },
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "12"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1792281600000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "730000000000000000000048"
+    },
+    "tacGiaId": {
+      "$oid": "670000000000000000000001"
+    },
+    "loaiBaiViet": "TIN_TUC",
+    "tieuDe": "[DEMO] Kinh nghiem nha tro 48",
+    "slug": "demo-kinh-nghiem-nha-tro-048",
+    "tomTat": "Noi dung minh hoa cho bang tin cong dong StaySync.",
+    "noiDung": "[DEMO] Bai viet gia lap de thu giao dien danh sach va chi tiet. Thay bang noi dung da duoc nhom duyet truoc khi dung that.",
+    "anhDaiDien": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    "hinhAnh": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80"
+    ],
+    "tags": [
+      "demo",
+      "nha-tro"
+    ],
+    "trangThai": "DA_DANG",
+    "ghimLenDau": false,
+    "ngayBatDauSuKien": null,
+    "ngayKetThucSuKien": null,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1795046400000"
+      }
+    },
+    "nguoiDuyetId": {
+      "$oid": "670000000000000000000007"
+    },
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "35"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1795046400000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "730000000000000000000049"
+    },
+    "tacGiaId": {
+      "$oid": "670000000000000000000002"
+    },
+    "loaiBaiViet": "SU_KIEN",
+    "tieuDe": "[DEMO] Kinh nghiem nha tro 49",
+    "slug": "demo-kinh-nghiem-nha-tro-049",
+    "tomTat": "Noi dung minh hoa cho bang tin cong dong StaySync.",
+    "noiDung": "[DEMO] Bai viet gia lap de thu giao dien danh sach va chi tiet. Thay bang noi dung da duoc nhom duyet truoc khi dung that.",
+    "anhDaiDien": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    "hinhAnh": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80"
+    ],
+    "tags": [
+      "demo",
+      "nha-tro"
+    ],
+    "trangThai": "DA_DANG",
+    "ghimLenDau": false,
+    "ngayBatDauSuKien": null,
+    "ngayKetThucSuKien": null,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1792454400000"
+      }
+    },
+    "nguoiDuyetId": {
+      "$oid": "670000000000000000000007"
+    },
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "58"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1792454400000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "730000000000000000000050"
+    },
+    "tacGiaId": {
+      "$oid": "670000000000000000000001"
+    },
+    "loaiBaiViet": "CONG_DONG",
+    "tieuDe": "[DEMO] Kinh nghiem nha tro 50",
+    "slug": "demo-kinh-nghiem-nha-tro-050",
+    "tomTat": "Noi dung minh hoa cho bang tin cong dong StaySync.",
+    "noiDung": "[DEMO] Bai viet gia lap de thu giao dien danh sach va chi tiet. Thay bang noi dung da duoc nhom duyet truoc khi dung that.",
+    "anhDaiDien": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    "hinhAnh": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80"
+    ],
+    "tags": [
+      "demo",
+      "nha-tro"
+    ],
+    "trangThai": "DA_DANG",
+    "ghimLenDau": false,
+    "ngayBatDauSuKien": null,
+    "ngayKetThucSuKien": null,
+    "ngayDang": {
+      "$date": {
+        "$numberLong": "1795219200000"
+      }
+    },
+    "nguoiDuyetId": {
+      "$oid": "670000000000000000000007"
+    },
+    "lyDoTuChoi": "",
+    "luotXem": {
+      "$numberInt": "81"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1795219200000"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1795161600000"
+      }
+    }
+  }
+]
