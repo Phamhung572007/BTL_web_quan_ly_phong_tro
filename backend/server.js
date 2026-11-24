@@ -3,6 +3,7 @@ const cors = require('cors');
 const { ketNoiDatabase } = require('./config/ket_noi_database');
 const xuLyLoi = require('./middleware/xu_ly_loi');
 const { guiThanhCong, guiThatBai } = require('./utils/phan_hoi_api');
+const { layDanhSachPhongTrong } = require('./controllers/phong_tro_controller');
 
 const cacRouteHung = [
   ['/api/dich-vu', require('./routes/dich_vu_routes')],
@@ -59,6 +60,8 @@ for (const [duongDan, tepRoute, thanhVien] of cacRouteThanhVien) {
 
   app.use(duongDan, router);
 }
+
+app.get('/api/phong-tro-trong', layDanhSachPhongTrong);
 
 app.use((req, res) => guiThatBai(res, {
   statusCode: 404,
