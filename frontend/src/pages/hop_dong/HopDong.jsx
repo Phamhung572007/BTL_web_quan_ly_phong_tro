@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import hopDongService from '../../services/hopDongService';
 import phongTroService from '../../services/phongTroService';
 import './HopDong.css';
@@ -47,7 +47,7 @@ export default function HopDong() {
     setTimeout(() => setThongBao({ type: '', text: '' }), 4500);
   };
 
-  const taiDanhSachHopDong = async () => {
+  const taiDanhSachHopDong = useCallback(async () => {
     setLoading(true);
     try {
       const res = await hopDongService.layDanhSach({ trangThai: locTrangThai });
@@ -57,10 +57,24 @@ export default function HopDong() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [locTrangThai]);
 
   useEffect(() => {
-    taiDanhSachHopDong();
+    let huy = false;
+    hopDongService
+      .layDanhSach({ trangThai: locTrangThai })
+      .then((res) => {
+        if (!huy) setDanhSachHD(res.data || []);
+      })
+      .catch((err) => {
+        if (!huy) hienThongBao('error', err.message);
+      })
+      .finally(() => {
+        if (!huy) setLoading(false);
+      });
+    return () => {
+      huy = true;
+    };
   }, [locTrangThai]);
 
   const moFormLapHopDong = async () => {

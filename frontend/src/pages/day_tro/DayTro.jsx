@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import dayTroService from '../../services/dayTroService';
 import './DayTro.css';
 
@@ -32,11 +32,13 @@ export default function DayTro() {
   const [loading, setLoading] = useState(true);
   const [thongBao, setThongBao] = useState({ type: '', text: '' });
 
+  // Modal Thêm / Sửa
   const [moModalForm, setMoModalForm] = useState(false);
   const [idDangSua, setIdDangSua] = useState(null);
   const [form, setForm] = useState(FORM_MAC_DINH);
   const [dangLuu, setDangLuu] = useState(false);
 
+  // Modal Chi tiết dãy trọ
   const [dayChiTiet, setDayChiTiet] = useState(null);
   const [loadingChiTiet, setLoadingChiTiet] = useState(false);
 
@@ -45,7 +47,7 @@ export default function DayTro() {
     setTimeout(() => setThongBao({ type: '', text: '' }), 4000);
   };
 
-  const taiDuLieu = async (kw = tuKhoa) => {
+  const taiDuLieu = useCallback(async (kw = '') => {
     setLoading(true);
     try {
       const res = await dayTroService.layDanhSach({ tuKhoa: kw });
@@ -55,21 +57,40 @@ export default function DayTro() {
     } finally {
       setLoading(false);
     }
-  };
-
-  useEffect(() => {
-    taiDuLieu('');
   }, []);
 
-  const moFormThem = () => {
+  useEffect(() => {
+    let huy = false;
+    dayTroService
+      .layDanhSach({ tuKhoa: '' })
+      .then((res) => {
+        if (!huy) setDanhSach(res.data || []);
+      })
+      .catch((err) => {
+        if (!huy) hienThongBao('error', err.message);
+      })
+      .finally(() => {
+        if (!huy) setLoading(false);
+      });
+    return () => {
+      huy = true;
+    };
+  }, []);
+
+  const handleTimKiem = (e) => {
+    e.preventDefault();
+    taiDuLieu(tuKhoa);
+  };
+
+  const moFormThemMoi = () => {
     setIdDangSua(null);
     setForm(FORM_MAC_DINH);
     setMoModalForm(true);
   };
 
-  const moFormSua = (day) => {
-    const coords = day.viTri?.coordinates || [];
+  const moFormChinhSua = (day) => {
     setIdDangSua(day._id);
+    const coords = day.viTri?.coordinates || [];
     setForm({
       tenDayTro: day.tenDayTro || '',
       soNhaDuong: day.diaChi?.soNhaDuong || '',
@@ -89,7 +110,7 @@ export default function DayTro() {
     setForm((prev) => ({
       ...prev,
       tienIchChung: prev.tienIchChung.includes(item)
-        ? prev.tienIchChung.filter((i) => i !== item)
+        ? prev.tienIchChung.filter((t) => t !== item)
         : [...prev.tienIchChung, item],
     }));
   };
@@ -97,6 +118,7 @@ export default function DayTro() {
   const handleLuuDayTro = async (e) => {
     e.preventDefault();
     setDangLuu(true);
+
     const payload = {
       tenDayTro: form.tenDayTro.trim(),
       diaChi: {
@@ -105,11 +127,17 @@ export default function DayTro() {
         quanHuyen: form.quanHuyen.trim(),
         tinhThanh: form.tinhThanh.trim(),
       },
-      ...(form.lat !== '' && form.lng !== '' ? { lat: Number(form.lat), lng: Number(form.lng) } : {}),
-      moTa: form.moTa,
-      quyDinhChung: form.quyDinhChung,
+      moTa: form.moTa.trim(),
+      quyDinhChung: form.quyDinhChung.trim(),
       tienIchChung: form.tienIchChung,
     };
+
+    if (form.lat !== '' && form.lng !== '') {
+      payload.viTri = {
+        type: 'Point',
+        coordinates: [Number(form.lng), Number(form.lat)],
+      };
+    }
 
     try {
       if (idDangSua) {
@@ -120,7 +148,7 @@ export default function DayTro() {
         hienThongBao('success', 'Thêm dãy trọ mới thành công!');
       }
       setMoModalForm(false);
-      taiDuLieu();
+      taiDuLieu(tuKhoa);
     } catch (err) {
       hienThongBao('error', err.message);
     } finally {
@@ -129,24 +157,29 @@ export default function DayTro() {
   };
 
   const handleXoaDayTro = async (day) => {
-    if (!window.confirm(`Bạn chắc chắn muốn xóa dãy trọ "${day.tenDayTro}"?`)) return;
+    const xacNhan = window.confirm(
+      `Bạn có chắc muốn xóa dãy trọ "${day.tenDayTro}"?\n(Hệ thống sẽ chặn xóa nếu dãy vẫn còn phòng bên trong)`
+    );
+    if (!xacNhan) return;
+
     try {
       await dayTroService.xoa(day._id);
-      hienThongBao('success', 'Đã xóa dãy trọ.');
-      taiDuLieu();
+      hienThongBao('success', `Đã xóa dãy trọ "${day.tenDayTro}".`);
+      taiDuLieu(tuKhoa);
     } catch (err) {
       hienThongBao('error', err.message);
     }
   };
 
   const handleXemChiTiet = async (day) => {
-    setDayChiTiet(day);
     setLoadingChiTiet(true);
+    setDayChiTiet({ ...day, danhSachPhong: [] });
     try {
       const res = await dayTroService.layChiTiet(day._id);
       setDayChiTiet(res.data);
     } catch (err) {
       hienThongBao('error', err.message);
+      setDayChiTiet(null);
     } finally {
       setLoadingChiTiet(false);
     }
@@ -156,89 +189,98 @@ export default function DayTro() {
     <div className="day-tro-page">
       <div className="dt-header">
         <div>
-          <h2 className="dt-title">Quản lý Dãy trọ / Tòa nhà</h2>
-          <p className="dt-subtitle">
-            Quản lý danh sách cơ sở nhà trọ, địa chỉ, tiện ích chung và công suất phòng
-          </p>
+          <h2 className="dt-title">Quản lý Dãy trọ</h2>
+          <p className="dt-subtitle">Quản lý danh sách tòa nhà, khu trọ, địa chỉ và tiện ích chung</p>
         </div>
-        <button className="dt-btn-primary" onClick={moFormThem}>
+        <button className="dt-btn-primary" onClick={moFormThemMoi}>
           + Thêm dãy trọ mới
         </button>
       </div>
 
       {thongBao.text && <div className={`dt-alert ${thongBao.type}`}>{thongBao.text}</div>}
 
-      <div className="dt-search-bar">
+      <form className="dt-search-bar" onSubmit={handleTimKiem}>
         <input
           type="text"
           className="dt-search-input"
           placeholder="Tìm theo tên dãy trọ, đường, quận/huyện..."
           value={tuKhoa}
           onChange={(e) => setTuKhoa(e.target.value)}
-          onKeyDown={(e) => e.key === 'Enter' && taiDuLieu(tuKhoa)}
         />
-        <button className="dt-btn-outline" onClick={() => taiDuLieu(tuKhoa)}>
+        <button type="submit" className="dt-btn-secondary">
           Tìm kiếm
         </button>
-      </div>
+        {tuKhoa && (
+          <button
+            type="button"
+            className="dt-btn-secondary"
+            onClick={() => {
+              setTuKhoa('');
+              taiDuLieu('');
+            }}
+          >
+            Đặt lại
+          </button>
+        )}
+      </form>
 
       {loading ? (
-        <p className="dt-subtitle">Đang tải dữ liệu dãy trọ...</p>
+        <p className="dt-subtitle">Đang tải danh sách dãy trọ...</p>
       ) : danhSach.length === 0 ? (
         <div className="dt-empty">
-          <p>Chưa có dãy trọ nào được tạo.</p>
-          <button className="dt-btn-primary" onClick={moFormThem}>
-            Tạo dãy trọ đầu tiên
+          <p>Chưa có dãy trọ nào. Hãy tạo dãy trọ đầu tiên để bắt đầu quản lý phòng!</p>
+          <button className="dt-btn-primary" onClick={moFormThemMoi}>
+            + Tạo dãy trọ ngay
           </button>
         </div>
       ) : (
         <div className="dt-grid">
-          {danhSach.map((day) => (
-            <div key={day._id} className="dt-card">
-              <div>
-                <div className="dt-card-top">
-                  <h3 className="dt-card-name">{day.tenDayTro}</h3>
-                  <span className="dt-badge-total">{day.tongSoPhong || 0} phòng</span>
-                </div>
+          {danhSach.map((day) => {
+            const diaChiDayDu = [
+              day.diaChi?.soNhaDuong,
+              day.diaChi?.phuongXa,
+              day.diaChi?.quanHuyen,
+              day.diaChi?.tinhThanh,
+            ]
+              .filter(Boolean)
+              .join(', ');
 
-                <p className="dt-address">
-                  📍 {day.diaChi?.soNhaDuong}, {day.diaChi?.phuongXa ? `${day.diaChi.phuongXa}, ` : ''}
-                  {day.diaChi?.quanHuyen}, {day.diaChi?.tinhThanh}
-                </p>
-
-                <div className="dt-stats">
-                  <span className="dt-stat-empty">Trống: {day.soPhongTrong || 0}</span>
-                  <span className="dt-stat-occupied">Đang ở: {day.soPhongDangO || 0}</span>
-                </div>
-
-                {day.tienIchChung?.length > 0 && (
-                  <div className="dt-amenities">
-                    {day.tienIchChung.map((ti) => (
-                      <span key={ti} className="dt-amenity-tag">
+            return (
+              <div key={day._id} className="dt-card">
+                <div>
+                  <div className="dt-card-top">
+                    <h3 className="dt-card-title">{day.tenDayTro}</h3>
+                    <span className="dt-badge">{day.tongSoPhong ?? 0} phòng</span>
+                  </div>
+                  <p className="dt-address">📍 {diaChiDayDu || 'Chưa cập nhật địa chỉ'}</p>
+                  {day.moTa && <p className="dt-desc">{day.moTa}</p>}
+                  <div className="dt-tags">
+                    {(day.tienIchChung || []).map((ti) => (
+                      <span key={ti} className="dt-tag">
                         {ti}
                       </span>
                     ))}
                   </div>
-                )}
-              </div>
+                </div>
 
-              <div className="dt-card-actions">
-                <button className="dt-btn-detail" onClick={() => handleXemChiTiet(day)}>
-                  Chi tiết
-                </button>
-                <button className="dt-btn-edit" onClick={() => moFormSua(day)}>
-                  Sửa
-                </button>
-                <button className="dt-btn-delete" onClick={() => handleXoaDayTro(day)}>
-                  Xóa
-                </button>
+                <div className="dt-card-actions">
+                  <button className="dt-btn-sm info" onClick={() => handleXemChiTiet(day)}>
+                    Chi tiết
+                  </button>
+                  <button className="dt-btn-sm" onClick={() => moFormChinhSua(day)}>
+                    Sửa
+                  </button>
+                  <button className="dt-btn-sm danger" onClick={() => handleXoaDayTro(day)}>
+                    Xóa
+                  </button>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       )}
 
-      {/* MODAL THÊM / SỬA */}
+      {/* MODAL THÊM / SỬA DÃY TRỌ */}
       {moModalForm && (
         <div className="dt-modal-overlay">
           <div className="dt-modal">
@@ -256,42 +298,11 @@ export default function DayTro() {
                   className="dt-input"
                   value={form.tenDayTro}
                   onChange={(e) => setForm({ ...form, tenDayTro: e.target.value })}
-                  placeholder="VD: Dãy trọ Xanh - Cơ sở 1"
+                  placeholder="VD: Khu trọ Hoa Sen - Cơ sở 1"
                 />
               </div>
 
-              <div className="dt-form-row-2">
-                <div>
-                  <label className="dt-label">Tỉnh / Thành phố *</label>
-                  <input
-                    required
-                    className="dt-input"
-                    value={form.tinhThanh}
-                    onChange={(e) => setForm({ ...form, tinhThanh: e.target.value })}
-                  />
-                </div>
-                <div>
-                  <label className="dt-label">Quận / Huyện *</label>
-                  <input
-                    required
-                    className="dt-input"
-                    value={form.quanHuyen}
-                    onChange={(e) => setForm({ ...form, quanHuyen: e.target.value })}
-                    placeholder="VD: Cầu Giấy"
-                  />
-                </div>
-              </div>
-
-              <div className="dt-form-row-1-2">
-                <div>
-                  <label className="dt-label">Phường / Xã</label>
-                  <input
-                    className="dt-input"
-                    value={form.phuongXa}
-                    onChange={(e) => setForm({ ...form, phuongXa: e.target.value })}
-                    placeholder="VD: Quan Hoa"
-                  />
-                </div>
+              <div className="dt-form-row">
                 <div>
                   <label className="dt-label">Số nhà, tên đường *</label>
                   <input
@@ -302,81 +313,110 @@ export default function DayTro() {
                     placeholder="VD: Số 15 Ngõ 68 Cầu Giấy"
                   />
                 </div>
+                <div>
+                  <label className="dt-label">Phường / Xã *</label>
+                  <input
+                    required
+                    className="dt-input"
+                    value={form.phuongXa}
+                    onChange={(e) => setForm({ ...form, phuongXa: e.target.value })}
+                    placeholder="VD: Quan Hoa"
+                  />
+                </div>
               </div>
 
-              <div className="dt-form-row-2">
+              <div className="dt-form-row">
                 <div>
-                  <label className="dt-label">Vĩ độ (Lat - tùy chọn)</label>
+                  <label className="dt-label">Quận / Huyện *</label>
+                  <input
+                    required
+                    className="dt-input"
+                    value={form.quanHuyen}
+                    onChange={(e) => setForm({ ...form, quanHuyen: e.target.value })}
+                    placeholder="VD: Cầu Giấy"
+                  />
+                </div>
+                <div>
+                  <label className="dt-label">Tỉnh / Thành phố *</label>
+                  <input
+                    required
+                    className="dt-input"
+                    value={form.tinhThanh}
+                    onChange={(e) => setForm({ ...form, tinhThanh: e.target.value })}
+                    placeholder="VD: Hà Nội"
+                  />
+                </div>
+              </div>
+
+              <div className="dt-form-row">
+                <div>
+                  <label className="dt-label">Vĩ độ (Latitude - tùy chọn)</label>
                   <input
                     type="number"
                     step="any"
                     className="dt-input"
                     value={form.lat}
                     onChange={(e) => setForm({ ...form, lat: e.target.value })}
-                    placeholder="VD: 21.0367"
+                    placeholder="VD: 21.0333"
                   />
                 </div>
                 <div>
-                  <label className="dt-label">Kinh độ (Lng - tùy chọn)</label>
+                  <label className="dt-label">Kinh độ (Longitude - tùy chọn)</label>
                   <input
                     type="number"
                     step="any"
                     className="dt-input"
                     value={form.lng}
                     onChange={(e) => setForm({ ...form, lng: e.target.value })}
-                    placeholder="VD: 105.7905"
+                    placeholder="VD: 105.7985"
                   />
                 </div>
               </div>
 
               <div>
                 <label className="dt-label">Tiện ích chung</label>
-                <div className="dt-chip-group">
-                  {TIEN_ICH_GOI_Y.map((item) => {
-                    const active = form.tienIchChung.includes(item);
-                    return (
-                      <button
-                        type="button"
-                        key={item}
-                        className={`dt-chip ${active ? 'active' : ''}`}
-                        onClick={() => toggleTienIch(item)}
-                      >
-                        {active ? '✓ ' : '+ '}
-                        {item}
-                      </button>
-                    );
-                  })}
+                <div className="dt-checkbox-group">
+                  {TIEN_ICH_GOI_Y.map((item) => (
+                    <label key={item} className="dt-checkbox-item">
+                      <input
+                        type="checkbox"
+                        checked={form.tienIchChung.includes(item)}
+                        onChange={() => toggleTienIch(item)}
+                      />
+                      {item}
+                    </label>
+                  ))}
                 </div>
               </div>
 
               <div>
-                <label className="dt-label">Mô tả</label>
+                <label className="dt-label">Mô tả chung</label>
                 <textarea
                   rows={2}
-                  className="dt-textarea"
+                  className="dt-input"
                   value={form.moTa}
                   onChange={(e) => setForm({ ...form, moTa: e.target.value })}
-                  placeholder="Mô tả tổng quan về khu trọ..."
+                  placeholder="Gần trường đại học, chợ, bến xe buýt..."
                 />
               </div>
 
               <div>
-                <label className="dt-label">Quy định chung</label>
+                <label className="dt-label">Nội quy / Quy định chung</label>
                 <textarea
                   rows={2}
-                  className="dt-textarea"
+                  className="dt-input"
                   value={form.quyDinhChung}
                   onChange={(e) => setForm({ ...form, quyDinhChung: e.target.value })}
-                  placeholder="VD: Đóng cổng lúc 23h30, không gây ồn ào..."
+                  placeholder="Không nuôi thú cưng, giữ trật tự sau 23h..."
                 />
               </div>
 
               <div className="dt-modal-footer">
-                <button type="button" className="dt-btn-outline" onClick={() => setMoModalForm(false)}>
+                <button type="button" className="dt-btn-secondary" onClick={() => setMoModalForm(false)}>
                   Hủy
                 </button>
                 <button type="submit" className="dt-btn-primary" disabled={dangLuu}>
-                  {dangLuu ? 'Đang lưu...' : idDangSua ? 'Lưu thay đổi' : 'Tạo dãy trọ'}
+                  {dangLuu ? 'Đang lưu...' : idDangSua ? 'Lưu cập nhật' : 'Tạo dãy trọ'}
                 </button>
               </div>
             </form>
@@ -384,54 +424,51 @@ export default function DayTro() {
         </div>
       )}
 
-      {/* MODAL CHI TIẾT */}
+      {/* MODAL XEM CHI TIẾT DÃY TRỌ */}
       {dayChiTiet && (
         <div className="dt-modal-overlay">
-          <div className="dt-modal large">
+          <div className="dt-modal">
             <div className="dt-modal-header">
               <h3 style={{ margin: 0 }}>{dayChiTiet.tenDayTro}</h3>
               <button className="dt-close-btn" onClick={() => setDayChiTiet(null)}>
                 ✕
               </button>
             </div>
-            <p className="dt-address">
-              <strong>Địa chỉ:</strong> {dayChiTiet.diaChi?.soNhaDuong},{' '}
-              {dayChiTiet.diaChi?.phuongXa ? `${dayChiTiet.diaChi.phuongXa}, ` : ''}
-              {dayChiTiet.diaChi?.quanHuyen}, {dayChiTiet.diaChi?.tinhThanh}
-            </p>
-            {dayChiTiet.moTa && (
-              <p className="dt-address">
-                <strong>Mô tả:</strong> {dayChiTiet.moTa}
-              </p>
-            )}
-            {dayChiTiet.quyDinhChung && (
-              <p className="dt-address">
-                <strong>Quy định:</strong> {dayChiTiet.quyDinhChung}
-              </p>
-            )}
-
-            <h4 style={{ margin: '16px 0 6px' }}>
-              Danh sách phòng thuộc dãy ({dayChiTiet.danhSachPhong?.length || 0} phòng)
-            </h4>
             {loadingChiTiet ? (
-              <p className="dt-subtitle">Đang tải danh sách phòng...</p>
-            ) : !dayChiTiet.danhSachPhong || dayChiTiet.danhSachPhong.length === 0 ? (
-              <p className="dt-subtitle">Dãy trọ này chưa có phòng nào.</p>
+              <p>Đang tải chi tiết dãy trọ...</p>
             ) : (
-              <div className="dt-room-mini-grid">
-                {dayChiTiet.danhSachPhong.map((p) => (
-                  <div key={p._id} className="dt-room-mini-card">
-                    <div style={{ fontWeight: 700 }}>
-                      {p.soPhong} (Tầng {p.tang})
-                    </div>
-                    <div style={{ fontSize: '13px', color: '#475569', marginTop: '4px' }}>
-                      {p.giaThue?.toLocaleString('vi-VN')} đ/tháng • {p.dienTich}m²
-                    </div>
-                    <span className={`dt-room-status ${p.trangThai}`}>
-                      {p.trangThai === 'TRONG' ? 'Trống' : p.trangThai === 'DANG_O' ? 'Đang ở' : 'Bảo trì'}
-                    </span>
+              <div>
+                <p className="dt-address">
+                  <strong>Địa chỉ:</strong>{' '}
+                  {[
+                    dayChiTiet.diaChi?.soNhaDuong,
+                    dayChiTiet.diaChi?.phuongXa,
+                    dayChiTiet.diaChi?.quanHuyen,
+                    dayChiTiet.diaChi?.tinhThanh,
+                  ]
+                    .filter(Boolean)
+                    .join(', ')}
+                </p>
+                {dayChiTiet.quyDinhChung && (
+                  <p className="dt-desc">
+                    <strong>Nội quy:</strong> {dayChiTiet.quyDinhChung}
+                  </p>
+                )}
+                <h4>Danh sách phòng thuộc dãy ({dayChiTiet.danhSachPhong?.length || 0} phòng)</h4>
+                {!dayChiTiet.danhSachPhong || dayChiTiet.danhSachPhong.length === 0 ? (
+                  <p className="dt-subtitle">Dãy trọ này chưa có phòng nào.</p>
+                ) : (
+                  <div className="dt-room-mini-list">
+                    {dayChiTiet.danhSachPhong.map((p) => (
+                      <div key={p._id} className="dt-room-mini-item">
+                        <span>
+                          <strong>{p.soPhong}</strong> (Tầng {p.tang}) — {p.giaThue?.toLocaleString('vi-VN')} đ/tháng
+                        </span>
+                        <span className="dt-badge">{p.trangThai}</span>
+                      </div>
+                    ))}
                   </div>
-                ))}
+                )}
               </div>
             )}
           </div>

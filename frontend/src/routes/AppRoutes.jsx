@@ -9,7 +9,7 @@ import LichXem from '../pages/lich_xem/LichXem.jsx'
 import ThongBao from '../pages/thong_bao/ThongBao.jsx'
 import ThongKe from '../pages/thong_ke/ThongKe.jsx'
 
-// Các trang thuộc Thành viên 2 (khoa mới nối thêm):
+// Các trang thuộc Thành viên 2
 import DayTro from '../pages/day_tro/DayTro.jsx'
 import PhongTro from '../pages/phong_tro/PhongTro.jsx'
 import HopDong from '../pages/hop_dong/HopDong.jsx'
@@ -39,13 +39,17 @@ export default function AppRoutes() {
         <Route path="bang-tin" element={<BangTin />} />
         <Route path="danh-gia-phong" element={<DanhGiaPhong />} />
         <Route path="thong-bao" element={<ThongBao />} />
-        <Route path="day-tro" element={<ModuleChoTichHop tenModule="Dãy trọ" thanhVien={2} />} />
-        <Route path="phong-tro" element={<ModuleChoTichHop tenModule="Phòng trọ" thanhVien={2} />} />
-        <Route path="hop-dong" element={<ModuleChoTichHop tenModule="Hợp đồng" thanhVien={2} />} />
+
+        {/* Các route của Thành viên 2 */}
+        <Route path="day-tro" element={<DayTro />} />
+        <Route path="phong-tro" element={<PhongTro />} />
+        <Route path="hop-dong" element={<HopDong />} />
+        <Route path="dang-tin" element={<DangTin />} />
+
         <Route path="nguoi-thue" element={<ModuleChoTichHop tenModule="Người thuê" thanhVien={3} />} />
         <Route path="sua-chua" element={<ModuleChoTichHop tenModule="Sửa chữa" thanhVien={3} />} />
         <Route path="*" element={<ModuleChoTichHop tenModule="Không tìm thấy trang" thanhVien="phụ trách" />} />
       </Route>
     </Routes>
-  );
+  )
 }

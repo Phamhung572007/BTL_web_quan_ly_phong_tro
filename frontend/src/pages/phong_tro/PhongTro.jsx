@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import dayTroService from '../../services/dayTroService';
 import phongTroService from '../../services/phongTroService';
 import './PhongTro.css';
@@ -59,7 +59,7 @@ export default function PhongTro() {
     setTimeout(() => setThongBao({ type: '', text: '' }), 4000);
   };
 
-  const taiDuLieu = async () => {
+  const taiDuLieu = useCallback(async () => {
     setLoading(true);
     try {
       const [resDay, resPhong] = await Promise.all([
@@ -77,38 +77,63 @@ export default function PhongTro() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [locDayTro, locTrangThai, tuKhoa]);
 
   useEffect(() => {
-    taiDuLieu();
+    let huy = false;
+    Promise.all([
+      dayTroService.layDanhSach({ limit: 100 }),
+      phongTroService.layDanhSach({
+        dayTroId: locDayTro,
+        trangThai: locTrangThai,
+        tuKhoa: '',
+      }),
+    ])
+      .then(([resDay, resPhong]) => {
+        if (!huy) {
+          setDanhSachDay(resDay.data || []);
+          setDanhSachPhong(resPhong.data || []);
+        }
+      })
+      .catch((err) => {
+        if (!huy) hienThongBao('error', err.message);
+      })
+      .finally(() => {
+        if (!huy) setLoading(false);
+      });
+    return () => {
+      huy = true;
+    };
   }, [locDayTro, locTrangThai]);
 
-  // Thống kê nhanh
+  // Thống kê nhanh số phòng theo trạng thái
   const thongKe = useMemo(() => {
-    return {
-      tong: danhSachPhong.length,
-      trong: danhSachPhong.filter((p) => p.trangThai === 'TRONG').length,
-      dangO: danhSachPhong.filter((p) => p.trangThai === 'DANG_O').length,
-      baoTri: danhSachPhong.filter((p) => p.trangThai === 'BAO_TRI').length,
-    };
+    return danhSachPhong.reduce(
+      (acc, p) => {
+        acc.tong += 1;
+        if (p.trangThai === 'TRONG') acc.trong += 1;
+        else if (p.trangThai === 'DANG_O') acc.dangO += 1;
+        else if (p.trangThai === 'BAO_TRI') acc.baoTri += 1;
+        return acc;
+      },
+      { tong: 0, trong: 0, dangO: 0, baoTri: 0 }
+    );
   }, [danhSachPhong]);
 
-  // Gom nhóm phòng theo Tầng cho chế độ Sơ đồ
+  // Nhóm phòng theo từng tầng cho Sơ đồ trực quan
   const phongTheoTang = useMemo(() => {
-    const groups = {};
+    const map = {};
     danhSachPhong.forEach((p) => {
-      const tang = p.tang ?? 1;
-      if (!groups[tang]) groups[tang] = [];
-      groups[tang].push(p);
+      const tang = p.tang || 1;
+      if (!map[tang]) map[tang] = [];
+      map[tang].push(p);
     });
-    return Object.keys(groups)
-      .sort((a, b) => Number(a) - Number(b))
-      .map((tang) => ({ tang, phongs: groups[tang] }));
+    return Object.entries(map).sort((a, b) => Number(a[0]) - Number(b[0]));
   }, [danhSachPhong]);
 
-  const moFormThem = () => {
+  const moFormThemMoi = () => {
     if (danhSachDay.length === 0) {
-      hienThongBao('error', 'Bạn cần tạo ít nhất một Dãy trọ trước khi thêm phòng!');
+      hienThongBao('error', 'Bạn cần tạo ít nhất một Dãy trọ trước khi thêm Phòng!');
       return;
     }
     setIdDangSua(null);
@@ -119,7 +144,7 @@ export default function PhongTro() {
     setMoModalForm(true);
   };
 
-  const moFormSua = (phong) => {
+  const moFormChinhSua = (phong) => {
     setIdDangSua(phong._id);
     setForm({
       dayTroId: phong.dayTroId?._id || phong.dayTroId || '',
@@ -140,7 +165,7 @@ export default function PhongTro() {
     setForm((prev) => ({
       ...prev,
       noiThat: prev.noiThat.includes(item)
-        ? prev.noiThat.filter((i) => i !== item)
+        ? prev.noiThat.filter((nt) => nt !== item)
         : [...prev.noiThat, item],
     }));
   };
@@ -148,6 +173,7 @@ export default function PhongTro() {
   const handleLuuPhong = async (e) => {
     e.preventDefault();
     setDangLuu(true);
+
     const payload = {
       dayTroId: form.dayTroId,
       soPhong: form.soPhong.trim(),
@@ -158,16 +184,16 @@ export default function PhongTro() {
       soNguoiToiDa: Number(form.soNguoiToiDa),
       trangThai: form.trangThai,
       noiThat: form.noiThat,
-      moTa: form.moTa,
+      moTa: form.moTa.trim(),
     };
 
     try {
       if (idDangSua) {
         await phongTroService.capNhat(idDangSua, payload);
-        hienThongBao('success', 'Cập nhật thông tin phòng thành công!');
+        hienThongBao('success', `Cập nhật ${payload.soPhong} thành công!`);
       } else {
         await phongTroService.taoMoi(payload);
-        hienThongBao('success', 'Thêm phòng trọ mới thành công!');
+        hienThongBao('success', `Thêm ${payload.soPhong} thành công!`);
       }
       setMoModalForm(false);
       taiDuLieu();
@@ -179,10 +205,14 @@ export default function PhongTro() {
   };
 
   const handleXoaPhong = async (phong) => {
-    if (!window.confirm(`Xác nhận xóa phòng "${phong.soPhong}"?`)) return;
+    const xacNhan = window.confirm(
+      `Bạn chắc chắn muốn xóa "${phong.soPhong}"?\n(Hệ thống sẽ chặn xóa nếu phòng đang có người ở hoặc hợp đồng hiệu lực)`
+    );
+    if (!xacNhan) return;
+
     try {
       await phongTroService.xoa(phong._id);
-      hienThongBao('success', 'Đã xóa phòng trọ.');
+      hienThongBao('success', `Đã xóa ${phong.soPhong}.`);
       taiDuLieu();
     } catch (err) {
       hienThongBao('error', err.message);
@@ -203,117 +233,120 @@ export default function PhongTro() {
       <div className="pt-header">
         <div>
           <h2 className="pt-title">Quản lý Phòng trọ</h2>
-          <p className="pt-subtitle">
-            Theo dõi sơ đồ tầng, giá thuê, tiện nghi và trạng thái từng phòng (Trống / Đang ở / Bảo trì)
-          </p>
+          <p className="pt-subtitle">Theo dõi trạng thái phòng theo sơ đồ tầng, giá thuê và nội thất</p>
         </div>
-        <button className="pt-btn-primary" onClick={moFormThem}>
+        <button className="pt-btn-primary" onClick={moFormThemMoi}>
           + Thêm phòng mới
         </button>
       </div>
 
       {thongBao.text && <div className={`pt-alert ${thongBao.type}`}>{thongBao.text}</div>}
 
-      {/* Thống kê tổng quan */}
-      <div className="pt-summary-bar">
-        <div className="pt-summary-card">
-          <div className="pt-summary-label">Tổng số phòng</div>
-          <div className="pt-summary-value">{thongKe.tong}</div>
+      {/* Thống kê nhanh */}
+      <div className="pt-stats">
+        <div className="pt-stat-card">
+          <div className="pt-stat-label">Tổng số phòng</div>
+          <div className="pt-stat-value">{thongKe.tong}</div>
         </div>
-        <div className="pt-summary-card">
-          <div className="pt-summary-label">Phòng trống</div>
-          <div className="pt-summary-value trong">{thongKe.trong}</div>
+        <div className="pt-stat-card">
+          <div className="pt-stat-label">Phòng trống</div>
+          <div className="pt-stat-value trong">{thongKe.trong}</div>
         </div>
-        <div className="pt-summary-card">
-          <div className="pt-summary-label">Đang có người ở</div>
-          <div className="pt-summary-value dang-o">{thongKe.dangO}</div>
+        <div className="pt-stat-card">
+          <div className="pt-stat-label">Đang có người ở</div>
+          <div className="pt-stat-value dang-o">{thongKe.dangO}</div>
         </div>
-        <div className="pt-summary-card">
-          <div className="pt-summary-label">Đang bảo trì</div>
-          <div className="pt-summary-value bao-tri">{thongKe.baoTri}</div>
+        <div className="pt-stat-card">
+          <div className="pt-stat-label">Đang bảo trì</div>
+          <div className="pt-stat-value bao-tri">{thongKe.baoTri}</div>
         </div>
       </div>
 
-      {/* Thanh công cụ lọc & chuyển chế độ xem */}
+      {/* Thanh lọc & chuyển chế độ xem */}
       <div className="pt-toolbar">
-        <div className="pt-filters">
-          <select className="pt-select" value={locDayTro} onChange={(e) => setLocDayTro(e.target.value)}>
-            <option value="">-- Tất cả dãy trọ --</option>
-            {danhSachDay.map((d) => (
-              <option key={d._id} value={d._id}>
-                {d.tenDayTro}
-              </option>
-            ))}
-          </select>
+        <select className="pt-select" value={locDayTro} onChange={(e) => setLocDayTro(e.target.value)}>
+          <option value="">-- Tất cả dãy trọ --</option>
+          {danhSachDay.map((d) => (
+            <option key={d._id} value={d._id}>
+              {d.tenDayTro}
+            </option>
+          ))}
+        </select>
 
-          <select className="pt-select" value={locTrangThai} onChange={(e) => setLocTrangThai(e.target.value)}>
-            <option value="">-- Tất cả trạng thái --</option>
-            <option value="TRONG">Trống</option>
-            <option value="DANG_O">Đang ở</option>
-            <option value="BAO_TRI">Bảo trì</option>
-          </select>
+        <select className="pt-select" value={locTrangThai} onChange={(e) => setLocTrangThai(e.target.value)}>
+          <option value="">-- Tất cả trạng thái --</option>
+          <option value="TRONG">Trống</option>
+          <option value="DANG_O">Đang ở</option>
+          <option value="BAO_TRI">Bảo trì</option>
+        </select>
 
-          <input
-            type="text"
-            className="pt-input"
-            placeholder="Tìm số phòng..."
-            value={tuKhoa}
-            onChange={(e) => setTuKhoa(e.target.value)}
-            onKeyDown={(e) => e.key === 'Enter' && taiDuLieu()}
-          />
-          <button className="pt-btn-outline" onClick={taiDuLieu}>
-            Lọc
-          </button>
-        </div>
+        <input
+          type="text"
+          className="pt-input"
+          style={{ maxWidth: '220px' }}
+          placeholder="Tìm số phòng (VD: P101)..."
+          value={tuKhoa}
+          onChange={(e) => setTuKhoa(e.target.value)}
+        />
+        <button type="button" className="pt-btn-outline" onClick={taiDuLieu}>
+          Lọc
+        </button>
 
         <div className="pt-view-switch">
           <button
+            type="button"
             className={`pt-btn-outline ${cheDoXem === 'SO_DO' ? 'active' : ''}`}
             onClick={() => setCheDoXem('SO_DO')}
           >
             Sơ đồ tầng
           </button>
           <button
+            type="button"
             className={`pt-btn-outline ${cheDoXem === 'DANH_SACH' ? 'active' : ''}`}
             onClick={() => setCheDoXem('DANH_SACH')}
           >
-            Danh sách
+            Bảng danh sách
           </button>
         </div>
       </div>
 
-      {/* Nội dung chính */}
       {loading ? (
-        <p className="pt-subtitle">Đang tải danh sách phòng...</p>
+        <p className="pt-subtitle">Đang tải dữ liệu phòng trọ...</p>
       ) : danhSachPhong.length === 0 ? (
-        <p className="pt-subtitle">Không có phòng nào phù hợp điều kiện lọc.</p>
+        <p className="pt-subtitle">Không tìm thấy phòng trọ nào phù hợp bộ lọc.</p>
       ) : cheDoXem === 'SO_DO' ? (
+        /* CHẾ ĐỘ SƠ ĐỒ TẦNG */
         <div>
-          {phongTheoTang.map(({ tang, phongs }) => (
+          {phongTheoTang.map(([tang, phongs]) => (
             <div key={tang} className="pt-floor-section">
-              <h3 className="pt-floor-title">
-                Tầng {tang} ({phongs.length} phòng)
-              </h3>
+              <div className="pt-floor-header">
+                <span>🏢 Tầng {tang}</span>
+                <span>{phongs.length} phòng</span>
+              </div>
               <div className="pt-room-grid">
                 {phongs.map((p) => (
                   <div key={p._id} className={`pt-room-card ${p.trangThai}`}>
                     <div>
                       <div className="pt-room-top">
-                        <span className="pt-room-number">{p.soPhong}</span>
-                        <span className={`pt-badge ${p.trangThai}`}>{TRANG_THAI_LABEL[p.trangThai]}</span>
+                        <span className="pt-room-name">{p.soPhong}</span>
+                        <span className={`pt-status-badge ${p.trangThai}`}>
+                          {TRANG_THAI_LABEL[p.trangThai]}
+                        </span>
                       </div>
-                      <div className="pt-room-meta">{p.dayTroId?.tenDayTro || 'Dãy trọ'}</div>
-                      <div className="pt-room-price">{p.giaThue?.toLocaleString('vi-VN')} đ/tháng</div>
-                      <div className="pt-room-meta">
-                        Diện tích: {p.dienTich}m² • Tối đa {p.soNguoiToiDa} người
+                      <div className="pt-room-info">🏠 {p.dayTroId?.tenDayTro || 'Dãy trọ'}</div>
+                      <div className="pt-room-info">
+                        💰 <strong>{p.giaThue?.toLocaleString('vi-VN')} đ</strong>/tháng
+                      </div>
+                      <div className="pt-room-info">
+                        📐 {p.dienTich} m² • 👥 Tối đa {p.soNguoiToiDa} người
                       </div>
                     </div>
 
-                    <div className="pt-card-actions">
+                    <div className="pt-room-actions">
                       <button className="pt-btn-sm info" onClick={() => handleXemChiTiet(p)}>
                         Chi tiết
                       </button>
-                      <button className="pt-btn-sm" onClick={() => moFormSua(p)}>
+                      <button className="pt-btn-sm" onClick={() => moFormChinhSua(p)}>
                         Sửa
                       </button>
                       <button className="pt-btn-sm danger" onClick={() => handleXoaPhong(p)}>
@@ -327,6 +360,7 @@ export default function PhongTro() {
           ))}
         </div>
       ) : (
+        /* CHẾ ĐỘ BẢNG DANH SÁCH */
         <div className="pt-table-wrap">
           <table className="pt-table">
             <thead>
@@ -334,8 +368,8 @@ export default function PhongTro() {
                 <th>Số phòng</th>
                 <th>Dãy trọ</th>
                 <th>Tầng</th>
-                <th>Diện tích</th>
                 <th>Giá thuê</th>
+                <th>Diện tích</th>
                 <th>Trạng thái</th>
                 <th>Thao tác</th>
               </tr>
@@ -348,17 +382,19 @@ export default function PhongTro() {
                   </td>
                   <td>{p.dayTroId?.tenDayTro || '-'}</td>
                   <td>Tầng {p.tang}</td>
-                  <td>{p.dienTich} m²</td>
                   <td>{p.giaThue?.toLocaleString('vi-VN')} đ</td>
+                  <td>{p.dienTich} m²</td>
                   <td>
-                    <span className={`pt-badge ${p.trangThai}`}>{TRANG_THAI_LABEL[p.trangThai]}</span>
+                    <span className={`pt-status-badge ${p.trangThai}`}>
+                      {TRANG_THAI_LABEL[p.trangThai]}
+                    </span>
                   </td>
                   <td>
                     <div style={{ display: 'flex', gap: '6px' }}>
                       <button className="pt-btn-sm info" onClick={() => handleXemChiTiet(p)}>
-                        Xem
+                        Chi tiết
                       </button>
-                      <button className="pt-btn-sm" onClick={() => moFormSua(p)}>
+                      <button className="pt-btn-sm" onClick={() => moFormChinhSua(p)}>
                         Sửa
                       </button>
                       <button className="pt-btn-sm danger" onClick={() => handleXoaPhong(p)}>
@@ -378,7 +414,7 @@ export default function PhongTro() {
         <div className="pt-modal-overlay">
           <div className="pt-modal">
             <div className="pt-modal-header">
-              <h3 style={{ margin: 0 }}>{idDangSua ? 'Cập nhật phòng trọ' : 'Thêm phòng trọ mới'}</h3>
+              <h3 style={{ margin: 0 }}>{idDangSua ? `Cập nhật ${form.soPhong}` : 'Thêm phòng trọ mới'}</h3>
               <button className="pt-close-btn" onClick={() => setMoModalForm(false)}>
                 ✕
               </button>
@@ -389,7 +425,7 @@ export default function PhongTro() {
                 <select
                   required
                   disabled={Boolean(idDangSua)}
-                  className="pt-full-input"
+                  className="pt-input"
                   value={form.dayTroId}
                   onChange={(e) => setForm({ ...form, dayTroId: e.target.value })}
                 >
@@ -406,10 +442,10 @@ export default function PhongTro() {
                   <label className="pt-label">Số phòng / Tên phòng *</label>
                   <input
                     required
-                    className="pt-full-input"
+                    className="pt-input"
                     value={form.soPhong}
                     onChange={(e) => setForm({ ...form, soPhong: e.target.value })}
-                    placeholder="VD: P.101"
+                    placeholder="VD: P101"
                   />
                 </div>
                 <div>
@@ -418,7 +454,7 @@ export default function PhongTro() {
                     required
                     type="number"
                     min="0"
-                    className="pt-full-input"
+                    className="pt-input"
                     value={form.tang}
                     onChange={(e) => setForm({ ...form, tang: e.target.value })}
                   />
@@ -432,10 +468,10 @@ export default function PhongTro() {
                     required
                     type="number"
                     min="0"
-                    className="pt-full-input"
+                    className="pt-input"
                     value={form.giaThue}
                     onChange={(e) => setForm({ ...form, giaThue: e.target.value })}
-                    placeholder="VD: 3200000"
+                    placeholder="VD: 3500000"
                   />
                 </div>
                 <div>
@@ -443,7 +479,7 @@ export default function PhongTro() {
                   <input
                     type="number"
                     min="0"
-                    className="pt-full-input"
+                    className="pt-input"
                     value={form.tienCocMacDinh}
                     onChange={(e) => setForm({ ...form, tienCocMacDinh: e.target.value })}
                     placeholder="Mặc định bằng 1 tháng tiền phòng"
@@ -458,10 +494,10 @@ export default function PhongTro() {
                     required
                     type="number"
                     min="1"
-                    className="pt-full-input"
+                    className="pt-input"
                     value={form.dienTich}
                     onChange={(e) => setForm({ ...form, dienTich: e.target.value })}
-                    placeholder="VD: 22"
+                    placeholder="VD: 25"
                   />
                 </div>
                 <div>
@@ -469,7 +505,7 @@ export default function PhongTro() {
                   <input
                     type="number"
                     min="1"
-                    className="pt-full-input"
+                    className="pt-input"
                     value={form.soNguoiToiDa}
                     onChange={(e) => setForm({ ...form, soNguoiToiDa: e.target.value })}
                   />
@@ -479,44 +515,40 @@ export default function PhongTro() {
               <div>
                 <label className="pt-label">Trạng thái phòng</label>
                 <select
-                  className="pt-full-input"
+                  className="pt-input"
                   value={form.trangThai}
                   onChange={(e) => setForm({ ...form, trangThai: e.target.value })}
                 >
-                  <option value="TRONG">Trống (Sẵn sàng cho thuê)</option>
+                  <option value="TRONG">Trống</option>
                   <option value="DANG_O">Đang ở</option>
-                  <option value="BAO_TRI">Đang bảo trì / sửa chữa</option>
+                  <option value="BAO_TRI">Bảo trì</option>
                 </select>
               </div>
 
               <div>
-                <label className="pt-label">Nội thất sẵn có</label>
-                <div className="pt-chip-group">
-                  {NOI_THAT_GOI_Y.map((item) => {
-                    const active = form.noiThat.includes(item);
-                    return (
-                      <button
-                        type="button"
-                        key={item}
-                        className={`pt-chip ${active ? 'active' : ''}`}
-                        onClick={() => toggleNoiThat(item)}
-                      >
-                        {active ? '✓ ' : '+ '}
-                        {item}
-                      </button>
-                    );
-                  })}
+                <label className="pt-label">Nội thất trang bị sẵn</label>
+                <div className="pt-checkbox-group">
+                  {NOI_THAT_GOI_Y.map((item) => (
+                    <label key={item} className="pt-checkbox-item">
+                      <input
+                        type="checkbox"
+                        checked={form.noiThat.includes(item)}
+                        onChange={() => toggleNoiThat(item)}
+                      />
+                      {item}
+                    </label>
+                  ))}
                 </div>
               </div>
 
               <div>
-                <label className="pt-label">Mô tả thêm</label>
+                <label className="pt-label">Mô tả phòng</label>
                 <textarea
                   rows={2}
-                  className="pt-full-input"
+                  className="pt-input"
                   value={form.moTa}
                   onChange={(e) => setForm({ ...form, moTa: e.target.value })}
-                  placeholder="Ghi chú hướng cửa sổ, đồng hồ điện riêng..."
+                  placeholder="Phòng thoáng mát, có cửa sổ giếng trời..."
                 />
               </div>
 
@@ -525,7 +557,7 @@ export default function PhongTro() {
                   Hủy
                 </button>
                 <button type="submit" className="pt-btn-primary" disabled={dangLuu}>
-                  {dangLuu ? 'Đang lưu...' : idDangSua ? 'Cập nhật phòng' : 'Thêm phòng'}
+                  {dangLuu ? 'Đang lưu...' : idDangSua ? 'Lưu cập nhật' : 'Thêm phòng'}
                 </button>
               </div>
             </form>
@@ -539,53 +571,47 @@ export default function PhongTro() {
           <div className="pt-modal">
             <div className="pt-modal-header">
               <h3 style={{ margin: 0 }}>
-                Chi tiết {phongChiTiet.soPhong} - {phongChiTiet.dayTroId?.tenDayTro}
+                Chi tiết {phongChiTiet.soPhong} — {phongChiTiet.dayTroId?.tenDayTro}
               </h3>
               <button className="pt-close-btn" onClick={() => setPhongChiTiet(null)}>
                 ✕
               </button>
             </div>
-            <p className="pt-room-meta">
-              <strong>Trạng thái:</strong>{' '}
-              <span className={`pt-badge ${phongChiTiet.trangThai}`}>
-                {TRANG_THAI_LABEL[phongChiTiet.trangThai]}
-              </span>
-            </p>
-            <p className="pt-room-meta">
-              <strong>Vị trí:</strong> Tầng {phongChiTiet.tang} • <strong>Diện tích:</strong> {phongChiTiet.dienTich} m² •{' '}
-              <strong>Tối đa:</strong> {phongChiTiet.soNguoiToiDa} người
-            </p>
-            <p className="pt-room-meta">
-              <strong>Giá thuê:</strong> {phongChiTiet.giaThue?.toLocaleString('vi-VN')} đ/tháng •{' '}
-              <strong>Tiền cọc:</strong> {phongChiTiet.tienCocMacDinh?.toLocaleString('vi-VN')} đ
-            </p>
-            {phongChiTiet.noiThat?.length > 0 && (
-              <p className="pt-room-meta">
-                <strong>Nội thất:</strong> {phongChiTiet.noiThat.join(', ')}
-              </p>
-            )}
-            {phongChiTiet.moTa && (
-              <p className="pt-room-meta">
-                <strong>Mô tả:</strong> {phongChiTiet.moTa}
-              </p>
-            )}
-
-            {phongChiTiet.hopDongHieuLuc ? (
-              <div style={{ marginTop: '14px', padding: '12px', background: '#fffbeb', borderRadius: '8px', border: '1px solid #fde68a' }}>
-                <strong style={{ color: '#92400e', fontSize: '14px' }}>Hợp đồng đang hiệu lực</strong>
-                <p className="pt-room-meta" style={{ marginTop: '6px' }}>
-                  Người thuê đại diện: <strong>{phongChiTiet.hopDongHieuLuc.nguoiThueId?.hoTen || 'Khách thuê'}</strong> ({phongChiTiet.hopDongHieuLuc.nguoiThueId?.soDienThoai || '-'})
-                </p>
-                <p className="pt-room-meta">
-                  Thời hạn: {new Date(phongChiTiet.hopDongHieuLuc.ngayBatDau).toLocaleDateString('vi-VN')} -{' '}
-                  {new Date(phongChiTiet.hopDongHieuLuc.ngayKetThuc).toLocaleDateString('vi-VN')}
-                </p>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', fontSize: '14px' }}>
+              <div>
+                <strong>Trạng thái:</strong> {TRANG_THAI_LABEL[phongChiTiet.trangThai]}
               </div>
-            ) : (
-              <p className="pt-room-meta" style={{ marginTop: '12px', fontStyle: 'italic' }}>
-                Hiện chưa có hợp đồng hiệu lực nào gắn với phòng này.
-              </p>
-            )}
+              <div>
+                <strong>Vị trí:</strong> Tầng {phongChiTiet.tang} • Diện tích {phongChiTiet.dienTich} m²
+              </div>
+              <div>
+                <strong>Giá thuê:</strong> {phongChiTiet.giaThue?.toLocaleString('vi-VN')} đ/tháng •{' '}
+                <strong>Tiền cọc:</strong> {phongChiTiet.tienCocMacDinh?.toLocaleString('vi-VN')} đ
+              </div>
+              <div>
+                <strong>Nội thất:</strong>{' '}
+                {phongChiTiet.noiThat?.length ? phongChiTiet.noiThat.join(', ') : 'Phòng trống cơ bản'}
+              </div>
+              {phongChiTiet.hopDongHienTai && (
+                <div
+                  style={{
+                    marginTop: '8px',
+                    padding: '12px',
+                    background: '#fffbeb',
+                    border: '1px solid #fde68a',
+                    borderRadius: '8px',
+                  }}
+                >
+                  <strong>Hợp đồng đang hiệu lực:</strong>
+                  <div>Người thuê: {phongChiTiet.hopDongHienTai.nguoiThueId?.hoTen || 'Đang cập nhật'}</div>
+                  <div>SĐT: {phongChiTiet.hopDongHienTai.nguoiThueId?.soDienThoai || '-'}</div>
+                  <div>
+                    Thời hạn: {new Date(phongChiTiet.hopDongHienTai.ngayBatDau).toLocaleDateString('vi-VN')} -{' '}
+                    {new Date(phongChiTiet.hopDongHienTai.ngayKetThuc).toLocaleDateString('vi-VN')}
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       )}
