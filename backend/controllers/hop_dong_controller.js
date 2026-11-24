@@ -2,7 +2,6 @@ const HopDong = require('../models/hop_dong');
 const PhongTro = require('../models/phong_tro');
 const TinDangPhong = require('../models/tin_dang_phong');
 
-// [GET] /api/hop-dong - Lấy danh sách hợp đồng của chủ trọ
 const layDanhSachHopDong = async (req, res, next) => {
   try {
     const page = Math.max(parseInt(req.query.page, 10) || 1, 1);
@@ -49,7 +48,7 @@ const layDanhSachHopDong = async (req, res, next) => {
   }
 };
 
-// [GET] /api/hop-dong/:maHopDong - Xem chi tiết hợp đồng
+
 const layChiTietHopDong = async (req, res, next) => {
   try {
     const hopDong = await HopDong.findById(req.params.maHopDong)
@@ -79,7 +78,7 @@ const layChiTietHopDong = async (req, res, next) => {
   }
 };
 
-// [POST] /api/hop-dong - Tạo hợp đồng mới & tự động chuyển phòng sang DANG_O
+
 const taoHopDong = async (req, res, next) => {
   try {
     const {
@@ -139,7 +138,6 @@ const taoHopDong = async (req, res, next) => {
       trangThai: 'HIEU_LUC',
     });
 
-    // Quy tắc 2: Tự động cập nhật trạng thái phòng sang DANG_O & ẩn tin đăng công khai
     phong.trangThai = 'DANG_O';
     await phong.save();
     await TinDangPhong.updateMany({ phongTroId: phong._id }, { $set: { trangThai: 'DA_AN' } });
@@ -154,7 +152,7 @@ const taoHopDong = async (req, res, next) => {
   }
 };
 
-// [PUT] /api/hop-dong/:maHopDong - Cập nhật / Gia hạn hợp đồng
+
 const capNhatHopDong = async (req, res, next) => {
   try {
     const hopDong = await HopDong.findById(req.params.maHopDong);
@@ -202,7 +200,7 @@ const capNhatHopDong = async (req, res, next) => {
   }
 };
 
-// [PATCH] /api/hop-dong/:maHopDong/ket-thuc - Thanh lý / Kết thúc hợp đồng & trả phòng về TRONG
+
 const ketThucHopDong = async (req, res, next) => {
   try {
     const hopDong = await HopDong.findById(req.params.maHopDong);
