@@ -35,12 +35,8 @@ export default function DangTin() {
   const taiDuLieu = async () => {
     setLoading(true);
     try {
-      const nguoiDung = JSON.parse(localStorage.getItem('user') || 'null');
       const [resTin, resPhongTrong] = await Promise.all([
-        tinDangService.timKiemTinDang({
-          ...(nguoiDung?._id ? { chuTroId: nguoiDung._id } : {}),
-          limit: 50,
-        }),
+        tinDangService.timKiemTinDang({ 'cua-toi': 'true', limit: 50 }),
         phongTroService.layPhongTrong({ limit: 100 }),
       ]);
       setDanhSachTin(resTin.data || []);
