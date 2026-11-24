@@ -1,7 +1,7 @@
 import { callApi } from './apiClient';
 
 const tinDangService = {
-  // Dùng chung cho cả trang Tìm phòng công khai (TV3) và Chủ trọ
+  // Dùng chung cho cả trang Tìm phòng công khai (TV3) và Chủ trọ (?cua-toi=true)
   timKiemTinDang: (filters = {}) => {
     const params = new URLSearchParams();
     const allowedKeys = [
@@ -18,7 +18,7 @@ const tinDangService = {
       'page',
       'limit',
       'sap-xep',
-      'chuTroId',
+      'cua-toi',
       'trangThai',
     ];
 
