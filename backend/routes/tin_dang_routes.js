@@ -21,8 +21,16 @@ const chiChuTro = (req, res, next) => {
   next();
 };
 
-// Route công khai
-router.get('/', layDanhSachTinDang);
+// Nếu client gửi Authorization header thì giải mã lấy req.user, không gửi thì bỏ qua (công khai)
+const xacThucTuyChon = (req, res, next) => {
+  if (req.headers.authorization) {
+    return xacThuc(req, res, next);
+  }
+  next();
+};
+
+// Route công khai (hỗ trợ nhận diện chủ trọ qua token nếu có ?cua-toi=true)
+router.get('/', xacThucTuyChon, layDanhSachTinDang);
 router.get('/:maTinDang', layChiTietTinDang);
 
 // Route quản trị dành cho Chủ trọ

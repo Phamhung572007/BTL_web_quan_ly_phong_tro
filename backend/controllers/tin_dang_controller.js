@@ -2,7 +2,7 @@ const TinDangPhong = require('../models/tin_dang_phong');
 const PhongTro = require('../models/phong_tro');
 const DayTro = require('../models/day_tro');
 
-// [GET] /api/tin-dang - Tìm kiếm tin công khai hoặc danh sách tin theo chủ trọ
+// [GET] /api/tin-dang - Tìm kiếm tin công khai hoặc danh sách tin của chủ trọ (?cua-toi=true)
 const layDanhSachTinDang = async (req, res, next) => {
   try {
     const page = Math.max(parseInt(req.query.page, 10) || 1, 1);
@@ -19,15 +19,24 @@ const layDanhSachTinDang = async (req, res, next) => {
     const lng = req.query.lng !== undefined ? Number(req.query.lng) : null;
     const banKinhKm = req.query['ban-kinh-km'] !== undefined ? Number(req.query['ban-kinh-km']) : null;
     const sapXep = req.query['sap-xep'] || 'moi-nhat';
-    const { chuTroId, trangThai } = req.query;
+    const cuaToi = req.query['cua-toi'] === 'true';
+    const { trangThai } = req.query;
 
     const filter = {};
 
-    // Nếu xem theo chủ trọ quản lý thì lấy theo chuTroId; ngược lại chỉ trả tin công khai của phòng còn trống
-    if (chuTroId) {
-      filter.chuTroId = chuTroId;
+    // Nếu chủ trọ xem danh sách tin của chính mình -> lấy chuTroId từ JWT token (req.user._id)
+    if (cuaToi) {
+      if (!req.user || req.user.vaiTro !== 'CHU_TRO') {
+        return res.status(403).json({
+          success: false,
+          message: 'Bạn cần đăng nhập tài khoản Chủ trọ để xem danh sách tin của mình.',
+          data: null,
+        });
+      }
+      filter.chuTroId = req.user._id;
       if (trangThai) filter.trangThai = trangThai;
     } else {
+      // Tìm kiếm công khai: chỉ trả tin đang hiển thị của các phòng đang TRONG
       filter.trangThai = 'DANG_HIEN_THI';
       const phongTrongIds = await PhongTro.find({ trangThai: 'TRONG' }).distinct('_id');
       filter.phongTroId = { $in: phongTrongIds };
