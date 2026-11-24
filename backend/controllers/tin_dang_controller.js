@@ -2,7 +2,7 @@ const TinDangPhong = require('../models/tin_dang_phong');
 const PhongTro = require('../models/phong_tro');
 const DayTro = require('../models/day_tro');
 
-// [GET] /api/tin-dang - Tìm kiếm tin công khai hoặc danh sách tin của chủ trọ (?cua-toi=true)
+
 const layDanhSachTinDang = async (req, res, next) => {
   try {
     const page = Math.max(parseInt(req.query.page, 10) || 1, 1);
@@ -24,7 +24,7 @@ const layDanhSachTinDang = async (req, res, next) => {
 
     const filter = {};
 
-    // Nếu chủ trọ xem danh sách tin của chính mình -> lấy chuTroId từ JWT token (req.user._id)
+    
     if (cuaToi) {
       if (!req.user || req.user.vaiTro !== 'CHU_TRO') {
         return res.status(403).json({
@@ -36,7 +36,7 @@ const layDanhSachTinDang = async (req, res, next) => {
       filter.chuTroId = req.user._id;
       if (trangThai) filter.trangThai = trangThai;
     } else {
-      // Tìm kiếm công khai: chỉ trả tin đang hiển thị của các phòng đang TRONG
+      
       filter.trangThai = 'DANG_HIEN_THI';
       const phongTrongIds = await PhongTro.find({ trangThai: 'TRONG' }).distinct('_id');
       filter.phongTroId = { $in: phongTrongIds };
@@ -65,7 +65,7 @@ const layDanhSachTinDang = async (req, res, next) => {
       if (dienTichDen !== null && !Number.isNaN(dienTichDen)) filter.dienTich.$lte = dienTichDen;
     }
 
-    // Lọc theo tọa độ bản đồ và bán kính (km)
+    
     if (
       lat !== null &&
       lng !== null &&
@@ -117,7 +117,7 @@ const layDanhSachTinDang = async (req, res, next) => {
   }
 };
 
-// [GET] /api/tin-dang/:maTinDang - Xem chi tiết tin đăng công khai
+
 const layChiTietTinDang = async (req, res, next) => {
   try {
     const tinDang = await TinDangPhong.findByIdAndUpdate(
@@ -144,7 +144,7 @@ const layChiTietTinDang = async (req, res, next) => {
   }
 };
 
-// [POST] /api/tin-dang - Chủ trọ tạo tin đăng gắn với phòng
+
 const taoTinDang = async (req, res, next) => {
   try {
     const { phongTroId, tieuDe, moTaChiTiet, giaChoThue, dienTich, hinhAnh, soDienThoaiLienHe } = req.body;
@@ -208,7 +208,7 @@ const taoTinDang = async (req, res, next) => {
   }
 };
 
-// [PUT] /api/tin-dang/:maTinDang - Chủ tin cập nhật nội dung tin
+
 const capNhatTinDang = async (req, res, next) => {
   try {
     const tinDang = await TinDangPhong.findById(req.params.maTinDang);
@@ -240,7 +240,7 @@ const capNhatTinDang = async (req, res, next) => {
   }
 };
 
-// [PATCH] /api/tin-dang/:maTinDang/trang-thai - Đăng hiển thị hoặc ẩn tin
+
 const doiTrangThaiTinDang = async (req, res, next) => {
   try {
     const tinDang = await TinDangPhong.findById(req.params.maTinDang);
@@ -262,7 +262,7 @@ const doiTrangThaiTinDang = async (req, res, next) => {
       });
     }
 
-    // Nếu bật hiển thị tin thì kiểm tra phòng phải đang TRONG
+  
     if (trangThaiMoi === 'DANG_HIEN_THI') {
       const phong = await PhongTro.findById(tinDang.phongTroId);
       if (!phong || phong.trangThai !== 'TRONG') {
@@ -287,7 +287,7 @@ const doiTrangThaiTinDang = async (req, res, next) => {
   }
 };
 
-// [DELETE] /api/tin-dang/:maTinDang - Xóa tin đăng
+
 const xoaTinDang = async (req, res, next) => {
   try {
     const tinDang = await TinDangPhong.findById(req.params.maTinDang);
