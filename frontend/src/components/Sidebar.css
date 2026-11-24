@@ -1,0 +1,156 @@
+.sidebar {
+  width: 214px;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  background: #0d174d;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 28px 20px 20px;
+}
+
+/* Logo */
+.sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 8px;
+  margin-bottom: 28px;
+}
+
+.sidebar-logo-img {
+  width: 56px;
+  height: 56px;
+  padding: 0;
+  background: none;
+  border-radius: 0;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.sidebar-brand strong {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.sidebar-brand span {
+  display: block;
+  font-size: 13px;
+  color: #aab3d4;
+  margin-top: 2px;
+}
+
+/* Profile */
+.sidebar-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  padding: 14px 16px;
+  margin-bottom: 28px;
+}
+
+.sidebar-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #c9ccd6;
+  color: #0d174d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.sidebar-profile strong {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.sidebar-profile span {
+  display: block;
+  font-size: 13px;
+  color: #aab3d4;
+}
+
+/* Nav */
+.sidebar-nav {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+/* Mảng đánh dấu trượt */
+.sidebar-indicator {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  background: #273773;
+  border-radius: 0.75rem;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              height 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.2s ease;
+  pointer-events: none;
+}
+
+.sidebar-link {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 13px 16px;
+  border-radius: 0.75rem;
+  color: #c3c9e2;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.sidebar-link:hover:not(.active) {
+  background: #18255e;
+  color: #fff;
+}
+
+.sidebar-link.active {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Footer */
+.sidebar-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 16px;
+  margin-top: 16px;
+}
+
+.sidebar-logout {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 13px 16px;
+  background: none;
+  border: none;
+  color: #c3c9e2;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 0.75rem;
+  transition: all 0.2s ease;
+}
+
+.sidebar-logout:hover {
+  color: #fff;
+  background: #18255e;
+}
