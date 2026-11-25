@@ -123,11 +123,11 @@ export default function DangNhap() {
 
   return (
     <div className="auth-container">
-      {/* Cột trái: Thương hiệu PTIT & Minh họa tòa nhà */}
+      {/* Cột trái: Thương hiệu StaySync & Minh họa tòa nhà */}
       <div className="auth-left">
         <div className="auth-brand">
-          <img src={logoNgoiNha} alt="Logo PTIT" width="56" height="56" />
-          <span className="auth-brand-text">PTIT</span>
+          <img src={logoNgoiNha} alt="Logo StaySync" width="76" height="76" />
+          <span className="auth-brand-text">StaySync</span>
         </div>
 
         <div className="auth-building-art">
