@@ -6,7 +6,6 @@ export const layChiTietNguoiThueApi = (maNguoiThue) => api.get(`/nguoi-thue/${ma
 
 export const taoNguoiThueApi = (duLieu) => api.post('/nguoi-thue', duLieu);
 
-export const capNhatNguoiThueApi = (maNguoiThue, duLieu) =>
-  api.put(`/nguoi-thue/${maNguoiThue}`, duLieu);
+export const capNhatNguoiThueApi = (maNguoiThue, duLieu) => api.put(`/nguoi-thue/${maNguoiThue}`, duLieu);
 
 export const xoaNguoiThueApi = (maNguoiThue) => api.delete(`/nguoi-thue/${maNguoiThue}`);
