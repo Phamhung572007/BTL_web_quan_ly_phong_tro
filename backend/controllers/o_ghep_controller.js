@@ -1,41 +1,101 @@
 const HoSoOGhep = require('../models/ho_so_o_ghep');
 const { guiThanhCong, guiThatBai } = require('../utils/phan_hoi_api');
 
-// GET /api/ho-so-o-ghep (Công khai: Xem và lọc danh sách ở ghép)
+// GET /api/ho-so-o-ghep
 const layDanhSachOGhep = async (req, res, next) => {
   try {
-    const { khuVuc, gioiTinh, giaToiDa } = req.query;
+    const page = Math.max(1, Number(req.query.page) || 1);
+    const limit = Math.max(1, Number(req.query.limit) || 20);
+    const skip = (page - 1) * limit;
+
+    const { khuVuc, gioiTinh, giaToiDa, thoiGianChuyenVao } = req.query;
     const boLoc = { trangThai: 'dang_tim' };
 
     if (khuVuc) boLoc.khuVucMongMuon = { $regex: khuVuc, $options: 'i' };
     if (gioiTinh && gioiTinh !== 'khong_yeu_cau') boLoc.gioiTinhYeuCau = gioiTinh;
     if (giaToiDa) boLoc.giaMongMuon = { $lte: Number(giaToiDa) };
+    if (thoiGianChuyenVao) boLoc.thoiGianChuyenVao = { $lte: new Date(thoiGianChuyenVao) };
 
-    const danhSach = await HoSoOGhep.find(boLoc)
-      .populate('nguoiDangId', 'hoTen soDienThoai anhDaiDien')
-      .populate('phongId')
-      .sort({ createdAt: -1 });
+    const [danhSach, total] = await Promise.all([
+      HoSoOGhep.find(boLoc)
+        .populate('nguoiDangId', 'hoTen soDienThoai anhDaiDien')
+        .populate('phongId')
+        .sort({ createdAt: -1 })
+        .skip(skip)
+        .limit(limit),
+      HoSoOGhep.countDocuments(boLoc),
+    ]);
+
+    const totalPages = Math.ceil(total / limit);
 
     return guiThanhCong(res, {
       message: 'Lấy danh sách hồ sơ ở ghép thành công.',
       data: danhSach,
+      meta: {
+        page,
+        limit,
+        total,
+        totalPages,
+        hasNextPage: page < totalPages,
+        hasPreviousPage: page > 1,
+      },
     });
   } catch (error) {
     next(error);
   }
 };
 
-// POST /api/ho-so-o-ghep (Tạo tin tìm ở ghép)
+// GET /api/ho-so-o-ghep/cua-toi
+const layHoSoCuaToi = async (req, res, next) => {
+  try {
+    const hoSo = await HoSoOGhep.findOne({ nguoiDangId: req.user._id }).populate('phongId');
+
+    return guiThanhCong(res, {
+      message: 'Lấy hồ sơ ở ghép cá nhân thành công.',
+      data: hoSo,
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
+// GET /api/ho-so-o-ghep/:maHoSo
+const layChiTietHoSoOGhep = async (req, res, next) => {
+  try {
+    const hoSo = await HoSoOGhep.findById(req.params.maHoSo)
+      .populate('nguoiDangId', 'hoTen soDienThoai anhDaiDien')
+      .populate('phongId');
+
+    if (!hoSo) {
+      return guiThatBai(res, {
+        statusCode: 404,
+        message: 'Không tìm thấy hồ sơ ở ghép.',
+      });
+    }
+
+    return guiThanhCong(res, {
+      message: 'Lấy chi tiết hồ sơ ở ghép thành công.',
+      data: hoSo,
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
+// POST /api/ho-so-o-ghep
 const taoHoSoOGhep = async (req, res, next) => {
   try {
+    const duLieu = { ...req.body };
+    delete duLieu.nguoiDangId;
+
     const hoSoMoi = await HoSoOGhep.create({
-      ...req.body,
+      ...duLieu,
       nguoiDangId: req.user._id,
     });
 
     return guiThanhCong(res, {
       statusCode: 201,
-      message: 'Đăng hồ sơ tìm ở ghép thành công.',
+      message: 'Tạo hồ sơ tìm người ở ghép thành công.',
       data: hoSoMoi,
     });
   } catch (error) {
@@ -43,17 +103,23 @@ const taoHoSoOGhep = async (req, res, next) => {
   }
 };
 
-// PUT /api/ho-so-o-ghep/:id (Cập nhật hồ sơ của bản thân)
-const capNhatHoSoOGhep = async (req, res, next) => {
+// PUT /api/ho-so-o-ghep/cua-toi
+const capNhatHoSoCuaToi = async (req, res, next) => {
   try {
+    const duLieu = { ...req.body };
+    delete duLieu.nguoiDangId;
+
     const hoSo = await HoSoOGhep.findOneAndUpdate(
-      { _id: req.params.id, nguoiDangId: req.user._id },
-      req.body,
+      { nguoiDangId: req.user._id },
+      duLieu,
       { new: true, runValidators: true }
     );
 
     if (!hoSo) {
-      return guiThatBai(res, { statusCode: 404, message: 'Không tìm thấy hồ sơ hoặc bạn không có quyền sửa.' });
+      return guiThatBai(res, {
+        statusCode: 404,
+        message: 'Bạn chưa có hồ sơ tìm ở ghép.',
+      });
     }
 
     return guiThanhCong(res, {
@@ -65,19 +131,19 @@ const capNhatHoSoOGhep = async (req, res, next) => {
   }
 };
 
-// DELETE /api/ho-so-o-ghep/:id (Gỡ hồ sơ của bản thân)
-const xoaHoSoOGhep = async (req, res, next) => {
+// DELETE /api/ho-so-o-ghep/cua-toi
+const xoaHoSoCuaToi = async (req, res, next) => {
   try {
-    const hoSo = await HoSoOGhep.findOneAndDelete({
-      _id: req.params.id,
-      nguoiDangId: req.user._id,
-    });
+    const hoSo = await HoSoOGhep.findOneAndDelete({ nguoiDangId: req.user._id });
 
     if (!hoSo) {
-      return guiThatBai(res, { statusCode: 404, message: 'Không tìm thấy hồ sơ hoặc bạn không có quyền xóa.' });
+      return guiThatBai(res, {
+        statusCode: 404,
+        message: 'Bạn chưa có hồ sơ tìm ở ghép.',
+      });
     }
 
-    return guiThanhCong(res, { message: 'Đã gỡ hồ sơ tìm ở ghép.' });
+    return guiThanhCong(res, { message: 'Đã gỡ hồ sơ khỏi kết quả tìm kiếm.' });
   } catch (error) {
     next(error);
   }
@@ -85,7 +151,9 @@ const xoaHoSoOGhep = async (req, res, next) => {
 
 module.exports = {
   layDanhSachOGhep,
+  layHoSoCuaToi,
+  layChiTietHoSoOGhep,
   taoHoSoOGhep,
-  capNhatHoSoOGhep,
-  xoaHoSoOGhep,
+  capNhatHoSoCuaToi,
+  xoaHoSoCuaToi,
 };

@@ -7,7 +7,6 @@ const hoSoOGhepSchema = new mongoose.Schema(
       ref: 'NguoiDung',
       required: true,
     },
-    // nếu người đăng đã thuê phòng trong hệ thống thì gắn phongId,chưa có thì để null
     phongId: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'PhongTro',
@@ -27,6 +26,10 @@ const hoSoOGhepSchema = new mongoose.Schema(
       type: Number,
       required: [true, 'Vui lòng nhập mức giá chia sẻ mong muốn'],
     },
+    thoiGianChuyenVao: {
+      type: Date,
+      default: Date.now,
+    },
     gioiTinhYeuCau: {
       type: String,
       enum: ['nam', 'nu', 'khong_yeu_cau'],
@@ -38,9 +41,8 @@ const hoSoOGhepSchema = new mongoose.Schema(
     },
     thoiQuenSinhHoat: {
       type: String,
-      default: '', // Ví dụ: Không hút thuốc, ngủ sớm, sạch sẽ...
+      default: '',
     },
-    // tọa độ phục vụ hiển thị trên bản đồ tìm ở ghép
     toaDo: {
       lat: { type: Number, default: 21.0285 },
       lng: { type: Number, default: 105.8542 },

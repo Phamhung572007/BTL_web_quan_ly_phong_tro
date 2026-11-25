@@ -30,12 +30,13 @@ const nguoiDungSchema = new mongoose.Schema(
     },
     vaiTro: {
       type: String,
-      enum: ['chu_tro', 'khach_thue', 'admin'],
-      default: 'khach_thue',
+      enum: ['CHU_TRO', 'KHACH_THUE', 'ADMIN'],
+      default: 'KHACH_THUE',
     },
     trangThai: {
-      type: Boolean,
-      default: true, // true: hoạt động, false: bị khóa
+      type: String,
+      enum: ['HOAT_DONG', 'BI_KHOA'],
+      default: 'HOAT_DONG',
     },
   },
   {

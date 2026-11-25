@@ -9,26 +9,32 @@ const dangKy = async (req, res, next) => {
     const { hoTen, email, matKhau, soDienThoai, vaiTro } = req.body;
 
     if (!hoTen || !email || !matKhau || !soDienThoai) {
-      return guiThatBai(res, { statusCode: 400, message: 'Vui lòng nhập đầy đủ thông tin bắt buộc.' });
+      return guiThatBai(res, {
+        statusCode: 400,
+        message: 'Vui lòng nhập đầy đủ thông tin.',
+      });
     }
 
-    const emailTonTai = await NguoiDung.findOne({ email: email.toLowerCase().trim() });
-    if (emailTonTai) {
-      return guiThatBai(res, { statusCode: 400, message: 'Email này đã được đăng ký.' });
+    const tonTai = await NguoiDung.findOne({ email: email.toLowerCase().trim() });
+    if (tonTai) {
+      return guiThatBai(res, {
+        statusCode: 409,
+        message: 'Email này đã được sử dụng.',
+      });
     }
 
     const salt = await bcrypt.genSalt(10);
     const matKhauMaHoa = await bcrypt.hash(matKhau, salt);
 
-    const nguoiDungMoi = await NguoiDung.create({
+    const nguoiDung = await NguoiDung.create({
       hoTen,
       email,
       matKhau: matKhauMaHoa,
       soDienThoai,
-      vaiTro: vaiTro === 'chu_tro' ? 'chu_tro' : 'khach_thue',
+      vaiTro: vaiTro === 'CHU_TRO' ? 'CHU_TRO' : 'KHACH_THUE',
     });
 
-    const token = generateToken(nguoiDungMoi._id, nguoiDungMoi.vaiTro);
+    const token = generateToken(nguoiDung._id, nguoiDung.vaiTro);
 
     return guiThanhCong(res, {
       statusCode: 201,
@@ -36,11 +42,13 @@ const dangKy = async (req, res, next) => {
       data: {
         token,
         nguoiDung: {
-          _id: nguoiDungMoi._id,
-          hoTen: nguoiDungMoi.hoTen,
-          email: nguoiDungMoi.email,
-          soDienThoai: nguoiDungMoi.soDienThoai,
-          vaiTro: nguoiDungMoi.vaiTro,
+          _id: nguoiDung._id,
+          hoTen: nguoiDung.hoTen,
+          email: nguoiDung.email,
+          soDienThoai: nguoiDung.soDienThoai,
+          anhDaiDien: nguoiDung.anhDaiDien,
+          vaiTro: nguoiDung.vaiTro,
+          trangThai: nguoiDung.trangThai,
         },
       },
     });
@@ -55,21 +63,25 @@ const dangNhap = async (req, res, next) => {
     const { email, matKhau } = req.body;
 
     if (!email || !matKhau) {
-      return guiThatBai(res, { statusCode: 400, message: 'Vui lòng nhập email và mật khẩu.' });
+      return guiThatBai(res, {
+        statusCode: 400,
+        message: 'Vui lòng nhập email và mật khẩu.',
+      });
     }
 
     const nguoiDung = await NguoiDung.findOne({ email: email.toLowerCase().trim() });
-    if (!nguoiDung) {
-      return guiThatBai(res, { statusCode: 401, message: 'Email hoặc mật khẩu không chính xác.' });
+    if (!nguoiDung || !(await bcrypt.compare(matKhau, nguoiDung.matKhau))) {
+      return guiThatBai(res, {
+        statusCode: 401,
+        message: 'Email hoặc mật khẩu không chính xác.',
+      });
     }
 
-    if (!nguoiDung.trangThai) {
-      return guiThatBai(res, { statusCode: 403, message: 'Tài khoản của bạn đã bị khóa.' });
-    }
-
-    const khopMatKhau = await bcrypt.compare(matKhau, nguoiDung.matKhau);
-    if (!khopMatKhau) {
-      return guiThatBai(res, { statusCode: 401, message: 'Email hoặc mật khẩu không chính xác.' });
+    if (nguoiDung.trangThai !== 'HOAT_DONG') {
+      return guiThatBai(res, {
+        statusCode: 403,
+        message: 'Tài khoản của bạn đã bị khóa.',
+      });
     }
 
     const token = generateToken(nguoiDung._id, nguoiDung.vaiTro);
@@ -85,6 +97,7 @@ const dangNhap = async (req, res, next) => {
           soDienThoai: nguoiDung.soDienThoai,
           anhDaiDien: nguoiDung.anhDaiDien,
           vaiTro: nguoiDung.vaiTro,
+          trangThai: nguoiDung.trangThai,
         },
       },
     });

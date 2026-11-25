@@ -3,14 +3,18 @@ const router = express.Router();
 const { xacThuc } = require('../middleware/xac_thuc');
 const {
   layDanhSachOGhep,
+  layHoSoCuaToi,
+  layChiTietHoSoOGhep,
   taoHoSoOGhep,
-  capNhatHoSoOGhep,
-  xoaHoSoOGhep,
+  capNhatHoSoCuaToi,
+  xoaHoSoCuaToi,
 } = require('../controllers/o_ghep_controller');
 
 router.get('/', layDanhSachOGhep);
+router.get('/cua-toi', xacThuc, layHoSoCuaToi);
+router.get('/:maHoSo', layChiTietHoSoOGhep);
 router.post('/', xacThuc, taoHoSoOGhep);
-router.put('/:id', xacThuc, capNhatHoSoOGhep);
-router.delete('/:id', xacThuc, xoaHoSoOGhep);
+router.put('/cua-toi', xacThuc, capNhatHoSoCuaToi);
+router.delete('/cua-toi', xacThuc, xoaHoSoCuaToi);
 
 module.exports = router;
