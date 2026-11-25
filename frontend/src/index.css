@@ -1,74 +1,60 @@
 @import "tailwindcss";
 
-/*nền và font chung của pj */
-body {
-  font-family: "Plus Jakarta Sans", sans-serif;
-  background: #f4efe6;
-  color: #0d174d;
+:root {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #1c2b43;
+  background: #f5f8fc;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-}
-
-/* class dùng chung cho mọi trang*/
-.card {
-  background: #fff;
-  border-radius: 16px;
-  padding: 24px;
-  box-shadow: 0 1px 2px rgba(13, 23, 77, 0.06);
-}
-
-.pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 4px 10px;
-  border-radius: 999px;
-  font-size: 13px;
-  font-weight: 600;
-  white-space: nowrap;
-}
-
-.pill::before {
-  content: "";
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: currentColor;
-}
-
-.pill-green { background: #e7f6ee; color: #1a7f4b; }
-.pill-amber { background: #fff4d6; color: #b45309; }
-.pill-red   { background: #fde8ec; color: #c81e3a; }
-
-.btn {
-  padding: 8px 14px;
-  border-radius: 10px;
-  border: none;
-  font-family: inherit;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
   font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s ease;
+  font-weight: 400;
+  --ink: #1c2b43;
+  --muted: #64758d;
+  --faint: #6b7c92;
+  --line: #e3eaf3;
+  --line-strong: #d5dfeb;
+  --surface: #ffffff;
+  --ground: #f5f8fc;
+  --blue: #2563d9;
+  --blue-dark: #174ea6;
+  --blue-pale: #edf3ff;
+  --orange: #ed7622;
+  --orange-pale: #fff2e7;
+  --green: #16835c;
+  --green-pale: #e8f6ef;
+  --red: #bf4545;
+  --red-pale: #fff0ef;
+  --amber: #a96710;
+  --amber-pale: #fff5dc;
 }
 
-.btn-ghost { 
-  background: #eef0f6; 
-  color: #0d174d; 
-}
+* { box-sizing: border-box; }
+html, body, #root { min-height: 100%; }
+body { margin: 0; min-width: 320px; min-height: 100vh; background: var(--ground); color: var(--ink); }
+button, input, select, textarea { font: inherit; }
+button { cursor: pointer; }
+button:disabled { cursor: not-allowed; }
+::selection { background: #d8e6ff; color: #153c7e; }
+:focus-visible { outline: 3px solid #8ab5ff; outline-offset: 2px; }
+* { scrollbar-color: #c4d2e4 #f5f8fc; scrollbar-width: thin; }
 
-.btn-ghost:hover { 
-  background: #e0e4ef; 
-}
+/* Utilities retained for screens that still use the older shared class names. */
+.card { border: 1px solid var(--line); border-radius: 8px; padding: 16px; background: var(--surface); box-shadow: none; }
+.pill { display: inline-flex; align-items: center; gap: 6px; padding: 4px 9px; border: 1px solid transparent; border-radius: 12px; font-size: 12px; font-weight: 650; white-space: nowrap; }
+.pill::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+.pill-green { border-color: #d8efe3; background: var(--green-pale); color: #16744d; }
+.pill-amber { border-color: #f4e5bb; background: var(--amber-pale); color: #80540e; }
+.pill-red { border-color: #f3d7d4; background: var(--red-pale); color: #a93431; }
+.btn { min-height: 36px; display: inline-flex; align-items: center; justify-content: center; gap: 7px; padding: 0 12px; border: 1px solid var(--line-strong); border-radius: 6px; background: #fff; color: #365170; font-family: inherit; font-size: 12px; font-weight: 650; transition: background-color .16s ease, border-color .16s ease; }
+.btn-ghost { background: #fff; color: #365170; }
+.btn-ghost:hover { border-color: #aebfd5; background: #f8fafd; }
+.btn-primary { border-color: var(--blue); background: var(--blue); color: #fff; }
+.btn-primary:hover { border-color: #1d52b7; background: #1d52b7; }
+.btn-success { border-color: #d5eddf; background: var(--green-pale); color: #176a49; }
 
-.btn-primary { 
-  background: #0d174d; 
-  color: #fff; 
-}
-
-.btn-primary:hover { 
-  background: #18255e; 
-}
-
-.btn-success { 
-  background: #e7f6ee; 
-  color: #1a7f4b; 
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }

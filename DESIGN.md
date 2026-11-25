@@ -200,6 +200,8 @@ Controls use gently rounded 6px corners; panels use 8px corners, and compact sta
 ### Room Control Row and Detail Sheet
 Desktop rows keep room, tenant, latest reading, unpaid invoice count, and balance in one scan line. On mobile, a summary card shows those same facts; selecting it opens a detail sheet with invoice state and direct links to the room's invoice and meter history.
 
+### Sign-in and Access States
+
 ## Do's and Don'ts
 
 ### Do:

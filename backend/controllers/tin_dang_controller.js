@@ -2,6 +2,81 @@ const TinDangPhong = require('../models/tin_dang_phong');
 const PhongTro = require('../models/phong_tro');
 const DayTro = require('../models/day_tro');
 
+const TRANG_THAI_TIN_CONG_KHAI = ['DANG_HIEN_THI', 'DA_DANG'];
+
+function themDieuKienHoac(filter, dieuKien) {
+  filter.$and ||= [];
+  filter.$and.push({ $or: dieuKien });
+}
+
+function chuanHoaHinhAnh(hinhAnh) {
+  if (!Array.isArray(hinhAnh)) return [];
+  return hinhAnh
+    .map((anh) => (typeof anh === 'string' ? anh : anh?.url))
+    .filter(Boolean);
+}
+
+function chuanHoaPhongTro(phong) {
+  if (!phong || typeof phong !== 'object') return phong;
+  return {
+    ...phong,
+    tenPhong: phong.tenPhong || phong.soPhong || '',
+    tienCocMacDinh: phong.tienCocMacDinh ?? phong.tienCocGoiY ?? 0,
+    dienTich: phong.dienTich ?? phong.dienTichM2,
+    noiThat: phong.noiThat ?? phong.tienIch ?? [],
+    hinhAnh: chuanHoaHinhAnh(phong.hinhAnh),
+    trangThai: phong.trangThai || phong.tinhTrang,
+  };
+}
+
+function chuanHoaTinDang(tin) {
+  const diaChi = tin.diaChi || {};
+  const khuVucCu = tin.khuVuc || {};
+  const diaChiDayTro = tin.dayTroId?.diaChi || {};
+  const diaChiDayDu = khuVucCu.diaChiDayDu || [
+    diaChi.soNhaDuong || diaChiDayTro.soNhaDuong,
+    diaChi.phuongXa || diaChiDayTro.phuongXa,
+    diaChi.quanHuyen || diaChiDayTro.quanHuyen,
+    diaChi.tinhThanh || diaChiDayTro.tinhThanh,
+  ].filter(Boolean).join(', ');
+
+  const dayTro = tin.dayTroId && typeof tin.dayTroId === 'object'
+    ? {
+        ...tin.dayTroId,
+        tenDayTro: tin.dayTroId.tenDayTro || tin.dayTroId.tenDay || '',
+        tienIchChung: tin.dayTroId.tienIchChung || tin.dayTroId.tienIch || [],
+      }
+    : tin.dayTroId;
+
+  return {
+    ...tin,
+    moTaChiTiet: tin.moTaChiTiet || tin.moTa || '',
+    giaChoThue: tin.giaChoThue ?? tin.giaThue ?? tin.phongTroId?.giaThue,
+    dienTich: tin.dienTich ?? tin.dienTichM2 ?? tin.phongTroId?.dienTichM2,
+    hinhAnh: chuanHoaHinhAnh(tin.hinhAnh),
+    khuVuc: {
+      ...khuVucCu,
+      diaChiDayDu,
+      quanHuyen: khuVucCu.quanHuyen || diaChi.quanHuyen || diaChiDayTro.quanHuyen || '',
+      tinhThanh: khuVucCu.tinhThanh || diaChi.tinhThanh || diaChiDayTro.tinhThanh || '',
+    },
+    soDienThoaiLienHe: tin.soDienThoaiLienHe || tin.chuTroId?.soDienThoai || '',
+    trangThai: tin.trangThai === 'DA_DANG' ? 'DANG_HIEN_THI' : tin.trangThai,
+    phongTroId: chuanHoaPhongTro(tin.phongTroId),
+    dayTroId: dayTro,
+  };
+}
+
+async function layIdsPhongDangTrong() {
+  return PhongTro.collection.distinct('_id', {
+    $and: [
+      { $or: [{ trangThai: 'TRONG' }, { tinhTrang: 'TRONG' }] },
+      { hienThi: { $ne: false } },
+      { daXoaLuc: null },
+    ],
+  });
+}
+
 
 const layDanhSachTinDang = async (req, res, next) => {
   try {
@@ -37,8 +112,8 @@ const layDanhSachTinDang = async (req, res, next) => {
       if (trangThai) filter.trangThai = trangThai;
     } else {
       
-      filter.trangThai = 'DANG_HIEN_THI';
-      const phongTrongIds = await PhongTro.find({ trangThai: 'TRONG' }).distinct('_id');
+      filter.trangThai = { $in: TRANG_THAI_TIN_CONG_KHAI };
+      const phongTrongIds = await layIdsPhongDangTrong();
       filter.phongTroId = { $in: phongTrongIds };
     }
 
@@ -46,23 +121,46 @@ const layDanhSachTinDang = async (req, res, next) => {
       filter.$or = [
         { tieuDe: { $regex: tuKhoa, $options: 'i' } },
         { moTaChiTiet: { $regex: tuKhoa, $options: 'i' } },
+        { moTa: { $regex: tuKhoa, $options: 'i' } },
         { 'khuVuc.diaChiDayDu': { $regex: tuKhoa, $options: 'i' } },
+        { 'diaChi.soNhaDuong': { $regex: tuKhoa, $options: 'i' } },
+        { 'diaChi.phuongXa': { $regex: tuKhoa, $options: 'i' } },
+        { 'diaChi.quanHuyen': { $regex: tuKhoa, $options: 'i' } },
+        { 'diaChi.tinhThanh': { $regex: tuKhoa, $options: 'i' } },
       ];
     }
 
-    if (tinh) filter['khuVuc.tinhThanh'] = { $regex: tinh, $options: 'i' };
-    if (quan) filter['khuVuc.quanHuyen'] = { $regex: quan, $options: 'i' };
+    if (tinh) {
+      themDieuKienHoac(filter, [
+        { 'khuVuc.tinhThanh': { $regex: tinh, $options: 'i' } },
+        { 'diaChi.tinhThanh': { $regex: tinh, $options: 'i' } },
+      ]);
+    }
+    if (quan) {
+      themDieuKienHoac(filter, [
+        { 'khuVuc.quanHuyen': { $regex: quan, $options: 'i' } },
+        { 'diaChi.quanHuyen': { $regex: quan, $options: 'i' } },
+      ]);
+    }
 
     if ((giaTu !== null && !Number.isNaN(giaTu)) || (giaDen !== null && !Number.isNaN(giaDen))) {
-      filter.giaChoThue = {};
-      if (giaTu !== null && !Number.isNaN(giaTu)) filter.giaChoThue.$gte = giaTu;
-      if (giaDen !== null && !Number.isNaN(giaDen)) filter.giaChoThue.$lte = giaDen;
+      const khoangGia = {};
+      if (giaTu !== null && !Number.isNaN(giaTu)) khoangGia.$gte = giaTu;
+      if (giaDen !== null && !Number.isNaN(giaDen)) khoangGia.$lte = giaDen;
+      themDieuKienHoac(filter, [
+        { giaChoThue: khoangGia },
+        { giaThue: khoangGia },
+      ]);
     }
 
     if ((dienTichTu !== null && !Number.isNaN(dienTichTu)) || (dienTichDen !== null && !Number.isNaN(dienTichDen))) {
-      filter.dienTich = {};
-      if (dienTichTu !== null && !Number.isNaN(dienTichTu)) filter.dienTich.$gte = dienTichTu;
-      if (dienTichDen !== null && !Number.isNaN(dienTichDen)) filter.dienTich.$lte = dienTichDen;
+      const khoangDienTich = {};
+      if (dienTichTu !== null && !Number.isNaN(dienTichTu)) khoangDienTich.$gte = dienTichTu;
+      if (dienTichDen !== null && !Number.isNaN(dienTichDen)) khoangDienTich.$lte = dienTichDen;
+      themDieuKienHoac(filter, [
+        { dienTich: khoangDienTich },
+        { dienTichM2: khoangDienTich },
+      ]);
     }
 
     
@@ -84,15 +182,15 @@ const layDanhSachTinDang = async (req, res, next) => {
     }
 
     let sortOption = { noiBat: -1, createdAt: -1 };
-    if (sapXep === 'gia-tang') sortOption = { giaChoThue: 1 };
-    else if (sapXep === 'gia-giam') sortOption = { giaChoThue: -1 };
-    else if (sapXep === 'dien-tich-giam') sortOption = { dienTich: -1 };
+    if (sapXep === 'gia-tang') sortOption = { giaChoThue: 1, giaThue: 1 };
+    else if (sapXep === 'gia-giam') sortOption = { giaChoThue: -1, giaThue: -1 };
+    else if (sapXep === 'dien-tich-giam') sortOption = { dienTich: -1, dienTichM2: -1 };
 
     const total = await TinDangPhong.countDocuments(filter);
     const totalPages = Math.ceil(total / limit) || 1;
     const danhSach = await TinDangPhong.find(filter)
-      .populate('phongTroId', 'soPhong tang noiThat soNguoiToiDa trangThai')
-      .populate('dayTroId', 'tenDayTro diaChi tienIchChung')
+      .populate('phongTroId', 'soPhong tenPhong tang giaThue tienCocGoiY tienCocMacDinh dienTich dienTichM2 noiThat tienIch hinhAnh soNguoiToiDa trangThai tinhTrang')
+      .populate('dayTroId', 'tenDayTro tenDay diaChi tienIchChung tienIch')
       .populate('chuTroId', 'hoTen soDienThoai')
       .sort(sortOption)
       .skip((page - 1) * limit)
@@ -102,7 +200,7 @@ const layDanhSachTinDang = async (req, res, next) => {
     return res.status(200).json({
       success: true,
       message: 'Lấy danh sách tin đăng thành công.',
-      data: danhSach,
+      data: danhSach.map(chuanHoaTinDang),
       meta: {
         page,
         limit,
@@ -120,30 +218,37 @@ const layDanhSachTinDang = async (req, res, next) => {
 
 const layChiTietTinDang = async (req, res, next) => {
   try {
-    const tinDang = await TinDangPhong.findByIdAndUpdate(
-      req.params.maTinDang,
+    const phongTrongIds = await layIdsPhongDangTrong();
+    const tinDang = await TinDangPhong.findOneAndUpdate(
+      {
+        _id: req.params.maTinDang,
+        trangThai: { $in: TRANG_THAI_TIN_CONG_KHAI },
+        phongTroId: { $in: phongTrongIds },
+      },
       { $inc: { luotXem: 1 } },
       { new: true }
     )
-      .populate('phongTroId', 'soPhong tang giaThue tienCocMacDinh dienTich soNguoiToiDa noiThat trangThai')
-      .populate('dayTroId', 'tenDayTro diaChi tienIchChung quyDinhChung viTri')
+      .populate({
+        path: 'phongTroId',
+        select: 'soPhong tenPhong tang giaThue tienCocGoiY tienCocMacDinh dienTich dienTichM2 soNguoiToiDa noiThat tienIch hinhAnh trangThai tinhTrang',
+      })
+      .populate('dayTroId', 'tenDayTro tenDay diaChi tienIchChung tienIch quyDinhChung viTri')
       .populate('chuTroId', 'hoTen soDienThoai email')
       .lean();
 
-    if (!tinDang) {
-      return res.status(404).json({ success: false, message: 'Không tìm thấy tin đăng.', data: null });
+    if (!tinDang || !tinDang.phongTroId) {
+      return res.status(404).json({ success: false, message: 'Không tìm thấy tin đăng đang hiển thị.', data: null });
     }
 
     return res.status(200).json({
       success: true,
       message: 'Lấy chi tiết tin đăng thành công.',
-      data: tinDang,
+      data: chuanHoaTinDang(tinDang),
     });
   } catch (error) {
     next(error);
   }
 };
-
 
 const taoTinDang = async (req, res, next) => {
   try {

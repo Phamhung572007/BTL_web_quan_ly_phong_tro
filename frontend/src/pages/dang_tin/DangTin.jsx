@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import tinDangService from '../../services/tinDangService';
 import phongTroService from '../../services/phongTroService';
 import './DangTin.css';
@@ -32,7 +32,7 @@ export default function DangTin() {
     setTimeout(() => setThongBao({ type: '', text: '' }), 4000);
   };
 
-  const taiDuLieu = useCallback(async () => {
+  const taiDuLieu = async () => {
     setLoading(true);
     try {
       const [resTin, resPhongTrong] = await Promise.all([
@@ -46,29 +46,10 @@ export default function DangTin() {
     } finally {
       setLoading(false);
     }
-  }, []);
+  };
 
   useEffect(() => {
-    let huy = false;
-    Promise.all([
-      tinDangService.timKiemTinDang({ 'cua-toi': 'true', limit: 50 }),
-      phongTroService.layPhongTrong({ limit: 100 }),
-    ])
-      .then(([resTin, resPhongTrong]) => {
-        if (!huy) {
-          setDanhSachTin(resTin.data || []);
-          setDanhSachPhongTrong(resPhongTrong.data || []);
-        }
-      })
-      .catch((err) => {
-        if (!huy) hienThongBao('error', err.message);
-      })
-      .finally(() => {
-        if (!huy) setLoading(false);
-      });
-    return () => {
-      huy = true;
-    };
+    taiDuLieu();
   }, []);
 
   const moFormTaoTin = () => {

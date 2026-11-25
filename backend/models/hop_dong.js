@@ -93,5 +93,13 @@ const hopDongSchema = new mongoose.Schema(
 );
 
 hopDongSchema.index({ phongTroId: 1, trangThai: 1 });
+hopDongSchema.index(
+  { phongTroId: 1 },
+  {
+    unique: true,
+    partialFilterExpression: { trangThai: 'HIEU_LUC' },
+    name: 'uniq_hop_dong_hieu_luc_theo_phong',
+  }
+);
 
 module.exports = mongoose.model('HopDong', hopDongSchema);

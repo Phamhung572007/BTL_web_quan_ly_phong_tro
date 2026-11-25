@@ -44,7 +44,7 @@ export function EmptyState({ title, detail, action }) {
   return (
     <div className="page-state">
       <div className="page-state__mark"><Info size={18} /></div>
-      <h1>{title}</h1>
+      <h2>{title}</h2>
       <p>{detail}</p>
       {action && <div className="page-state__action">{action}</div>}
     </div>

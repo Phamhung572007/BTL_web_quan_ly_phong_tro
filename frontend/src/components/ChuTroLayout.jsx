@@ -1,11 +1,9 @@
-import { useEffect, useState } from 'react'
-import { NavLink, Outlet, useLocation } from 'react-router-dom'
+import { useEffect, useRef, useState } from 'react'
+import { Link, NavLink, Outlet, useLocation } from 'react-router-dom'
 import {
-  Bell, Building2, CalendarDays, ChevronDown, CircleHelp, FileText, Gauge, House,
-  Menu, MessageSquareText, ReceiptText, Settings2, Star, Users, Wrench, X,
+  Building2, CalendarDays, ChevronDown, CircleHelp, FileText, Gauge, House,
+  LogIn, Menu, Megaphone, MessageSquareText, ReceiptText, Settings2, Star, UserRound, Users, Wrench, X,
 } from 'lucide-react'
-import { useAuth } from '../contexts/AuthContext.jsx'
-import api from '../services/api.js'
 
 const groups = [
   {
@@ -16,6 +14,7 @@ const groups = [
       { to: '/phong-tro', label: 'Phòng trọ', icon: House },
       { to: '/nguoi-thue', label: 'Người thuê', icon: Users },
       { to: '/hop-dong', label: 'Hợp đồng', icon: FileText },
+      { to: '/tin-dang', label: 'Tin đăng phòng', icon: Megaphone },
     ],
   },
   {
@@ -39,37 +38,10 @@ const groups = [
 
 const titles = {
   '/thong-ke': 'Tổng quan', '/day-tro': 'Dãy trọ', '/phong-tro': 'Phòng trọ',
-  '/nguoi-thue': 'Người thuê', '/hop-dong': 'Hợp đồng', '/dien-nuoc': 'Điện nước',
-  '/hoa-don': 'Hóa đơn', '/dich-vu': 'Dịch vụ & đơn giá', '/lich-xem': 'Lịch xem phòng',
-  '/sua-chua': 'Sửa chữa', '/bang-tin': 'Bảng tin & sự kiện',
+  '/nguoi-thue': 'Người thuê', '/hop-dong': 'Hợp đồng', '/tin-dang': 'Tin đăng phòng',
+  '/dien-nuoc': 'Điện nước', '/hoa-don': 'Hóa đơn', '/dich-vu': 'Dịch vụ & đơn giá',
+  '/lich-xem': 'Lịch xem phòng', '/sua-chua': 'Sửa chữa', '/bang-tin': 'Bảng tin & sự kiện',
   '/danh-gia-phong': 'Đánh giá phòng', '/thong-bao': 'Thông báo',
-}
-
-const roleLabels = { CHU_TRO: 'Chủ trọ', KHACH_THUE: 'Khách thuê', QUAN_TRI: 'Quản trị viên' }
-const accountStatusLabels = { HOAT_DONG: 'Đang hoạt động', NGUNG_HOAT_DONG: 'Ngừng hoạt động', BI_KHOA: 'Đã khóa' }
-
-function tenHienThi(user, authStatus) {
-  if (user) return user.hoTen || user.ten || user.name || user.email || 'Tài khoản'
-  if (authStatus === 'loading') return 'Đang tải tài khoản…'
-  if (authStatus === 'unavailable') return 'Chưa đồng bộ tài khoản'
-  return 'Chưa đăng nhập'
-}
-
-function chuCaiDaiDien(name) {
-  return Array.from(String(name || '').trim())[0]?.toLocaleUpperCase('vi-VN') || '?'
-}
-
-function moTaTaiKhoan(user, authStatus) {
-  if (!user) {
-    if (authStatus === 'loading') return 'Đang đồng bộ hồ sơ'
-    if (authStatus === 'unavailable') return 'Chưa kết nối API tài khoản'
-    return 'Đăng nhập để đồng bộ hồ sơ'
-  }
-
-  const role = roleLabels[user.vaiTro] || user.vaiTro
-  const status = accountStatusLabels[user.trangThai]
-    || (user.trangThai ? String(user.trangThai).replaceAll('_', ' ').toLowerCase() : 'Đã đăng nhập')
-  return [role, status].filter(Boolean).join(' · ')
 }
 
 function Navigation({ onNavigate }) {
@@ -97,34 +69,44 @@ function Navigation({ onNavigate }) {
 
 export default function ChuTroLayout() {
   const location = useLocation()
-  const { user, authStatus } = useAuth()
   const [menuOpen, setMenuOpen] = useState(false)
-  const [unread, setUnread] = useState(0)
+  const sidebarRef = useRef(null)
+  const menuToggleRef = useRef(null)
   const pageTitle = titles[location.pathname] || 'Không gian chủ trọ'
-  const accountName = tenHienThi(user, authStatus)
-  const accountInitial = chuCaiDaiDien(user?.hoTen || user?.ten || user?.name || user?.email)
-  const accountDescription = moTaTaiKhoan(user, authStatus)
 
   useEffect(() => {
-    let active = true
-    api.get('/thong-bao/chua-doc')
-      .then((response) => {
-        if (active) setUnread(response.data?.total || 0)
-      })
-      .catch(() => {
-        if (active) setUnread(0)
-      })
-    return () => { active = false }
-  }, [location.pathname])
+    if (!menuOpen) return undefined
+    const focusable = () => sidebarRef.current?.querySelectorAll('a[href], button:not([disabled])') || []
+    const closeOnEscape = (event) => {
+      if (event.key === 'Escape') setMenuOpen(false)
+      if (event.key === 'Tab') {
+        const items = focusable()
+        if (!items.length) return
+        const first = items[0]
+        const last = items[items.length - 1]
+        if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus() }
+        else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus() }
+      }
+    }
+    const previousOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    document.addEventListener('keydown', closeOnEscape)
+    requestAnimationFrame(() => focusable()[0]?.focus())
+    return () => {
+      document.body.style.overflow = previousOverflow
+      document.removeEventListener('keydown', closeOnEscape)
+      menuToggleRef.current?.focus()
+    }
+  }, [menuOpen])
 
   return (
     <div className="owner-app">
-      {menuOpen && <button className="nav-scrim" aria-label="Đóng menu" onClick={() => setMenuOpen(false)} />}
-      <aside className={`owner-sidebar${menuOpen ? ' is-open' : ''}`}>
+      {menuOpen && <button className="nav-scrim" type="button" aria-label="Đóng menu" onClick={() => setMenuOpen(false)} />}
+      <aside ref={sidebarRef} id="owner-navigation" className={`owner-sidebar${menuOpen ? ' is-open' : ''}`} aria-label="Điều hướng chủ trọ">
         <div className="brand-lockup">
           <span className="brand-mark" aria-hidden="true">S</span>
           <span>Stay<span className="brand-lockup__accent">Sync</span></span>
-          <button className="icon-button sidebar-close" aria-label="Đóng menu" onClick={() => setMenuOpen(false)}><X size={18} /></button>
+          <button className="icon-button sidebar-close" type="button" aria-label="Đóng menu" onClick={() => setMenuOpen(false)}><X size={18} /></button>
         </div>
         <div className="workspace-switcher">
           <span className="workspace-switcher__icon"><Building2 size={17} /></span>
@@ -134,23 +116,20 @@ export default function ChuTroLayout() {
         <Navigation onNavigate={() => setMenuOpen(false)} />
         <div className="sidebar-bottom">
           <div className="sidebar-help"><span className="sidebar-help__mark"><CircleHelp size={16} aria-hidden="true" /></span><span><b>Cần hỗ trợ?</b><small>Xem hướng dẫn sử dụng</small></span></div>
-          <div className="account-row"><span className="account-avatar" aria-hidden="true">{accountInitial}</span><span><b title={accountName}>{accountName}</b><small title={accountDescription}>{accountDescription}</small></span><ChevronDown size={15} /></div>
+          <Link className="account-row account-row--login" to="/dang-nhap" onClick={() => setMenuOpen(false)}>
+            <span className="account-avatar" aria-hidden="true"><UserRound size={16} /></span>
+            <span><b>Đăng nhập</b><small>Để mở dữ liệu chủ trọ</small></span>
+            <LogIn size={15} aria-hidden="true" />
+          </Link>
         </div>
       </aside>
       <div className="owner-main">
         <header className="owner-topbar">
           <div className="owner-topbar__left">
-            <button className="icon-button menu-toggle" aria-label="Mở menu" onClick={() => setMenuOpen(true)}><Menu size={20} /></button>
+            <button ref={menuToggleRef} className="icon-button menu-toggle" type="button" aria-label="Mở menu" aria-controls="owner-navigation" aria-expanded={menuOpen} onClick={() => setMenuOpen(true)}><Menu size={20} /></button>
             <div className="breadcrumb"><span>StaySync</span><span className="breadcrumb__slash">/</span><b>{pageTitle}</b></div>
           </div>
-          <div className="owner-topbar__right">
-            <span className="today-label">Không gian chủ trọ</span>
-            <NavLink to="/thong-bao" className="icon-button notification-button" aria-label={`Thông báo, ${unread} chưa đọc`}>
-              <Bell size={19} />{unread > 0 && <span className="notification-dot">{unread > 9 ? '9+' : unread}</span>}
-            </NavLink>
-            <span className="topbar-divider" />
-            <span className="account-avatar account-avatar--small" role="img" aria-label={`Avatar của ${accountName}`}>{accountInitial}</span>
-          </div>
+          <div className="owner-topbar__right"><span className="today-label">Không gian chủ trọ</span></div>
         </header>
         <main className="owner-content"><Outlet /></main>
       </div>

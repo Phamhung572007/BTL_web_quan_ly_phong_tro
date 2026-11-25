@@ -109,8 +109,14 @@ const taoHopDong = async (req, res, next) => {
     if (String(phong.chuTroId) !== String(req.user._id)) {
       return res.status(403).json({ success: false, message: 'Bạn không sở hữu phòng trọ này.', data: null });
     }
+    if (phong.trangThai === 'BAO_TRI') {
+      return res.status(409).json({
+        success: false,
+        message: 'Không thể lập hợp đồng cho phòng đang bảo trì.',
+        data: null,
+      });
+    }
 
-    // Quy tắc 1: Không tạo hợp đồng mới cho phòng đang có hợp đồng hiệu lực
     const dangCoHopDong = await HopDong.exists({ phongTroId: phong._id, trangThai: 'HIEU_LUC' });
     if (dangCoHopDong || phong.trangThai === 'DANG_O') {
       return res.status(409).json({
@@ -119,27 +125,74 @@ const taoHopDong = async (req, res, next) => {
         data: null,
       });
     }
+    if (phong.trangThai !== 'TRONG') {
+      return res.status(409).json({
+        success: false,
+        message: 'Chỉ có thể lập hợp đồng cho phòng đang trống.',
+        data: null,
+      });
+    }
 
-    const maHopDongSo = `HD-${new Date().getFullYear()}-${Date.now().toString().slice(-6)}`;
+    // Giữ phòng bằng cập nhật có điều kiện để hai yêu cầu đồng thời không cùng lập hợp đồng.
+    const phongDaGiu = await PhongTro.findOneAndUpdate(
+      { _id: phong._id, chuTroId: req.user._id, trangThai: 'TRONG' },
+      { $set: { trangThai: 'DANG_O' } },
+      { new: true, runValidators: true }
+    );
+    if (!phongDaGiu) {
+      return res.status(409).json({
+        success: false,
+        message: 'Phòng vừa được giữ hoặc thay đổi trạng thái. Vui lòng tải lại danh sách phòng.',
+        data: null,
+      });
+    }
 
-    const hopDongMoi = await HopDong.create({
-      chuTroId: req.user._id,
-      phongTroId: phong._id,
-      nguoiThueId,
-      danhSachNguoiO: danhSachNguoiO || [nguoiThueId],
-      maHopDongSo,
-      ngayBatDau,
-      ngayKetThuc,
-      giaThueChot,
-      tienCoc,
-      chuKyThanhToan: chuKyThanhToan || 1,
-      ngayThuTienHangThang: ngayThuTienHangThang || 5,
-      dieuKhoan: dieuKhoan || '',
-      trangThai: 'HIEU_LUC',
-    });
+    const randomBytes = require('crypto').randomBytes;
+    const maHopDongSo = 'HD-' + new Date().getFullYear() + '-' + Date.now() + '-' +
+      randomBytes(3).toString('hex').toUpperCase();
 
-    phong.trangThai = 'DANG_O';
-    await phong.save();
+    let hopDongMoi;
+    try {
+      hopDongMoi = await HopDong.create({
+        chuTroId: req.user._id,
+        phongTroId: phong._id,
+        nguoiThueId,
+        danhSachNguoiO: danhSachNguoiO || [nguoiThueId],
+        maHopDongSo,
+        ngayBatDau,
+        ngayKetThuc,
+        giaThueChot,
+        tienCoc,
+        chuKyThanhToan: chuKyThanhToan || 1,
+        ngayThuTienHangThang: ngayThuTienHangThang || 5,
+        dieuKhoan: dieuKhoan || '',
+        trangThai: 'HIEU_LUC',
+      });
+    } catch (error) {
+      const hopDongHieuLuc = await HopDong.exists({
+        phongTroId: phong._id,
+        trangThai: 'HIEU_LUC',
+      });
+
+      if (!hopDongHieuLuc) {
+        await PhongTro.updateOne(
+          { _id: phong._id, chuTroId: req.user._id, trangThai: 'DANG_O' },
+          { $set: { trangThai: 'TRONG' } }
+        );
+      }
+
+      if (error?.code === 11000) {
+        return res.status(409).json({
+          success: false,
+          message: hopDongHieuLuc
+            ? 'Phòng đã có hợp đồng hiệu lực.'
+            : 'Mã hợp đồng bị trùng. Vui lòng thử tạo lại.',
+          data: null,
+        });
+      }
+      throw error;
+    }
+
     await TinDangPhong.updateMany({ phongTroId: phong._id }, { $set: { trangThai: 'DA_AN' } });
 
     return res.status(201).json({
@@ -151,7 +204,6 @@ const taoHopDong = async (req, res, next) => {
     next(error);
   }
 };
-
 
 const capNhatHopDong = async (req, res, next) => {
   try {

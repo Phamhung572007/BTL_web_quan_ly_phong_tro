@@ -1,7 +1,7 @@
 const DayTro = require('../models/day_tro');
 const PhongTro = require('../models/phong_tro');
 
-
+// [GET] /api/day-tro - Lấy danh sách dãy trọ của chủ trọ hiện tại
 const layDanhSachDayTro = async (req, res, next) => {
   try {
     const page = Math.max(parseInt(req.query.page, 10) || 1, 1);
@@ -26,7 +26,7 @@ const layDanhSachDayTro = async (req, res, next) => {
       .limit(limit)
       .lean();
 
-   
+    // Thống kê nhanh số phòng theo từng dãy
     const dayTroIds = danhSach.map((d) => d._id);
     const thongKePhong = await PhongTro.aggregate([
       { $match: { dayTroId: { $in: dayTroIds } } },
@@ -68,7 +68,7 @@ const layDanhSachDayTro = async (req, res, next) => {
   }
 };
 
-
+// [GET] /api/day-tro/:maDayTro - Xem chi tiết dãy trọ kèm danh sách phòng
 const layChiTietDayTro = async (req, res, next) => {
   try {
     const dayTro = await DayTro.findById(req.params.maDayTro).lean();
@@ -91,7 +91,7 @@ const layChiTietDayTro = async (req, res, next) => {
   }
 };
 
-
+// [POST] /api/day-tro - Thêm dãy trọ mới
 const taoDayTro = async (req, res, next) => {
   try {
     const { tenDayTro, diaChi, lat, lng, moTa, quyDinhChung, tienIchChung, anhDaiDien } = req.body;
@@ -130,7 +130,7 @@ const taoDayTro = async (req, res, next) => {
   }
 };
 
-
+// [PUT] /api/day-tro/:maDayTro - Cập nhật thông tin dãy trọ
 const capNhatDayTro = async (req, res, next) => {
   try {
     const dayTro = await DayTro.findById(req.params.maDayTro);
@@ -165,7 +165,7 @@ const capNhatDayTro = async (req, res, next) => {
   }
 };
 
-
+// [DELETE] /api/day-tro/:maDayTro - Xóa dãy trọ (chặn nếu còn phòng)
 const xoaDayTro = async (req, res, next) => {
   try {
     const dayTro = await DayTro.findById(req.params.maDayTro);
