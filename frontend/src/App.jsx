@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './contexts/AuthContext.jsx';
-import AppRoutes from './routes/AppRoutes.js';
-import KhachThueRoutes from './routes/KhachThueRoutes.js';
+import AppRoutes from './routes/AppRoutes.jsx';
+import KhachThueRoutes from './routes/KhachThueRoutes.jsx';
 import { BaoVeRoute } from './routes/BaoVeRoute.jsx';
 import DangNhap from './pages/dang_nhap/DangNhap.jsx';
 import './App.css';
