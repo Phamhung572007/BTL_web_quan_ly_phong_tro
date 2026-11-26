@@ -42,7 +42,7 @@ export default function TrangChu() {
       try {
         const [tinRes, oGhepRes] = await Promise.allSettled([
           api.get('/tin-dang', { params: { limit: 6 } }),
-          api.get('/o-ghep', { params: { limit: 3 } }),
+          api.get('/ho-so-o-ghep', { params: { limit: 3 } }),
         ]);
 
         if (!huy) {
@@ -211,7 +211,7 @@ export default function TrangChu() {
               onClick={() => dieuHuongCoBaoVe('/khach-thue/tim-phong')}
             >
               <span>Xem tất cả phòng</span>
-              <span aria-hidden="true">→</span>
+              <span aria-hidden="true">&rarr;</span>
             </button>
           </div>
 
@@ -344,7 +344,7 @@ export default function TrangChu() {
             <h2 className="tc-why-title">Tại Sao Nên Chọn Thuê Qua StaySync?</h2>
             <p className="tc-why-sub">
               Giải quyết triệt để nỗi lo bị chặt chém tiền điện nước, mất trộm đồ hay hợp đồng thiếu
-              minh bạch khi thuê trọ.
+              minh bạch khi thuê trọ sinh viên.
             </p>
           </div>
 
@@ -441,17 +441,17 @@ export default function TrangChu() {
             <ul className="tc-footer-links">
               <li>
                 <button type="button" onClick={() => dieuHuongCoBaoVe('/khach-thue/tim-phong')}>
-                    &rsaquo; Điều khoản sử dụng
+                  &rsaquo; Điều khoản sử dụng
                 </button>
               </li>
               <li>
                 <button type="button" onClick={() => dieuHuongCoBaoVe('/khach-thue/tim-phong')}>
-                    &rsaquo; Chính sách bảo mật thông tin
+                  &rsaquo; Chính sách bảo mật thông tin
                 </button>
               </li>
               <li>
                 <button type="button" onClick={() => dieuHuongCoBaoVe('/khach-thue/tim-phong')}>
-                    &rsaquo; Quy chế hoạt động & giải quyết tranh chấp
+                  &rsaquo; Quy chế hoạt động & giải quyết tranh chấp
                 </button>
               </li>
             </ul>
