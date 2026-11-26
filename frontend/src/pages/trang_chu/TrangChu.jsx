@@ -441,17 +441,17 @@ export default function TrangChu() {
             <ul className="tc-footer-links">
               <li>
                 <button type="button" onClick={() => dieuHuongCoBaoVe('/khach-thue/tim-phong')}>
-                  › Điều khoản sử dụng
+                    &rsaquo; Điều khoản sử dụng
                 </button>
               </li>
               <li>
                 <button type="button" onClick={() => dieuHuongCoBaoVe('/khach-thue/tim-phong')}>
-                  › Chính sách bảo mật thông tin
+                    &rsaquo; Chính sách bảo mật thông tin
                 </button>
               </li>
               <li>
                 <button type="button" onClick={() => dieuHuongCoBaoVe('/khach-thue/tim-phong')}>
-                  › Quy chế hoạt động & giải quyết tranh chấp
+                    &rsaquo; Quy chế hoạt động & giải quyết tranh chấp
                 </button>
               </li>
             </ul>
