@@ -344,7 +344,7 @@ export default function TrangChu() {
             <h2 className="tc-why-title">Tại Sao Nên Chọn Thuê Qua StaySync?</h2>
             <p className="tc-why-sub">
               Giải quyết triệt để nỗi lo bị chặt chém tiền điện nước, mất trộm đồ hay hợp đồng thiếu
-              minh bạch khi thuê trọ sinh viên.
+              minh bạch khi thuê trọ.
             </p>
           </div>
 
