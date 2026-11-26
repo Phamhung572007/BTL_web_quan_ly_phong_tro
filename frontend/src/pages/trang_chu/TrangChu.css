@@ -1,28 +1,36 @@
-/* Tổng thể trang chủ Landing (đồng bộ StaySync) */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
 .tc-page {
   min-height: 100vh;
-  background-color: #f5f8fc;
-  color: #1c2b43;
+  background: #ffffff;
+  color: #1e293b;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Thanh điều hướng trên cùng */
-.tc-navbar {
-  position: sticky;
-  top: 0;
-  z-index: 30;
-  height: 64px;
-  background-color: #ffffff;
-  border-bottom: 1px solid #e3eaf3;
+.tc-page button,
+.tc-page input,
+.tc-page select {
+  font-family: inherit;
 }
 
 .tc-container {
-  max-width: 1240px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
+/* 1. Navbar */
+.tc-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: #e6ecf8;
+  border-bottom: 1px solid #d5e0f4;
+}
+
 .tc-navbar-inner {
-  height: 100%;
+  height: 68px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -34,244 +42,373 @@
   align-items: center;
   gap: 10px;
   text-decoration: none;
-  font-size: 19px;
-  font-weight: 800;
-  color: #174ea6;
-  letter-spacing: -0.02em;
 }
 
 .tc-brand-mark {
-  width: 34px;
-  height: 34px;
-  border-radius: 8px;
-  background-color: #2563d9;
-  color: #ffffff;
-  display: flex;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: #071356;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-weight: 800;
-  font-size: 16px;
+  flex-shrink: 0;
 }
 
-.tc-brand span span {
-  color: #2563d9;
+.tc-brand-mark--lg {
+  width: 40px;
+  height: 40px;
+  border-radius: 11px;
+}
+
+/* Logo thương hiệu: 20px, ExtraBold (800), tracking-tight, leading-tight */
+.tc-brand-text {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+  color: #071356;
 }
 
 .tc-nav-links {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
 }
 
+/* Menu điều hướng: 14px, SemiBold (600), leading-none */
 .tc-nav-link {
-  padding: 7px 12px;
-  border-radius: 6px;
-  font-size: 13.5px;
+  background: transparent;
+  border: none;
+  padding: 9px 16px;
+  border-radius: 10px;
+  font-size: 14px;
   font-weight: 600;
-  color: #365170;
+  line-height: 1;
+  color: #334155;
   text-decoration: none;
-  transition: background-color 0.15s, color 0.15s;
+  cursor: pointer;
+  transition: all 0.16s ease;
 }
 
-.tc-nav-link:hover,
+.tc-nav-link:hover {
+  color: #1d4ed8;
+  background: rgba(255, 255, 255, 0.55);
+}
+
 .tc-nav-link.is-active {
-  background-color: #edf3ff;
-  color: #174ea6;
+  background: #d3e1fa;
+  color: #1d4ed8;
 }
 
 .tc-nav-actions {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 }
 
-/* Khu vực Hero Banner & Tìm kiếm nhanh */
-.tc-hero {
-  background: linear-gradient(180deg, #edf3ff 0%, #f5f8fc 100%);
-  border-bottom: 1px solid #e3eaf3;
-  padding: 48px 0 42px;
-}
-
-.tc-hero-grid {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 28px;
-  align-items: center;
-}
-
-.tc-hero-pill {
+/* Nút bấm chính CTA / Nav: 14px, SemiBold (600), leading-none */
+.tc-btn-login {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 4px 12px;
-  border-radius: 12px;
-  background-color: #ffffff;
-  border: 1px solid #d5dfeb;
-  color: #174ea6;
-  font-size: 12px;
-  font-weight: 700;
-  margin-bottom: 14px;
-}
-
-.tc-hero-title {
-  margin: 0 0 12px;
-  font-size: 32px;
-  font-weight: 800;
-  line-height: 1.2;
-  letter-spacing: -0.03em;
-  color: #1c2b43;
-}
-
-.tc-hero-title span {
-  color: #2563d9;
-}
-
-.tc-hero-desc {
-  margin: 0 0 22px;
-  font-size: 15px;
-  line-height: 1.55;
-  color: #365170;
-  max-width: 580px;
-}
-
-/* Hộp tìm kiếm phòng trên Hero */
-.tc-search-bar {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  background-color: #ffffff;
-  border: 1px solid #d5dfeb;
+  gap: 7px;
+  padding: 10px 16px;
   border-radius: 8px;
-  padding: 8px;
+  background: #e2e8f0;
+  border: 1px solid #cbd5e1;
+  color: #1e293b;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  transition: background 0.15s ease;
 }
 
-.tc-search-field {
-  flex: 1 1 220px;
+.tc-btn-login:hover {
+  background: #cbd5e1;
+}
+
+.tc-btn-register {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 18px;
+  border-radius: 8px;
+  background: #f96b07;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(249, 107, 7, 0.28);
+  transition: background 0.15s ease;
+}
+
+.tc-btn-register:hover {
+  background: #e15c00;
+}
+
+/* 2. Hero & Search Card */
+.tc-hero {
+  background: linear-gradient(180deg, #f3f7fd 0%, #ffffff 100%);
+  padding: 52px 0 36px;
+  text-align: center;
+}
+
+/* Tiêu đề Hero chính (h1): 36px, ExtraBold (800), leading-snug, tracking-tight */
+.tc-hero-title {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1.375;
+  letter-spacing: -0.025em;
+  color: #071356;
+}
+
+/* Nội dung phụ: 14px, Regular (400), leading-relaxed */
+.tc-hero-sub {
+  margin: 10px auto 32px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.625;
+  color: #64748b;
+  max-width: 650px;
+}
+
+.tc-search-card {
+  max-width: 1120px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 26px 28px 28px;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.06);
+  text-align: left;
+}
+
+.tc-search-input-wrap {
   position: relative;
   display: flex;
   align-items: center;
 }
 
-.tc-search-field svg {
+.tc-search-icon {
   position: absolute;
-  left: 10px;
-  color: #8b98aa;
+  left: 16px;
   pointer-events: none;
 }
 
-.tc-search-field input {
+/* Ô tìm kiếm: 14px, Regular (400), leading-relaxed */
+.tc-search-input {
   width: 100%;
-  padding-left: 32px !important;
-  border: none !important;
-  background: transparent !important;
+  height: 48px;
+  padding: 0 16px 0 46px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  background: #f1f5fb;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.625;
+  color: #1e293b;
+  outline: none;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.tc-search-input::placeholder {
+  color: #94a3b8;
+}
+
+.tc-search-input:focus {
+  background: #ffffff;
+  border-color: #2563eb;
+}
+
+.tc-search-field-group {
+  margin-top: 16px;
+}
+
+.tc-search-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.625;
+  color: #334155;
+  margin-bottom: 6px;
 }
 
 .tc-search-select {
-  min-width: 165px;
-  border: none !important;
-  border-left: 1px solid #e3eaf3 !important;
-  border-radius: 0 !important;
-}
-
-/* Thẻ thống kê nhanh bên phải Hero */
-.tc-hero-card {
-  background-color: #ffffff;
-  border: 1px solid #e3eaf3;
-  border-radius: 8px;
-  padding: 18px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.tc-hero-card-title {
-  margin: 0;
+  width: 100%;
+  height: 44px;
+  padding: 0 14px;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
   font-size: 14px;
-  font-weight: 700;
-  color: #1c2b43;
+  font-weight: 500;
+  color: #1e293b;
+  outline: none;
 }
 
-.tc-stat-list {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
+.tc-search-select:focus {
+  border-color: #2563eb;
 }
 
-.tc-stat-item {
-  background-color: #f4f7fb;
-  border: 1px solid #e3eaf3;
-  border-radius: 6px;
-  padding: 12px;
+.tc-search-submit-wrap {
+  margin-top: 22px;
+  display: flex;
+  justify-content: center;
 }
 
-.tc-stat-item strong {
-  display: block;
-  font-size: 20px;
-  font-weight: 800;
-  color: #2563d9;
+/* Nút Tìm kiếm phòng: 14px, SemiBold (600), leading-none */
+.tc-btn-search {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 30px;
+  border: none;
+  border-radius: 10px;
+  background: #071356;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(7, 19, 86, 0.2);
+  transition: background 0.15s ease;
 }
 
-.tc-stat-item span {
-  font-size: 12px;
-  color: #64758d;
+.tc-btn-search:hover {
+  background: #0d218a;
 }
 
-/* Các section nội dung bên dưới */
+/* 3 & 4. Sections */
 .tc-section {
-  padding: 32px 0;
+  padding: 36px 0 28px;
+}
+
+.tc-section--compact {
+  padding-top: 16px;
+  padding-bottom: 52px;
 }
 
 .tc-section-head {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
-  gap: 12px;
-  margin-bottom: 18px;
+  gap: 16px;
+  flex-wrap: wrap;
 }
 
-.tc-section-head h2 {
-  margin: 0 0 4px;
-  font-size: 20px;
-  font-weight: 700;
-  color: #1c2b43;
-}
-
-.tc-section-head p {
+/* Tiêu đề nhóm / Card lớn (h2): 18px, Bold (700), leading-normal */
+.tc-section-title {
   margin: 0;
-  font-size: 13.5px;
-  color: #64758d;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #0f172a;
 }
 
-/* Lưới thẻ phòng nổi bật */
-.tc-room-grid {
+/* Nội dung phụ: 13px-14px, Regular (400), leading-relaxed */
+.tc-section-sub {
+  margin: 4px 0 0;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.625;
+  color: #64748b;
+}
+
+.tc-empty-line {
+  margin: 12px 0 0;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.625;
+  color: #475569;
+}
+
+/* Nút CTA thẻ nhỏ (Xem tất cả, Khám phá): 12px, SemiBold (600), leading-none */
+.tc-btn-navy {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #071356;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.tc-btn-navy:hover {
+  background: #0d218a;
+}
+
+.tc-btn-navy--sm {
+  padding: 8px 13px;
+  font-size: 12px;
+}
+
+.tc-btn-orange {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #f96b07;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.tc-btn-orange:hover {
+  background: #e15c00;
+}
+
+.tc-btn-orange--sm {
+  padding: 8px 13px;
+  font-size: 12px;
+}
+
+/* Grid phòng & ở ghép khi có dữ liệu API */
+.tc-room-grid,
+.tc-roommate-grid {
+  margin-top: 22px;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
+  gap: 20px;
 }
 
-.tc-room-card {
-  background-color: #ffffff;
-  border: 1px solid #e3eaf3;
-  border-radius: 8px;
+.tc-room-card,
+.tc-roommate-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: border-color 0.15s;
+  justify-content: space-between;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
 }
 
-.tc-room-card:hover {
-  border-color: #b8ccf0;
+.tc-roommate-card {
+  padding: 18px;
 }
 
 .tc-room-thumb {
   position: relative;
-  height: 175px;
-  background-color: #edf3ff;
+  height: 180px;
+  background: #f1f5f9;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #2563d9;
-  overflow: hidden;
 }
 
 .tc-room-thumb img {
@@ -280,144 +417,287 @@
   object-fit: cover;
 }
 
-.tc-room-price-badge {
+.tc-room-placeholder {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: #071356;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tc-room-badge {
   position: absolute;
-  left: 10px;
-  bottom: 10px;
-  background-color: #1c2b43;
+  top: 12px;
+  left: 12px;
+  background: #071356;
   color: #ffffff;
-  padding: 4px 10px;
-  border-radius: 6px;
-  font-size: 12.5px;
+  font-size: 11px;
   font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 4px 10px;
+  border-radius: 999px;
 }
 
 .tc-room-body {
-  padding: 14px;
-  flex: 1;
+  padding: 16px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 10px;
+  gap: 8px;
 }
 
-.tc-room-title {
-  margin: 0 0 6px;
+.tc-room-title,
+.tc-roommate-title {
+  margin: 0;
   font-size: 15px;
   font-weight: 700;
-  color: #1c2b43;
-  line-height: 1.35;
+  line-height: 1.5;
+  color: #0f172a;
 }
 
-.tc-room-address {
+.tc-room-meta {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 6px;
   font-size: 12.5px;
-  color: #64758d;
+  font-weight: 400;
+  line-height: 1.625;
+  color: #64748b;
 }
 
-.tc-room-specs {
+.tc-roommate-desc {
+  margin: 8px 0;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.625;
+  color: #475569;
+}
+
+.tc-room-footer {
+  margin-top: 8px;
+  padding-top: 12px;
+  border-top: 1px solid #f1f5f9;
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
   gap: 8px;
+}
+
+.tc-room-price {
+  font-size: 16px;
+  font-weight: 800;
+  color: #f96b07;
+}
+
+.tc-room-price small {
   font-size: 12px;
-  color: #365170;
-  padding-top: 8px;
-  border-top: 1px solid #e3eaf3;
+  font-weight: 500;
+  color: #64748b;
 }
 
-/* Lưới Bảng tin & Sự kiện */
-.tc-news-grid {
+/* 5. Chuẩn mực quản trị số */
+.tc-why-section {
+  background: #eef4fc;
+  padding: 64px 0 72px;
+  border-top: 1px solid #e2eaf7;
+  border-bottom: 1px solid #e2eaf7;
+}
+
+.tc-why-head {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 40px;
+}
+
+/* Nhãn dán danh mục / Eyebrow text: 11px, Bold (700), uppercase, tracking-wider */
+.tc-why-kicker {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #2563eb;
+}
+
+/* Tiêu đề Section (h3): 24px, ExtraBold (800), tracking-tight */
+.tc-why-title {
+  margin: 8px 0 12px;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: #0f172a;
+}
+
+/* Nội dung phụ: 13.5px, Regular (400), leading-relaxed */
+.tc-why-sub {
+  margin: 0;
+  font-size: 13.5px;
+  font-weight: 400;
+  line-height: 1.625;
+  color: #64748b;
+}
+
+.tc-feature-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
 }
 
-.tc-news-card {
-  background-color: #ffffff;
-  border: 1px solid #e3eaf3;
-  border-radius: 8px;
-  padding: 15px;
+.tc-feature-card {
+  background: #ffffff;
+  border: 1px solid #e6edf8;
+  border-radius: 16px;
+  padding: 24px 20px;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.04);
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
+}
+
+.tc-feature-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.07);
+}
+
+.tc-feature-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.tc-feature-icon--blue {
+  background: #eff6ff;
+}
+
+.tc-feature-icon--indigo {
+  background: #eef2ff;
+}
+
+.tc-feature-icon--sky {
+  background: #f0f9ff;
+}
+
+/* Tiêu đề Card 4 tính năng (h4): 14px, Bold (700), leading-normal */
+.tc-feature-title {
+  margin: 0 0 8px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #0f172a;
+}
+
+/* Nội dung mô tả card: 12.5px, Regular (400), leading-relaxed */
+.tc-feature-desc {
+  margin: 0;
+  font-size: 12.5px;
+  font-weight: 400;
+  line-height: 1.625;
+  color: #64748b;
+}
+
+/* 6. Footer (11px - 12px, Regular 400 & Medium 500, leading-relaxed) */
+.tc-footer {
+  background: #ffffff;
+  padding: 48px 0 56px;
+}
+
+.tc-footer-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1.2fr 1fr;
+  gap: 36px;
+}
+
+.tc-footer-desc {
+  margin: 14px 0 0;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.625;
+  color: #64748b;
+  max-width: 310px;
+}
+
+.tc-footer-heading {
+  margin: 0 0 14px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #0f172a;
+}
+
+.tc-footer-list,
+.tc-footer-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   gap: 10px;
 }
 
-.tc-news-type {
-  display: inline-block;
-  padding: 2px 8px;
-  border-radius: 12px;
-  font-size: 11px;
-  font-weight: 700;
-  background-color: #edf3ff;
-  color: #174ea6;
-  margin-bottom: 6px;
-}
-
-.tc-news-card h3 {
-  margin: 0 0 6px;
-  font-size: 14.5px;
-  font-weight: 700;
-  color: #1c2b43;
-  line-height: 1.4;
-}
-
-.tc-news-card p {
-  margin: 0;
-  font-size: 13px;
-  color: #64758d;
-  line-height: 1.45;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-/* Footer */
-.tc-footer {
-  margin-top: 24px;
-  background-color: #ffffff;
-  border-top: 1px solid #e3eaf3;
-  padding: 22px 0;
-  font-size: 13px;
-  color: #64758d;
-}
-
-.tc-footer-inner {
+.tc-footer-list li {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.625;
+  color: #475569;
 }
 
-@media (max-width: 960px) {
-  .tc-hero-grid {
-    grid-template-columns: 1fr;
+.tc-footer-list li strong {
+  font-weight: 600;
+}
+
+.tc-footer-list li img {
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.tc-footer-links button {
+  background: none;
+  border: none;
+  padding: 0;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.625;
+  color: #475569;
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.tc-footer-links button:hover {
+  color: #2563eb;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .tc-feature-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .tc-room-grid,
-  .tc-news-grid {
+  .tc-roommate-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .tc-nav-links {
     display: none;
   }
 
-  .tc-room-grid,
-  .tc-news-grid {
-    grid-template-columns: 1fr;
+  .tc-hero-title {
+    font-size: 32px;
   }
 
-  .tc-search-select {
-    width: 100%;
-    border-left: none !important;
-    border-top: 1px solid #e3eaf3 !important;
+  .tc-feature-grid,
+  .tc-room-grid,
+  .tc-roommate-grid,
+  .tc-footer-grid {
+    grid-template-columns: 1fr;
   }
 }

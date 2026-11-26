@@ -1,22 +1,25 @@
 import { useEffect, useState } from 'react';
 import { Link, Navigate, useNavigate } from 'react-router-dom';
-import {
-  ArrowRight,
-  Building2,
-  CalendarCheck2,
-  House,
-  LogIn,
-  MapPin,
-  Search,
-  ShieldCheck,
-  Sparkles,
-  Users,
-  Wrench,
-} from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext.jsx';
 import api from '../../services/api.js';
 import { layUrlAnh } from '../../services/upload_service.js';
 import { formatMoney, idOf } from '../../utils/format.js';
+
+// Tận dụng lại 2 file SVG có sẵn từ DangNhap
+import logoNgoiNha from '../../assets/icons/logo-ngoi-nha.svg';
+import iconEmail from '../../assets/icons/icon-email.svg';
+
+// Các icon bổ sung cho TrangChu
+import iconKinhLup from '../../assets/icons/icon-kinh-lup.svg';
+import iconDangNhap from '../../assets/icons/icon-dang-nhap.svg';
+import iconBanOGhep from '../../assets/icons/icon-ban-o-ghep.svg';
+import iconLich from '../../assets/icons/icon-lich.svg';
+import iconHoaDon from '../../assets/icons/icon-hoa-don.svg';
+import iconSuCo from '../../assets/icons/icon-su-co.svg';
+import iconHopDong from '../../assets/icons/icon-hop-dong.svg';
+import iconKyThuat from '../../assets/icons/icon-ky-thuat.svg';
+import iconLocationPin from '../../assets/icons/icon-location-pin.svg';
+
 import './TrangChu.css';
 
 export default function TrangChu() {
@@ -63,7 +66,7 @@ export default function TrangChu() {
     };
   }, [user]);
 
-  // Đã đăng nhập thì không ở trang Landing nữa mà chuyển thẳng vào không gian làm việc
+  // Nếu đã đăng nhập thì chuyển thẳng vào không gian làm việc
   if (user) {
     const dich =
       user.vaiTro === 'CHU_TRO' || user.vaiTro === 'ADMIN'
@@ -72,7 +75,7 @@ export default function TrangChu() {
     return <Navigate to={dich} replace />;
   }
 
-  // Chưa đăng nhập thì đưa sang /dang-nhap kèm đường dẫn đích để sau khi đăng nhập nhảy tới đúng trang đó
+  // Chưa đăng nhập: bấm vào bất kỳ nút nào đều đưa sang /dang-nhap kèm đường dẫn đích
   function dieuHuongCoBaoVe(duongDanDich) {
     navigate('/dang-nhap', { state: { from: duongDanDich } });
   }
@@ -89,24 +92,23 @@ export default function TrangChu() {
 
   return (
     <div className="tc-page">
-      {/* Thanh điều hướng Landing */}
+      {/* 1. Thanh điều hướng trên cùng */}
       <header className="tc-navbar">
         <div className="tc-container tc-navbar-inner">
           <Link to="/trang-chu" className="tc-brand">
-            <span className="tc-brand-mark">S</span>
-            <span>
-              Stay<span>Sync</span>
+            <span className="tc-brand-mark">
+              <img src={logoNgoiNha} alt="Logo StaySync" width="22" height="22" />
             </span>
+            <span className="tc-brand-text">StaySync</span>
           </Link>
 
           <nav className="tc-nav-links" aria-label="Điều hướng chính">
-            <Link to="/trang-chu" className="tc-nav-link active">
+            <Link to="/trang-chu" className="tc-nav-link is-active">
               Trang chủ
             </Link>
             <button
               type="button"
               className="tc-nav-link"
-              style={{ background: 'none', border: 'none', cursor: 'pointer', font: 'inherit' }}
               onClick={() => dieuHuongCoBaoVe('/khach-thue/tim-phong')}
             >
               Tìm phòng trọ
@@ -114,7 +116,6 @@ export default function TrangChu() {
             <button
               type="button"
               className="tc-nav-link"
-              style={{ background: 'none', border: 'none', cursor: 'pointer', font: 'inherit' }}
               onClick={() => dieuHuongCoBaoVe('/khach-thue/o-ghep')}
             >
               Tìm bạn ở ghép
@@ -122,13 +123,18 @@ export default function TrangChu() {
           </nav>
 
           <div className="tc-nav-actions">
-            <Link to="/dang-nhap" state={{ from: '/khach-thue/tim-phong' }} className="button">
-              <LogIn size={14} /> Đăng nhập
+            <Link
+              to="/dang-nhap"
+              state={{ from: '/khach-thue/tim-phong' }}
+              className="tc-btn-login"
+            >
+              <img src={iconDangNhap} alt="" width="16" height="16" />
+              <span>Đăng nhập</span>
             </Link>
             <Link
               to="/dang-nhap"
               state={{ from: '/khach-thue/tim-phong' }}
-              className="button button--warm"
+              className="tc-btn-register"
             >
               Đăng ký ngay
             </Link>
@@ -136,71 +142,60 @@ export default function TrangChu() {
         </div>
       </header>
 
-      {/* Khu vực Hero & Thanh tìm kiếm */}
+      {/* 2. Hero & Khung tìm kiếm */}
       <section className="tc-hero">
         <div className="tc-container">
-          <div className="tc-hero-badge">
-            <Sparkles size={13} /> Nền tảng tìm trọ & quản lý lưu trú đồng bộ
-          </div>
-          <h1 className="tc-hero-title">
-            Tìm phòng trọ minh bạch, đặt lịch xem phòng & kết nối ở ghép dễ dàng
-          </h1>
+          <h1 className="tc-hero-title">Tìm phòng trọ lý tưởng ngay hôm nay</h1>
           <p className="tc-hero-sub">
-            Xem trước danh sách phòng trọ đang mở trên hệ thống. Đăng nhập để lọc chi tiết, đặt lịch
-            xem phòng trực tiếp với chủ trọ và theo dõi hợp đồng, hóa đơn minh bạch.
+            Không gian tiện nghi – Giá cả hợp lý – Dịch vụ tận tâm dành cho mọi người
           </p>
 
           <form className="tc-search-card" onSubmit={xuLyTimKiem}>
-            <input
-              type="text"
-              className="field tc-search-input"
-              placeholder="Nhập tên đường, khu vực, quận hoặc tên dãy trọ..."
-              value={tuKhoa}
-              onChange={(e) => setTuKhoa(e.target.value)}
-            />
-            <select
-              className="select tc-search-select"
-              value={mucGia}
-              onChange={(e) => setMucGia(e.target.value)}
-            >
-              <option value="TAT_CA">Mọi mức giá</option>
-              <option value="DUOI_2TR">Dưới 2 triệu / tháng</option>
-              <option value="2_DEN_3_5TR">2 - 3.5 triệu / tháng</option>
-              <option value="TREN_3_5TR">Trên 3.5 triệu / tháng</option>
-            </select>
-            <button type="submit" className="button button--warm tc-search-btn">
-              <Search size={15} /> Tìm phòng ngay
-            </button>
-          </form>
+            <div className="tc-search-input-wrap">
+              <img src={iconKinhLup} alt="" width="18" height="18" className="tc-search-icon" />
+              <input
+                type="text"
+                className="tc-search-input"
+                placeholder="Nhập tên đường, khu vực, quận... (Ví dụ: Trần Phú, Hà Đông, Phú Lương)"
+                value={tuKhoa}
+                onChange={(e) => setTuKhoa(e.target.value)}
+              />
+            </div>
 
-          <div className="tc-quick-tags">
-            <span>Gợi ý nhanh:</span>
-            <button
-              type="button"
-              className="tc-quick-tag"
-              onClick={() => dieuHuongCoBaoVe('/khach-thue/tim-phong?gia=DUOI_2TR')}
-            >
-              Phòng dưới 2 triệu
-            </button>
-            <button
-              type="button"
-              className="tc-quick-tag"
-              onClick={() => dieuHuongCoBaoVe('/khach-thue/tim-phong?q=Hà Đông')}
-            >
-              Khu vực Hà Đông
-            </button>
-            <button
-              type="button"
-              className="tc-quick-tag"
-              onClick={() => dieuHuongCoBaoVe('/khach-thue/o-ghep')}
-            >
-              Tìm bạn ở ghép
-            </button>
-          </div>
+            <div className="tc-search-field-group">
+              <label className="tc-search-label" htmlFor="tc-select-gia">
+                Khoảng giá thuê:
+              </label>
+              <select
+                id="tc-select-gia"
+                className="tc-search-select"
+                value={mucGia}
+                onChange={(e) => setMucGia(e.target.value)}
+              >
+                <option value="TAT_CA">Mọi mức giá</option>
+                <option value="DUOI_2TR">Dưới 2 triệu / tháng</option>
+                <option value="2_DEN_3_5TR">2 - 3.5 triệu / tháng</option>
+                <option value="TREN_3_5TR">Trên 3.5 triệu / tháng</option>
+              </select>
+            </div>
+
+            <div className="tc-search-submit-wrap">
+              <button type="submit" className="tc-btn-search">
+                <img
+                  src={iconKinhLup}
+                  alt=""
+                  width="16"
+                  height="16"
+                  style={{ filter: 'brightness(0) invert(1)' }}
+                />
+                <span>Tìm kiếm phòng</span>
+              </button>
+            </div>
+          </form>
         </div>
       </section>
 
-      {/* Danh sách phòng trọ nổi bật */}
+      {/* 3. Phòng trọ đang mở cho thuê */}
       <section className="tc-section">
         <div className="tc-container">
           <div className="tc-section-head">
@@ -212,19 +207,20 @@ export default function TrangChu() {
             </div>
             <button
               type="button"
-              className="button button--primary"
+              className="tc-btn-navy"
               onClick={() => dieuHuongCoBaoVe('/khach-thue/tim-phong')}
             >
-              Xem tất cả phòng <ArrowRight size={14} />
+              <span>Xem tất cả phòng</span>
+              <span aria-hidden="true">→</span>
             </button>
           </div>
 
           {dangTai ? (
-            <div className="tc-empty-box">Đang tải danh sách phòng trọ nổi bật...</div>
+            <p className="tc-empty-line">Đang tải danh sách phòng trọ nổi bật...</p>
           ) : dsTinNoiBat.length === 0 ? (
-            <div className="tc-empty-box">
+            <p className="tc-empty-line">
               Hiện chưa có tin đăng phòng trọ mới. Đăng nhập để cập nhật thêm tin đăng từ các dãy trọ.
-            </div>
+            </p>
           ) : (
             <div className="tc-room-grid">
               {dsTinNoiBat.map((tin) => {
@@ -241,7 +237,9 @@ export default function TrangChu() {
                       {anhBia ? (
                         <img src={layUrlAnh(anhBia)} alt={tin.tieuDe} />
                       ) : (
-                        <House size={40} strokeWidth={1.5} />
+                        <div className="tc-room-placeholder">
+                          <img src={logoNgoiNha} alt="" width="34" height="34" />
+                        </div>
                       )}
                       <span className="tc-room-badge">Đang mở thuê</span>
                     </div>
@@ -249,12 +247,11 @@ export default function TrangChu() {
                     <div className="tc-room-body">
                       <h3 className="tc-room-title">{tin.tieuDe || 'Phòng trọ tiện nghi'}</h3>
                       <div className="tc-room-meta">
-                        <MapPin size={14} />
+                        <img src={iconLocationPin} alt="" width="14" height="14" />
                         <span>{diaChi}</span>
                       </div>
                       {dienTich && (
                         <div className="tc-room-meta">
-                          <Building2 size={14} />
                           <span>Diện tích: {dienTich} m²</span>
                         </div>
                       )}
@@ -266,7 +263,7 @@ export default function TrangChu() {
                         </div>
                         <button
                           type="button"
-                          className="button button--primary"
+                          className="tc-btn-navy tc-btn-navy--sm"
                           onClick={() => dieuHuongCoBaoVe(`/khach-thue/tim-phong?tinId=${tinId}`)}
                         >
                           Xem chi tiết
@@ -281,8 +278,8 @@ export default function TrangChu() {
         </div>
       </section>
 
-      {/* Bảng tin tìm bạn ở ghép nổi bật */}
-      <section className="tc-section tc-section--alt">
+      {/* 4. Kết nối tìm bạn ở ghép */}
+      <section className="tc-section tc-section--compact">
         <div className="tc-container">
           <div className="tc-section-head">
             <div>
@@ -293,28 +290,30 @@ export default function TrangChu() {
             </div>
             <button
               type="button"
-              className="button button--warm"
+              className="tc-btn-orange"
               onClick={() => dieuHuongCoBaoVe('/khach-thue/o-ghep')}
             >
-              <Users size={14} /> Khám phá ở ghép
+              <img src={iconBanOGhep} alt="" width="16" height="16" />
+              <span>Khám phá ở ghép</span>
             </button>
           </div>
 
           {dsOGhepNoiBat.length === 0 ? (
-            <div className="tc-empty-box">
+            <p className="tc-empty-line">
               Đăng nhập ngay để đăng hồ sơ tìm bạn ở ghép hoặc xem danh sách người đang tìm phòng ghép.
-            </div>
+            </p>
           ) : (
             <div className="tc-roommate-grid">
               {dsOGhepNoiBat.map((item) => (
                 <article className="tc-roommate-card" key={idOf(item)}>
                   <h3 className="tc-roommate-title">{item.tieuDe}</h3>
                   <div className="tc-room-meta">
-                    <MapPin size={14} />
+                    <img src={iconLocationPin} alt="" width="14" height="14" />
                     <span>Khu vực: {item.khuVucMongMuon || 'Linh hoạt'}</span>
                   </div>
                   <p className="tc-roommate-desc">
-                    {item.moTaBanThan || 'Tìm bạn ở ghép lịch sự, gọn gàng, chia sẻ chi phí minh bạch.'}
+                    {item.moTaBanThan ||
+                      'Tìm bạn ở ghép lịch sự, gọn gàng, chia sẻ chi phí minh bạch.'}
                   </p>
                   <div className="tc-room-footer">
                     <span className="tc-room-price" style={{ fontSize: 15 }}>
@@ -324,7 +323,7 @@ export default function TrangChu() {
                     </span>
                     <button
                       type="button"
-                      className="button"
+                      className="tc-btn-orange tc-btn-orange--sm"
                       onClick={() => dieuHuongCoBaoVe('/khach-thue/o-ghep')}
                     >
                       Kết nối
@@ -337,24 +336,24 @@ export default function TrangChu() {
         </div>
       </section>
 
-      {/* Ưu điểm hệ thống */}
-      <section className="tc-section">
+      {/* 5. Chuẩn mực quản trị số - Tại Sao Nên Chọn Thuê Qua StaySync? */}
+      <section className="tc-why-section">
         <div className="tc-container">
-          <div className="tc-section-head">
-            <div>
-              <h2 className="tc-section-title">Trải nghiệm lưu trú số hóa trên StaySync</h2>
-              <p className="tc-section-sub">
-                Kết nối liền mạch từ lúc tìm phòng cho tới suốt quá trình sinh sống tại dãy trọ.
-              </p>
-            </div>
+          <div className="tc-why-head">
+            <span className="tc-why-kicker">CHUẨN MỰC QUẢN TRỊ SỐ</span>
+            <h2 className="tc-why-title">Tại Sao Nên Chọn Thuê Qua StaySync?</h2>
+            <p className="tc-why-sub">
+              Giải quyết triệt để nỗi lo bị chặt chém tiền điện nước, mất trộm đồ hay hợp đồng thiếu
+              minh bạch khi thuê trọ sinh viên.
+            </p>
           </div>
 
           <div className="tc-feature-grid">
             <div className="tc-feature-card">
-              <div className="tc-feature-icon">
-                <CalendarCheck2 size={20} />
+              <div className="tc-feature-icon tc-feature-icon--blue">
+                <img src={iconLich} alt="" width="22" height="22" />
               </div>
-              <h3 className="tc-feature-title">Đặt lịch xem phòng trực tuyến</h3>
+              <h3 className="tc-feature-title">Đặt Lịch Xem Phòng Trực Tuyến</h3>
               <p className="tc-feature-desc">
                 Chọn khung giờ rảnh và gửi yêu cầu trực tiếp tới chủ trọ, nhận xác nhận nhanh chóng mà
                 không qua trung gian.
@@ -362,54 +361,100 @@ export default function TrangChu() {
             </div>
 
             <div className="tc-feature-card">
-              <div className="tc-feature-icon">
-                <ShieldCheck size={20} />
+              <div className="tc-feature-icon tc-feature-icon--indigo">
+                <img src={iconHoaDon} alt="" width="22" height="22" />
               </div>
-              <h3 className="tc-feature-title">Hợp đồng & hóa đơn minh bạch</h3>
+              <h3 className="tc-feature-title">Điện Nước Số Hóa Minh Bạch</h3>
               <p className="tc-feature-desc">
-                Theo dõi chỉ số điện nước, tiền phòng hàng tháng và lưu trữ hợp đồng điện tử ngay trên
-                tài khoản cá nhân.
+                Theo dõi chỉ số điện nước, tiền phòng hàng tháng và lưu trữ hợp đồng điện tử ngay
+                trên tài khoản cá nhân.
               </p>
             </div>
 
             <div className="tc-feature-card">
-              <div className="tc-feature-icon">
-                <Wrench size={20} />
+              <div className="tc-feature-icon tc-feature-icon--sky">
+                <img src={iconSuCo} alt="" width="22" height="22" />
               </div>
-              <h3 className="tc-feature-title">Báo sửa chữa sự cố 1 chạm</h3>
+              <h3 className="tc-feature-title">Báo Cáo Sự Cố 1 Chạm</h3>
               <p className="tc-feature-desc">
-                Gửi yêu cầu bảo trì thiết bị kèm hình ảnh thực tế và theo dõi tiến độ xử lý của chủ trọ
-                theo thời gian thực.
+                Gửi yêu cầu bảo trì thiết bị kèm hình ảnh thực tế và theo dõi tiến độ xử lý của chủ
+                trọ theo thời gian thực.
+              </p>
+            </div>
+
+            <div className="tc-feature-card">
+              <div className="tc-feature-icon tc-feature-icon--blue">
+                <img src={iconHopDong} alt="" width="22" height="22" />
+              </div>
+              <h3 className="tc-feature-title">Hợp Đồng Điện Tử Chuẩn StaySync</h3>
+              <p className="tc-feature-desc">
+                Điều khoản bảo vệ quyền lợi người thuê rõ ràng, lưu trữ vĩnh viễn trên tài khoản. Cam
+                kết không tăng giá bất thường trong suốt chu kỳ thuê.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
+      {/* 6. Footer 3 cột giống ảnh mẫu */}
       <footer className="tc-footer">
-        <div className="tc-container tc-footer-inner">
-          <div>
-            <strong>StaySync</strong> — Hệ thống quản lý nhà trọ & kết nối lưu trú thông minh.
-          </div>
-          <div className="tc-footer-links">
-            <button
-              type="button"
-              style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'inherit', font: 'inherit' }}
-              onClick={() => dieuHuongCoBaoVe('/khach-thue/tim-phong')}
-            >
-              Tìm phòng
-            </button>
-            <button
-              type="button"
-              style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'inherit', font: 'inherit' }}
-              onClick={() => dieuHuongCoBaoVe('/khach-thue/o-ghep')}
-            >
-              Tìm ở ghép
-            </button>
-            <Link to="/dang-nhap" state={{ from: '/khach-thue/tim-phong' }}>
-              Đăng nhập hệ thống
+        <div className="tc-container tc-footer-grid">
+          <div className="tc-footer-col">
+            <Link to="/trang-chu" className="tc-brand tc-brand--footer">
+              <span className="tc-brand-mark tc-brand-mark--lg">
+                <img src={logoNgoiNha} alt="Logo StaySync" width="24" height="24" />
+              </span>
+              <span className="tc-brand-text">StaySync</span>
             </Link>
+            <p className="tc-footer-desc">
+              Nền tảng quản lý nhà trọ và kết nối lưu trú số dành riêng cho cộng đồng sinh viên và
+              người đi làm.
+            </p>
+          </div>
+
+          <div className="tc-footer-col">
+            <h4 className="tc-footer-heading">HOTLINE & TRỢ GIÚP</h4>
+            <ul className="tc-footer-list">
+              <li>
+                <img src={iconKyThuat} alt="" width="15" height="15" />
+                <span>
+                  <strong>Kỹ thuật & Vận hành:</strong> 1900 8198
+                </span>
+              </li>
+              <li>
+                <img src={iconEmail} alt="" width="15" height="15" />
+                <span>
+                  <strong>Hỗ trợ chủ trọ:</strong> support@staysync.vn
+                </span>
+              </li>
+              <li>
+                <img src={iconLocationPin} alt="" width="15" height="15" />
+                <span>
+                  <strong>Địa chỉ:</strong> Số 122, phố Yên Lãng, phường Đống Đa, Hà Nội.
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          <div className="tc-footer-col">
+            <h4 className="tc-footer-heading">CHÍNH SÁCH & QUY ĐỊNH</h4>
+            <ul className="tc-footer-links">
+              <li>
+                <button type="button" onClick={() => dieuHuongCoBaoVe('/khach-thue/tim-phong')}>
+                  › Điều khoản sử dụng
+                </button>
+              </li>
+              <li>
+                <button type="button" onClick={() => dieuHuongCoBaoVe('/khach-thue/tim-phong')}>
+                  › Chính sách bảo mật thông tin
+                </button>
+              </li>
+              <li>
+                <button type="button" onClick={() => dieuHuongCoBaoVe('/khach-thue/tim-phong')}>
+                  › Quy chế hoạt động & giải quyết tranh chấp
+                </button>
+              </li>
+            </ul>
           </div>
         </div>
       </footer>
