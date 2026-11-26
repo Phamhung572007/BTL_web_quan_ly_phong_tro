@@ -4,6 +4,8 @@ import AppRoutes from './routes/AppRoutes.jsx';
 import KhachThueRoutes from './routes/KhachThueRoutes.jsx';
 import { BaoVeRoute } from './routes/BaoVeRoute.jsx';
 import DangNhap from './pages/dang_nhap/DangNhap.jsx';
+import TrangChu from './pages/trang_chu/TrangChu.jsx';
+import TimPhong from './pages/tim_phong/TimPhong.jsx';
 import './App.css';
 
 export default function App() {
@@ -11,6 +13,9 @@ export default function App() {
     <AuthProvider>
       <BrowserRouter>
         <Routes>
+          {/* luồng landing và tìm phòng*/}
+          <Route path="/trang-chu" element={<TrangChu />} />
+          <Route path="/tim-phong" element={<TimPhong />} />
           {/* 1. Trang Đăng nhập / Đăng ký công khai */}
           <Route path="/dang-nhap" element={<DangNhap />} />
 
