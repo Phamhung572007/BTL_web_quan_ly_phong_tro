@@ -1,0 +1,134 @@
+/* Bố cục 2 cột cho trang Hồ sơ tài khoản (đồng bộ StaySync) */
+.tk-grid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.tk-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Thẻ tóm tắt hồ sơ bên trái */
+.tk-profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 24px 18px;
+}
+
+.tk-avatar-wrap {
+  position: relative;
+  width: 92px;
+  height: 92px;
+  margin-bottom: 14px;
+}
+
+.tk-avatar-img,
+.tk-avatar-fallback {
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e3eaf3;
+}
+
+.tk-avatar-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #edf3ff;
+  color: #174ea6;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.tk-avatar-upload-btn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #2563d9;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.tk-avatar-upload-btn:hover {
+  background-color: #174ea6;
+}
+
+.tk-profile-name {
+  margin: 0 0 4px;
+  font-size: 17px;
+  font-weight: 700;
+  color: #1c2b43;
+}
+
+.tk-profile-email {
+  margin: 0 0 12px;
+  font-size: 13px;
+  color: #64758d;
+  word-break: break-all;
+}
+
+.tk-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.tk-role-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 11.5px;
+  font-weight: 600;
+  background-color: #edf3ff;
+  color: #174ea6;
+}
+
+.tk-meta-list {
+  width: 100%;
+  border-top: 1px solid #e3eaf3;
+  padding-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
+}
+
+.tk-meta-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+}
+
+.tk-meta-item span {
+  color: #64758d;
+}
+
+.tk-meta-item strong {
+  color: #1c2b43;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .tk-grid {
+    grid-template-columns: 1fr;
+  }
+}
