@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 const cors = require('cors');
 const { ketNoiDatabase } = require('./config/ket_noi_database');
 const xuLyLoi = require('./middleware/xu_ly_loi');
@@ -43,6 +44,9 @@ app.use(cors(allowedOrigins.length
 app.use(express.json({ limit: '1mb' }));
 app.use(express.urlencoded({ extended: true, limit: '1mb' }));
 
+// Phục vụ ảnh tĩnh đã upload (đặt trước middleware bắt lỗi 404)
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+
 app.get('/api/health', (req, res) => guiThanhCong(res, {
   message: 'Backend đang hoạt động.',
   data: { database: 'connected' },
@@ -84,7 +88,3 @@ if (require.main === module) {
 }
 
 module.exports = { app, khoiDongServer };
-
-// quyền truy cập ảnh tĩnh
-const path = require('path');
-app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
