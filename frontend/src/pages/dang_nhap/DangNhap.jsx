@@ -11,6 +11,25 @@ import iconMuiTen from '../../assets/icons/icon-mui-ten.svg';
 
 import './DangNhap.css';
 
+function xacDinhTrangDich(vaiTro, fromState) {
+  if (vaiTro === 'CHU_TRO' || vaiTro === 'ADMIN') {
+    return '/thong-ke';
+  }
+
+  const duongDanTuState =
+    typeof fromState === 'string'
+      ? fromState
+      : fromState?.pathname
+        ? `${fromState.pathname}${fromState.search || ''}`
+        : '';
+
+  if (duongDanTuState && duongDanTuState.startsWith('/khach-thue')) {
+    return duongDanTuState;
+  }
+
+  return '/khach-thue/tim-phong';
+}
+
 export default function DangNhap() {
   const navigate = useNavigate();
   const location = useLocation();
@@ -35,9 +54,7 @@ export default function DangNhap() {
   // tự động điều hướng nếu người dùng đã đăng nhập từ trước
   useEffect(() => {
     if (authStatus === 'authenticated' && user) {
-      const trangDich =
-        location.state?.from?.pathname ||
-        (user.vaiTro === 'CHU_TRO' || user.vaiTro === 'ADMIN' ? '/thong-ke' : '/khach-thue');
+      const trangDich = xacDinhTrangDich(user.vaiTro, location.state?.from);
       navigate(trangDich, { replace: true });
     }
   }, [authStatus, user, navigate, location]);
@@ -108,10 +125,8 @@ export default function DangNhap() {
       const taiKhoan = await setSession(response);
       const vaiTroHienTai = taiKhoan?.vaiTro || response?.data?.nguoiDung?.vaiTro;
 
-      // Phân luồng trang đích theo vai trò tài khoản
-      const trangDich =
-        location.state?.from?.pathname ||
-        (vaiTroHienTai === 'CHU_TRO' || vaiTroHienTai === 'ADMIN' ? '/thong-ke' : '/khach-thue');
+      // Phân luồng trang đích theo vai trò tài khoản (không bao giờ quay lại /trang-chu)
+      const trangDich = xacDinhTrangDich(vaiTroHienTai, location.state?.from);
 
       navigate(trangDich, { replace: true });
     } catch (error) {

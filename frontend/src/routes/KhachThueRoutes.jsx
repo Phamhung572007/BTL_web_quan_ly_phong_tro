@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 //import KhachThueHome from "../pages/khach_thue/KhachThueHome";
+import TimPhong from "../pages/tim_phong/TimPhong.jsx";
 import SuaChua from "../pages/sua_chua/SuaChua.jsx";
 import OGhep from "../pages/o_ghep/OGhep.jsx";
 import TaiKhoan from "../pages/tai_khoan/TaiKhoan.jsx";
@@ -15,9 +16,23 @@ export default function KhachThueRoutes() {
       {/* <Route path="thong-bao" element={<ThongBao />} /> */}
       {/* <Route path="sua-chua" element={<GuiYeuCauSuaChua />} /> */}
 
-
       {/* Các route của Thành viên 3 */}
-      <Route path="o-ghep" element={<OGhep />} />
+      <Route
+        path="tim-phong"
+        element={
+          <BaoVeRoute vaiTroChoPhep={["KHACH_THUE"]}>
+            <TimPhong />
+          </BaoVeRoute>
+        }
+      />
+      <Route
+        path="o-ghep"
+        element={
+          <BaoVeRoute vaiTroChoPhep={["KHACH_THUE"]}>
+            <OGhep />
+          </BaoVeRoute>
+        }
+      />
       <Route
         path="sua-chua"
         element={
@@ -29,7 +44,7 @@ export default function KhachThueRoutes() {
       <Route
         path="tai-khoan"
         element={
-          <BaoVeRoute>
+          <BaoVeRoute vaiTroChoPhep={["KHACH_THUE"]}>
             <TaiKhoan />
           </BaoVeRoute>
         }

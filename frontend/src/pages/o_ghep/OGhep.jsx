@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   Calendar,
   MapPin,
@@ -72,6 +73,7 @@ function chuyenSangForm(item, user) {
 
 export default function OGhep() {
   const { user } = useAuth();
+  const navigate = useNavigate();
 
   // Danh sách cộng đồng & hồ sơ cá nhân
   const [danhSach, setDanhSach] = useState([]);
@@ -95,26 +97,27 @@ export default function OGhep() {
   const [loi, setLoi] = useState('');
   const [thanhCong, setThanhCong] = useState('');
 
-  // Tải đồng thời danh sách ở ghép & hồ sơ của tôi
+  // Tải danh sách ở ghép công khai; chỉ tải hồ sơ cá nhân nếu đã đăng nhập
   async function taiDuLieu() {
     setDangTai(true);
     setLoi('');
 
-    const [listRes, mineRes] = await Promise.allSettled([
-      layDanhSachOGhepApi({ limit: 200 }),
-      layHoSoOGhepCuaToiApi(),
-    ]);
-
-    if (listRes.status === 'fulfilled') {
-      const duLieu = listRes.value.data?.items || listRes.value.data || [];
+    try {
+      const listRes = await layDanhSachOGhepApi({ limit: 200 });
+      const duLieu = listRes.data?.items || listRes.data || [];
       setDanhSach(Array.isArray(duLieu) ? duLieu : []);
-    } else {
-      setLoi(errorMessage(listRes.reason, 'Không thể tải danh sách tìm bạn ở ghép.'));
+    } catch (err) {
+      setLoi(errorMessage(err, 'Không thể tải danh sách tìm bạn ở ghép.'));
     }
 
-    if (mineRes.status === 'fulfilled') {
-      const hoSo = mineRes.value.data?.hoSo || mineRes.value.data || null;
-      setHoSoCuaToi(hoSo && Object.keys(hoSo).length > 0 ? hoSo : null);
+    if (user) {
+      try {
+        const mineRes = await layHoSoOGhepCuaToiApi();
+        const hoSo = mineRes.data?.hoSo || mineRes.data || null;
+        setHoSoCuaToi(hoSo && Object.keys(hoSo).length > 0 ? hoSo : null);
+      } catch {
+        setHoSoCuaToi(null);
+      }
     } else {
       setHoSoCuaToi(null);
     }
@@ -124,7 +127,7 @@ export default function OGhep() {
 
   useEffect(() => {
     taiDuLieu();
-  }, []);
+  }, [user]);
 
   // Lọc danh sách theo từ khóa, giới tính và ngân sách
   const danhSachLoc = useMemo(() => {
@@ -158,8 +161,12 @@ export default function OGhep() {
     });
   }, [danhSach, tuKhoa, locGioiTinh, locNganSach]);
 
-  // Mở form tạo mới hoặc sửa hồ sơ của tôi
+  // Chưa đăng nhập thì chuyển sang trang Đăng nhập; đã đăng nhập thì mở form
   function batDauChinhSua() {
+    if (!user) {
+      navigate('/dang-nhap');
+      return;
+    }
     setForm(chuyenSangForm(hoSoCuaToi, user));
     setMoForm(true);
     setLoi('');
@@ -173,6 +180,10 @@ export default function OGhep() {
   // Lưu hồ sơ ở ghép (Tạo mới nếu chưa có, Cập nhật nếu đã có)
   async function xuLyLuuHoSo(e) {
     e.preventDefault();
+    if (!user) {
+      navigate('/dang-nhap');
+      return;
+    }
     if (!form.tieuDe.trim() || !form.khuVucMongMuon.trim()) {
       setLoi('Vui lòng nhập tiêu đề tin và khu vực mong muốn ở ghép.');
       return;
@@ -259,7 +270,7 @@ export default function OGhep() {
       )}
 
       {/* Thẻ hiển thị trạng thái hồ sơ cá nhân của người dùng hiện tại */}
-      {hoSoCuaToi && !moForm && (
+      {user && hoSoCuaToi && !moForm && (
         <div className="og-my-card">
           <div className="og-my-info">
             <span className="og-my-badge">
@@ -294,7 +305,7 @@ export default function OGhep() {
       )}
 
       {/* Panel biểu mẫu đăng / chỉnh sửa hồ sơ ở ghép */}
-      {moForm && (
+      {user && moForm && (
         <section className="panel editor-panel">
           <div className="panel__heading">
             <div>
