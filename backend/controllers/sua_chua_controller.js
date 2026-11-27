@@ -1,5 +1,26 @@
+const mongoose = require('mongoose');
 const YeuCauSuaChua = require('../models/yeu_cau_sua_chua');
+const NguoiThue = require('../models/nguoi_thue');
 const { guiThanhCong, guiThatBai } = require('../utils/phan_hoi_api');
+
+function chuanHoaDuLieuSuaChua(body) {
+  const duLieu = { ...body };
+
+  if (typeof duLieu.mucDoUuTien === 'string') {
+    duLieu.mucDoUuTien = duLieu.mucDoUuTien.trim().toLowerCase();
+  }
+  if (typeof duLieu.trangThai === 'string') {
+    duLieu.trangThai = duLieu.trangThai.trim().toLowerCase();
+  }
+  if (duLieu.phongId === '') {
+    duLieu.phongId = null;
+  }
+  if (duLieu.chiPhiSuaChua !== undefined && duLieu.chiPhiSuaChua !== '') {
+    duLieu.chiPhiSuaChua = Number(duLieu.chiPhiSuaChua);
+  }
+
+  return duLieu;
+}
 
 // GET /api/yeu-cau-sua-chua
 const layDanhSachSuaChua = async (req, res, next) => {
@@ -12,13 +33,18 @@ const layDanhSachSuaChua = async (req, res, next) => {
       ? { chuTroId: req.user._id }
       : { nguoiGuiId: req.user._id };
 
+    let truyVan = YeuCauSuaChua.find(dieuKien)
+      .populate('nguoiGuiId', 'hoTen soDienThoai')
+      .sort({ createdAt: -1 })
+      .skip(skip)
+      .limit(limit);
+
+    if (mongoose.models.PhongTro) {
+      truyVan = truyVan.populate('phongId');
+    }
+
     const [danhSach, total] = await Promise.all([
-      YeuCauSuaChua.find(dieuKien)
-        .populate('phongId')
-        .populate('nguoiGuiId', 'hoTen soDienThoai')
-        .sort({ createdAt: -1 })
-        .skip(skip)
-        .limit(limit),
+      truyVan,
       YeuCauSuaChua.countDocuments(dieuKien),
     ]);
 
@@ -44,9 +70,14 @@ const layDanhSachSuaChua = async (req, res, next) => {
 // GET /api/yeu-cau-sua-chua/:maYeuCau
 const layChiTietSuaChua = async (req, res, next) => {
   try {
-    const yeuCau = await YeuCauSuaChua.findById(req.params.maYeuCau)
-      .populate('phongId')
+    let truyVan = YeuCauSuaChua.findById(req.params.maYeuCau)
       .populate('nguoiGuiId', 'hoTen soDienThoai');
+
+    if (mongoose.models.PhongTro) {
+      truyVan = truyVan.populate('phongId');
+    }
+
+    const yeuCau = await truyVan;
 
     if (!yeuCau) {
       return guiThatBai(res, {
@@ -77,8 +108,29 @@ const layChiTietSuaChua = async (req, res, next) => {
 // POST /api/yeu-cau-sua-chua
 const taoYeuCauSuaChua = async (req, res, next) => {
   try {
+    const duLieu = chuanHoaDuLieuSuaChua(req.body);
+
+    // Chỉ khách thuê đã được gán phòng mới được gửi yêu cầu sửa chữa
+    const dieuKienThue = {
+      nguoiDungId: req.user._id,
+      phongId: { $ne: null },
+    };
+    if (duLieu.phongId) {
+      dieuKienThue.phongId = duLieu.phongId;
+    }
+
+    const hoSoThue = await NguoiThue.findOne(dieuKienThue);
+    if (!hoSoThue || !hoSoThue.phongId) {
+      return guiThatBai(res, {
+        statusCode: 403,
+        message: 'Bạn chưa được gán phòng trọ nên không thể gửi yêu cầu sửa chữa.',
+      });
+    }
+
     const yeuCauMoi = await YeuCauSuaChua.create({
-      ...req.body,
+      ...duLieu,
+      phongId: hoSoThue.phongId,
+      chuTroId: hoSoThue.chuTroId,
       nguoiGuiId: req.user._id,
     });
 
@@ -95,11 +147,17 @@ const taoYeuCauSuaChua = async (req, res, next) => {
 // PATCH /api/yeu-cau-sua-chua/:maYeuCau/trang-thai
 const capNhatTrangThaiSuaChua = async (req, res, next) => {
   try {
-    const { trangThai, phanHoiChuTro, chiPhiSuaChua } = req.body;
+    const duLieu = chuanHoaDuLieuSuaChua(req.body);
+    const { trangThai, phanHoiChuTro, chiPhiSuaChua } = duLieu;
+
+    const capNhat = {};
+    if (trangThai !== undefined) capNhat.trangThai = trangThai;
+    if (phanHoiChuTro !== undefined) capNhat.phanHoiChuTro = phanHoiChuTro;
+    if (chiPhiSuaChua !== undefined) capNhat.chiPhiSuaChua = chiPhiSuaChua;
 
     const yeuCau = await YeuCauSuaChua.findOneAndUpdate(
       { _id: req.params.maYeuCau, chuTroId: req.user._id },
-      { trangThai, phanHoiChuTro, chiPhiSuaChua },
+      capNhat,
       { new: true, runValidators: true }
     );
 
