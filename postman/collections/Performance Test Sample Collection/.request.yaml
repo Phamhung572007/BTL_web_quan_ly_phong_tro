@@ -1,0 +1,5438 @@
+$kind: http-request
+name: ""
+url: http://localhost:5000/api/yeu-cau-sua-chua
+method: POST
+body:
+  type: json
+  content: "[\r
+
+    \  {\r
+
+    \    \"_id\": {\r
+
+    \      \"$oid\": \"6f0000000000000000000001\"\r
+
+    \    },\r
+
+    \    \"chuTroId\": {\r
+
+    \      \"$oid\": \"670000000000000000000001\"\r
+
+    \    },\r
+
+    \    \"nguoiTaoId\": {\r
+
+    \      \"$oid\": \"670000000000000000000003\"\r
+
+    \    },\r
+
+    \    \"nguoiThueId\": {\r
+
+    \      \"$oid\": \"6a0000000000000000000001\"\r
+
+    \    },\r
+
+    \    \"dayTroId\": {\r
+
+    \      \"$oid\": \"680000000000000000000001\"\r
+
+    \    },\r
+
+    \    \"phongTroId\": {\r
+
+    \      \"$oid\": \"690000000000000000000002\"\r
+
+    \    },\r
+
+    \    \"tieuDe\": \"Voi nuoc phong tam bi ro\",\r
+
+    \    \"moTa\": \"Du lieu demo: voi nuoc phong tam ro nhe, can kiem tra ron va khop noi.\",\r
+
+    \    \"loaiSuCo\": \"NUOC\",\r
+
+    \    \"mucDoUuTien\": \"BINH_THUONG\",\r
+
+    \    \"hinhAnh\": [\r
+
+    \      {\r
+
+    \        \"url\": \"https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80\",\r
+
+    \        \"tenTep\": \"anh-su-co-demo.jpg\",\r
+
+    \        \"loaiTep\": \"image/jpeg\"\r
+
+    \      }\r
+
+    \    ],\r
+
+    \    \"trangThai\": \"DANG_XU_LY\",\r
+
+    \    \"nguoiPhuTrachId\": {\r
+
+    \      \"$oid\": \"670000000000000000000001\"\r
+
+    \    },\r
+
+    \    \"chiPhiDuKien\": {\r
+
+    \      \"$numberInt\": \"200000\"\r
+
+    \    },\r
+
+    \    \"chiPhiThucTe\": {\r
+
+    \      \"$numberInt\": \"0\"\r
+
+    \    },\r
+
+    \    \"lichSuXuLy\": [\r
+
+    \      {\r
+
+    \        \"_id\": {\r
+
+    \          \"$oid\": \"6f1000000000000000000001\"\r
+
+    \        },\r
+
+    \        \"nguoiThucHienId\": {\r
+
+    \          \"$oid\": \"670000000000000000000001\"\r
+
+    \        },\r
+
+    \        \"hanhDong\": \"DA_TIEP_NHAN\",\r
+
+    \        \"noiDung\": \"Da tiep nhan yeu cau demo.\",\r
+
+    \        \"trangThai\": \"DA_TIEP_NHAN\",\r
+
+    \        \"thoiGian\": {\r
+
+    \          \"$date\": {\r
+
+    \            \"$numberLong\": \"1795163400000\"\r
+
+    \          }\r
+
+    \        }\r
+
+    \      }\r
+
+    \    ],\r
+
+    \    \"ngayHoanTat\": null,\r
+
+    \    \"createdAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1795161600000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"updatedAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1795163400000\"\r
+
+    \      }\r
+
+    \    }\r
+
+    \  },\r
+
+    \  {\r
+
+    \    \"_id\": {\r
+
+    \      \"$oid\": \"6f0000000000000000000002\"\r
+
+    \    },\r
+
+    \    \"chuTroId\": {\r
+
+    \      \"$oid\": \"670000000000000000000002\"\r
+
+    \    },\r
+
+    \    \"nguoiTaoId\": {\r
+
+    \      \"$oid\": \"670000000000000000000005\"\r
+
+    \    },\r
+
+    \    \"nguoiThueId\": {\r
+
+    \      \"$oid\": \"6a0000000000000000000003\"\r
+
+    \    },\r
+
+    \    \"dayTroId\": {\r
+
+    \      \"$oid\": \"680000000000000000000002\"\r
+
+    \    },\r
+
+    \    \"phongTroId\": {\r
+
+    \      \"$oid\": \"690000000000000000000005\"\r
+
+    \    },\r
+
+    \    \"tieuDe\": \"Dieu hoa chua mat\",\r
+
+    \    \"moTa\": \"Du lieu demo: thiet bi lam mat kem, de nghi kiem tra luoi loc.\",\r
+
+    \    \"loaiSuCo\": \"THIET_BI\",\r
+
+    \    \"mucDoUuTien\": \"THAP\",\r
+
+    \    \"hinhAnh\": [],\r
+
+    \    \"trangThai\": \"DA_HOAN_TAT\",\r
+
+    \    \"nguoiPhuTrachId\": {\r
+
+    \      \"$oid\": \"670000000000000000000002\"\r
+
+    \    },\r
+
+    \    \"chiPhiDuKien\": {\r
+
+    \      \"$numberInt\": \"0\"\r
+
+    \    },\r
+
+    \    \"chiPhiThucTe\": {\r
+
+    \      \"$numberInt\": \"0\"\r
+
+    \    },\r
+
+    \    \"lichSuXuLy\": [\r
+
+    \      {\r
+
+    \        \"_id\": {\r
+
+    \          \"$oid\": \"6f1000000000000000000002\"\r
+
+    \        },\r
+
+    \        \"nguoiThucHienId\": {\r
+
+    \          \"$oid\": \"670000000000000000000002\"\r
+
+    \        },\r
+
+    \        \"hanhDong\": \"DA_HOAN_TAT\",\r
+
+    \        \"noiDung\": \"Da ve sinh luoi loc trong du lieu demo.\",\r
+
+    \        \"trangThai\": \"DA_HOAN_TAT\",\r
+
+    \        \"thoiGian\": {\r
+
+    \          \"$date\": {\r
+
+    \            \"$numberLong\": \"1794992400000\"\r
+
+    \          }\r
+
+    \        }\r
+
+    \      }\r
+
+    \    ],\r
+
+    \    \"ngayHoanTat\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1794992400000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"createdAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1794902400000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"updatedAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1794992400000\"\r
+
+    \      }\r
+
+    \    }\r
+
+    \  },\r
+
+    \  {\r
+
+    \    \"_id\": {\r
+
+    \      \"$oid\": \"6f0000000000000000000003\"\r
+
+    \    },\r
+
+    \    \"chuTroId\": {\r
+
+    \      \"$oid\": \"670000000000000000000001\"\r
+
+    \    },\r
+
+    \    \"nguoiTaoId\": {\r
+
+    \      \"$oid\": \"670000000000000000000008\"\r
+
+    \    },\r
+
+    \    \"nguoiThueId\": {\r
+
+    \      \"$oid\": \"6a0000000000000000000005\"\r
+
+    \    },\r
+
+    \    \"dayTroId\": {\r
+
+    \      \"$oid\": \"680000000000000000000003\"\r
+
+    \    },\r
+
+    \    \"phongTroId\": {\r
+
+    \      \"$oid\": \"690000000000000000000008\"\r
+
+    \    },\r
+
+    \    \"tieuDe\": \"[DEMO] Yeu cau sua chua 03\",\r
+
+    \    \"moTa\": \"[DEMO] Su co gia lap de thu trang thai xu ly.\",\r
+
+    \    \"loaiSuCo\": \"NUOC\",\r
+
+    \    \"mucDoUuTien\": \"THAP\",\r
+
+    \    \"hinhAnh\": [\r
+
+    \      {\r
+
+    \        \"url\": \"https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80\",\r
+
+    \        \"tenTep\": \"anh-su-co-demo.jpg\",\r
+
+    \        \"loaiTep\": \"image/jpeg\"\r
+
+    \      }\r
+
+    \    ],\r
+
+    \    \"trangThai\": \"DA_HOAN_TAT\",\r
+
+    \    \"nguoiPhuTrachId\": {\r
+
+    \      \"$oid\": \"670000000000000000000001\"\r
+
+    \    },\r
+
+    \    \"chiPhiDuKien\": {\r
+
+    \      \"$numberInt\": \"100000\"\r
+
+    \    },\r
+
+    \    \"chiPhiThucTe\": {\r
+
+    \      \"$numberInt\": \"100000\"\r
+
+    \    },\r
+
+    \    \"lichSuXuLy\": [],\r
+
+    \    \"ngayHoanTat\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1790812800000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"createdAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1790812800000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"updatedAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1795161600000\"\r
+
+    \      }\r
+
+    \    }\r
+
+    \  },\r
+
+    \  {\r
+
+    \    \"_id\": {\r
+
+    \      \"$oid\": \"6f0000000000000000000004\"\r
+
+    \    },\r
+
+    \    \"chuTroId\": {\r
+
+    \      \"$oid\": \"670000000000000000000002\"\r
+
+    \    },\r
+
+    \    \"nguoiTaoId\": {\r
+
+    \      \"$oid\": \"670000000000000000000009\"\r
+
+    \    },\r
+
+    \    \"nguoiThueId\": {\r
+
+    \      \"$oid\": \"6a0000000000000000000006\"\r
+
+    \    },\r
+
+    \    \"dayTroId\": {\r
+
+    \      \"$oid\": \"680000000000000000000004\"\r
+
+    \    },\r
+
+    \    \"phongTroId\": {\r
+
+    \      \"$oid\": \"690000000000000000000009\"\r
+
+    \    },\r
+
+    \    \"tieuDe\": \"[DEMO] Yeu cau sua chua 04\",\r
+
+    \    \"moTa\": \"[DEMO] Su co gia lap de thu trang thai xu ly.\",\r
+
+    \    \"loaiSuCo\": \"DIEN\",\r
+
+    \    \"mucDoUuTien\": \"BINH_THUONG\",\r
+
+    \    \"hinhAnh\": [\r
+
+    \      {\r
+
+    \        \"url\": \"https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80\",\r
+
+    \        \"tenTep\": \"anh-su-co-demo.jpg\",\r
+
+    \        \"loaiTep\": \"image/jpeg\"\r
+
+    \      }\r
+
+    \    ],\r
+
+    \    \"trangThai\": \"DANG_XU_LY\",\r
+
+    \    \"nguoiPhuTrachId\": {\r
+
+    \      \"$oid\": \"670000000000000000000002\"\r
+
+    \    },\r
+
+    \    \"chiPhiDuKien\": {\r
+
+    \      \"$numberInt\": \"150000\"\r
+
+    \    },\r
+
+    \    \"chiPhiThucTe\": {\r
+
+    \      \"$numberInt\": \"0\"\r
+
+    \    },\r
+
+    \    \"lichSuXuLy\": [],\r
+
+    \    \"ngayHoanTat\": null,\r
+
+    \    \"createdAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1793577600000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"updatedAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1795161600000\"\r
+
+    \      }\r
+
+    \    }\r
+
+    \  },\r
+
+    \  {\r
+
+    \    \"_id\": {\r
+
+    \      \"$oid\": \"6f0000000000000000000005\"\r
+
+    \    },\r
+
+    \    \"chuTroId\": {\r
+
+    \      \"$oid\": \"670000000000000000000001\"\r
+
+    \    },\r
+
+    \    \"nguoiTaoId\": {\r
+
+    \      \"$oid\": \"670000000000000000000010\"\r
+
+    \    },\r
+
+    \    \"nguoiThueId\": {\r
+
+    \      \"$oid\": \"6a0000000000000000000007\"\r
+
+    \    },\r
+
+    \    \"dayTroId\": {\r
+
+    \      \"$oid\": \"680000000000000000000005\"\r
+
+    \    },\r
+
+    \    \"phongTroId\": {\r
+
+    \      \"$oid\": \"690000000000000000000010\"\r
+
+    \    },\r
+
+    \    \"tieuDe\": \"[DEMO] Yeu cau sua chua 05\",\r
+
+    \    \"moTa\": \"[DEMO] Su co gia lap de thu trang thai xu ly.\",\r
+
+    \    \"loaiSuCo\": \"NOI_THAT\",\r
+
+    \    \"mucDoUuTien\": \"CAO\",\r
+
+    \    \"hinhAnh\": [\r
+
+    \      {\r
+
+    \        \"url\": \"https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80\",\r
+
+    \        \"tenTep\": \"anh-su-co-demo.jpg\",\r
+
+    \        \"loaiTep\": \"image/jpeg\"\r
+
+    \      }\r
+
+    \    ],\r
+
+    \    \"trangThai\": \"DANG_XU_LY\",\r
+
+    \    \"nguoiPhuTrachId\": {\r
+
+    \      \"$oid\": \"670000000000000000000001\"\r
+
+    \    },\r
+
+    \    \"chiPhiDuKien\": {\r
+
+    \      \"$numberInt\": \"200000\"\r
+
+    \    },\r
+
+    \    \"chiPhiThucTe\": {\r
+
+    \      \"$numberInt\": \"0\"\r
+
+    \    },\r
+
+    \    \"lichSuXuLy\": [],\r
+
+    \    \"ngayHoanTat\": null,\r
+
+    \    \"createdAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1790985600000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"updatedAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1795161600000\"\r
+
+    \      }\r
+
+    \    }\r
+
+    \  },\r
+
+    \  {\r
+
+    \    \"_id\": {\r
+
+    \      \"$oid\": \"6f0000000000000000000006\"\r
+
+    \    },\r
+
+    \    \"chuTroId\": {\r
+
+    \      \"$oid\": \"670000000000000000000002\"\r
+
+    \    },\r
+
+    \    \"nguoiTaoId\": {\r
+
+    \      \"$oid\": \"670000000000000000000011\"\r
+
+    \    },\r
+
+    \    \"nguoiThueId\": {\r
+
+    \      \"$oid\": \"6a0000000000000000000008\"\r
+
+    \    },\r
+
+    \    \"dayTroId\": {\r
+
+    \      \"$oid\": \"680000000000000000000006\"\r
+
+    \    },\r
+
+    \    \"phongTroId\": {\r
+
+    \      \"$oid\": \"690000000000000000000011\"\r
+
+    \    },\r
+
+    \    \"tieuDe\": \"[DEMO] Yeu cau sua chua 06\",\r
+
+    \    \"moTa\": \"[DEMO] Su co gia lap de thu trang thai xu ly.\",\r
+
+    \    \"loaiSuCo\": \"KHAC\",\r
+
+    \    \"mucDoUuTien\": \"THAP\",\r
+
+    \    \"hinhAnh\": [\r
+
+    \      {\r
+
+    \        \"url\": \"https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80\",\r
+
+    \        \"tenTep\": \"anh-su-co-demo.jpg\",\r
+
+    \        \"loaiTep\": \"image/jpeg\"\r
+
+    \      }\r
+
+    \    ],\r
+
+    \    \"trangThai\": \"DA_HOAN_TAT\",\r
+
+    \    \"nguoiPhuTrachId\": {\r
+
+    \      \"$oid\": \"670000000000000000000002\"\r
+
+    \    },\r
+
+    \    \"chiPhiDuKien\": {\r
+
+    \      \"$numberInt\": \"250000\"\r
+
+    \    },\r
+
+    \    \"chiPhiThucTe\": {\r
+
+    \      \"$numberInt\": \"250000\"\r
+
+    \    },\r
+
+    \    \"lichSuXuLy\": [],\r
+
+    \    \"ngayHoanTat\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1793750400000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"createdAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1793750400000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"updatedAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1795161600000\"\r
+
+    \      }\r
+
+    \    }\r
+
+    \  },\r
+
+    \  {\r
+
+    \    \"_id\": {\r
+
+    \      \"$oid\": \"6f0000000000000000000007\"\r
+
+    \    },\r
+
+    \    \"chuTroId\": {\r
+
+    \      \"$oid\": \"670000000000000000000001\"\r
+
+    \    },\r
+
+    \    \"nguoiTaoId\": {\r
+
+    \      \"$oid\": \"670000000000000000000012\"\r
+
+    \    },\r
+
+    \    \"nguoiThueId\": {\r
+
+    \      \"$oid\": \"6a0000000000000000000009\"\r
+
+    \    },\r
+
+    \    \"dayTroId\": {\r
+
+    \      \"$oid\": \"680000000000000000000007\"\r
+
+    \    },\r
+
+    \    \"phongTroId\": {\r
+
+    \      \"$oid\": \"690000000000000000000012\"\r
+
+    \    },\r
+
+    \    \"tieuDe\": \"[DEMO] Yeu cau sua chua 07\",\r
+
+    \    \"moTa\": \"[DEMO] Su co gia lap de thu trang thai xu ly.\",\r
+
+    \    \"loaiSuCo\": \"NUOC\",\r
+
+    \    \"mucDoUuTien\": \"BINH_THUONG\",\r
+
+    \    \"hinhAnh\": [\r
+
+    \      {\r
+
+    \        \"url\": \"https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80\",\r
+
+    \        \"tenTep\": \"anh-su-co-demo.jpg\",\r
+
+    \        \"loaiTep\": \"image/jpeg\"\r
+
+    \      }\r
+
+    \    ],\r
+
+    \    \"trangThai\": \"DANG_XU_LY\",\r
+
+    \    \"nguoiPhuTrachId\": {\r
+
+    \      \"$oid\": \"670000000000000000000001\"\r
+
+    \    },\r
+
+    \    \"chiPhiDuKien\": {\r
+
+    \      \"$numberInt\": \"300000\"\r
+
+    \    },\r
+
+    \    \"chiPhiThucTe\": {\r
+
+    \      \"$numberInt\": \"0\"\r
+
+    \    },\r
+
+    \    \"lichSuXuLy\": [],\r
+
+    \    \"ngayHoanTat\": null,\r
+
+    \    \"createdAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1791158400000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"updatedAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1795161600000\"\r
+
+    \      }\r
+
+    \    }\r
+
+    \  },\r
+
+    \  {\r
+
+    \    \"_id\": {\r
+
+    \      \"$oid\": \"6f0000000000000000000008\"\r
+
+    \    },\r
+
+    \    \"chuTroId\": {\r
+
+    \      \"$oid\": \"670000000000000000000002\"\r
+
+    \    },\r
+
+    \    \"nguoiTaoId\": {\r
+
+    \      \"$oid\": \"670000000000000000000013\"\r
+
+    \    },\r
+
+    \    \"nguoiThueId\": {\r
+
+    \      \"$oid\": \"6a0000000000000000000010\"\r
+
+    \    },\r
+
+    \    \"dayTroId\": {\r
+
+    \      \"$oid\": \"680000000000000000000008\"\r
+
+    \    },\r
+
+    \    \"phongTroId\": {\r
+
+    \      \"$oid\": \"690000000000000000000013\"\r
+
+    \    },\r
+
+    \    \"tieuDe\": \"[DEMO] Yeu cau sua chua 08\",\r
+
+    \    \"moTa\": \"[DEMO] Su co gia lap de thu trang thai xu ly.\",\r
+
+    \    \"loaiSuCo\": \"DIEN\",\r
+
+    \    \"mucDoUuTien\": \"CAO\",\r
+
+    \    \"hinhAnh\": [\r
+
+    \      {\r
+
+    \        \"url\": \"https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80\",\r
+
+    \        \"tenTep\": \"anh-su-co-demo.jpg\",\r
+
+    \        \"loaiTep\": \"image/jpeg\"\r
+
+    \      }\r
+
+    \    ],\r
+
+    \    \"trangThai\": \"DANG_XU_LY\",\r
+
+    \    \"nguoiPhuTrachId\": {\r
+
+    \      \"$oid\": \"670000000000000000000002\"\r
+
+    \    },\r
+
+    \    \"chiPhiDuKien\": {\r
+
+    \      \"$numberInt\": \"350000\"\r
+
+    \    },\r
+
+    \    \"chiPhiThucTe\": {\r
+
+    \      \"$numberInt\": \"0\"\r
+
+    \    },\r
+
+    \    \"lichSuXuLy\": [],\r
+
+    \    \"ngayHoanTat\": null,\r
+
+    \    \"createdAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1793923200000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"updatedAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1795161600000\"\r
+
+    \      }\r
+
+    \    }\r
+
+    \  },\r
+
+    \  {\r
+
+    \    \"_id\": {\r
+
+    \      \"$oid\": \"6f0000000000000000000009\"\r
+
+    \    },\r
+
+    \    \"chuTroId\": {\r
+
+    \      \"$oid\": \"670000000000000000000001\"\r
+
+    \    },\r
+
+    \    \"nguoiTaoId\": {\r
+
+    \      \"$oid\": \"670000000000000000000014\"\r
+
+    \    },\r
+
+    \    \"nguoiThueId\": {\r
+
+    \      \"$oid\": \"6a0000000000000000000011\"\r
+
+    \    },\r
+
+    \    \"dayTroId\": {\r
+
+    \      \"$oid\": \"680000000000000000000009\"\r
+
+    \    },\r
+
+    \    \"phongTroId\": {\r
+
+    \      \"$oid\": \"690000000000000000000014\"\r
+
+    \    },\r
+
+    \    \"tieuDe\": \"[DEMO] Yeu cau sua chua 09\",\r
+
+    \    \"moTa\": \"[DEMO] Su co gia lap de thu trang thai xu ly.\",\r
+
+    \    \"loaiSuCo\": \"NOI_THAT\",\r
+
+    \    \"mucDoUuTien\": \"THAP\",\r
+
+    \    \"hinhAnh\": [\r
+
+    \      {\r
+
+    \        \"url\": \"https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80\",\r
+
+    \        \"tenTep\": \"anh-su-co-demo.jpg\",\r
+
+    \        \"loaiTep\": \"image/jpeg\"\r
+
+    \      }\r
+
+    \    ],\r
+
+    \    \"trangThai\": \"DA_HOAN_TAT\",\r
+
+    \    \"nguoiPhuTrachId\": {\r
+
+    \      \"$oid\": \"670000000000000000000001\"\r
+
+    \    },\r
+
+    \    \"chiPhiDuKien\": {\r
+
+    \      \"$numberInt\": \"400000\"\r
+
+    \    },\r
+
+    \    \"chiPhiThucTe\": {\r
+
+    \      \"$numberInt\": \"400000\"\r
+
+    \    },\r
+
+    \    \"lichSuXuLy\": [],\r
+
+    \    \"ngayHoanTat\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1791331200000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"createdAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1791331200000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"updatedAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1795161600000\"\r
+
+    \      }\r
+
+    \    }\r
+
+    \  },\r
+
+    \  {\r
+
+    \    \"_id\": {\r
+
+    \      \"$oid\": \"6f0000000000000000000010\"\r
+
+    \    },\r
+
+    \    \"chuTroId\": {\r
+
+    \      \"$oid\": \"670000000000000000000002\"\r
+
+    \    },\r
+
+    \    \"nguoiTaoId\": {\r
+
+    \      \"$oid\": \"670000000000000000000015\"\r
+
+    \    },\r
+
+    \    \"nguoiThueId\": {\r
+
+    \      \"$oid\": \"6a0000000000000000000012\"\r
+
+    \    },\r
+
+    \    \"dayTroId\": {\r
+
+    \      \"$oid\": \"680000000000000000000010\"\r
+
+    \    },\r
+
+    \    \"phongTroId\": {\r
+
+    \      \"$oid\": \"690000000000000000000015\"\r
+
+    \    },\r
+
+    \    \"tieuDe\": \"[DEMO] Yeu cau sua chua 10\",\r
+
+    \    \"moTa\": \"[DEMO] Su co gia lap de thu trang thai xu ly.\",\r
+
+    \    \"loaiSuCo\": \"KHAC\",\r
+
+    \    \"mucDoUuTien\": \"BINH_THUONG\",\r
+
+    \    \"hinhAnh\": [\r
+
+    \      {\r
+
+    \        \"url\": \"https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80\",\r
+
+    \        \"tenTep\": \"anh-su-co-demo.jpg\",\r
+
+    \        \"loaiTep\": \"image/jpeg\"\r
+
+    \      }\r
+
+    \    ],\r
+
+    \    \"trangThai\": \"DANG_XU_LY\",\r
+
+    \    \"nguoiPhuTrachId\": {\r
+
+    \      \"$oid\": \"670000000000000000000002\"\r
+
+    \    },\r
+
+    \    \"chiPhiDuKien\": {\r
+
+    \      \"$numberInt\": \"450000\"\r
+
+    \    },\r
+
+    \    \"chiPhiThucTe\": {\r
+
+    \      \"$numberInt\": \"0\"\r
+
+    \    },\r
+
+    \    \"lichSuXuLy\": [],\r
+
+    \    \"ngayHoanTat\": null,\r
+
+    \    \"createdAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1794096000000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"updatedAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1795161600000\"\r
+
+    \      }\r
+
+    \    }\r
+
+    \  },\r
+
+    \  {\r
+
+    \    \"_id\": {\r
+
+    \      \"$oid\": \"6f0000000000000000000011\"\r
+
+    \    },\r
+
+    \    \"chuTroId\": {\r
+
+    \      \"$oid\": \"670000000000000000000001\"\r
+
+    \    },\r
+
+    \    \"nguoiTaoId\": {\r
+
+    \      \"$oid\": \"670000000000000000000016\"\r
+
+    \    },\r
+
+    \    \"nguoiThueId\": {\r
+
+    \      \"$oid\": \"6a0000000000000000000013\"\r
+
+    \    },\r
+
+    \    \"dayTroId\": {\r
+
+    \      \"$oid\": \"680000000000000000000011\"\r
+
+    \    },\r
+
+    \    \"phongTroId\": {\r
+
+    \      \"$oid\": \"690000000000000000000016\"\r
+
+    \    },\r
+
+    \    \"tieuDe\": \"[DEMO] Yeu cau sua chua 11\",\r
+
+    \    \"moTa\": \"[DEMO] Su co gia lap de thu trang thai xu ly.\",\r
+
+    \    \"loaiSuCo\": \"NUOC\",\r
+
+    \    \"mucDoUuTien\": \"CAO\",\r
+
+    \    \"hinhAnh\": [\r
+
+    \      {\r
+
+    \        \"url\": \"https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80\",\r
+
+    \        \"tenTep\": \"anh-su-co-demo.jpg\",\r
+
+    \        \"loaiTep\": \"image/jpeg\"\r
+
+    \      }\r
+
+    \    ],\r
+
+    \    \"trangThai\": \"DANG_XU_LY\",\r
+
+    \    \"nguoiPhuTrachId\": {\r
+
+    \      \"$oid\": \"670000000000000000000001\"\r
+
+    \    },\r
+
+    \    \"chiPhiDuKien\": {\r
+
+    \      \"$numberInt\": \"100000\"\r
+
+    \    },\r
+
+    \    \"chiPhiThucTe\": {\r
+
+    \      \"$numberInt\": \"0\"\r
+
+    \    },\r
+
+    \    \"lichSuXuLy\": [],\r
+
+    \    \"ngayHoanTat\": null,\r
+
+    \    \"createdAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1791504000000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"updatedAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1795161600000\"\r
+
+    \      }\r
+
+    \    }\r
+
+    \  },\r
+
+    \  {\r
+
+    \    \"_id\": {\r
+
+    \      \"$oid\": \"6f0000000000000000000012\"\r
+
+    \    },\r
+
+    \    \"chuTroId\": {\r
+
+    \      \"$oid\": \"670000000000000000000002\"\r
+
+    \    },\r
+
+    \    \"nguoiTaoId\": {\r
+
+    \      \"$oid\": \"670000000000000000000017\"\r
+
+    \    },\r
+
+    \    \"nguoiThueId\": {\r
+
+    \      \"$oid\": \"6a0000000000000000000014\"\r
+
+    \    },\r
+
+    \    \"dayTroId\": {\r
+
+    \      \"$oid\": \"680000000000000000000012\"\r
+
+    \    },\r
+
+    \    \"phongTroId\": {\r
+
+    \      \"$oid\": \"690000000000000000000017\"\r
+
+    \    },\r
+
+    \    \"tieuDe\": \"[DEMO] Yeu cau sua chua 12\",\r
+
+    \    \"moTa\": \"[DEMO] Su co gia lap de thu trang thai xu ly.\",\r
+
+    \    \"loaiSuCo\": \"DIEN\",\r
+
+    \    \"mucDoUuTien\": \"THAP\",\r
+
+    \    \"hinhAnh\": [\r
+
+    \      {\r
+
+    \        \"url\": \"https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80\",\r
+
+    \        \"tenTep\": \"anh-su-co-demo.jpg\",\r
+
+    \        \"loaiTep\": \"image/jpeg\"\r
+
+    \      }\r
+
+    \    ],\r
+
+    \    \"trangThai\": \"DA_HOAN_TAT\",\r
+
+    \    \"nguoiPhuTrachId\": {\r
+
+    \      \"$oid\": \"670000000000000000000002\"\r
+
+    \    },\r
+
+    \    \"chiPhiDuKien\": {\r
+
+    \      \"$numberInt\": \"150000\"\r
+
+    \    },\r
+
+    \    \"chiPhiThucTe\": {\r
+
+    \      \"$numberInt\": \"150000\"\r
+
+    \    },\r
+
+    \    \"lichSuXuLy\": [],\r
+
+    \    \"ngayHoanTat\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1794268800000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"createdAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1794268800000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"updatedAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1795161600000\"\r
+
+    \      }\r
+
+    \    }\r
+
+    \  },\r
+
+    \  {\r
+
+    \    \"_id\": {\r
+
+    \      \"$oid\": \"6f0000000000000000000013\"\r
+
+    \    },\r
+
+    \    \"chuTroId\": {\r
+
+    \      \"$oid\": \"670000000000000000000001\"\r
+
+    \    },\r
+
+    \    \"nguoiTaoId\": {\r
+
+    \      \"$oid\": \"670000000000000000000018\"\r
+
+    \    },\r
+
+    \    \"nguoiThueId\": {\r
+
+    \      \"$oid\": \"6a0000000000000000000015\"\r
+
+    \    },\r
+
+    \    \"dayTroId\": {\r
+
+    \      \"$oid\": \"680000000000000000000013\"\r
+
+    \    },\r
+
+    \    \"phongTroId\": {\r
+
+    \      \"$oid\": \"690000000000000000000018\"\r
+
+    \    },\r
+
+    \    \"tieuDe\": \"[DEMO] Yeu cau sua chua 13\",\r
+
+    \    \"moTa\": \"[DEMO] Su co gia lap de thu trang thai xu ly.\",\r
+
+    \    \"loaiSuCo\": \"NOI_THAT\",\r
+
+    \    \"mucDoUuTien\": \"BINH_THUONG\",\r
+
+    \    \"hinhAnh\": [\r
+
+    \      {\r
+
+    \        \"url\": \"https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80\",\r
+
+    \        \"tenTep\": \"anh-su-co-demo.jpg\",\r
+
+    \        \"loaiTep\": \"image/jpeg\"\r
+
+    \      }\r
+
+    \    ],\r
+
+    \    \"trangThai\": \"DANG_XU_LY\",\r
+
+    \    \"nguoiPhuTrachId\": {\r
+
+    \      \"$oid\": \"670000000000000000000001\"\r
+
+    \    },\r
+
+    \    \"chiPhiDuKien\": {\r
+
+    \      \"$numberInt\": \"200000\"\r
+
+    \    },\r
+
+    \    \"chiPhiThucTe\": {\r
+
+    \      \"$numberInt\": \"0\"\r
+
+    \    },\r
+
+    \    \"lichSuXuLy\": [],\r
+
+    \    \"ngayHoanTat\": null,\r
+
+    \    \"createdAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1791676800000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"updatedAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1795161600000\"\r
+
+    \      }\r
+
+    \    }\r
+
+    \  },\r
+
+    \  {\r
+
+    \    \"_id\": {\r
+
+    \      \"$oid\": \"6f0000000000000000000014\"\r
+
+    \    },\r
+
+    \    \"chuTroId\": {\r
+
+    \      \"$oid\": \"670000000000000000000002\"\r
+
+    \    },\r
+
+    \    \"nguoiTaoId\": {\r
+
+    \      \"$oid\": \"670000000000000000000019\"\r
+
+    \    },\r
+
+    \    \"nguoiThueId\": {\r
+
+    \      \"$oid\": \"6a0000000000000000000016\"\r
+
+    \    },\r
+
+    \    \"dayTroId\": {\r
+
+    \      \"$oid\": \"680000000000000000000014\"\r
+
+    \    },\r
+
+    \    \"phongTroId\": {\r
+
+    \      \"$oid\": \"690000000000000000000019\"\r
+
+    \    },\r
+
+    \    \"tieuDe\": \"[DEMO] Yeu cau sua chua 14\",\r
+
+    \    \"moTa\": \"[DEMO] Su co gia lap de thu trang thai xu ly.\",\r
+
+    \    \"loaiSuCo\": \"KHAC\",\r
+
+    \    \"mucDoUuTien\": \"CAO\",\r
+
+    \    \"hinhAnh\": [\r
+
+    \      {\r
+
+    \        \"url\": \"https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80\",\r
+
+    \        \"tenTep\": \"anh-su-co-demo.jpg\",\r
+
+    \        \"loaiTep\": \"image/jpeg\"\r
+
+    \      }\r
+
+    \    ],\r
+
+    \    \"trangThai\": \"DANG_XU_LY\",\r
+
+    \    \"nguoiPhuTrachId\": {\r
+
+    \      \"$oid\": \"670000000000000000000002\"\r
+
+    \    },\r
+
+    \    \"chiPhiDuKien\": {\r
+
+    \      \"$numberInt\": \"250000\"\r
+
+    \    },\r
+
+    \    \"chiPhiThucTe\": {\r
+
+    \      \"$numberInt\": \"0\"\r
+
+    \    },\r
+
+    \    \"lichSuXuLy\": [],\r
+
+    \    \"ngayHoanTat\": null,\r
+
+    \    \"createdAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1794441600000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"updatedAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1795161600000\"\r
+
+    \      }\r
+
+    \    }\r
+
+    \  },\r
+
+    \  {\r
+
+    \    \"_id\": {\r
+
+    \      \"$oid\": \"6f0000000000000000000015\"\r
+
+    \    },\r
+
+    \    \"chuTroId\": {\r
+
+    \      \"$oid\": \"670000000000000000000001\"\r
+
+    \    },\r
+
+    \    \"nguoiTaoId\": {\r
+
+    \      \"$oid\": \"670000000000000000000020\"\r
+
+    \    },\r
+
+    \    \"nguoiThueId\": {\r
+
+    \      \"$oid\": \"6a0000000000000000000017\"\r
+
+    \    },\r
+
+    \    \"dayTroId\": {\r
+
+    \      \"$oid\": \"680000000000000000000015\"\r
+
+    \    },\r
+
+    \    \"phongTroId\": {\r
+
+    \      \"$oid\": \"690000000000000000000020\"\r
+
+    \    },\r
+
+    \    \"tieuDe\": \"[DEMO] Yeu cau sua chua 15\",\r
+
+    \    \"moTa\": \"[DEMO] Su co gia lap de thu trang thai xu ly.\",\r
+
+    \    \"loaiSuCo\": \"NUOC\",\r
+
+    \    \"mucDoUuTien\": \"THAP\",\r
+
+    \    \"hinhAnh\": [\r
+
+    \      {\r
+
+    \        \"url\": \"https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80\",\r
+
+    \        \"tenTep\": \"anh-su-co-demo.jpg\",\r
+
+    \        \"loaiTep\": \"image/jpeg\"\r
+
+    \      }\r
+
+    \    ],\r
+
+    \    \"trangThai\": \"DA_HOAN_TAT\",\r
+
+    \    \"nguoiPhuTrachId\": {\r
+
+    \      \"$oid\": \"670000000000000000000001\"\r
+
+    \    },\r
+
+    \    \"chiPhiDuKien\": {\r
+
+    \      \"$numberInt\": \"300000\"\r
+
+    \    },\r
+
+    \    \"chiPhiThucTe\": {\r
+
+    \      \"$numberInt\": \"300000\"\r
+
+    \    },\r
+
+    \    \"lichSuXuLy\": [],\r
+
+    \    \"ngayHoanTat\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1791849600000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"createdAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1791849600000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"updatedAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1795161600000\"\r
+
+    \      }\r
+
+    \    }\r
+
+    \  },\r
+
+    \  {\r
+
+    \    \"_id\": {\r
+
+    \      \"$oid\": \"6f0000000000000000000016\"\r
+
+    \    },\r
+
+    \    \"chuTroId\": {\r
+
+    \      \"$oid\": \"670000000000000000000002\"\r
+
+    \    },\r
+
+    \    \"nguoiTaoId\": {\r
+
+    \      \"$oid\": \"670000000000000000000021\"\r
+
+    \    },\r
+
+    \    \"nguoiThueId\": {\r
+
+    \      \"$oid\": \"6a0000000000000000000018\"\r
+
+    \    },\r
+
+    \    \"dayTroId\": {\r
+
+    \      \"$oid\": \"680000000000000000000016\"\r
+
+    \    },\r
+
+    \    \"phongTroId\": {\r
+
+    \      \"$oid\": \"690000000000000000000021\"\r
+
+    \    },\r
+
+    \    \"tieuDe\": \"[DEMO] Yeu cau sua chua 16\",\r
+
+    \    \"moTa\": \"[DEMO] Su co gia lap de thu trang thai xu ly.\",\r
+
+    \    \"loaiSuCo\": \"DIEN\",\r
+
+    \    \"mucDoUuTien\": \"BINH_THUONG\",\r
+
+    \    \"hinhAnh\": [\r
+
+    \      {\r
+
+    \        \"url\": \"https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80\",\r
+
+    \        \"tenTep\": \"anh-su-co-demo.jpg\",\r
+
+    \        \"loaiTep\": \"image/jpeg\"\r
+
+    \      }\r
+
+    \    ],\r
+
+    \    \"trangThai\": \"DANG_XU_LY\",\r
+
+    \    \"nguoiPhuTrachId\": {\r
+
+    \      \"$oid\": \"670000000000000000000002\"\r
+
+    \    },\r
+
+    \    \"chiPhiDuKien\": {\r
+
+    \      \"$numberInt\": \"350000\"\r
+
+    \    },\r
+
+    \    \"chiPhiThucTe\": {\r
+
+    \      \"$numberInt\": \"0\"\r
+
+    \    },\r
+
+    \    \"lichSuXuLy\": [],\r
+
+    \    \"ngayHoanTat\": null,\r
+
+    \    \"createdAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1794614400000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"updatedAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1795161600000\"\r
+
+    \      }\r
+
+    \    }\r
+
+    \  },\r
+
+    \  {\r
+
+    \    \"_id\": {\r
+
+    \      \"$oid\": \"6f0000000000000000000017\"\r
+
+    \    },\r
+
+    \    \"chuTroId\": {\r
+
+    \      \"$oid\": \"670000000000000000000001\"\r
+
+    \    },\r
+
+    \    \"nguoiTaoId\": {\r
+
+    \      \"$oid\": \"670000000000000000000022\"\r
+
+    \    },\r
+
+    \    \"nguoiThueId\": {\r
+
+    \      \"$oid\": \"6a0000000000000000000019\"\r
+
+    \    },\r
+
+    \    \"dayTroId\": {\r
+
+    \      \"$oid\": \"680000000000000000000017\"\r
+
+    \    },\r
+
+    \    \"phongTroId\": {\r
+
+    \      \"$oid\": \"690000000000000000000022\"\r
+
+    \    },\r
+
+    \    \"tieuDe\": \"[DEMO] Yeu cau sua chua 17\",\r
+
+    \    \"moTa\": \"[DEMO] Su co gia lap de thu trang thai xu ly.\",\r
+
+    \    \"loaiSuCo\": \"NOI_THAT\",\r
+
+    \    \"mucDoUuTien\": \"CAO\",\r
+
+    \    \"hinhAnh\": [\r
+
+    \      {\r
+
+    \        \"url\": \"https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80\",\r
+
+    \        \"tenTep\": \"anh-su-co-demo.jpg\",\r
+
+    \        \"loaiTep\": \"image/jpeg\"\r
+
+    \      }\r
+
+    \    ],\r
+
+    \    \"trangThai\": \"DANG_XU_LY\",\r
+
+    \    \"nguoiPhuTrachId\": {\r
+
+    \      \"$oid\": \"670000000000000000000001\"\r
+
+    \    },\r
+
+    \    \"chiPhiDuKien\": {\r
+
+    \      \"$numberInt\": \"400000\"\r
+
+    \    },\r
+
+    \    \"chiPhiThucTe\": {\r
+
+    \      \"$numberInt\": \"0\"\r
+
+    \    },\r
+
+    \    \"lichSuXuLy\": [],\r
+
+    \    \"ngayHoanTat\": null,\r
+
+    \    \"createdAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1792022400000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"updatedAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1795161600000\"\r
+
+    \      }\r
+
+    \    }\r
+
+    \  },\r
+
+    \  {\r
+
+    \    \"_id\": {\r
+
+    \      \"$oid\": \"6f0000000000000000000018\"\r
+
+    \    },\r
+
+    \    \"chuTroId\": {\r
+
+    \      \"$oid\": \"670000000000000000000002\"\r
+
+    \    },\r
+
+    \    \"nguoiTaoId\": {\r
+
+    \      \"$oid\": \"670000000000000000000023\"\r
+
+    \    },\r
+
+    \    \"nguoiThueId\": {\r
+
+    \      \"$oid\": \"6a0000000000000000000020\"\r
+
+    \    },\r
+
+    \    \"dayTroId\": {\r
+
+    \      \"$oid\": \"680000000000000000000018\"\r
+
+    \    },\r
+
+    \    \"phongTroId\": {\r
+
+    \      \"$oid\": \"690000000000000000000023\"\r
+
+    \    },\r
+
+    \    \"tieuDe\": \"[DEMO] Yeu cau sua chua 18\",\r
+
+    \    \"moTa\": \"[DEMO] Su co gia lap de thu trang thai xu ly.\",\r
+
+    \    \"loaiSuCo\": \"KHAC\",\r
+
+    \    \"mucDoUuTien\": \"THAP\",\r
+
+    \    \"hinhAnh\": [\r
+
+    \      {\r
+
+    \        \"url\": \"https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80\",\r
+
+    \        \"tenTep\": \"anh-su-co-demo.jpg\",\r
+
+    \        \"loaiTep\": \"image/jpeg\"\r
+
+    \      }\r
+
+    \    ],\r
+
+    \    \"trangThai\": \"DA_HOAN_TAT\",\r
+
+    \    \"nguoiPhuTrachId\": {\r
+
+    \      \"$oid\": \"670000000000000000000002\"\r
+
+    \    },\r
+
+    \    \"chiPhiDuKien\": {\r
+
+    \      \"$numberInt\": \"450000\"\r
+
+    \    },\r
+
+    \    \"chiPhiThucTe\": {\r
+
+    \      \"$numberInt\": \"450000\"\r
+
+    \    },\r
+
+    \    \"lichSuXuLy\": [],\r
+
+    \    \"ngayHoanTat\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1794787200000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"createdAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1794787200000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"updatedAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1795161600000\"\r
+
+    \      }\r
+
+    \    }\r
+
+    \  },\r
+
+    \  {\r
+
+    \    \"_id\": {\r
+
+    \      \"$oid\": \"6f0000000000000000000019\"\r
+
+    \    },\r
+
+    \    \"chuTroId\": {\r
+
+    \      \"$oid\": \"670000000000000000000001\"\r
+
+    \    },\r
+
+    \    \"nguoiTaoId\": {\r
+
+    \      \"$oid\": \"670000000000000000000024\"\r
+
+    \    },\r
+
+    \    \"nguoiThueId\": {\r
+
+    \      \"$oid\": \"6a0000000000000000000021\"\r
+
+    \    },\r
+
+    \    \"dayTroId\": {\r
+
+    \      \"$oid\": \"680000000000000000000019\"\r
+
+    \    },\r
+
+    \    \"phongTroId\": {\r
+
+    \      \"$oid\": \"690000000000000000000024\"\r
+
+    \    },\r
+
+    \    \"tieuDe\": \"[DEMO] Yeu cau sua chua 19\",\r
+
+    \    \"moTa\": \"[DEMO] Su co gia lap de thu trang thai xu ly.\",\r
+
+    \    \"loaiSuCo\": \"NUOC\",\r
+
+    \    \"mucDoUuTien\": \"BINH_THUONG\",\r
+
+    \    \"hinhAnh\": [\r
+
+    \      {\r
+
+    \        \"url\": \"https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80\",\r
+
+    \        \"tenTep\": \"anh-su-co-demo.jpg\",\r
+
+    \        \"loaiTep\": \"image/jpeg\"\r
+
+    \      }\r
+
+    \    ],\r
+
+    \    \"trangThai\": \"DANG_XU_LY\",\r
+
+    \    \"nguoiPhuTrachId\": {\r
+
+    \      \"$oid\": \"670000000000000000000001\"\r
+
+    \    },\r
+
+    \    \"chiPhiDuKien\": {\r
+
+    \      \"$numberInt\": \"100000\"\r
+
+    \    },\r
+
+    \    \"chiPhiThucTe\": {\r
+
+    \      \"$numberInt\": \"0\"\r
+
+    \    },\r
+
+    \    \"lichSuXuLy\": [],\r
+
+    \    \"ngayHoanTat\": null,\r
+
+    \    \"createdAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1792195200000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"updatedAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1795161600000\"\r
+
+    \      }\r
+
+    \    }\r
+
+    \  },\r
+
+    \  {\r
+
+    \    \"_id\": {\r
+
+    \      \"$oid\": \"6f0000000000000000000020\"\r
+
+    \    },\r
+
+    \    \"chuTroId\": {\r
+
+    \      \"$oid\": \"670000000000000000000002\"\r
+
+    \    },\r
+
+    \    \"nguoiTaoId\": {\r
+
+    \      \"$oid\": \"670000000000000000000025\"\r
+
+    \    },\r
+
+    \    \"nguoiThueId\": {\r
+
+    \      \"$oid\": \"6a0000000000000000000022\"\r
+
+    \    },\r
+
+    \    \"dayTroId\": {\r
+
+    \      \"$oid\": \"680000000000000000000020\"\r
+
+    \    },\r
+
+    \    \"phongTroId\": {\r
+
+    \      \"$oid\": \"690000000000000000000025\"\r
+
+    \    },\r
+
+    \    \"tieuDe\": \"[DEMO] Yeu cau sua chua 20\",\r
+
+    \    \"moTa\": \"[DEMO] Su co gia lap de thu trang thai xu ly.\",\r
+
+    \    \"loaiSuCo\": \"DIEN\",\r
+
+    \    \"mucDoUuTien\": \"CAO\",\r
+
+    \    \"hinhAnh\": [\r
+
+    \      {\r
+
+    \        \"url\": \"https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80\",\r
+
+    \        \"tenTep\": \"anh-su-co-demo.jpg\",\r
+
+    \        \"loaiTep\": \"image/jpeg\"\r
+
+    \      }\r
+
+    \    ],\r
+
+    \    \"trangThai\": \"DANG_XU_LY\",\r
+
+    \    \"nguoiPhuTrachId\": {\r
+
+    \      \"$oid\": \"670000000000000000000002\"\r
+
+    \    },\r
+
+    \    \"chiPhiDuKien\": {\r
+
+    \      \"$numberInt\": \"150000\"\r
+
+    \    },\r
+
+    \    \"chiPhiThucTe\": {\r
+
+    \      \"$numberInt\": \"0\"\r
+
+    \    },\r
+
+    \    \"lichSuXuLy\": [],\r
+
+    \    \"ngayHoanTat\": null,\r
+
+    \    \"createdAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1794960000000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"updatedAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1795161600000\"\r
+
+    \      }\r
+
+    \    }\r
+
+    \  },\r
+
+    \  {\r
+
+    \    \"_id\": {\r
+
+    \      \"$oid\": \"6f0000000000000000000021\"\r
+
+    \    },\r
+
+    \    \"chuTroId\": {\r
+
+    \      \"$oid\": \"670000000000000000000001\"\r
+
+    \    },\r
+
+    \    \"nguoiTaoId\": {\r
+
+    \      \"$oid\": \"670000000000000000000026\"\r
+
+    \    },\r
+
+    \    \"nguoiThueId\": {\r
+
+    \      \"$oid\": \"6a0000000000000000000023\"\r
+
+    \    },\r
+
+    \    \"dayTroId\": {\r
+
+    \      \"$oid\": \"680000000000000000000021\"\r
+
+    \    },\r
+
+    \    \"phongTroId\": {\r
+
+    \      \"$oid\": \"690000000000000000000026\"\r
+
+    \    },\r
+
+    \    \"tieuDe\": \"[DEMO] Yeu cau sua chua 21\",\r
+
+    \    \"moTa\": \"[DEMO] Su co gia lap de thu trang thai xu ly.\",\r
+
+    \    \"loaiSuCo\": \"NOI_THAT\",\r
+
+    \    \"mucDoUuTien\": \"THAP\",\r
+
+    \    \"hinhAnh\": [\r
+
+    \      {\r
+
+    \        \"url\": \"https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80\",\r
+
+    \        \"tenTep\": \"anh-su-co-demo.jpg\",\r
+
+    \        \"loaiTep\": \"image/jpeg\"\r
+
+    \      }\r
+
+    \    ],\r
+
+    \    \"trangThai\": \"DA_HOAN_TAT\",\r
+
+    \    \"nguoiPhuTrachId\": {\r
+
+    \      \"$oid\": \"670000000000000000000001\"\r
+
+    \    },\r
+
+    \    \"chiPhiDuKien\": {\r
+
+    \      \"$numberInt\": \"200000\"\r
+
+    \    },\r
+
+    \    \"chiPhiThucTe\": {\r
+
+    \      \"$numberInt\": \"200000\"\r
+
+    \    },\r
+
+    \    \"lichSuXuLy\": [],\r
+
+    \    \"ngayHoanTat\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1792368000000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"createdAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1792368000000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"updatedAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1795161600000\"\r
+
+    \      }\r
+
+    \    }\r
+
+    \  },\r
+
+    \  {\r
+
+    \    \"_id\": {\r
+
+    \      \"$oid\": \"6f0000000000000000000022\"\r
+
+    \    },\r
+
+    \    \"chuTroId\": {\r
+
+    \      \"$oid\": \"670000000000000000000002\"\r
+
+    \    },\r
+
+    \    \"nguoiTaoId\": {\r
+
+    \      \"$oid\": \"670000000000000000000027\"\r
+
+    \    },\r
+
+    \    \"nguoiThueId\": {\r
+
+    \      \"$oid\": \"6a0000000000000000000024\"\r
+
+    \    },\r
+
+    \    \"dayTroId\": {\r
+
+    \      \"$oid\": \"680000000000000000000022\"\r
+
+    \    },\r
+
+    \    \"phongTroId\": {\r
+
+    \      \"$oid\": \"690000000000000000000027\"\r
+
+    \    },\r
+
+    \    \"tieuDe\": \"[DEMO] Yeu cau sua chua 22\",\r
+
+    \    \"moTa\": \"[DEMO] Su co gia lap de thu trang thai xu ly.\",\r
+
+    \    \"loaiSuCo\": \"KHAC\",\r
+
+    \    \"mucDoUuTien\": \"BINH_THUONG\",\r
+
+    \    \"hinhAnh\": [\r
+
+    \      {\r
+
+    \        \"url\": \"https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80\",\r
+
+    \        \"tenTep\": \"anh-su-co-demo.jpg\",\r
+
+    \        \"loaiTep\": \"image/jpeg\"\r
+
+    \      }\r
+
+    \    ],\r
+
+    \    \"trangThai\": \"DANG_XU_LY\",\r
+
+    \    \"nguoiPhuTrachId\": {\r
+
+    \      \"$oid\": \"670000000000000000000002\"\r
+
+    \    },\r
+
+    \    \"chiPhiDuKien\": {\r
+
+    \      \"$numberInt\": \"250000\"\r
+
+    \    },\r
+
+    \    \"chiPhiThucTe\": {\r
+
+    \      \"$numberInt\": \"0\"\r
+
+    \    },\r
+
+    \    \"lichSuXuLy\": [],\r
+
+    \    \"ngayHoanTat\": null,\r
+
+    \    \"createdAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1795132800000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"updatedAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1795161600000\"\r
+
+    \      }\r
+
+    \    }\r
+
+    \  },\r
+
+    \  {\r
+
+    \    \"_id\": {\r
+
+    \      \"$oid\": \"6f0000000000000000000023\"\r
+
+    \    },\r
+
+    \    \"chuTroId\": {\r
+
+    \      \"$oid\": \"670000000000000000000001\"\r
+
+    \    },\r
+
+    \    \"nguoiTaoId\": {\r
+
+    \      \"$oid\": \"670000000000000000000028\"\r
+
+    \    },\r
+
+    \    \"nguoiThueId\": {\r
+
+    \      \"$oid\": \"6a0000000000000000000025\"\r
+
+    \    },\r
+
+    \    \"dayTroId\": {\r
+
+    \      \"$oid\": \"680000000000000000000023\"\r
+
+    \    },\r
+
+    \    \"phongTroId\": {\r
+
+    \      \"$oid\": \"690000000000000000000028\"\r
+
+    \    },\r
+
+    \    \"tieuDe\": \"[DEMO] Yeu cau sua chua 23\",\r
+
+    \    \"moTa\": \"[DEMO] Su co gia lap de thu trang thai xu ly.\",\r
+
+    \    \"loaiSuCo\": \"NUOC\",\r
+
+    \    \"mucDoUuTien\": \"CAO\",\r
+
+    \    \"hinhAnh\": [\r
+
+    \      {\r
+
+    \        \"url\": \"https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80\",\r
+
+    \        \"tenTep\": \"anh-su-co-demo.jpg\",\r
+
+    \        \"loaiTep\": \"image/jpeg\"\r
+
+    \      }\r
+
+    \    ],\r
+
+    \    \"trangThai\": \"DANG_XU_LY\",\r
+
+    \    \"nguoiPhuTrachId\": {\r
+
+    \      \"$oid\": \"670000000000000000000001\"\r
+
+    \    },\r
+
+    \    \"chiPhiDuKien\": {\r
+
+    \      \"$numberInt\": \"300000\"\r
+
+    \    },\r
+
+    \    \"chiPhiThucTe\": {\r
+
+    \      \"$numberInt\": \"0\"\r
+
+    \    },\r
+
+    \    \"lichSuXuLy\": [],\r
+
+    \    \"ngayHoanTat\": null,\r
+
+    \    \"createdAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1792540800000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"updatedAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1795161600000\"\r
+
+    \      }\r
+
+    \    }\r
+
+    \  },\r
+
+    \  {\r
+
+    \    \"_id\": {\r
+
+    \      \"$oid\": \"6f0000000000000000000024\"\r
+
+    \    },\r
+
+    \    \"chuTroId\": {\r
+
+    \      \"$oid\": \"670000000000000000000002\"\r
+
+    \    },\r
+
+    \    \"nguoiTaoId\": {\r
+
+    \      \"$oid\": \"670000000000000000000029\"\r
+
+    \    },\r
+
+    \    \"nguoiThueId\": {\r
+
+    \      \"$oid\": \"6a0000000000000000000026\"\r
+
+    \    },\r
+
+    \    \"dayTroId\": {\r
+
+    \      \"$oid\": \"680000000000000000000024\"\r
+
+    \    },\r
+
+    \    \"phongTroId\": {\r
+
+    \      \"$oid\": \"690000000000000000000029\"\r
+
+    \    },\r
+
+    \    \"tieuDe\": \"[DEMO] Yeu cau sua chua 24\",\r
+
+    \    \"moTa\": \"[DEMO] Su co gia lap de thu trang thai xu ly.\",\r
+
+    \    \"loaiSuCo\": \"DIEN\",\r
+
+    \    \"mucDoUuTien\": \"THAP\",\r
+
+    \    \"hinhAnh\": [\r
+
+    \      {\r
+
+    \        \"url\": \"https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80\",\r
+
+    \        \"tenTep\": \"anh-su-co-demo.jpg\",\r
+
+    \        \"loaiTep\": \"image/jpeg\"\r
+
+    \      }\r
+
+    \    ],\r
+
+    \    \"trangThai\": \"DA_HOAN_TAT\",\r
+
+    \    \"nguoiPhuTrachId\": {\r
+
+    \      \"$oid\": \"670000000000000000000002\"\r
+
+    \    },\r
+
+    \    \"chiPhiDuKien\": {\r
+
+    \      \"$numberInt\": \"350000\"\r
+
+    \    },\r
+
+    \    \"chiPhiThucTe\": {\r
+
+    \      \"$numberInt\": \"350000\"\r
+
+    \    },\r
+
+    \    \"lichSuXuLy\": [],\r
+
+    \    \"ngayHoanTat\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1795305600000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"createdAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1795305600000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"updatedAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1795161600000\"\r
+
+    \      }\r
+
+    \    }\r
+
+    \  },\r
+
+    \  {\r
+
+    \    \"_id\": {\r
+
+    \      \"$oid\": \"6f0000000000000000000025\"\r
+
+    \    },\r
+
+    \    \"chuTroId\": {\r
+
+    \      \"$oid\": \"670000000000000000000001\"\r
+
+    \    },\r
+
+    \    \"nguoiTaoId\": {\r
+
+    \      \"$oid\": \"670000000000000000000030\"\r
+
+    \    },\r
+
+    \    \"nguoiThueId\": {\r
+
+    \      \"$oid\": \"6a0000000000000000000027\"\r
+
+    \    },\r
+
+    \    \"dayTroId\": {\r
+
+    \      \"$oid\": \"680000000000000000000025\"\r
+
+    \    },\r
+
+    \    \"phongTroId\": {\r
+
+    \      \"$oid\": \"690000000000000000000030\"\r
+
+    \    },\r
+
+    \    \"tieuDe\": \"[DEMO] Yeu cau sua chua 25\",\r
+
+    \    \"moTa\": \"[DEMO] Su co gia lap de thu trang thai xu ly.\",\r
+
+    \    \"loaiSuCo\": \"NOI_THAT\",\r
+
+    \    \"mucDoUuTien\": \"BINH_THUONG\",\r
+
+    \    \"hinhAnh\": [\r
+
+    \      {\r
+
+    \        \"url\": \"https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80\",\r
+
+    \        \"tenTep\": \"anh-su-co-demo.jpg\",\r
+
+    \        \"loaiTep\": \"image/jpeg\"\r
+
+    \      }\r
+
+    \    ],\r
+
+    \    \"trangThai\": \"DANG_XU_LY\",\r
+
+    \    \"nguoiPhuTrachId\": {\r
+
+    \      \"$oid\": \"670000000000000000000001\"\r
+
+    \    },\r
+
+    \    \"chiPhiDuKien\": {\r
+
+    \      \"$numberInt\": \"400000\"\r
+
+    \    },\r
+
+    \    \"chiPhiThucTe\": {\r
+
+    \      \"$numberInt\": \"0\"\r
+
+    \    },\r
+
+    \    \"lichSuXuLy\": [],\r
+
+    \    \"ngayHoanTat\": null,\r
+
+    \    \"createdAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1792713600000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"updatedAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1795161600000\"\r
+
+    \      }\r
+
+    \    }\r
+
+    \  },\r
+
+    \  {\r
+
+    \    \"_id\": {\r
+
+    \      \"$oid\": \"6f0000000000000000000026\"\r
+
+    \    },\r
+
+    \    \"chuTroId\": {\r
+
+    \      \"$oid\": \"670000000000000000000002\"\r
+
+    \    },\r
+
+    \    \"nguoiTaoId\": {\r
+
+    \      \"$oid\": \"670000000000000000000031\"\r
+
+    \    },\r
+
+    \    \"nguoiThueId\": {\r
+
+    \      \"$oid\": \"6a0000000000000000000028\"\r
+
+    \    },\r
+
+    \    \"dayTroId\": {\r
+
+    \      \"$oid\": \"680000000000000000000026\"\r
+
+    \    },\r
+
+    \    \"phongTroId\": {\r
+
+    \      \"$oid\": \"690000000000000000000031\"\r
+
+    \    },\r
+
+    \    \"tieuDe\": \"[DEMO] Yeu cau sua chua 26\",\r
+
+    \    \"moTa\": \"[DEMO] Su co gia lap de thu trang thai xu ly.\",\r
+
+    \    \"loaiSuCo\": \"KHAC\",\r
+
+    \    \"mucDoUuTien\": \"CAO\",\r
+
+    \    \"hinhAnh\": [\r
+
+    \      {\r
+
+    \        \"url\": \"https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80\",\r
+
+    \        \"tenTep\": \"anh-su-co-demo.jpg\",\r
+
+    \        \"loaiTep\": \"image/jpeg\"\r
+
+    \      }\r
+
+    \    ],\r
+
+    \    \"trangThai\": \"DANG_XU_LY\",\r
+
+    \    \"nguoiPhuTrachId\": {\r
+
+    \      \"$oid\": \"670000000000000000000002\"\r
+
+    \    },\r
+
+    \    \"chiPhiDuKien\": {\r
+
+    \      \"$numberInt\": \"450000\"\r
+
+    \    },\r
+
+    \    \"chiPhiThucTe\": {\r
+
+    \      \"$numberInt\": \"0\"\r
+
+    \    },\r
+
+    \    \"lichSuXuLy\": [],\r
+
+    \    \"ngayHoanTat\": null,\r
+
+    \    \"createdAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1795478400000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"updatedAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1795161600000\"\r
+
+    \      }\r
+
+    \    }\r
+
+    \  },\r
+
+    \  {\r
+
+    \    \"_id\": {\r
+
+    \      \"$oid\": \"6f0000000000000000000027\"\r
+
+    \    },\r
+
+    \    \"chuTroId\": {\r
+
+    \      \"$oid\": \"670000000000000000000001\"\r
+
+    \    },\r
+
+    \    \"nguoiTaoId\": {\r
+
+    \      \"$oid\": \"670000000000000000000032\"\r
+
+    \    },\r
+
+    \    \"nguoiThueId\": {\r
+
+    \      \"$oid\": \"6a0000000000000000000029\"\r
+
+    \    },\r
+
+    \    \"dayTroId\": {\r
+
+    \      \"$oid\": \"680000000000000000000027\"\r
+
+    \    },\r
+
+    \    \"phongTroId\": {\r
+
+    \      \"$oid\": \"690000000000000000000032\"\r
+
+    \    },\r
+
+    \    \"tieuDe\": \"[DEMO] Yeu cau sua chua 27\",\r
+
+    \    \"moTa\": \"[DEMO] Su co gia lap de thu trang thai xu ly.\",\r
+
+    \    \"loaiSuCo\": \"NUOC\",\r
+
+    \    \"mucDoUuTien\": \"THAP\",\r
+
+    \    \"hinhAnh\": [\r
+
+    \      {\r
+
+    \        \"url\": \"https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80\",\r
+
+    \        \"tenTep\": \"anh-su-co-demo.jpg\",\r
+
+    \        \"loaiTep\": \"image/jpeg\"\r
+
+    \      }\r
+
+    \    ],\r
+
+    \    \"trangThai\": \"DA_HOAN_TAT\",\r
+
+    \    \"nguoiPhuTrachId\": {\r
+
+    \      \"$oid\": \"670000000000000000000001\"\r
+
+    \    },\r
+
+    \    \"chiPhiDuKien\": {\r
+
+    \      \"$numberInt\": \"100000\"\r
+
+    \    },\r
+
+    \    \"chiPhiThucTe\": {\r
+
+    \      \"$numberInt\": \"100000\"\r
+
+    \    },\r
+
+    \    \"lichSuXuLy\": [],\r
+
+    \    \"ngayHoanTat\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1792886400000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"createdAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1792886400000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"updatedAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1795161600000\"\r
+
+    \      }\r
+
+    \    }\r
+
+    \  },\r
+
+    \  {\r
+
+    \    \"_id\": {\r
+
+    \      \"$oid\": \"6f0000000000000000000028\"\r
+
+    \    },\r
+
+    \    \"chuTroId\": {\r
+
+    \      \"$oid\": \"670000000000000000000002\"\r
+
+    \    },\r
+
+    \    \"nguoiTaoId\": {\r
+
+    \      \"$oid\": \"670000000000000000000033\"\r
+
+    \    },\r
+
+    \    \"nguoiThueId\": {\r
+
+    \      \"$oid\": \"6a0000000000000000000030\"\r
+
+    \    },\r
+
+    \    \"dayTroId\": {\r
+
+    \      \"$oid\": \"680000000000000000000028\"\r
+
+    \    },\r
+
+    \    \"phongTroId\": {\r
+
+    \      \"$oid\": \"690000000000000000000033\"\r
+
+    \    },\r
+
+    \    \"tieuDe\": \"[DEMO] Yeu cau sua chua 28\",\r
+
+    \    \"moTa\": \"[DEMO] Su co gia lap de thu trang thai xu ly.\",\r
+
+    \    \"loaiSuCo\": \"DIEN\",\r
+
+    \    \"mucDoUuTien\": \"BINH_THUONG\",\r
+
+    \    \"hinhAnh\": [\r
+
+    \      {\r
+
+    \        \"url\": \"https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80\",\r
+
+    \        \"tenTep\": \"anh-su-co-demo.jpg\",\r
+
+    \        \"loaiTep\": \"image/jpeg\"\r
+
+    \      }\r
+
+    \    ],\r
+
+    \    \"trangThai\": \"DANG_XU_LY\",\r
+
+    \    \"nguoiPhuTrachId\": {\r
+
+    \      \"$oid\": \"670000000000000000000002\"\r
+
+    \    },\r
+
+    \    \"chiPhiDuKien\": {\r
+
+    \      \"$numberInt\": \"150000\"\r
+
+    \    },\r
+
+    \    \"chiPhiThucTe\": {\r
+
+    \      \"$numberInt\": \"0\"\r
+
+    \    },\r
+
+    \    \"lichSuXuLy\": [],\r
+
+    \    \"ngayHoanTat\": null,\r
+
+    \    \"createdAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1795651200000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"updatedAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1795161600000\"\r
+
+    \      }\r
+
+    \    }\r
+
+    \  },\r
+
+    \  {\r
+
+    \    \"_id\": {\r
+
+    \      \"$oid\": \"6f0000000000000000000029\"\r
+
+    \    },\r
+
+    \    \"chuTroId\": {\r
+
+    \      \"$oid\": \"670000000000000000000001\"\r
+
+    \    },\r
+
+    \    \"nguoiTaoId\": {\r
+
+    \      \"$oid\": \"670000000000000000000034\"\r
+
+    \    },\r
+
+    \    \"nguoiThueId\": {\r
+
+    \      \"$oid\": \"6a0000000000000000000031\"\r
+
+    \    },\r
+
+    \    \"dayTroId\": {\r
+
+    \      \"$oid\": \"680000000000000000000029\"\r
+
+    \    },\r
+
+    \    \"phongTroId\": {\r
+
+    \      \"$oid\": \"690000000000000000000034\"\r
+
+    \    },\r
+
+    \    \"tieuDe\": \"[DEMO] Yeu cau sua chua 29\",\r
+
+    \    \"moTa\": \"[DEMO] Su co gia lap de thu trang thai xu ly.\",\r
+
+    \    \"loaiSuCo\": \"NOI_THAT\",\r
+
+    \    \"mucDoUuTien\": \"CAO\",\r
+
+    \    \"hinhAnh\": [\r
+
+    \      {\r
+
+    \        \"url\": \"https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80\",\r
+
+    \        \"tenTep\": \"anh-su-co-demo.jpg\",\r
+
+    \        \"loaiTep\": \"image/jpeg\"\r
+
+    \      }\r
+
+    \    ],\r
+
+    \    \"trangThai\": \"DANG_XU_LY\",\r
+
+    \    \"nguoiPhuTrachId\": {\r
+
+    \      \"$oid\": \"670000000000000000000001\"\r
+
+    \    },\r
+
+    \    \"chiPhiDuKien\": {\r
+
+    \      \"$numberInt\": \"200000\"\r
+
+    \    },\r
+
+    \    \"chiPhiThucTe\": {\r
+
+    \      \"$numberInt\": \"0\"\r
+
+    \    },\r
+
+    \    \"lichSuXuLy\": [],\r
+
+    \    \"ngayHoanTat\": null,\r
+
+    \    \"createdAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1793059200000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"updatedAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1795161600000\"\r
+
+    \      }\r
+
+    \    }\r
+
+    \  },\r
+
+    \  {\r
+
+    \    \"_id\": {\r
+
+    \      \"$oid\": \"6f0000000000000000000030\"\r
+
+    \    },\r
+
+    \    \"chuTroId\": {\r
+
+    \      \"$oid\": \"670000000000000000000002\"\r
+
+    \    },\r
+
+    \    \"nguoiTaoId\": {\r
+
+    \      \"$oid\": \"670000000000000000000035\"\r
+
+    \    },\r
+
+    \    \"nguoiThueId\": {\r
+
+    \      \"$oid\": \"6a0000000000000000000032\"\r
+
+    \    },\r
+
+    \    \"dayTroId\": {\r
+
+    \      \"$oid\": \"680000000000000000000030\"\r
+
+    \    },\r
+
+    \    \"phongTroId\": {\r
+
+    \      \"$oid\": \"690000000000000000000035\"\r
+
+    \    },\r
+
+    \    \"tieuDe\": \"[DEMO] Yeu cau sua chua 30\",\r
+
+    \    \"moTa\": \"[DEMO] Su co gia lap de thu trang thai xu ly.\",\r
+
+    \    \"loaiSuCo\": \"KHAC\",\r
+
+    \    \"mucDoUuTien\": \"THAP\",\r
+
+    \    \"hinhAnh\": [\r
+
+    \      {\r
+
+    \        \"url\": \"https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80\",\r
+
+    \        \"tenTep\": \"anh-su-co-demo.jpg\",\r
+
+    \        \"loaiTep\": \"image/jpeg\"\r
+
+    \      }\r
+
+    \    ],\r
+
+    \    \"trangThai\": \"DA_HOAN_TAT\",\r
+
+    \    \"nguoiPhuTrachId\": {\r
+
+    \      \"$oid\": \"670000000000000000000002\"\r
+
+    \    },\r
+
+    \    \"chiPhiDuKien\": {\r
+
+    \      \"$numberInt\": \"250000\"\r
+
+    \    },\r
+
+    \    \"chiPhiThucTe\": {\r
+
+    \      \"$numberInt\": \"250000\"\r
+
+    \    },\r
+
+    \    \"lichSuXuLy\": [],\r
+
+    \    \"ngayHoanTat\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1793491200000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"createdAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1793491200000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"updatedAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1795161600000\"\r
+
+    \      }\r
+
+    \    }\r
+
+    \  },\r
+
+    \  {\r
+
+    \    \"_id\": {\r
+
+    \      \"$oid\": \"6f0000000000000000000031\"\r
+
+    \    },\r
+
+    \    \"chuTroId\": {\r
+
+    \      \"$oid\": \"670000000000000000000001\"\r
+
+    \    },\r
+
+    \    \"nguoiTaoId\": {\r
+
+    \      \"$oid\": \"670000000000000000000036\"\r
+
+    \    },\r
+
+    \    \"nguoiThueId\": {\r
+
+    \      \"$oid\": \"6a0000000000000000000033\"\r
+
+    \    },\r
+
+    \    \"dayTroId\": {\r
+
+    \      \"$oid\": \"680000000000000000000031\"\r
+
+    \    },\r
+
+    \    \"phongTroId\": {\r
+
+    \      \"$oid\": \"690000000000000000000036\"\r
+
+    \    },\r
+
+    \    \"tieuDe\": \"[DEMO] Yeu cau sua chua 31\",\r
+
+    \    \"moTa\": \"[DEMO] Su co gia lap de thu trang thai xu ly.\",\r
+
+    \    \"loaiSuCo\": \"NUOC\",\r
+
+    \    \"mucDoUuTien\": \"BINH_THUONG\",\r
+
+    \    \"hinhAnh\": [\r
+
+    \      {\r
+
+    \        \"url\": \"https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80\",\r
+
+    \        \"tenTep\": \"anh-su-co-demo.jpg\",\r
+
+    \        \"loaiTep\": \"image/jpeg\"\r
+
+    \      }\r
+
+    \    ],\r
+
+    \    \"trangThai\": \"DANG_XU_LY\",\r
+
+    \    \"nguoiPhuTrachId\": {\r
+
+    \      \"$oid\": \"670000000000000000000001\"\r
+
+    \    },\r
+
+    \    \"chiPhiDuKien\": {\r
+
+    \      \"$numberInt\": \"300000\"\r
+
+    \    },\r
+
+    \    \"chiPhiThucTe\": {\r
+
+    \      \"$numberInt\": \"0\"\r
+
+    \    },\r
+
+    \    \"lichSuXuLy\": [],\r
+
+    \    \"ngayHoanTat\": null,\r
+
+    \    \"createdAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1790899200000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"updatedAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1795161600000\"\r
+
+    \      }\r
+
+    \    }\r
+
+    \  },\r
+
+    \  {\r
+
+    \    \"_id\": {\r
+
+    \      \"$oid\": \"6f0000000000000000000032\"\r
+
+    \    },\r
+
+    \    \"chuTroId\": {\r
+
+    \      \"$oid\": \"670000000000000000000002\"\r
+
+    \    },\r
+
+    \    \"nguoiTaoId\": {\r
+
+    \      \"$oid\": \"670000000000000000000037\"\r
+
+    \    },\r
+
+    \    \"nguoiThueId\": {\r
+
+    \      \"$oid\": \"6a0000000000000000000034\"\r
+
+    \    },\r
+
+    \    \"dayTroId\": {\r
+
+    \      \"$oid\": \"680000000000000000000032\"\r
+
+    \    },\r
+
+    \    \"phongTroId\": {\r
+
+    \      \"$oid\": \"690000000000000000000037\"\r
+
+    \    },\r
+
+    \    \"tieuDe\": \"[DEMO] Yeu cau sua chua 32\",\r
+
+    \    \"moTa\": \"[DEMO] Su co gia lap de thu trang thai xu ly.\",\r
+
+    \    \"loaiSuCo\": \"DIEN\",\r
+
+    \    \"mucDoUuTien\": \"CAO\",\r
+
+    \    \"hinhAnh\": [\r
+
+    \      {\r
+
+    \        \"url\": \"https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80\",\r
+
+    \        \"tenTep\": \"anh-su-co-demo.jpg\",\r
+
+    \        \"loaiTep\": \"image/jpeg\"\r
+
+    \      }\r
+
+    \    ],\r
+
+    \    \"trangThai\": \"DANG_XU_LY\",\r
+
+    \    \"nguoiPhuTrachId\": {\r
+
+    \      \"$oid\": \"670000000000000000000002\"\r
+
+    \    },\r
+
+    \    \"chiPhiDuKien\": {\r
+
+    \      \"$numberInt\": \"350000\"\r
+
+    \    },\r
+
+    \    \"chiPhiThucTe\": {\r
+
+    \      \"$numberInt\": \"0\"\r
+
+    \    },\r
+
+    \    \"lichSuXuLy\": [],\r
+
+    \    \"ngayHoanTat\": null,\r
+
+    \    \"createdAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1793664000000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"updatedAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1795161600000\"\r
+
+    \      }\r
+
+    \    }\r
+
+    \  },\r
+
+    \  {\r
+
+    \    \"_id\": {\r
+
+    \      \"$oid\": \"6f0000000000000000000033\"\r
+
+    \    },\r
+
+    \    \"chuTroId\": {\r
+
+    \      \"$oid\": \"670000000000000000000001\"\r
+
+    \    },\r
+
+    \    \"nguoiTaoId\": {\r
+
+    \      \"$oid\": \"670000000000000000000038\"\r
+
+    \    },\r
+
+    \    \"nguoiThueId\": null,\r
+
+    \    \"dayTroId\": {\r
+
+    \      \"$oid\": \"680000000000000000000033\"\r
+
+    \    },\r
+
+    \    \"phongTroId\": {\r
+
+    \      \"$oid\": \"690000000000000000000038\"\r
+
+    \    },\r
+
+    \    \"tieuDe\": \"[DEMO] Yeu cau sua chua 33\",\r
+
+    \    \"moTa\": \"[DEMO] Su co gia lap de thu trang thai xu ly.\",\r
+
+    \    \"loaiSuCo\": \"NOI_THAT\",\r
+
+    \    \"mucDoUuTien\": \"THAP\",\r
+
+    \    \"hinhAnh\": [\r
+
+    \      {\r
+
+    \        \"url\": \"https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80\",\r
+
+    \        \"tenTep\": \"anh-su-co-demo.jpg\",\r
+
+    \        \"loaiTep\": \"image/jpeg\"\r
+
+    \      }\r
+
+    \    ],\r
+
+    \    \"trangThai\": \"DA_HOAN_TAT\",\r
+
+    \    \"nguoiPhuTrachId\": {\r
+
+    \      \"$oid\": \"670000000000000000000001\"\r
+
+    \    },\r
+
+    \    \"chiPhiDuKien\": {\r
+
+    \      \"$numberInt\": \"400000\"\r
+
+    \    },\r
+
+    \    \"chiPhiThucTe\": {\r
+
+    \      \"$numberInt\": \"400000\"\r
+
+    \    },\r
+
+    \    \"lichSuXuLy\": [],\r
+
+    \    \"ngayHoanTat\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1791072000000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"createdAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1791072000000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"updatedAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1795161600000\"\r
+
+    \      }\r
+
+    \    }\r
+
+    \  },\r
+
+    \  {\r
+
+    \    \"_id\": {\r
+
+    \      \"$oid\": \"6f0000000000000000000034\"\r
+
+    \    },\r
+
+    \    \"chuTroId\": {\r
+
+    \      \"$oid\": \"670000000000000000000002\"\r
+
+    \    },\r
+
+    \    \"nguoiTaoId\": {\r
+
+    \      \"$oid\": \"670000000000000000000039\"\r
+
+    \    },\r
+
+    \    \"nguoiThueId\": null,\r
+
+    \    \"dayTroId\": {\r
+
+    \      \"$oid\": \"680000000000000000000034\"\r
+
+    \    },\r
+
+    \    \"phongTroId\": {\r
+
+    \      \"$oid\": \"690000000000000000000039\"\r
+
+    \    },\r
+
+    \    \"tieuDe\": \"[DEMO] Yeu cau sua chua 34\",\r
+
+    \    \"moTa\": \"[DEMO] Su co gia lap de thu trang thai xu ly.\",\r
+
+    \    \"loaiSuCo\": \"KHAC\",\r
+
+    \    \"mucDoUuTien\": \"BINH_THUONG\",\r
+
+    \    \"hinhAnh\": [\r
+
+    \      {\r
+
+    \        \"url\": \"https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80\",\r
+
+    \        \"tenTep\": \"anh-su-co-demo.jpg\",\r
+
+    \        \"loaiTep\": \"image/jpeg\"\r
+
+    \      }\r
+
+    \    ],\r
+
+    \    \"trangThai\": \"DANG_XU_LY\",\r
+
+    \    \"nguoiPhuTrachId\": {\r
+
+    \      \"$oid\": \"670000000000000000000002\"\r
+
+    \    },\r
+
+    \    \"chiPhiDuKien\": {\r
+
+    \      \"$numberInt\": \"450000\"\r
+
+    \    },\r
+
+    \    \"chiPhiThucTe\": {\r
+
+    \      \"$numberInt\": \"0\"\r
+
+    \    },\r
+
+    \    \"lichSuXuLy\": [],\r
+
+    \    \"ngayHoanTat\": null,\r
+
+    \    \"createdAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1793836800000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"updatedAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1795161600000\"\r
+
+    \      }\r
+
+    \    }\r
+
+    \  },\r
+
+    \  {\r
+
+    \    \"_id\": {\r
+
+    \      \"$oid\": \"6f0000000000000000000035\"\r
+
+    \    },\r
+
+    \    \"chuTroId\": {\r
+
+    \      \"$oid\": \"670000000000000000000001\"\r
+
+    \    },\r
+
+    \    \"nguoiTaoId\": {\r
+
+    \      \"$oid\": \"670000000000000000000040\"\r
+
+    \    },\r
+
+    \    \"nguoiThueId\": null,\r
+
+    \    \"dayTroId\": {\r
+
+    \      \"$oid\": \"680000000000000000000035\"\r
+
+    \    },\r
+
+    \    \"phongTroId\": {\r
+
+    \      \"$oid\": \"690000000000000000000040\"\r
+
+    \    },\r
+
+    \    \"tieuDe\": \"[DEMO] Yeu cau sua chua 35\",\r
+
+    \    \"moTa\": \"[DEMO] Su co gia lap de thu trang thai xu ly.\",\r
+
+    \    \"loaiSuCo\": \"NUOC\",\r
+
+    \    \"mucDoUuTien\": \"CAO\",\r
+
+    \    \"hinhAnh\": [\r
+
+    \      {\r
+
+    \        \"url\": \"https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80\",\r
+
+    \        \"tenTep\": \"anh-su-co-demo.jpg\",\r
+
+    \        \"loaiTep\": \"image/jpeg\"\r
+
+    \      }\r
+
+    \    ],\r
+
+    \    \"trangThai\": \"DANG_XU_LY\",\r
+
+    \    \"nguoiPhuTrachId\": {\r
+
+    \      \"$oid\": \"670000000000000000000001\"\r
+
+    \    },\r
+
+    \    \"chiPhiDuKien\": {\r
+
+    \      \"$numberInt\": \"100000\"\r
+
+    \    },\r
+
+    \    \"chiPhiThucTe\": {\r
+
+    \      \"$numberInt\": \"0\"\r
+
+    \    },\r
+
+    \    \"lichSuXuLy\": [],\r
+
+    \    \"ngayHoanTat\": null,\r
+
+    \    \"createdAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1791244800000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"updatedAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1795161600000\"\r
+
+    \      }\r
+
+    \    }\r
+
+    \  },\r
+
+    \  {\r
+
+    \    \"_id\": {\r
+
+    \      \"$oid\": \"6f0000000000000000000036\"\r
+
+    \    },\r
+
+    \    \"chuTroId\": {\r
+
+    \      \"$oid\": \"670000000000000000000002\"\r
+
+    \    },\r
+
+    \    \"nguoiTaoId\": {\r
+
+    \      \"$oid\": \"670000000000000000000041\"\r
+
+    \    },\r
+
+    \    \"nguoiThueId\": null,\r
+
+    \    \"dayTroId\": {\r
+
+    \      \"$oid\": \"680000000000000000000036\"\r
+
+    \    },\r
+
+    \    \"phongTroId\": {\r
+
+    \      \"$oid\": \"690000000000000000000041\"\r
+
+    \    },\r
+
+    \    \"tieuDe\": \"[DEMO] Yeu cau sua chua 36\",\r
+
+    \    \"moTa\": \"[DEMO] Su co gia lap de thu trang thai xu ly.\",\r
+
+    \    \"loaiSuCo\": \"DIEN\",\r
+
+    \    \"mucDoUuTien\": \"THAP\",\r
+
+    \    \"hinhAnh\": [\r
+
+    \      {\r
+
+    \        \"url\": \"https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80\",\r
+
+    \        \"tenTep\": \"anh-su-co-demo.jpg\",\r
+
+    \        \"loaiTep\": \"image/jpeg\"\r
+
+    \      }\r
+
+    \    ],\r
+
+    \    \"trangThai\": \"DA_HOAN_TAT\",\r
+
+    \    \"nguoiPhuTrachId\": {\r
+
+    \      \"$oid\": \"670000000000000000000002\"\r
+
+    \    },\r
+
+    \    \"chiPhiDuKien\": {\r
+
+    \      \"$numberInt\": \"150000\"\r
+
+    \    },\r
+
+    \    \"chiPhiThucTe\": {\r
+
+    \      \"$numberInt\": \"150000\"\r
+
+    \    },\r
+
+    \    \"lichSuXuLy\": [],\r
+
+    \    \"ngayHoanTat\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1794009600000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"createdAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1794009600000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"updatedAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1795161600000\"\r
+
+    \      }\r
+
+    \    }\r
+
+    \  },\r
+
+    \  {\r
+
+    \    \"_id\": {\r
+
+    \      \"$oid\": \"6f0000000000000000000037\"\r
+
+    \    },\r
+
+    \    \"chuTroId\": {\r
+
+    \      \"$oid\": \"670000000000000000000001\"\r
+
+    \    },\r
+
+    \    \"nguoiTaoId\": {\r
+
+    \      \"$oid\": \"670000000000000000000042\"\r
+
+    \    },\r
+
+    \    \"nguoiThueId\": null,\r
+
+    \    \"dayTroId\": {\r
+
+    \      \"$oid\": \"680000000000000000000037\"\r
+
+    \    },\r
+
+    \    \"phongTroId\": {\r
+
+    \      \"$oid\": \"690000000000000000000042\"\r
+
+    \    },\r
+
+    \    \"tieuDe\": \"[DEMO] Yeu cau sua chua 37\",\r
+
+    \    \"moTa\": \"[DEMO] Su co gia lap de thu trang thai xu ly.\",\r
+
+    \    \"loaiSuCo\": \"NOI_THAT\",\r
+
+    \    \"mucDoUuTien\": \"BINH_THUONG\",\r
+
+    \    \"hinhAnh\": [\r
+
+    \      {\r
+
+    \        \"url\": \"https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80\",\r
+
+    \        \"tenTep\": \"anh-su-co-demo.jpg\",\r
+
+    \        \"loaiTep\": \"image/jpeg\"\r
+
+    \      }\r
+
+    \    ],\r
+
+    \    \"trangThai\": \"DANG_XU_LY\",\r
+
+    \    \"nguoiPhuTrachId\": {\r
+
+    \      \"$oid\": \"670000000000000000000001\"\r
+
+    \    },\r
+
+    \    \"chiPhiDuKien\": {\r
+
+    \      \"$numberInt\": \"200000\"\r
+
+    \    },\r
+
+    \    \"chiPhiThucTe\": {\r
+
+    \      \"$numberInt\": \"0\"\r
+
+    \    },\r
+
+    \    \"lichSuXuLy\": [],\r
+
+    \    \"ngayHoanTat\": null,\r
+
+    \    \"createdAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1791417600000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"updatedAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1795161600000\"\r
+
+    \      }\r
+
+    \    }\r
+
+    \  },\r
+
+    \  {\r
+
+    \    \"_id\": {\r
+
+    \      \"$oid\": \"6f0000000000000000000038\"\r
+
+    \    },\r
+
+    \    \"chuTroId\": {\r
+
+    \      \"$oid\": \"670000000000000000000002\"\r
+
+    \    },\r
+
+    \    \"nguoiTaoId\": {\r
+
+    \      \"$oid\": \"670000000000000000000043\"\r
+
+    \    },\r
+
+    \    \"nguoiThueId\": null,\r
+
+    \    \"dayTroId\": {\r
+
+    \      \"$oid\": \"680000000000000000000038\"\r
+
+    \    },\r
+
+    \    \"phongTroId\": {\r
+
+    \      \"$oid\": \"690000000000000000000043\"\r
+
+    \    },\r
+
+    \    \"tieuDe\": \"[DEMO] Yeu cau sua chua 38\",\r
+
+    \    \"moTa\": \"[DEMO] Su co gia lap de thu trang thai xu ly.\",\r
+
+    \    \"loaiSuCo\": \"KHAC\",\r
+
+    \    \"mucDoUuTien\": \"CAO\",\r
+
+    \    \"hinhAnh\": [\r
+
+    \      {\r
+
+    \        \"url\": \"https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80\",\r
+
+    \        \"tenTep\": \"anh-su-co-demo.jpg\",\r
+
+    \        \"loaiTep\": \"image/jpeg\"\r
+
+    \      }\r
+
+    \    ],\r
+
+    \    \"trangThai\": \"DANG_XU_LY\",\r
+
+    \    \"nguoiPhuTrachId\": {\r
+
+    \      \"$oid\": \"670000000000000000000002\"\r
+
+    \    },\r
+
+    \    \"chiPhiDuKien\": {\r
+
+    \      \"$numberInt\": \"250000\"\r
+
+    \    },\r
+
+    \    \"chiPhiThucTe\": {\r
+
+    \      \"$numberInt\": \"0\"\r
+
+    \    },\r
+
+    \    \"lichSuXuLy\": [],\r
+
+    \    \"ngayHoanTat\": null,\r
+
+    \    \"createdAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1794182400000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"updatedAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1795161600000\"\r
+
+    \      }\r
+
+    \    }\r
+
+    \  },\r
+
+    \  {\r
+
+    \    \"_id\": {\r
+
+    \      \"$oid\": \"6f0000000000000000000039\"\r
+
+    \    },\r
+
+    \    \"chuTroId\": {\r
+
+    \      \"$oid\": \"670000000000000000000001\"\r
+
+    \    },\r
+
+    \    \"nguoiTaoId\": {\r
+
+    \      \"$oid\": \"670000000000000000000044\"\r
+
+    \    },\r
+
+    \    \"nguoiThueId\": null,\r
+
+    \    \"dayTroId\": {\r
+
+    \      \"$oid\": \"680000000000000000000039\"\r
+
+    \    },\r
+
+    \    \"phongTroId\": {\r
+
+    \      \"$oid\": \"690000000000000000000044\"\r
+
+    \    },\r
+
+    \    \"tieuDe\": \"[DEMO] Yeu cau sua chua 39\",\r
+
+    \    \"moTa\": \"[DEMO] Su co gia lap de thu trang thai xu ly.\",\r
+
+    \    \"loaiSuCo\": \"NUOC\",\r
+
+    \    \"mucDoUuTien\": \"THAP\",\r
+
+    \    \"hinhAnh\": [\r
+
+    \      {\r
+
+    \        \"url\": \"https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80\",\r
+
+    \        \"tenTep\": \"anh-su-co-demo.jpg\",\r
+
+    \        \"loaiTep\": \"image/jpeg\"\r
+
+    \      }\r
+
+    \    ],\r
+
+    \    \"trangThai\": \"DA_HOAN_TAT\",\r
+
+    \    \"nguoiPhuTrachId\": {\r
+
+    \      \"$oid\": \"670000000000000000000001\"\r
+
+    \    },\r
+
+    \    \"chiPhiDuKien\": {\r
+
+    \      \"$numberInt\": \"300000\"\r
+
+    \    },\r
+
+    \    \"chiPhiThucTe\": {\r
+
+    \      \"$numberInt\": \"300000\"\r
+
+    \    },\r
+
+    \    \"lichSuXuLy\": [],\r
+
+    \    \"ngayHoanTat\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1791590400000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"createdAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1791590400000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"updatedAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1795161600000\"\r
+
+    \      }\r
+
+    \    }\r
+
+    \  },\r
+
+    \  {\r
+
+    \    \"_id\": {\r
+
+    \      \"$oid\": \"6f0000000000000000000040\"\r
+
+    \    },\r
+
+    \    \"chuTroId\": {\r
+
+    \      \"$oid\": \"670000000000000000000002\"\r
+
+    \    },\r
+
+    \    \"nguoiTaoId\": {\r
+
+    \      \"$oid\": \"670000000000000000000045\"\r
+
+    \    },\r
+
+    \    \"nguoiThueId\": null,\r
+
+    \    \"dayTroId\": {\r
+
+    \      \"$oid\": \"680000000000000000000040\"\r
+
+    \    },\r
+
+    \    \"phongTroId\": {\r
+
+    \      \"$oid\": \"690000000000000000000045\"\r
+
+    \    },\r
+
+    \    \"tieuDe\": \"[DEMO] Yeu cau sua chua 40\",\r
+
+    \    \"moTa\": \"[DEMO] Su co gia lap de thu trang thai xu ly.\",\r
+
+    \    \"loaiSuCo\": \"DIEN\",\r
+
+    \    \"mucDoUuTien\": \"BINH_THUONG\",\r
+
+    \    \"hinhAnh\": [\r
+
+    \      {\r
+
+    \        \"url\": \"https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80\",\r
+
+    \        \"tenTep\": \"anh-su-co-demo.jpg\",\r
+
+    \        \"loaiTep\": \"image/jpeg\"\r
+
+    \      }\r
+
+    \    ],\r
+
+    \    \"trangThai\": \"DANG_XU_LY\",\r
+
+    \    \"nguoiPhuTrachId\": {\r
+
+    \      \"$oid\": \"670000000000000000000002\"\r
+
+    \    },\r
+
+    \    \"chiPhiDuKien\": {\r
+
+    \      \"$numberInt\": \"350000\"\r
+
+    \    },\r
+
+    \    \"chiPhiThucTe\": {\r
+
+    \      \"$numberInt\": \"0\"\r
+
+    \    },\r
+
+    \    \"lichSuXuLy\": [],\r
+
+    \    \"ngayHoanTat\": null,\r
+
+    \    \"createdAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1794355200000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"updatedAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1795161600000\"\r
+
+    \      }\r
+
+    \    }\r
+
+    \  },\r
+
+    \  {\r
+
+    \    \"_id\": {\r
+
+    \      \"$oid\": \"6f0000000000000000000041\"\r
+
+    \    },\r
+
+    \    \"chuTroId\": {\r
+
+    \      \"$oid\": \"670000000000000000000001\"\r
+
+    \    },\r
+
+    \    \"nguoiTaoId\": {\r
+
+    \      \"$oid\": \"670000000000000000000046\"\r
+
+    \    },\r
+
+    \    \"nguoiThueId\": null,\r
+
+    \    \"dayTroId\": {\r
+
+    \      \"$oid\": \"680000000000000000000041\"\r
+
+    \    },\r
+
+    \    \"phongTroId\": {\r
+
+    \      \"$oid\": \"690000000000000000000046\"\r
+
+    \    },\r
+
+    \    \"tieuDe\": \"[DEMO] Yeu cau sua chua 41\",\r
+
+    \    \"moTa\": \"[DEMO] Su co gia lap de thu trang thai xu ly.\",\r
+
+    \    \"loaiSuCo\": \"NOI_THAT\",\r
+
+    \    \"mucDoUuTien\": \"CAO\",\r
+
+    \    \"hinhAnh\": [\r
+
+    \      {\r
+
+    \        \"url\": \"https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80\",\r
+
+    \        \"tenTep\": \"anh-su-co-demo.jpg\",\r
+
+    \        \"loaiTep\": \"image/jpeg\"\r
+
+    \      }\r
+
+    \    ],\r
+
+    \    \"trangThai\": \"DANG_XU_LY\",\r
+
+    \    \"nguoiPhuTrachId\": {\r
+
+    \      \"$oid\": \"670000000000000000000001\"\r
+
+    \    },\r
+
+    \    \"chiPhiDuKien\": {\r
+
+    \      \"$numberInt\": \"400000\"\r
+
+    \    },\r
+
+    \    \"chiPhiThucTe\": {\r
+
+    \      \"$numberInt\": \"0\"\r
+
+    \    },\r
+
+    \    \"lichSuXuLy\": [],\r
+
+    \    \"ngayHoanTat\": null,\r
+
+    \    \"createdAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1791763200000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"updatedAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1795161600000\"\r
+
+    \      }\r
+
+    \    }\r
+
+    \  },\r
+
+    \  {\r
+
+    \    \"_id\": {\r
+
+    \      \"$oid\": \"6f0000000000000000000042\"\r
+
+    \    },\r
+
+    \    \"chuTroId\": {\r
+
+    \      \"$oid\": \"670000000000000000000002\"\r
+
+    \    },\r
+
+    \    \"nguoiTaoId\": {\r
+
+    \      \"$oid\": \"670000000000000000000047\"\r
+
+    \    },\r
+
+    \    \"nguoiThueId\": null,\r
+
+    \    \"dayTroId\": {\r
+
+    \      \"$oid\": \"680000000000000000000042\"\r
+
+    \    },\r
+
+    \    \"phongTroId\": {\r
+
+    \      \"$oid\": \"690000000000000000000047\"\r
+
+    \    },\r
+
+    \    \"tieuDe\": \"[DEMO] Yeu cau sua chua 42\",\r
+
+    \    \"moTa\": \"[DEMO] Su co gia lap de thu trang thai xu ly.\",\r
+
+    \    \"loaiSuCo\": \"KHAC\",\r
+
+    \    \"mucDoUuTien\": \"THAP\",\r
+
+    \    \"hinhAnh\": [\r
+
+    \      {\r
+
+    \        \"url\": \"https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80\",\r
+
+    \        \"tenTep\": \"anh-su-co-demo.jpg\",\r
+
+    \        \"loaiTep\": \"image/jpeg\"\r
+
+    \      }\r
+
+    \    ],\r
+
+    \    \"trangThai\": \"DA_HOAN_TAT\",\r
+
+    \    \"nguoiPhuTrachId\": {\r
+
+    \      \"$oid\": \"670000000000000000000002\"\r
+
+    \    },\r
+
+    \    \"chiPhiDuKien\": {\r
+
+    \      \"$numberInt\": \"450000\"\r
+
+    \    },\r
+
+    \    \"chiPhiThucTe\": {\r
+
+    \      \"$numberInt\": \"450000\"\r
+
+    \    },\r
+
+    \    \"lichSuXuLy\": [],\r
+
+    \    \"ngayHoanTat\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1794528000000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"createdAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1794528000000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"updatedAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1795161600000\"\r
+
+    \      }\r
+
+    \    }\r
+
+    \  },\r
+
+    \  {\r
+
+    \    \"_id\": {\r
+
+    \      \"$oid\": \"6f0000000000000000000043\"\r
+
+    \    },\r
+
+    \    \"chuTroId\": {\r
+
+    \      \"$oid\": \"670000000000000000000001\"\r
+
+    \    },\r
+
+    \    \"nguoiTaoId\": {\r
+
+    \      \"$oid\": \"670000000000000000000048\"\r
+
+    \    },\r
+
+    \    \"nguoiThueId\": null,\r
+
+    \    \"dayTroId\": {\r
+
+    \      \"$oid\": \"680000000000000000000043\"\r
+
+    \    },\r
+
+    \    \"phongTroId\": {\r
+
+    \      \"$oid\": \"690000000000000000000048\"\r
+
+    \    },\r
+
+    \    \"tieuDe\": \"[DEMO] Yeu cau sua chua 43\",\r
+
+    \    \"moTa\": \"[DEMO] Su co gia lap de thu trang thai xu ly.\",\r
+
+    \    \"loaiSuCo\": \"NUOC\",\r
+
+    \    \"mucDoUuTien\": \"BINH_THUONG\",\r
+
+    \    \"hinhAnh\": [\r
+
+    \      {\r
+
+    \        \"url\": \"https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80\",\r
+
+    \        \"tenTep\": \"anh-su-co-demo.jpg\",\r
+
+    \        \"loaiTep\": \"image/jpeg\"\r
+
+    \      }\r
+
+    \    ],\r
+
+    \    \"trangThai\": \"DANG_XU_LY\",\r
+
+    \    \"nguoiPhuTrachId\": {\r
+
+    \      \"$oid\": \"670000000000000000000001\"\r
+
+    \    },\r
+
+    \    \"chiPhiDuKien\": {\r
+
+    \      \"$numberInt\": \"100000\"\r
+
+    \    },\r
+
+    \    \"chiPhiThucTe\": {\r
+
+    \      \"$numberInt\": \"0\"\r
+
+    \    },\r
+
+    \    \"lichSuXuLy\": [],\r
+
+    \    \"ngayHoanTat\": null,\r
+
+    \    \"createdAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1791936000000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"updatedAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1795161600000\"\r
+
+    \      }\r
+
+    \    }\r
+
+    \  },\r
+
+    \  {\r
+
+    \    \"_id\": {\r
+
+    \      \"$oid\": \"6f0000000000000000000044\"\r
+
+    \    },\r
+
+    \    \"chuTroId\": {\r
+
+    \      \"$oid\": \"670000000000000000000002\"\r
+
+    \    },\r
+
+    \    \"nguoiTaoId\": {\r
+
+    \      \"$oid\": \"670000000000000000000049\"\r
+
+    \    },\r
+
+    \    \"nguoiThueId\": null,\r
+
+    \    \"dayTroId\": {\r
+
+    \      \"$oid\": \"680000000000000000000044\"\r
+
+    \    },\r
+
+    \    \"phongTroId\": {\r
+
+    \      \"$oid\": \"690000000000000000000049\"\r
+
+    \    },\r
+
+    \    \"tieuDe\": \"[DEMO] Yeu cau sua chua 44\",\r
+
+    \    \"moTa\": \"[DEMO] Su co gia lap de thu trang thai xu ly.\",\r
+
+    \    \"loaiSuCo\": \"DIEN\",\r
+
+    \    \"mucDoUuTien\": \"CAO\",\r
+
+    \    \"hinhAnh\": [\r
+
+    \      {\r
+
+    \        \"url\": \"https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80\",\r
+
+    \        \"tenTep\": \"anh-su-co-demo.jpg\",\r
+
+    \        \"loaiTep\": \"image/jpeg\"\r
+
+    \      }\r
+
+    \    ],\r
+
+    \    \"trangThai\": \"DANG_XU_LY\",\r
+
+    \    \"nguoiPhuTrachId\": {\r
+
+    \      \"$oid\": \"670000000000000000000002\"\r
+
+    \    },\r
+
+    \    \"chiPhiDuKien\": {\r
+
+    \      \"$numberInt\": \"150000\"\r
+
+    \    },\r
+
+    \    \"chiPhiThucTe\": {\r
+
+    \      \"$numberInt\": \"0\"\r
+
+    \    },\r
+
+    \    \"lichSuXuLy\": [],\r
+
+    \    \"ngayHoanTat\": null,\r
+
+    \    \"createdAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1794700800000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"updatedAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1795161600000\"\r
+
+    \      }\r
+
+    \    }\r
+
+    \  },\r
+
+    \  {\r
+
+    \    \"_id\": {\r
+
+    \      \"$oid\": \"6f0000000000000000000045\"\r
+
+    \    },\r
+
+    \    \"chuTroId\": {\r
+
+    \      \"$oid\": \"670000000000000000000001\"\r
+
+    \    },\r
+
+    \    \"nguoiTaoId\": {\r
+
+    \      \"$oid\": \"670000000000000000000050\"\r
+
+    \    },\r
+
+    \    \"nguoiThueId\": null,\r
+
+    \    \"dayTroId\": {\r
+
+    \      \"$oid\": \"680000000000000000000045\"\r
+
+    \    },\r
+
+    \    \"phongTroId\": {\r
+
+    \      \"$oid\": \"690000000000000000000050\"\r
+
+    \    },\r
+
+    \    \"tieuDe\": \"[DEMO] Yeu cau sua chua 45\",\r
+
+    \    \"moTa\": \"[DEMO] Su co gia lap de thu trang thai xu ly.\",\r
+
+    \    \"loaiSuCo\": \"NOI_THAT\",\r
+
+    \    \"mucDoUuTien\": \"THAP\",\r
+
+    \    \"hinhAnh\": [\r
+
+    \      {\r
+
+    \        \"url\": \"https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80\",\r
+
+    \        \"tenTep\": \"anh-su-co-demo.jpg\",\r
+
+    \        \"loaiTep\": \"image/jpeg\"\r
+
+    \      }\r
+
+    \    ],\r
+
+    \    \"trangThai\": \"DA_HOAN_TAT\",\r
+
+    \    \"nguoiPhuTrachId\": {\r
+
+    \      \"$oid\": \"670000000000000000000001\"\r
+
+    \    },\r
+
+    \    \"chiPhiDuKien\": {\r
+
+    \      \"$numberInt\": \"200000\"\r
+
+    \    },\r
+
+    \    \"chiPhiThucTe\": {\r
+
+    \      \"$numberInt\": \"200000\"\r
+
+    \    },\r
+
+    \    \"lichSuXuLy\": [],\r
+
+    \    \"ngayHoanTat\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1792108800000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"createdAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1792108800000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"updatedAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1795161600000\"\r
+
+    \      }\r
+
+    \    }\r
+
+    \  },\r
+
+    \  {\r
+
+    \    \"_id\": {\r
+
+    \      \"$oid\": \"6f0000000000000000000046\"\r
+
+    \    },\r
+
+    \    \"chuTroId\": {\r
+
+    \      \"$oid\": \"670000000000000000000001\"\r
+
+    \    },\r
+
+    \    \"nguoiTaoId\": {\r
+
+    \      \"$oid\": \"670000000000000000000001\"\r
+
+    \    },\r
+
+    \    \"nguoiThueId\": null,\r
+
+    \    \"dayTroId\": {\r
+
+    \      \"$oid\": \"680000000000000000000003\"\r
+
+    \    },\r
+
+    \    \"phongTroId\": {\r
+
+    \      \"$oid\": \"690000000000000000000008\"\r
+
+    \    },\r
+
+    \    \"tieuDe\": \"[DEMO] Yeu cau sua chua 46\",\r
+
+    \    \"moTa\": \"[DEMO] Su co gia lap de thu trang thai xu ly.\",\r
+
+    \    \"loaiSuCo\": \"KHAC\",\r
+
+    \    \"mucDoUuTien\": \"BINH_THUONG\",\r
+
+    \    \"hinhAnh\": [\r
+
+    \      {\r
+
+    \        \"url\": \"https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80\",\r
+
+    \        \"tenTep\": \"anh-su-co-demo.jpg\",\r
+
+    \        \"loaiTep\": \"image/jpeg\"\r
+
+    \      }\r
+
+    \    ],\r
+
+    \    \"trangThai\": \"DANG_XU_LY\",\r
+
+    \    \"nguoiPhuTrachId\": {\r
+
+    \      \"$oid\": \"670000000000000000000001\"\r
+
+    \    },\r
+
+    \    \"chiPhiDuKien\": {\r
+
+    \      \"$numberInt\": \"250000\"\r
+
+    \    },\r
+
+    \    \"chiPhiThucTe\": {\r
+
+    \      \"$numberInt\": \"0\"\r
+
+    \    },\r
+
+    \    \"lichSuXuLy\": [],\r
+
+    \    \"ngayHoanTat\": null,\r
+
+    \    \"createdAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1794873600000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"updatedAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1795161600000\"\r
+
+    \      }\r
+
+    \    }\r
+
+    \  },\r
+
+    \  {\r
+
+    \    \"_id\": {\r
+
+    \      \"$oid\": \"6f0000000000000000000047\"\r
+
+    \    },\r
+
+    \    \"chuTroId\": {\r
+
+    \      \"$oid\": \"670000000000000000000002\"\r
+
+    \    },\r
+
+    \    \"nguoiTaoId\": {\r
+
+    \      \"$oid\": \"670000000000000000000002\"\r
+
+    \    },\r
+
+    \    \"nguoiThueId\": null,\r
+
+    \    \"dayTroId\": {\r
+
+    \      \"$oid\": \"680000000000000000000004\"\r
+
+    \    },\r
+
+    \    \"phongTroId\": {\r
+
+    \      \"$oid\": \"690000000000000000000009\"\r
+
+    \    },\r
+
+    \    \"tieuDe\": \"[DEMO] Yeu cau sua chua 47\",\r
+
+    \    \"moTa\": \"[DEMO] Su co gia lap de thu trang thai xu ly.\",\r
+
+    \    \"loaiSuCo\": \"NUOC\",\r
+
+    \    \"mucDoUuTien\": \"CAO\",\r
+
+    \    \"hinhAnh\": [\r
+
+    \      {\r
+
+    \        \"url\": \"https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80\",\r
+
+    \        \"tenTep\": \"anh-su-co-demo.jpg\",\r
+
+    \        \"loaiTep\": \"image/jpeg\"\r
+
+    \      }\r
+
+    \    ],\r
+
+    \    \"trangThai\": \"DANG_XU_LY\",\r
+
+    \    \"nguoiPhuTrachId\": {\r
+
+    \      \"$oid\": \"670000000000000000000002\"\r
+
+    \    },\r
+
+    \    \"chiPhiDuKien\": {\r
+
+    \      \"$numberInt\": \"300000\"\r
+
+    \    },\r
+
+    \    \"chiPhiThucTe\": {\r
+
+    \      \"$numberInt\": \"0\"\r
+
+    \    },\r
+
+    \    \"lichSuXuLy\": [],\r
+
+    \    \"ngayHoanTat\": null,\r
+
+    \    \"createdAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1792281600000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"updatedAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1795161600000\"\r
+
+    \      }\r
+
+    \    }\r
+
+    \  },\r
+
+    \  {\r
+
+    \    \"_id\": {\r
+
+    \      \"$oid\": \"6f0000000000000000000048\"\r
+
+    \    },\r
+
+    \    \"chuTroId\": {\r
+
+    \      \"$oid\": \"670000000000000000000001\"\r
+
+    \    },\r
+
+    \    \"nguoiTaoId\": {\r
+
+    \      \"$oid\": \"670000000000000000000001\"\r
+
+    \    },\r
+
+    \    \"nguoiThueId\": null,\r
+
+    \    \"dayTroId\": {\r
+
+    \      \"$oid\": \"680000000000000000000005\"\r
+
+    \    },\r
+
+    \    \"phongTroId\": {\r
+
+    \      \"$oid\": \"690000000000000000000010\"\r
+
+    \    },\r
+
+    \    \"tieuDe\": \"[DEMO] Yeu cau sua chua 48\",\r
+
+    \    \"moTa\": \"[DEMO] Su co gia lap de thu trang thai xu ly.\",\r
+
+    \    \"loaiSuCo\": \"DIEN\",\r
+
+    \    \"mucDoUuTien\": \"THAP\",\r
+
+    \    \"hinhAnh\": [\r
+
+    \      {\r
+
+    \        \"url\": \"https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80\",\r
+
+    \        \"tenTep\": \"anh-su-co-demo.jpg\",\r
+
+    \        \"loaiTep\": \"image/jpeg\"\r
+
+    \      }\r
+
+    \    ],\r
+
+    \    \"trangThai\": \"DA_HOAN_TAT\",\r
+
+    \    \"nguoiPhuTrachId\": {\r
+
+    \      \"$oid\": \"670000000000000000000001\"\r
+
+    \    },\r
+
+    \    \"chiPhiDuKien\": {\r
+
+    \      \"$numberInt\": \"350000\"\r
+
+    \    },\r
+
+    \    \"chiPhiThucTe\": {\r
+
+    \      \"$numberInt\": \"350000\"\r
+
+    \    },\r
+
+    \    \"lichSuXuLy\": [],\r
+
+    \    \"ngayHoanTat\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1795046400000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"createdAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1795046400000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"updatedAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1795161600000\"\r
+
+    \      }\r
+
+    \    }\r
+
+    \  },\r
+
+    \  {\r
+
+    \    \"_id\": {\r
+
+    \      \"$oid\": \"6f0000000000000000000049\"\r
+
+    \    },\r
+
+    \    \"chuTroId\": {\r
+
+    \      \"$oid\": \"670000000000000000000002\"\r
+
+    \    },\r
+
+    \    \"nguoiTaoId\": {\r
+
+    \      \"$oid\": \"670000000000000000000008\"\r
+
+    \    },\r
+
+    \    \"nguoiThueId\": {\r
+
+    \      \"$oid\": \"6a0000000000000000000005\"\r
+
+    \    },\r
+
+    \    \"dayTroId\": {\r
+
+    \      \"$oid\": \"680000000000000000000006\"\r
+
+    \    },\r
+
+    \    \"phongTroId\": {\r
+
+    \      \"$oid\": \"690000000000000000000011\"\r
+
+    \    },\r
+
+    \    \"tieuDe\": \"[DEMO] Yeu cau sua chua 49\",\r
+
+    \    \"moTa\": \"[DEMO] Su co gia lap de thu trang thai xu ly.\",\r
+
+    \    \"loaiSuCo\": \"NOI_THAT\",\r
+
+    \    \"mucDoUuTien\": \"BINH_THUONG\",\r
+
+    \    \"hinhAnh\": [\r
+
+    \      {\r
+
+    \        \"url\": \"https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80\",\r
+
+    \        \"tenTep\": \"anh-su-co-demo.jpg\",\r
+
+    \        \"loaiTep\": \"image/jpeg\"\r
+
+    \      }\r
+
+    \    ],\r
+
+    \    \"trangThai\": \"DANG_XU_LY\",\r
+
+    \    \"nguoiPhuTrachId\": {\r
+
+    \      \"$oid\": \"670000000000000000000002\"\r
+
+    \    },\r
+
+    \    \"chiPhiDuKien\": {\r
+
+    \      \"$numberInt\": \"400000\"\r
+
+    \    },\r
+
+    \    \"chiPhiThucTe\": {\r
+
+    \      \"$numberInt\": \"0\"\r
+
+    \    },\r
+
+    \    \"lichSuXuLy\": [],\r
+
+    \    \"ngayHoanTat\": null,\r
+
+    \    \"createdAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1792454400000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"updatedAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1795161600000\"\r
+
+    \      }\r
+
+    \    }\r
+
+    \  },\r
+
+    \  {\r
+
+    \    \"_id\": {\r
+
+    \      \"$oid\": \"6f0000000000000000000050\"\r
+
+    \    },\r
+
+    \    \"chuTroId\": {\r
+
+    \      \"$oid\": \"670000000000000000000001\"\r
+
+    \    },\r
+
+    \    \"nguoiTaoId\": {\r
+
+    \      \"$oid\": \"670000000000000000000009\"\r
+
+    \    },\r
+
+    \    \"nguoiThueId\": {\r
+
+    \      \"$oid\": \"6a0000000000000000000006\"\r
+
+    \    },\r
+
+    \    \"dayTroId\": {\r
+
+    \      \"$oid\": \"680000000000000000000007\"\r
+
+    \    },\r
+
+    \    \"phongTroId\": {\r
+
+    \      \"$oid\": \"690000000000000000000012\"\r
+
+    \    },\r
+
+    \    \"tieuDe\": \"[DEMO] Yeu cau sua chua 50\",\r
+
+    \    \"moTa\": \"[DEMO] Su co gia lap de thu trang thai xu ly.\",\r
+
+    \    \"loaiSuCo\": \"KHAC\",\r
+
+    \    \"mucDoUuTien\": \"CAO\",\r
+
+    \    \"hinhAnh\": [\r
+
+    \      {\r
+
+    \        \"url\": \"https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80\",\r
+
+    \        \"tenTep\": \"anh-su-co-demo.jpg\",\r
+
+    \        \"loaiTep\": \"image/jpeg\"\r
+
+    \      }\r
+
+    \    ],\r
+
+    \    \"trangThai\": \"DANG_XU_LY\",\r
+
+    \    \"nguoiPhuTrachId\": {\r
+
+    \      \"$oid\": \"670000000000000000000001\"\r
+
+    \    },\r
+
+    \    \"chiPhiDuKien\": {\r
+
+    \      \"$numberInt\": \"450000\"\r
+
+    \    },\r
+
+    \    \"chiPhiThucTe\": {\r
+
+    \      \"$numberInt\": \"0\"\r
+
+    \    },\r
+
+    \    \"lichSuXuLy\": [],\r
+
+    \    \"ngayHoanTat\": null,\r
+
+    \    \"createdAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1795219200000\"\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"updatedAt\": {\r
+
+    \      \"$date\": {\r
+
+    \        \"$numberLong\": \"1795161600000\"\r
+
+    \      }\r
+
+    \    }\r
+
+    \  }\r
+
+    ]\r\n"
+order: 1000
