@@ -1,6 +1,31 @@
 const NguoiThue = require('../models/nguoi_thue');
 const { guiThanhCong, guiThatBai } = require('../utils/phan_hoi_api');
 
+// Chuẩn hóa dữ liệu từ Frontend cho khớp với schema Mongoose
+function chuanHoaDuLieuNguoiThue(body) {
+  const duLieu = { ...body };
+  delete duLieu.chuTroId; // Không nhận chuTroId từ client
+
+  // Hỗ trợ cả cccd lẫn soCCCD
+  if (!duLieu.cccd && duLieu.soCCCD) {
+    duLieu.cccd = duLieu.soCCCD;
+  }
+
+  // Đưa enum về chữ thường ('nam' | 'nu' | 'khac', 'chua_dang_ky' | 'da_dang_ky' | 'het_han')
+  if (typeof duLieu.gioiTinh === 'string') {
+    duLieu.gioiTinh = duLieu.gioiTinh.trim().toLowerCase();
+  }
+  if (typeof duLieu.trangThaiTamTru === 'string') {
+    duLieu.trangThaiTamTru = duLieu.trangThaiTamTru.trim().toLowerCase();
+  }
+
+  // Tránh lỗi cast ObjectId khi client gửi chuỗi rỗng
+  if (duLieu.phongId === '') duLieu.phongId = null;
+  if (duLieu.nguoiDungId === '') duLieu.nguoiDungId = null;
+
+  return duLieu;
+}
+
 // GET /api/nguoi-thue
 const layDanhSachNguoiThue = async (req, res, next) => {
   try {
@@ -77,8 +102,7 @@ const layChiTietNguoiThue = async (req, res, next) => {
 // POST /api/nguoi-thue
 const taoNguoiThue = async (req, res, next) => {
   try {
-    const duLieu = { ...req.body };
-    delete duLieu.chuTroId; // Không nhận chuTroId từ client
+    const duLieu = chuanHoaDuLieuNguoiThue(req.body);
 
     const hoSoMoi = await NguoiThue.create({
       ...duLieu,
@@ -98,8 +122,7 @@ const taoNguoiThue = async (req, res, next) => {
 // PUT /api/nguoi-thue/:maNguoiThue
 const capNhatNguoiThue = async (req, res, next) => {
   try {
-    const duLieu = { ...req.body };
-    delete duLieu.chuTroId;
+    const duLieu = chuanHoaDuLieuNguoiThue(req.body);
 
     const hoSo = await NguoiThue.findOneAndUpdate(
       { _id: req.params.maNguoiThue, chuTroId: req.user._id },

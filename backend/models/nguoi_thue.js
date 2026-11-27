@@ -40,7 +40,7 @@ const nguoiThueSchema = new mongoose.Schema(
     },
     gioiTinh: {
       type: String,
-      enum: ['nam', 'nu', 'khac'],
+      enum: ['nam', 'nu', 'khac', 'NAM', 'NU', 'KHAC'],
       default: 'nam',
     },
     queQuan: {
@@ -57,7 +57,7 @@ const nguoiThueSchema = new mongoose.Schema(
     },
     trangThaiTamTru: {
       type: String,
-      enum: ['chua_dang_ky', 'da_dang_ky', 'het_han'],
+      enum: ['chua_dang_ky', 'da_dang_ky', 'het_han', 'CHUA_DANG_KY', 'DA_DANG_KY', 'HET_HAN'],
       default: 'chua_dang_ky',
     },
     ngayHetHanTamTru: {
