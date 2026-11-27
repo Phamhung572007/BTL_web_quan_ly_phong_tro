@@ -106,9 +106,57 @@ const dangNhap = async (req, res, next) => {
   }
 };
 
+// POST /api/quen-mat-khau
+const quenMatKhau = async (req, res, next) => {
+  try {
+    const email = String(req.body?.email || '').toLowerCase().trim();
+    const soDienThoai = String(req.body?.soDienThoai || '').trim();
+    const matKhauMoi = String(req.body?.matKhauMoi || '');
+
+    if (!email || !soDienThoai || !matKhauMoi) {
+      return guiThatBai(res, {
+        statusCode: 400,
+        message: 'Vui lòng nhập đầy đủ Email, Số điện thoại và Mật khẩu mới.',
+      });
+    }
+
+    if (matKhauMoi.length < 6) {
+      return guiThatBai(res, {
+        statusCode: 400,
+        message: 'Mật khẩu mới phải có ít nhất 6 ký tự.',
+      });
+    }
+
+    const nguoiDung = await NguoiDung.findOne({ email, soDienThoai });
+    if (!nguoiDung) {
+      return guiThatBai(res, {
+        statusCode: 404,
+        message: 'Email hoặc số điện thoại không khớp với bất kỳ tài khoản nào.',
+      });
+    }
+
+    if (nguoiDung.trangThai !== 'HOAT_DONG') {
+      return guiThatBai(res, {
+        statusCode: 403,
+        message: 'Tài khoản của bạn đã bị khóa.',
+      });
+    }
+
+    const salt = await bcrypt.genSalt(10);
+    nguoiDung.matKhau = await bcrypt.hash(matKhauMoi, salt);
+    await nguoiDung.save();
+
+    return guiThanhCong(res, {
+      message: 'Đặt lại mật khẩu thành công. Vui lòng đăng nhập bằng mật khẩu mới.',
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
 // POST /api/dang-xuat
 const dangXuat = (req, res) => {
   return guiThanhCong(res, { message: 'Đăng xuất thành công.' });
 };
 
-module.exports = { dangKy, dangNhap, dangXuat };
+module.exports = { dangKy, dangNhap, quenMatKhau, dangXuat };
