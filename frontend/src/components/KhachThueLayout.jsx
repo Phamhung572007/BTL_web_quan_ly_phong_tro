@@ -103,7 +103,7 @@ function Navigation({ onNavigate }) {
 export default function KhachThueLayout() {
   const location = useLocation()
   const navigate = useNavigate()
-  const { user, authStatus, logout } = useAuth()
+  const { user, authStatus, clearSession } = useAuth()
   const [menuOpen, setMenuOpen] = useState(false)
   const [unread, setUnread] = useState(0)
 
@@ -124,10 +124,16 @@ export default function KhachThueLayout() {
     return () => { active = false }
   }, [location.pathname])
 
-  async function xuLyDangXuat() {
-    if (logout) await logout()
+async function xuLyDangXuat() {
+  try {
+    await api.post('/dang-xuat')
+  } catch {
+    //bỏ qua nếu token đã hết hạn, vẫn xóa phiên ở trình duyệt
+  } finally {
+    clearSession()
     navigate('/dang-nhap', { replace: true })
   }
+}
 
   return (
     <div className="owner-app">
